@@ -11,7 +11,7 @@ import os
 app = Flask(__name__)
 
 # A welcome message to test our server
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def index():
     return render_template("index.html")
 
