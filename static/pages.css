@@ -1,0 +1,10 @@
+body {
+    background-color: #272B30;
+    color: #aaa
+}
+
+
+#playerlist {
+    border-right: 2px solid lightgray;
+    vertical-align: text-top;
+}
