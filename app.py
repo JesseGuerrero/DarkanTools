@@ -13,7 +13,7 @@ app = Flask(__name__)
 # A welcome message to test our server
 @app.route('/')
 def index():
-    return "<h1>Darkan Tools from pycharm</h1>"
+    return render_template("index.html")
 
 '''
 @app.route('/', methods=["GET", "POST"])
