@@ -1,6 +1,3 @@
-'''
-This is the stats module
-'''
 from datetime import date, datetime
 import os
 import json
@@ -13,8 +10,9 @@ import os
 #TODO: Create a logging system in a logs file(daily like before)
 #TODO: Upgrade, debug player commit
 #TODO: Create a logs commit->PUSH system <-- You can delay and move to graphing though
-#TODO: Document and organize modules.
-
+#TODO: 3 place trophy icons in top weekly
+#TODO: Make top weekly
+#TODO: Annotate new register forms and register page func
 
 #VCS/Shell Automation----
 def multiple_cmd(*cmds):
@@ -72,18 +70,23 @@ def commit_player(username, remote_name) -> str:
     initialized before in a seperate function.
     players dir is already defined outside scope
     '''
+    #exit if empty
+    if username == "":
+        return ""
+
     user_exists, player_info = playerExists(username)
+
     if username in getRegPlayers():
         return f"{username.title()} already registered..."
     elif user_exists:
         # Add username file to playersdir path
-        with open(os.path.join(playersdir, username), mode="w"):
-            print(multiple_cmd(f"cd \"{playersdir}\"", "git add .",
+        with open(os.path.join(getPlayerDir(), username), mode="w"):
+            print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
                                f"git commit -m \"{date.today()} committed {username} via website\"",
                                f"git push {remote_name} master"))
             return f"Successfully registered {username.title()}!"
     else:
-        return "Does not exist in Darkan..."
+        return f"{username.title()} does not exist in Darkan..."
 #VCS/Shell DONE----
 
 #Create a Stat class
@@ -182,7 +185,7 @@ def playerExists(player) -> tuple:
     '''
     exists = False
     #=====----->The following was created with Postman
-    url = "https://darkan.org/api/player/" + player
+    url = "https://darkan.org/api/player/" + player.replace(" ", "_")
 
     payload = {}
     headers= {}
@@ -364,6 +367,24 @@ def sync_stats():
     sleep(60*60*24)
     sync_stats()
 #---XP tracking assurance DONE
+
+#---Graph Maker
+def makeGraph():
+    pass
+
+#---Graph Maker DONE
+
+#---Top Weekly
+def getTopPlayers() -> list:
+    '''
+    Returns top 10 players of the week
+
+    :return:
+    '''
+    pass
+
+#---Top Weekly DONE
+
 
 if __name__ == "__main__":
     #clean_stats()

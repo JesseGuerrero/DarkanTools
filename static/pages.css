@@ -100,6 +100,10 @@ h1 img {
     margin-top: auto;
 }
 
+.maincontent p {
+    width: 30em;
+}
+
 .specialnotice {
     font-family: Arial;
     font-size: .8em;

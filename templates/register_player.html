@@ -19,54 +19,44 @@
     <h1><img src="static/images/logo.png">Darkan Tools</h1>
     <table id = "mainmenu">
         <tr>
-
-                <td class = "mainbutton">
-                    <a href="/">XP tracker</a>
-                </td>
-
+            <td class = "mainbutton">
+                <a href="/">Home</a>
+            </td>
+            <td class = "mainbutton">
+                <a href="https://darkan.org/">Official site</a>
+            </td>
+             <td class = "mainbutton">
+                <a href="https://darkan.fandom.com/wiki/Darkan_Wiki">Wiki page</a>
+            </td>
+            <td class = "mainbutton">
+                <a href="/tracker">XP tracker</a>
+            </td>
             <td class = "mainbutton">
                 <a href='/register'>Register username</a>
             </td>
             <td>
-
+                {#Left blank for more space#}
             </td>
         </tr>
     </table>
     <table class = "layout">
         <tr>
             <td id="playerlist">
-                <div>Registered players</div>
+                <div>Top Weekly</div>
                 {% for each in player_list %}
                 {{ each.title() }}<br>
                 {% endfor %}
             </td>
             <td class = "maincontent">
-                <h2>Registration options</h2>
+                <h2>Register on Darkan Tools</h2>
                 <p>
-                  Why register? You can register any username for xp tracking and <br>
-                  other features on the website. In addition you can verify ownership<br>
-                  for more control, once features are implemented.
+                  I try to make sure all active players are able to see their xp gains
+                  on the site. Here you can add any existing player. I will not ask for
+                  any emails or passwords, as your account safety is most important. In the
+                  future I may do account verification through the API through some specific
+                  process like, "kill a chicken NPC with a random amount of GP in your first
+                  inventory slot, something like that.
                 </p>
-                <p>
-                  I will not ask for any emails or passwords. Your account safety<br>
-                  is most important. In the future account verification will be done<br>
-                  through the API through some specific process like, "kill a chicken <br>
-                  NPC with a random amount of GP in your first inventory slot.
-                </p>
-                <p>
-                  Or, if you are a pure then you can option to wear a chef's hat and<br>
-                  have a random amount of gp. There are plenty of things we can do in<br>
-                  the future
-                </p>
-                <!-- <form name="verifyownership" method="GET">
-                  <label for="claimaccount">Account name: </label>
-                  <input class = "registration" type="text" placeholder="Username">
-
-                  <p>
-                    Verify account methods:
-                    <input type="radio" name="" value="">
-                  </p>
-                </form> -->
 
                 <form name="newplayer" method="POST">
                   <label for="registration">Register a player:</label>
@@ -74,6 +64,15 @@
                   <input class = "registration" type="submit" value="Submit">
                   <div class="specialnotice">{{ result }}</div>
                 </form>
+
+                <form name="search player" method="POST">
+                    <label for="search">Search players:</label>
+                    <input class = "search" type="text" name="search_reg" placeholder="Username">
+                    <input class = "search" type="submit" value="Submit">
+                    <div class="specialnotice">{{ result2 }}</div>
+                </form>
+
+
             </td>
         </tr>
     </table>

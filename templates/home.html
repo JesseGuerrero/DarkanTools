@@ -23,6 +23,12 @@
                 <a href="/">Home</a>
             </td>
             <td class = "mainbutton">
+                <a href="https://darkan.org/">Official site</a>
+            </td>
+             <td class = "mainbutton">
+                <a href="https://darkan.fandom.com/wiki/Darkan_Wiki">Wiki page</a>
+            </td>
+            <td class = "mainbutton">
                 <a href="/tracker">XP tracker</a>
             </td>
             <td class = "mainbutton">
@@ -42,63 +48,7 @@
                 {% endfor %}
             </td>
             <td class="maincontent">
-                <div id = "Plot">
-                  <form class="form-signin" method="POST" action="">
-                    <div class="form-group">
-                      <label for="input_player" class="sr-only">Player 1: </label>
-                      <input style="border-radius: 0.25rem" type="text" id="input_player" name="player1_input" class="form-control" value = "{{ player1 }}" required autofocus>
-                      <br>
-                      <label for="input_player" class="sr-only">Player 2: </label>
-                      <input style="border-radius: 0.25rem" type="text" id="input_player" name="player2_input" class="form-control" value = "{{ player2 }}" required autofocus>
-                      <br>
-                         <label>Skill: </label>
-
-
-                         <select id = "skill_selector" name="skill_input" class="skill-menu">
-                           <option value = "0">Attack</option>
-                           <option value = "1">Defence</option>
-                           <option value = "2">Strength</option>
-                           <option value = "3">Hitpoints</option>
-                           <option value = "4">Ranged</option>
-                           <option value = "5">Prayer</option>
-                           <option value = "6">Magic</option>
-                           <option value = "7">Cooking</option>
-                           <option value = "8">Woodcutting</option>
-                           <option value = "9">Fletching</option>
-                           <option value = "10">Fishing</option>
-                           <option value = "11">Firemaking</option>
-                           <option value = "12">Crafting</option>
-                           <option value = "13">Smithing</option>
-                           <option value = "14">Mining</option>
-                           <option value = "15">Herblore</option>
-                           <option value = "16">Agility</option>
-                           <option value = "17">Thieving</option>
-                           <option value = "18">Slayer</option>
-                           <option value = "19">Farming</option>
-                           <option value = "20">Runecrafting</option>
-                           <option value = "21">Hunter</option>
-                           <option value = "22">Construction</option>
-                           <option value = "23">Summoning</option>
-                           <option value = "24">Dungeoneering</option>
-                         </select>
-                      <br>
-                         <label>Days: </label>
-                         <select id = "days_selector" name="days_input">
-                           <option value = "7">7 Days</option>
-                           <option value = "14">14 days</option>
-                           <option value = "30">30 days</option>
-                         </select>
-                      <div class="container">
-                        <form method="post">
-                              <input type="submit" value="Plot" style = "color: #fff; height:40px; width: 65px; font-size: 15px; border: 1px solid transparent; border-radius: 0.25rem; background-color: #3A3F44; border-color: rgba(0,0,0,0.6); text-shadow: 1px 1px 1px rgba(0,0,0,0.3); transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;" >
-                        </form>
-                      </div>
-                      <br>
-                        <!-- you gotta use static -->
-                      <img src="static/test.png" alt="my plot">
-                    </div>
-                  </form>
-                </div>
+                Welcome to Darkan Tools!
             </td>
         </tr>
     </table>
