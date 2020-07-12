@@ -15,24 +15,6 @@ import os
 #TODO: Create a logs commit->PUSH system <-- You can delay and move to graphing though
 #TODO: Document and organize modules.
 
-#<----GET RELATIVE PATH TO PLAYERS---->
-
-#Magic variable with file path string
-filePath = __file__
-
-#Convert to standard of OS path string
-filePath = os.path.realpath(filePath)
-
-#Just get the folder
-filePath = os.path.dirname(filePath)
-filePath = os.path.realpath(filePath)
-
-
-
-skill_ID = {"Attack": 0, "Defence": 1, "Strength": 2, "Hitpoints": 3, "Ranged": 4, "Prayer": 5,"Magic": 6,"Cooking": 7
-    ,"Woodcutting": 8,"Fletching": 9,"Fishing": 10,"Firemaking": 11,"Crafting": 12,"Smithing": 13,"Mining": 14
-    ,"Herblore": 15,"Agility": 16,"Thieving": 17,"Slayer": 18,"Farming": 19,"Runecrafting": 20,"Hunter": 21
-    ,"Construction": 22,"Summoning": 23,"Dungeoneering": 24}
 
 #VCS/Shell Automation----
 def multiple_cmd(*cmds):
@@ -56,7 +38,9 @@ def multiple_cmd(*cmds):
 def ensure_remote(url, remote_name):
     '''
     Ensures local repo, branch master and remote 'remote_name' exists
-    we need to pull AT THE START OF THE WEBSERVER ONLY TO UPDATE THE WEB
+    if it does not then we create it and update the cloud to the github version.
+    Remember remote 'github' is the name of the local pointer to the actual
+    github repository.
     '''
 
     #----Get current file path
@@ -74,7 +58,7 @@ def ensure_remote(url, remote_name):
 
     if remote_name in str(multiple_cmd(f"cd \"{gitPath}\"", "git remote")):
         print(f"Remote {remote_name} exists, don't worry")
-    #CHANGE THIS TO PULL
+    #If github remote is not in local we need to make it and pull
     else:
         multiple_cmd(f"cd \"{gitPath}\"",
                      "git init .",
@@ -104,6 +88,22 @@ def commit_player(username, remote_name) -> str:
 
 #Create a Stat class
 class Stat():
+    '''
+    Stores stats information for future use.
+    name of stat
+    value is xp
+    timestamp is a date the stat was made.
+
+    These are meant to be generated and sent to garbage as they are made
+    and left in a dead scope.
+    '''
+
+    skill_ID = {"Attack": 0, "Defence": 1, "Strength": 2, "Hitpoints": 3, "Ranged": 4, "Prayer": 5, "Magic": 6,
+                "Cooking": 7, "Woodcutting": 8, "Fletching": 9, "Fishing": 10, "Firemaking": 11, "Crafting": 12,
+                "Smithing": 13, "Mining": 14, "Herblore": 15, "Agility": 16, "Thieving": 17, "Slayer": 18,
+                "Farming": 19, "Runecrafting": 20, "Hunter": 21, "Construction": 22, "Summoning": 23,
+                "Dungeoneering": 24}
+
     def __init__(self, name : str, value : int, timestamp : date):
         self.name = name
         self.value = value
@@ -116,6 +116,7 @@ class Stat():
     def getValue(self): return self.value
     def getDate(self): return self.timestamp
 
+#---Player assurance functions
 def getPlayerDir():
     '''
     Returns player directory as a string. Compatible with other OS using
@@ -123,6 +124,7 @@ def getPlayerDir():
 
     :return: String directory path/breadcrumb, dynamic to OS
     '''
+    #Magic Python variable
     filePath = __file__
 
     # Convert to standard of OS path string
@@ -204,8 +206,10 @@ def playerExists(player) -> tuple:
         print(f"{player} query success")
         exists = True
     return (exists, player_info)
+#---Player assurance functions DONE
 
-def get_stats(player : str) -> dict:
+#---XP tracking assurance
+def get_game_stats(player : str) -> dict:
     '''
     Meant for internal use.
 
@@ -213,7 +217,6 @@ def get_stats(player : str) -> dict:
     :return: Returns their stats from the Darkan API & adds a username key
     '''
     user_exists, player_info = playerExists(player)
-
 
     if user_exists:
         # Now we add meta data to the dict for future reference
@@ -225,7 +228,9 @@ def get_stats(player : str) -> dict:
 
 def save_stats(stats : dict):
     '''
-    Adds a current record of stat changes to a file. with the oldest at the top
+    Adds a current record of stat changes to a file. with the oldest at the top.
+    It finds the appropriate file name to write the stats dictionary via the
+    name key, which was added in get_game stats.
 
     :param stats: Requires dictionary of current statistics
     :return: None
@@ -235,7 +240,7 @@ def save_stats(stats : dict):
     with open(directory, mode="a") as file:
         file.write(str(stats).replace("'", '"') + "\n") #JSON does not accept single quotes
 
-def load_stats(player : str, stat_ID : str, days = 90) -> list:
+def get_file_stats(player : str, stat_ID : str, days = 90) -> list:
     '''
     stats: list of stats from oldest to newest top to bottom
     newest_dict: Current stat from top to bottom
@@ -259,7 +264,7 @@ def load_stats(player : str, stat_ID : str, days = 90) -> list:
                 stamp = datetime.strptime(newest_stat["timestamp"], "%Y-%m-%d").date()
                 newest_stat = Stat(stat_ID, newest_stat[stat_ID], stamp)
             # Use the stat_ID keys to signify it is a regular skill
-            elif stat_ID.title() in skill_ID:
+            elif stat_ID.title() in Stat.skill_ID:
                 #I need to get all the attributes for the Stat() class but there is a lot of nesting
                 #Remember it is name, datetime, xp
 
@@ -270,7 +275,7 @@ def load_stats(player : str, stat_ID : str, days = 90) -> list:
                 stamp = datetime.strptime(newest_stat["timestamp"], "%Y-%m-%d").date()
 
                 #XP value, remember the value for skill_ID is its place in the skill dictionary
-                skill_index = skill_ID[stat_name] #Get the index for skills list
+                skill_index = Stat.skill_ID[stat_name] #Get the index for skills list
                 newest_stat = newest_stat["skills"] #Specify into list of stat dictionaries
                 newest_stat = newest_stat[skill_index]
                 xp_value = newest_stat['xp']
@@ -297,12 +302,12 @@ def load_stats(player : str, stat_ID : str, days = 90) -> list:
                 stats.append(newest_stat)
         return stats
 
-def gather_all():
+def gather_game_stats():
     '''
     Gathers all stat information for registered players
     '''
     for player in getRegPlayers():
-        stat_record = get_stats(player) #Gets stat of the day and puts it in a record
+        stat_record = get_game_stats(player) #Gets stat of the day and puts it in a record
         save_stats(stat_record) #save it into a file and append to it
 
 def clean_stats():
@@ -347,23 +352,23 @@ def clean_stats():
                  file.write(str(each).replace("'", '"')+"\n")
 
 def sync_stats():
-    gather_all()
+    '''
+    Syncronizes stats every 24 hours by calling gather game stats
+    then cleaning the data.
+    '''
+    gather_game_stats()
     clean_stats()
     print("all stats updated & cleaned")
 
     #60 seconds * 60 minutes * 24 hours
     sleep(60*60*24)
     sync_stats()
-
-
-
-
-
+#---XP tracking assurance DONE
 
 if __name__ == "__main__":
     #clean_stats()
     #Gathers stats for all registered players
-    gather_all()
+    gather_game_stats()
 
 if __name__ != "__main__":
     #Make sure there is a connection to remote github
