@@ -8,27 +8,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- CSS Call is specific to Flask-->
-{#    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='pages.css') }}">#}
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='pages.css') }}">
 
     <!-- Titles -->
     <link rel="icon" href="static/images/icons/{{ icon }}">
     <title>Darkan Tools</title>
 </head>
 <body>
-    <h1>Darkan Tools</h1>
-    <hr>
-
-    <table>
+{#Main header + menu#}
+    <h1><img src="static/images/logo.png">Darkan Tools</h1>
+    <table id = "mainmenu">
         <tr>
-            <th></th>
+
+                <td class = "mainbutton">
+                    <a href="/">XP tracker</a>
+                </td>
+
+            <td class = "mainbutton">
+                <a href='/register'>Register username</a>
+            </td>
+            <td>
+
+            </td>
         </tr>
+    </table>
+    <table class = "layout">
         <tr>
             <td id="playerlist">
-                <u style="text-align: left;">Registered players</u><br>
+                <div>Registered players</div>
                 jawarrior1<br>
                 Trent<br>
             </td>
-            <td>
+            <td class="maincontent">
                 <div id = "Plot">
                   <form class="form-signin" method="POST" action="">
                     <div class="form-group">

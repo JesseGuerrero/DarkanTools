@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 # A welcome message to test our server
 @app.route('/', methods=["GET", "POST"])
-def index():
+def home():
     #Unique PATH per OS
     icondir = os.path.dirname(__file__)
     icondir = os.path.join(icondir, "static", "images", "icons")
@@ -21,9 +21,22 @@ def index():
     shuffle(icon_list)
     return render_template("index.html", icon = icon_list.pop())
 
+@app.route('/register')
+def register():
+    #First implementation with backend
+    new_player = request.form['user_reg']
+
+
+    icondir = os.path.dirname(__file__)
+    icondir = os.path.join(icondir, "static", "images", "icons")
+    icon_list = os.listdir(icondir)
+
+    shuffle(icon_list)
+    return render_template("register_player.html", icon = icon_list.pop())
+
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=5000)
+    app.run(threaded=True, port=5000, debug = True)
 
 
 '''

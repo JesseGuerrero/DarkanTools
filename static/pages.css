@@ -1,10 +1,102 @@
+/*
+Abstract top, specific going down.
+For now focus on functionality. We
+can let someone else setup to make it
+pretty
+*/
+
+/*Setup constants on all pages*/
 body {
+    /*Default universal settings for page*/
     background-color: #272B30;
     color: #aaa
 }
 
+h1 {
+    /*For future reference, h1 will be the "Darkan Tools" Header*/
+}
+
+h1 img {
+    /*This is the main header logo*/
+    height: 50px;
+    margin-bottom: -8px;
+}
+
+#mainmenu {
+    /* The menu is a table. The columns or "td" are links with anchor tag */
+    border-left: 2px black solid;
+    border-right: 2px black solid;
+    border-top: 2px black solid;
+    background-color: #1a1a1a;
+    width: 100%;
+}
+
+/*Button formatting for main menu*/
+#mainmenu td + td {
+    /*Adjacent siblings operator, "+", only the second gets affected.
+    We make the second one border left. Each button will do this*/
+    border-left: 2px black solid;
+}
+
+#mainmenu td + td + td {
+    /*for future button*/
+}
+
+.mainbutton {
+    /*Make buttons a consistent width*/
+    width: 8em;
+}
+
+.mainbutton a {
+    /*Make decoration normal instead of standard url decoration.
+     Also "display: block" makes the link take up the whole td,
+     or "block" */
+
+    color: lightgray;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.mainbutton a:hover {
+    /*Creates hover effect*/
+   background: #141414;
+}
+
+/*---Start actual content---*/
+
+/*layout and playerlist will be on every page*/
+.layout {
+    /*Layout is going to be how every page is organized, by a table under the heading/menu*/
+    vertical-align: text-top;
+    width: 100%;
+}
+
+.layout tr {
+    /*Set a min height*/
+    height: 600px
+}
 
 #playerlist {
     border-right: 2px solid lightgray;
     vertical-align: text-top;
+    text-align: left;
+    border-top: 2px solid lightgray;
+    width: 12em;
 }
+
+#playerlist div {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/*main content is the container for the page.*/
+.maincontent {
+    border-top: 2px solid lightgray;
+    vertical-align: top;
+}
+
+.maincontent h2 {
+    margin-top: auto;
+}
+
