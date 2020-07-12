@@ -19,23 +19,24 @@
     <h1><img src="static/images/logo.png">Darkan Tools</h1>
     <table id = "mainmenu">
         <tr>
-
-                <td class = "mainbutton">
-                    <a href="/">XP tracker</a>
-                </td>
-
+            <td class = "mainbutton">
+                <a href="/">Home</a>
+            </td>
+            <td class = "mainbutton">
+                <a href="/tracker">XP tracker</a>
+            </td>
             <td class = "mainbutton">
                 <a href='/register'>Register username</a>
             </td>
             <td>
-
+                {#Left blank for more space#}
             </td>
         </tr>
     </table>
     <table class = "layout">
         <tr>
             <td id="playerlist">
-                <div>Registered players</div>
+                <div>Top Weekly</div>
                 {% for each in player_list %}
                 {{ each.title() }}<br>
                 {% endfor %}
