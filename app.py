@@ -1,7 +1,9 @@
 #Essentials
 from flask import Flask, render_template, request
-#from DarkanTools1.tracker_backend import xp_tracker_backend as be
+from tracker_backend import xp_tracker_backend as be
 #import matplotlib.pyplot as plt
+
+#TODO: Create log system
 
 #Extras
 from random import shuffle
@@ -24,7 +26,9 @@ def home():
 @app.route('/register')
 def register():
     #First implementation with backend
-    # new_player = request.form['newplayer']
+    new_player = None
+    if request.method == "POST":
+        new_player = request.form['newplayer']
 
 
     icondir = os.path.dirname(__file__)
@@ -36,8 +40,11 @@ def register():
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=5000, debug = True)
-
+    #If its windows, we are probably debugging at home.
+    if "win" in os.sys.platform:
+        app.run(threaded=True, port=5000, debug = True)
+    else:
+        app.run(threaded=True, port=5000, debug=False)
 
 '''
 @app.route('/', methods=["GET", "POST"])
