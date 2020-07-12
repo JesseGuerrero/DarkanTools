@@ -10,6 +10,8 @@ from threading import Thread
 import subprocess
 import os
 
+
+
 #TODO: Create a logging system in a logs file(daily like before)
 #TODO: Create a player commit->PUSH system
 #TODO: Create a logs commit->PUSH system <-- You can delay and move to graphing though
@@ -56,30 +58,16 @@ class Stat():
     def getValue(self): return self.value
     def getDate(self): return self.timestamp
 
-def add_player(username, remote_name) -> str:
+def playerExists(player) -> tuple:
     '''
-    Commits a folder to remote_name. Remote VCS is
-    initialized before in a seperate function.
-    players dir is already defined outside scope
-    '''
-    if username in os.listdir(playersdir):
-        return f"{username.title()} already registered..."
-    else:
-        #Add username file to playersdir path
-        with open(os.path.join(playersdir, username), mode="w"):
-            print(multiple_cmd(f"cd \"{playersdir}\"", "git add players",
-                         f"git commit -m \"{username} was committed\"",
-                         f"git push {remote_name} master"))
-            return f"Successfully registered {username.title()}!"
+    Calls player from API and checks for error by accessing byte information.
+    The GET request from HTTPS works even when there is no player. So we check
+    after converting the byte file into a string by trying to access a known
+    piece of information.
 
-def get_stats(player : str) -> dict:
+    :return: Tuple type (player existed in API, Actual Stat info)
     '''
-    Meant for internal use.
-
-    :param player: Insert a Darkan username as a string
-    :return: Returns their stats from the Darkan API & adds a username key
-    '''
-
+    exists = False
     #=====----->The following was created with Postman
     url = "https://darkan.org/api/player/" + player
 
@@ -100,15 +88,48 @@ def get_stats(player : str) -> dict:
         player_info = player_info['stats'] #Remove everything else
     except:
         print("Player not found")
+        pass
     else:
         print(f"{player} query success")
+        exists = True
+    return (exists, player_info)
 
-    #Now we add meta data to the dict for future reference
-    player_info["name"] = player  # Add a name
+def add_player(username, remote_name) -> str:
+    '''
+    Commits a folder to remote_name. Remote VCS is
+    initialized before in a seperate function.
+    players dir is already defined outside scope
+    '''
+    user_exists, player_info = playerExists(username)
+    if username in os.listdir(playersdir):
+        return f"{username.title()} already registered..."
+    elif user_exists:
+        # Add username file to playersdir path
+        with open(os.path.join(playersdir, username), mode="w"):
+            print(multiple_cmd(f"cd \"{playersdir}\"", "git add .",
+                               f"git commit -m \"{date.today()} committed {username} via website\"",
+                               f"git push {remote_name} master"))
+            return f"Successfully registered {username.title()}!"
+    else:
+        return "Does not exist in Darkan..."
 
-    #We will add a date meta to it as a string
-    player_info["timestamp"] = str(date.today()) #JSON does not accept date objects so its str
-    return player_info
+def get_stats(player : str) -> dict:
+    '''
+    Meant for internal use.
+
+    :param player: Insert a Darkan username as a string
+    :return: Returns their stats from the Darkan API & adds a username key
+    '''
+    user_exists, player_info = playerExists(player)
+
+
+    if user_exists:
+        # Now we add meta data to the dict for future reference
+        player_info["name"] = player  # Add a name
+
+        #We will add a date meta to it as a string
+        player_info["timestamp"] = str(date.today()) #JSON does not accept date objects so its str
+        return player_info
 
 def save_stats(stats : dict):
     '''
