@@ -22,7 +22,7 @@ filePath = os.path.dirname(filePath)
 filePath = os.path.realpath(filePath)
 
 #Now get player directory from this relative path
-playersdir = filePath + "\\players"
+playersdir = os.path.join(filePath, "players")
 
 #Convert to standard of OS
 playersdir = os.path.realpath(playersdir)
