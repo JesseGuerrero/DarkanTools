@@ -24,7 +24,7 @@ def home():
 @app.route('/register')
 def register():
     #First implementation with backend
-    new_player = request.form['user_reg']
+    # new_player = request.form['newplayer']
 
 
     icondir = os.path.dirname(__file__)
@@ -36,7 +36,7 @@ def register():
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=5000, debug = False)
+    app.run(threaded=True, port=5000, debug = True)
 
 
 '''
