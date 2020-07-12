@@ -56,13 +56,21 @@ class Stat():
     def getValue(self): return self.value
     def getDate(self): return self.timestamp
 
-def add_player(username) -> str:
-    if username in reg_players:
+def add_player(username, remote_name) -> str:
+    '''
+    Commits a folder to remote_name. Remote VCS is
+    initialized before in a seperate function.
+    players dir is already defined outside scope
+    '''
+    if username in os.listdir(playersdir):
         return f"{username.title()} already registered..."
     else:
-        file = open(os.path.join(playersdir, username), mode="w")
-        file.close()
-        return f"Successfully registered {username.title()}!"
+        #Add username file to playersdir path
+        with open(os.path.join(playersdir, username), mode="w"):
+            print(multiple_cmd(f"cd \"{playersdir}\"", "git add players",
+                         f"git commit -m \"{username} was committed\"",
+                         f"git push {remote_name} master"))
+            return f"Successfully registered {username.title()}!"
 
 def get_stats(player : str) -> dict:
     '''
@@ -282,19 +290,6 @@ def ensure_remote(url, remote_name):
                      f"git remote add {remote_name} {url}",
                      f"git pull github master")
         print(f"Created remote {remote_name} and pulled from it!")
-
-
-def commitplayers(remote_name, username):
-    '''
-    commits a folder to remote_name. REMOTE NAME IS ENSURED AT THE START
-    '''
-    if username in os.listdir("players"):
-        print("player already exists")
-    else:  # Commit player
-        subprocess.call("git add players", shell=True)
-        subprocess.call(f"git commit -m \"{username} was committed\"", shell=True)
-        subprocess.check_output(f"git push {remote_name} master", shell=True)
-        print("executed")
 
 if __name__ == "__main__":
     #clean_stats()

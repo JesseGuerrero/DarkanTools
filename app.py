@@ -25,6 +25,10 @@ def home():
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
+    be.add_player("jawarrior", "github")
+    print("player func run")
+
+
     #First implementation with backend
     reg_result = ""
     if request.method == "POST":
@@ -38,7 +42,7 @@ def register():
     icon_list = os.listdir(icondir)
 
     shuffle(icon_list)
-    return render_template("register_player.html", icon = icon_list.pop(), player_list = be.reg_players, result = reg_result)
+    return render_template("register_player.html", icon = icon_list.pop(), player_list = be.reg_players, result = "reg_result")
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
