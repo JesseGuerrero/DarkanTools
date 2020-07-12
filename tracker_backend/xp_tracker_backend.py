@@ -275,9 +275,9 @@ def ensure_remote(url, remote_name):
     else:
         multiple_cmd(f"cd \"{gitPath}\"",
                      "git init .",
-                     f"git commit -m \"local repo & remote created on server as {remote_name}!\"",
-                     f"git remote add {remote_name} {url}")
-        print(f"Created remote {remote_name}!")
+                     f"git remote add {remote_name} {url}",
+                     f"git pull github master")
+        print(f"Created remote {remote_name} and pulled from it!")
 
 
 def commitplayers(remote_name, username):
@@ -299,7 +299,7 @@ if __name__ == "__main__":
 
 if __name__ != "__main__":
     #Make sure there is a connection to remote github
-    ensure_remote("https://github.com/JesseGuerrero/link.git", "link")
+    ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github")
 
     #Update stats everyday if we are out of focus, runs twice on a debug
     Thread(target=sync_stats).start()
