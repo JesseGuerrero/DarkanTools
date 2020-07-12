@@ -21,7 +21,7 @@ def home():
     icon_list = os.listdir(icondir)
 
     shuffle(icon_list)
-    return render_template("index.html", icon = icon_list.pop(), player_list = be.reg_players)
+    return render_template("index.html", icon = icon_list.pop(), player_list = be.getRegPlayers())
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
@@ -30,15 +30,17 @@ def register():
     if request.method == "POST":
         new_player = request.form['user_reg']
         new_player = new_player.lower()
-        reg_result = be.add_player(new_player)
 
+        #reg_result is determined by the return of commit_player
+        reg_result = be.commit_player(new_player, "github")
 
+    #Get path to icon, os.path works with all os, list icons in path, shuffle path
     icondir = os.path.dirname(__file__)
     icondir = os.path.join(icondir, "static", "images", "icons")
     icon_list = os.listdir(icondir)
-
     shuffle(icon_list)
-    return render_template("register_player.html", icon = icon_list.pop(), player_list = be.reg_players, result = reg_result)
+
+    return render_template("register_player.html", icon = icon_list.pop(), player_list = be.getRegPlayers(), result = reg_result)
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support

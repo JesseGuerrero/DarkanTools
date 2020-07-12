@@ -10,11 +10,10 @@ from threading import Thread
 import subprocess
 import os
 
-
-
 #TODO: Create a logging system in a logs file(daily like before)
-#TODO: Create a player commit->PUSH system
+#TODO: Upgrade, debug player commit
 #TODO: Create a logs commit->PUSH system <-- You can delay and move to graphing though
+#TODO: Document and organize modules.
 
 #<----GET RELATIVE PATH TO PLAYERS---->
 
@@ -28,21 +27,80 @@ filePath = os.path.realpath(filePath)
 filePath = os.path.dirname(filePath)
 filePath = os.path.realpath(filePath)
 
-#Now get player directory from this relative path
-playersdir = os.path.join(filePath, "players")
 
-#Convert to standard of OS
-playersdir = os.path.realpath(playersdir)
-
-#<---- DONE ---->
-
-#Create Globals
-reg_players = os.listdir(playersdir)
 
 skill_ID = {"Attack": 0, "Defence": 1, "Strength": 2, "Hitpoints": 3, "Ranged": 4, "Prayer": 5,"Magic": 6,"Cooking": 7
     ,"Woodcutting": 8,"Fletching": 9,"Fishing": 10,"Firemaking": 11,"Crafting": 12,"Smithing": 13,"Mining": 14
     ,"Herblore": 15,"Agility": 16,"Thieving": 17,"Slayer": 18,"Farming": 19,"Runecrafting": 20,"Hunter": 21
     ,"Construction": 22,"Summoning": 23,"Dungeoneering": 24}
+
+#VCS/Shell Automation----
+def multiple_cmd(*cmds):
+    '''
+    Runs multiple commands in sub-process shell. Commands are seperated differently depending on OS.
+    If it is not windows it will default to a ";" seperator.
+
+    :param cmds: A tuple which is joined/combined into a string with a seperator
+    :return: output of shell
+    '''
+    command = ""
+    if "win" in os.sys.platform:
+        command = " & ".join(cmds)
+    else:
+        command = " ; ".join(cmds)
+
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
+    proc_stdout = process.communicate()[0].strip()
+    return proc_stdout
+
+def ensure_remote(url, remote_name):
+    '''
+    Ensures local repo, branch master and remote 'remote_name' exists
+    we need to pull AT THE START OF THE WEBSERVER ONLY TO UPDATE THE WEB
+    '''
+
+    #----Get current file path
+    gitPath = __file__
+    # Convert to standard of OS path string
+    gitPath = os.path.realpath(gitPath)
+    # Just get the folder, then the folder of the folder, go one up
+    gitPath = os.path.dirname(gitPath)
+    gitPath = os.path.dirname(gitPath)
+
+    #Convert to OS friendly
+    gitPath = os.path.realpath(gitPath)
+    #----
+
+
+    if remote_name in str(multiple_cmd(f"cd \"{gitPath}\"", "git remote")):
+        print(f"Remote {remote_name} exists, don't worry")
+    #CHANGE THIS TO PULL
+    else:
+        multiple_cmd(f"cd \"{gitPath}\"",
+                     "git init .",
+                     f"git remote add {remote_name} {url}",
+                     f"git pull github master")
+        print(f"Created remote {remote_name} and pulled from it!")
+
+def commit_player(username, remote_name) -> str:
+    '''
+    Commits a folder to remote_name. Remote VCS is
+    initialized before in a seperate function.
+    players dir is already defined outside scope
+    '''
+    user_exists, player_info = playerExists(username)
+    if username in getRegPlayers():
+        return f"{username.title()} already registered..."
+    elif user_exists:
+        # Add username file to playersdir path
+        with open(os.path.join(playersdir, username), mode="w"):
+            print(multiple_cmd(f"cd \"{playersdir}\"", "git add .",
+                               f"git commit -m \"{date.today()} committed {username} via website\"",
+                               f"git push {remote_name} master"))
+            return f"Successfully registered {username.title()}!"
+    else:
+        return "Does not exist in Darkan..."
+#VCS/Shell DONE----
 
 #Create a Stat class
 class Stat():
@@ -57,6 +115,59 @@ class Stat():
     def getName(self): return self.name
     def getValue(self): return self.value
     def getDate(self): return self.timestamp
+
+def getPlayerDir():
+    '''
+    Returns player directory as a string. Compatible with other OS using
+    os.path
+
+    :return: String directory path/breadcrumb, dynamic to OS
+    '''
+    filePath = __file__
+
+    # Convert to standard of OS path string
+    filePath = os.path.realpath(filePath)
+
+    # Just get the folder
+    filePath = os.path.dirname(filePath)
+    filePath = os.path.realpath(filePath)
+
+    # Now get player directory from this relative path
+    playersdir = os.path.join(filePath, "players")
+
+    # Convert to standard of OS
+    playersdir = os.path.realpath(playersdir)
+    return playersdir
+
+def getRegPlayers():
+    '''
+    uses the current python file as a path and modifies it
+    to find players folder. Players folder is parsed and
+    strings are recorded and placed into a list. At the end
+    it is gathered and sorted before returning the list.
+
+    :return: a list of strings showing files in "players" folder
+    '''
+    filePath = __file__
+
+    # Convert to standard of OS path string
+    filePath = os.path.realpath(filePath)
+
+    # Just get the folder
+    filePath = os.path.dirname(filePath)
+    filePath = os.path.realpath(filePath)
+
+    # Now get player directory from this relative path
+    playersdir = os.path.join(filePath, "players")
+
+    # Convert to standard of OS
+    playersdir = os.path.realpath(playersdir)
+
+    #Sort it before you return the files as a list of strings. Sort returns none btw
+    players = os.listdir(playersdir)
+    players.sort()
+
+    return players
 
 def playerExists(player) -> tuple:
     '''
@@ -94,25 +205,6 @@ def playerExists(player) -> tuple:
         exists = True
     return (exists, player_info)
 
-def add_player(username, remote_name) -> str:
-    '''
-    Commits a folder to remote_name. Remote VCS is
-    initialized before in a seperate function.
-    players dir is already defined outside scope
-    '''
-    user_exists, player_info = playerExists(username)
-    if username in os.listdir(playersdir):
-        return f"{username.title()} already registered..."
-    elif user_exists:
-        # Add username file to playersdir path
-        with open(os.path.join(playersdir, username), mode="w"):
-            print(multiple_cmd(f"cd \"{playersdir}\"", "git add .",
-                               f"git commit -m \"{date.today()} committed {username} via website\"",
-                               f"git push {remote_name} master"))
-            return f"Successfully registered {username.title()}!"
-    else:
-        return "Does not exist in Darkan..."
-
 def get_stats(player : str) -> dict:
     '''
     Meant for internal use.
@@ -139,7 +231,7 @@ def save_stats(stats : dict):
     :return: None
     '''
     #Opens a file in write mode, saving it as PLAYERNAME
-    directory = f"{playersdir}/{stats['name'].lower()}"
+    directory = f"{getPlayerDir()}/{stats['name'].lower()}"
     with open(directory, mode="a") as file:
         file.write(str(stats).replace("'", '"') + "\n") #JSON does not accept single quotes
 
@@ -209,7 +301,7 @@ def gather_all():
     '''
     Gathers all stat information for registered players
     '''
-    for player in reg_players:
+    for player in getRegPlayers():
         stat_record = get_stats(player) #Gets stat of the day and puts it in a record
         save_stats(stat_record) #save it into a file and append to it
 
@@ -218,7 +310,7 @@ def clean_stats():
     Deletes stats recorded on the same day for all players and deletes past 180 days.
     Maybe do this once a month. The delete after 180 days is unwritten.
     '''
-    for player in reg_players:
+    for player in getRegPlayers():
         #Create stats for outer scope, the cleaned_stats is the filtered list of {PLAYERDICT}s
         cleaned_stats = []
 
@@ -226,7 +318,7 @@ def clean_stats():
         newest_dict = {}
 
 
-        with open(f"{playersdir}/{player}", mode='r') as file:
+        with open(f"{getPlayerDir()}/{player}", mode='r') as file:
             #Open the file as a string "{PLAYERDICT} \n" over and over
             player_file = file.readlines()
             player_file
@@ -249,7 +341,7 @@ def clean_stats():
                 else:
                     cleaned_stats.append(newest_dict)
 
-        with open(f"{playersdir}/{player}", mode='w+') as file:
+        with open(f"{getPlayerDir()}/{player}", mode='w+') as file:
              for each in cleaned_stats:
                  #Remember load JSON does not accept single quotes, this one may be unnecessary
                  file.write(str(each).replace("'", '"')+"\n")
@@ -264,53 +356,9 @@ def sync_stats():
     sync_stats()
 
 
-def multiple_cmd(*cmds):
-    '''
-    Runs multiple commands in sub-process shell. Commands are seperated differently depending on OS.
-    If it is not windows it will default to a ";" seperator.
-
-    :param cmds: A tuple which is joined/combined into a string with a seperator
-    :return: output of shell
-    '''
-    command = ""
-    if "win" in os.sys.platform:
-        command = " & ".join(cmds)
-    else:
-        command = " ; ".join(cmds)
-
-    process = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
-    proc_stdout = process.communicate()[0].strip()
-    return proc_stdout
-
-#Version control automation
-def ensure_remote(url, remote_name):
-    '''
-    Ensures local repo, branch master and remote 'remote_name' exists
-    we need to pull AT THE START OF THE WEBSERVER ONLY TO UPDATE THE WEB
-    '''
-
-    #----Get current file path
-    gitPath = __file__
-    # Convert to standard of OS path string
-    gitPath = os.path.realpath(gitPath)
-    # Just get the folder, then the folder of the folder, go one up
-    gitPath = os.path.dirname(gitPath)
-    gitPath = os.path.dirname(gitPath)
-
-    #Convert to OS friendly
-    gitPath = os.path.realpath(gitPath)
-    #----
 
 
-    if remote_name in str(multiple_cmd(f"cd \"{gitPath}\"", "git remote")):
-        print(f"Remote {remote_name} exists, don't worry")
-    #CHANGE THIS TO PULL
-    else:
-        multiple_cmd(f"cd \"{gitPath}\"",
-                     "git init .",
-                     f"git remote add {remote_name} {url}",
-                     f"git pull github master")
-        print(f"Created remote {remote_name} and pulled from it!")
+
 
 if __name__ == "__main__":
     #clean_stats()
