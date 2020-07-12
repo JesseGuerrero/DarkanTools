@@ -36,8 +36,9 @@
         <tr>
             <td id="playerlist">
                 <div>Registered players</div>
-                jawarrior1<br>
-                Trent<br>
+                {% for each in player_list %}
+                {{ each.title() }}<br>
+                {% endfor %}
             </td>
             <td class="maincontent">
                 <div id = "Plot">

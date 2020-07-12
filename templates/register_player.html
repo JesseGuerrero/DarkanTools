@@ -36,8 +36,9 @@
         <tr>
             <td id="playerlist">
                 <div>Registered players</div>
-                jawarrior1<br>
-                Trent<br>
+                {% for each in player_list %}
+                {{ each.title() }}<br>
+                {% endfor %}
             </td>
             <td class = "maincontent">
                 <h2>Registration options</h2>
@@ -57,7 +58,6 @@
                   have a random amount of gp. There are plenty of things we can do in<br>
                   the future
                 </p>
-
                 <!-- <form name="verifyownership" method="GET">
                   <label for="claimaccount">Account name: </label>
                   <input class = "registration" type="text" placeholder="Username">
@@ -68,11 +68,11 @@
                   </p>
                 </form> -->
 
-                <form name="newplayer" method="GET">
+                <form name="newplayer" method="POST">
                   <label for="registration">Register a player:</label>
                   <input class = "registration" type="text" name="user_reg" placeholder="Username">
-
-                  <input class = "registration" type="submit" value="Submit"
+                  <input class = "registration" type="submit" value="Submit">
+                  <div class="specialnotice">{{ result }}</div>
                 </form>
             </td>
         </tr>

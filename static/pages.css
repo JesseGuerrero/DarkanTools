@@ -100,3 +100,9 @@ h1 img {
     margin-top: auto;
 }
 
+.specialnotice {
+    font-family: Arial;
+    font-size: .8em;
+    color: yellow;
+}
+

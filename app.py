@@ -21,14 +21,16 @@ def home():
     icon_list = os.listdir(icondir)
 
     shuffle(icon_list)
-    return render_template("index.html", icon = icon_list.pop())
+    return render_template("index.html", icon = icon_list.pop(), player_list = be.reg_players)
 
-@app.route('/register')
+@app.route('/register', methods=["GET", "POST"])
 def register():
     #First implementation with backend
-    new_player = None
+    reg_result = ""
     if request.method == "POST":
-        new_player = request.form['newplayer']
+        new_player = request.form['user_reg']
+        new_player = new_player.lower()
+        reg_result = be.add_player(new_player)
 
 
     icondir = os.path.dirname(__file__)
@@ -36,7 +38,7 @@ def register():
     icon_list = os.listdir(icondir)
 
     shuffle(icon_list)
-    return render_template("register_player.html", icon = icon_list.pop())
+    return render_template("register_player.html", icon = icon_list.pop(), player_list = be.reg_players, result = reg_result)
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support

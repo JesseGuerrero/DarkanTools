@@ -7,7 +7,8 @@ import json
 from time import sleep
 import requests
 from threading import Thread
-
+import subprocess
+import os
 
 #<----GET RELATIVE PATH TO PLAYERS---->
 
@@ -30,7 +31,7 @@ playersdir = os.path.realpath(playersdir)
 #<---- DONE ---->
 
 #Create Globals
-registered_players = os.listdir(playersdir)
+reg_players = os.listdir(playersdir)
 
 skill_ID = {"Attack": 0, "Defence": 1, "Strength": 2, "Hitpoints": 3, "Ranged": 4, "Prayer": 5,"Magic": 6,"Cooking": 7
     ,"Woodcutting": 8,"Fletching": 9,"Fishing": 10,"Firemaking": 11,"Crafting": 12,"Smithing": 13,"Mining": 14
@@ -50,6 +51,14 @@ class Stat():
     def getName(self): return self.name
     def getValue(self): return self.value
     def getDate(self): return self.timestamp
+
+def add_player(username) -> str:
+    if username in reg_players:
+        return f"{username.title()} already registered..."
+    else:
+        file = open(os.path.join(playersdir, username), mode="w")
+        file.close()
+        return f"Successfully registered {username.title()}!"
 
 def get_stats(player : str) -> dict:
     '''
@@ -167,7 +176,7 @@ def gather_all():
     '''
     Gathers all stat information for registered players
     '''
-    for player in registered_players:
+    for player in reg_players:
         stat_record = get_stats(player) #Gets stat of the day and puts it in a record
         save_stats(stat_record) #save it into a file and append to it
 
@@ -176,7 +185,7 @@ def clean_stats():
     Deletes stats recorded on the same day for all players and deletes past 180 days.
     Maybe do this once a month. The delete after 180 days is unwritten.
     '''
-    for player in registered_players:
+    for player in reg_players:
         #Create stats for outer scope, the cleaned_stats is the filtered list of {PLAYERDICT}s
         cleaned_stats = []
 
@@ -221,14 +230,79 @@ def sync_stats():
     sleep(60*60*24)
     sync_stats()
 
+
+def multiple_cmd(*cmds):
+    '''
+    Runs multiple commands in sub-process shell. Commands are seperated differently depending on OS.
+    If it is not windows it will default to a ";" seperator.
+
+    :param cmds: A tuple which is joined/combined into a string with a seperator
+    :return: output of shell
+    '''
+    command = ""
+    if "win" in os.sys.platform:
+        command = " & ".join(cmds)
+    else:
+        command = " ; ".join(cmds)
+
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
+    proc_stdout = process.communicate()[0].strip()
+    return proc_stdout
+
+#Version control automation
+def ensure_remote(url, remote_name):
+    '''
+    Ensures local repo, branch master and remote 'remote_name' exists
+    we need to pull AT THE START OF THE WEBSERVER ONLY TO UPDATE THE WEB
+    '''
+
+    #----Get current file path
+    gitPath = __file__
+    # Convert to standard of OS path string
+    gitPath = os.path.realpath(gitPath)
+    # Just get the folder, then the folder of the folder, go one up
+    gitPath = os.path.dirname(gitPath)
+    gitPath = os.path.dirname(gitPath)
+
+    #Convert to OS friendly
+    gitPath = os.path.realpath(gitPath)
+    #----
+
+
+    if remote_name in str(multiple_cmd(f"cd \"{gitPath}\"", "git remote")):
+        print(f"Remote {remote_name} exists, don't worry")
+    #CHANGE THIS TO PULL
+    else:
+        multiple_cmd(f"cd \"{gitPath}\"",
+                     "git init .",
+                     f"git commit -m \"local repo & remote created on server as {remote_name}!\"",
+                     f"git remote add {remote_name} {url}")
+        print(f"Created remote {remote_name}!")
+
+
+def commitplayers(remote_name, username):
+    '''
+    commits a folder to remote_name. REMOTE NAME IS ENSURED AT THE START
+    '''
+    if username in os.listdir("players"):
+        print("player already exists")
+    else:  # Commit player
+        subprocess.call("git add players", shell=True)
+        subprocess.call(f"git commit -m \"{username} was committed\"", shell=True)
+        subprocess.check_output(f"git push {remote_name} master", shell=True)
+        print("executed")
+
 if __name__ == "__main__":
     #clean_stats()
     #Gathers stats for all registered players
     gather_all()
 
-# if __name__ != "__main__":
+if __name__ != "__main__":
+    #Make sure there is a connection to remote github
+    ensure_remote("https://github.com/JesseGuerrero/link.git", "link")
+
     #Update stats everyday if we are out of focus, runs twice on a debug
-    #Thread(target=sync_stats).start()
+    Thread(target=sync_stats).start()
 
 
 
