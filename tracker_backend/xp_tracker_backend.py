@@ -10,6 +10,10 @@ from threading import Thread
 import subprocess
 import os
 
+#TODO: Create a logging system in a logs file(daily like before)
+#TODO: Create a player commit->PUSH system
+#TODO: Create a logs commit->PUSH system <-- You can delay and move to graphing though
+
 #<----GET RELATIVE PATH TO PLAYERS---->
 
 #Magic variable with file path string
