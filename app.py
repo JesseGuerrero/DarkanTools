@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 from tracker_backend import xp_tracker_backend as be
 
 #TODO: Create log system
+#TODO: Document more, implement a bit DRY
 
 #Extras
 from random import shuffle
@@ -20,7 +21,10 @@ def home():
     icon_list = os.listdir(icondir)
 
     shuffle(icon_list)
-    return render_template("home.html", icon = icon_list.pop(), player_list = be.getRegPlayers())
+
+
+    return render_template("home.html", icon = icon_list.pop(), player_list = be.getRegPlayers(),
+                           player_icons = be.populatePlayerIcons())
 
 @app.route('/tracker', methods=["GET", "POST"])
 def tracker():
@@ -29,7 +33,8 @@ def tracker():
     icondir = os.path.join(icondir, "static", "images", "icons")
     icon_list = os.listdir(icondir)
 
-    return render_template("tracker.html", icon = icon_list.pop(), player_list = be.getRegPlayers())
+    return render_template("tracker.html", icon = icon_list.pop(), player_list = be.getRegPlayers(),
+                           player_icons = be.populatePlayerIcons())
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
@@ -65,7 +70,7 @@ def register():
     shuffle(icon_list)
 
     return render_template("register_player.html", icon = icon_list.pop(), player_list = be.getRegPlayers(),
-                           result = reg_result, result2 = searched_player)
+                           result = reg_result, result2 = searched_player, player_icons = be.populatePlayerIcons())
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
@@ -74,18 +79,4 @@ if __name__ == '__main__':
         app.run(threaded=True, port=5000, debug = True)
     else:
         app.run(threaded=True, port=5000, debug=False)
-
-'''
-@app.route('/', methods=["GET", "POST"])
-def home():
-
-
-
-    player1 = ""
-    player2 = ""
-    if request.method == "POST":
-        player1 = request.form['player1_input']
-        player2 = request.form['player2_input']
-    return render_template("home.html", icon = icon_list.pop(), player1 = player1, player2 = player2)
-'''
 

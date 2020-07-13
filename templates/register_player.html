@@ -44,7 +44,7 @@
             <td id="playerlist">
                 <div>Top Weekly</div>
                 {% for each in player_list %}
-                {{ each.title() }}<br>
+                    <img src="{{ player_icons.pop(0) }}" class="player_icons">{{ each.title() }}<br>
                 {% endfor %}
             </td>
             <td class = "maincontent">

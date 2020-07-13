@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import os
 import json
 from time import sleep
@@ -101,6 +101,7 @@ class Stat():
     and left in a dead scope.
     '''
 
+    #TODO: Implement adding totalXP as 25th skill
     skill_ID = {"Attack": 0, "Defence": 1, "Strength": 2, "Hitpoints": 3, "Ranged": 4, "Prayer": 5, "Magic": 6,
                 "Cooking": 7, "Woodcutting": 8, "Fletching": 9, "Fishing": 10, "Firemaking": 11, "Crafting": 12,
                 "Smithing": 13, "Mining": 14, "Herblore": 15, "Agility": 16, "Thieving": 17, "Slayer": 18,
@@ -357,10 +358,12 @@ def clean_stats():
 def sync_stats():
     '''
     Syncronizes stats every 24 hours by calling gather game stats
-    then cleaning the data.
+    then cleaning the data. Lastly it will populate the day's
+    Top weekly
     '''
     gather_game_stats()
     clean_stats()
+    #setTopPlayers
     print("all stats updated & cleaned")
 
     #60 seconds * 60 minutes * 24 hours
@@ -375,6 +378,45 @@ def makeGraph():
 #---Graph Maker DONE
 
 #---Top Weekly
+
+def setTopPlayers():
+    '''
+    Sets top players for the week in the top_players file
+    '''
+    #TODO: Document previous work
+
+
+    #Will be used to hold total xp over the week, keyed by name
+    delta_week_all = {}
+
+    #Do this for all players
+    for player in getRegPlayers():
+        #Take out only totalxp for the lifetime of the player, remember its a list of Stat objs
+        player_stats = get_file_stats(player, "totalXp")
+
+        #Xp from week goes here, every day registered will be here
+        xpBuffer = []
+
+        #Retrieve individual stat_obj
+        for totalXp in player_stats:
+            #If date is after 7 days ago ignore
+            if totalXp.getDate() > (date.today() - timedelta(days=7)):
+                #Put the dates until 7 days ago in the buffer
+                xpBuffer.append(totalXp.getValue())
+
+        #Create new player key, we are still in the reg player loop,
+        #and substract last day of week by first day. Total difference is xp gained.
+        delta_week_all[player] = xpBuffer[-1]-xpBuffer[0]
+    #TODO: Organize delta week to top ten players and return a list of ten tuples of [(playername, XP), (), ...] index 0 top 9 last
+
+    #Organize the dictionary by top ten
+    for name, xp in delta_week_all.items():
+        pass
+
+    print(delta_week_all)
+
+    pass
+
 def getTopPlayers() -> list:
     '''
     Returns top 10 players of the week
@@ -383,15 +425,31 @@ def getTopPlayers() -> list:
     '''
     pass
 
+def populatePlayerIcons():
+    '''
+    Creates player tags for top 10 players. Perhaps create a tag
+    folder just for this purpose
+
+    :return: icon strings in a list. Try list of lists once we get into online and offline.
+    '''
+    icon_dir = "static/images/"
+
+    return [f"{icon_dir}goldtrophy.png", f"{icon_dir}silvertrophy.png", f"{icon_dir}bronzetrophy.png", "", "", "", "", "", "", ""]
 #---Top Weekly DONE
 
 
 if __name__ == "__main__":
-    #clean_stats()
-    #Gathers stats for all registered players
-    gather_game_stats()
+    '''
+    Used for testing new functions
+    '''
+    setTopPlayers()
+
+
 
 if __name__ != "__main__":
+    '''
+    Always run this when you import this module.
+    '''
     #Make sure there is a connection to remote github
     ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github")
 

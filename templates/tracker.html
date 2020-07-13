@@ -41,10 +41,11 @@
             <td id="playerlist">
                 <div>Top Weekly</div>
                 {% for each in player_list %}
-                {{ each.title() }}<br>
+                    <img src="{{ player_icons.pop(0) }}" class="player_icons">{{ each.title() }}<br>
                 {% endfor %}
             </td>
             <td class="maincontent">
+                <h2>XP Tracker</h2>
                 <div id = "Plot">
                   <form class="form-signin" method="POST" action="">
                     <div class="form-group">
