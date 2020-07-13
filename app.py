@@ -95,5 +95,5 @@ if __name__ == '__main__':
     if "win" in os.sys.platform:
         app.run(threaded=True, port=5000, debug = True)
     else:
-        app.run(threaded=True, port=5000, debug=False)
+        app.run(host = '0.0.0.0', threaded=True, port=80, debug=False)
 
