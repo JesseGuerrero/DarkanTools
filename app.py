@@ -1,18 +1,18 @@
 #Essentials
 from flask import Flask, render_template, request
+from random import shuffle
+import os
+
+#Custom Modules
 from tracker_backend import xp_tracker_backend as be
 
 #TODO: Create log system
 #TODO: Document more, implement a bit DRY
 
-#Extras
-from random import shuffle
-import os
-
 #The Flask object constructor takes arguments
 app = Flask(__name__)
 
-# A welcome message to test our server
+#Landing page
 @app.route('/', methods=["GET", "POST"])
 def home():
     #Unique PATH per OS
@@ -22,10 +22,12 @@ def home():
 
     shuffle(icon_list)
 
-
-    return render_template("home.html", icon = icon_list.pop(), player_list = be.getRegPlayers(),
+    #Create website oriented function section in backend. use each func ind at first, get rid of shuffle at each page.
+    #Do this for each
+    return render_template("home.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
                            player_icons = be.populatePlayerIcons())
 
+#XP Tracker(Graph not made, graphmaker.py)
 @app.route('/tracker', methods=["GET", "POST"])
 def tracker():
     #Unique PATH per OS
@@ -33,12 +35,13 @@ def tracker():
     icondir = os.path.join(icondir, "static", "images", "icons")
     icon_list = os.listdir(icondir)
 
-    return render_template("tracker.html", icon = icon_list.pop(), player_list = be.getRegPlayers(),
+    return render_template("tracker.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
                            player_icons = be.populatePlayerIcons())
 
+#A section for adding usernames
 @app.route('/register', methods=["GET", "POST"])
 def register():
-    #First implementation with backend
+    #Processes POSTS of registered player search and player registration
     reg_result = ""
     searched_player = ""
     if request.method == "POST":
@@ -53,7 +56,6 @@ def register():
 
             # reg_result is determined by the return of commit_player
             reg_result = be.commit_player(new_player, "github")
-
         try:
             searched_player = request.form['search_reg']
         except:
@@ -69,11 +71,18 @@ def register():
     icon_list = os.listdir(icondir)
     shuffle(icon_list)
 
-    return render_template("register_player.html", icon = icon_list.pop(), player_list = be.getRegPlayers(),
+    return render_template("register_player.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
                            result = reg_result, result2 = searched_player, player_icons = be.populatePlayerIcons())
 
+@app.route("/grandexchange")
+def grandexchange():
+    '''
+    Using API create a UI for GE
+    '''
+    return "grandexchange"
+
 if __name__ == '__main__':
-    # Threaded option to enable multiple instances for multiple user access support
+    #Threaded option to enable multiple instances for multiple user access support
     #If its windows, we are probably debugging at home.
     if "win" in os.sys.platform:
         app.run(threaded=True, port=5000, debug = True)

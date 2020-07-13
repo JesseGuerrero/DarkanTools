@@ -251,8 +251,7 @@ def get_file_stats(player : str, stat_ID : str, days = 90) -> list:
     current stat: parsed stat_dict
     :return: a list of Stat objects for the specified stat
     '''
-    directory = f"players/{player}"
-    with open(directory, mode="r") as file:
+    with open(f"{getPlayerDir()}/{player}", mode="r") as file:
         stats = []
 
         #readlines returns a list of lines/string dictionaries of each daily stat report
@@ -363,8 +362,9 @@ def sync_stats():
     '''
     gather_game_stats()
     clean_stats()
-    #setTopPlayers
-    print("all stats updated & cleaned")
+    setTopPlayers()
+
+    print("all stats updated & cleaned. Also did top weekly!")
 
     #60 seconds * 60 minutes * 24 hours
     sleep(60*60*24)
@@ -374,17 +374,14 @@ def sync_stats():
 #---Graph Maker
 def makeGraph():
     pass
-
 #---Graph Maker DONE
 
 #---Top Weekly
-
 def setTopPlayers():
     '''
     Sets top players for the week in the top_players file
     '''
     #TODO: Document previous work
-
 
     #Will be used to hold total xp over the week, keyed by name
     delta_week_all = {}
@@ -407,23 +404,65 @@ def setTopPlayers():
         #Create new player key, we are still in the reg player loop,
         #and substract last day of week by first day. Total difference is xp gained.
         delta_week_all[player] = xpBuffer[-1]-xpBuffer[0]
-    #TODO: Organize delta week to top ten players and return a list of ten tuples of [(playername, XP), (), ...] index 0 top 9 last
 
-    #Organize the dictionary by top ten
-    for name, xp in delta_week_all.items():
-        pass
+    #Get the folder above playerDir using os.path.dirname
+    with open(f"{os.path.dirname(getPlayerDir())}/top_players", mode = "w") as file:
+        #Stop at 10th player, i is counter
+        i = 0
 
-    print(delta_week_all)
+        # Organize the dictionary by top ten using keyword sorted
+        for w in sorted(delta_week_all, key=delta_week_all.get, reverse=True):
+            #Stop at 10th player
+            if i == 10:
+                break
 
-    pass
+            #Write each line then add to count
+            file.write(f"{w}, {delta_week_all[w]}\n")
+            i += 1
 
 def getTopPlayers() -> list:
     '''
-    Returns top 10 players of the week
+    Returns top 10 players of the week organized as a list of tuples.
+    If it runs out of players who have more than 0 xp then it adds
+    'No more XP registered' and exits the organization phase
 
-    :return:
+    :return: list of tuples [(PLAYER1, XP1), (PLAYER2, XP2), ..., (PLAYER10, XP10)]
     '''
-    pass
+    #unorganized list, organize list
+    unorg_players = []
+    org_players = []
+
+    #Start with unorganized: get a list of the top, [PLAYER1, XP1, PLAYER2, XP2, ...]
+    with open(f"{os.path.dirname(getPlayerDir())}/top_players", mode="r") as file:
+        unorg_players = file.read().split('\n')
+
+    #End with organized list as a list of tuples
+    for player in unorg_players:
+        #If its empty let it go
+        if player == '':
+            continue
+
+        #The line is "PLAYER1, XP1\n" as all strings so we split to interpret each as a list -> [P1, XP1]
+        interpreted_line = player.split(", ")
+
+        ranout_notice = "No more XP registered!"
+
+        #If they earned nothing let it go and end the top list. Split makes a list of the line
+        if interpreted_line[1] == '0':
+            org_players.append(ranout_notice)
+            break
+        #Turn the list to a tuple
+        else:
+            #if there is a ranout notice skip
+            if not ranout_notice in interpreted_line[1]:
+                #Format the xp string, but the format function requires a int cast.
+                xp = "{:,}".format(int(interpreted_line[1]))
+
+                #Create a tuple from list elements.
+                interpreted_line = (interpreted_line[0], xp)
+                org_players.append(interpreted_line)
+    #-Organize list DONE
+    return org_players
 
 def populatePlayerIcons():
     '''
@@ -437,12 +476,20 @@ def populatePlayerIcons():
     return [f"{icon_dir}goldtrophy.png", f"{icon_dir}silvertrophy.png", f"{icon_dir}bronzetrophy.png", "", "", "", "", "", "", ""]
 #---Top Weekly DONE
 
+#---Pure site oriented functions
+def randomTab():
+    '''
+    Returns a random icon image string for all page tabs
+    '''
+    pass
+
+#---Pure site oriented functions DONE
 
 if __name__ == "__main__":
     '''
     Used for testing new functions
     '''
-    setTopPlayers()
+    print(getTopPlayers())
 
 
 

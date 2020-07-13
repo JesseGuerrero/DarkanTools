@@ -43,8 +43,13 @@
         <tr>
             <td id="playerlist">
                 <div>Top Weekly</div>
-                {% for each in player_list %}
-                    <img src="{{ player_icons.pop(0) }}" class="player_icons">{{ each.title() }}<br>
+                {% for player in player_list %}
+                    {% if player == "No more XP registered!" %}
+                        <span style="font-style: italic; color: red">{{ player }}</span>
+                    {% else %}
+                        <img src="{{ player_icons.pop(0) }}" class="player_icons">
+                        <span style="text-decoration: underline;">{{ player[0].title() }}:</span> {{ player[1] }}<br>
+                    {% endif %}
                 {% endfor %}
             </td>
             <td class = "maincontent">
