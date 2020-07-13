@@ -3,11 +3,13 @@ from flask import Flask, render_template, request
 from random import shuffle
 import os
 
+#TODO: Finish XP Tracker then deploy. Then start on GE
+#TODO: Apply Dry to page functions
+
 #Custom Modules
 from tracker_backend import xp_tracker_backend as be
 
 #TODO: Create log system
-#TODO: Document more, implement a bit DRY
 
 #The Flask object constructor takes arguments
 app = Flask(__name__)
@@ -79,7 +81,13 @@ def grandexchange():
     '''
     Using API create a UI for GE
     '''
-    return "grandexchange"
+
+    icondir = os.path.dirname(__file__)
+    icondir = os.path.join(icondir, "static", "images", "icons")
+    icon_list = os.listdir(icondir)
+    shuffle(icon_list)
+    return render_template("grandexchange.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
+                           player_icons = be.populatePlayerIcons())
 
 if __name__ == '__main__':
     #Threaded option to enable multiple instances for multiple user access support
