@@ -244,7 +244,7 @@ def save_stats(stats : dict):
     with open(directory, mode="a") as file:
         file.write(str(stats).replace("'", '"') + "\n") #JSON does not accept single quotes
 
-def get_file_stats(player : str, stat_ID : str, days = 90) -> list:
+def get_file_stats(player : str, stat_ID : str, days = 7) -> list:
     '''
     stats: list of stats from oldest to newest top to bottom
     newest_dict: Current stat from top to bottom
@@ -290,10 +290,12 @@ def get_file_stats(player : str, stat_ID : str, days = 90) -> list:
                 break
 
             #Here we are adding stats to a list with conditions
-            if len(stats) is 0:
+            if newest_stat.timestamp < (date.today() - timedelta(days=days)):
+                #If our newest date was made after the past DAYS days
+                continue
+            elif len(stats) is 0:
                 # If stats is an empty list add to it
                 stats.append(newest_stat)
-
             elif newest_stat.timestamp <= stats[-1].timestamp or newest_stat is None:
                 '''
                 newest stat is the newest line of stats, the one below, as a Stat object. Stats[-1] is the previous or
@@ -487,7 +489,10 @@ def randomTab():
 
 if __name__ == "__main__":
     '''
-    Used for testing new functions
+    if we are running this file, it is usually for testing and debugging.
+    This won't run when imported as it would not be the __main__.
+    Remember, main is established as the first indentation of code, even 
+    in imports. This means all level 0 indentations run, even in imports.
     '''
     print(getTopPlayers())
 
@@ -495,13 +500,27 @@ if __name__ == "__main__":
 
 if __name__ != "__main__":
     '''
-    Always run this when you import this module.
+    When you run Python from this file __name__ becomes __main__ as a string
+    If you run this file from another module by importing it __name__ returns
+    a string of the module name.
+    
+    We can check for which file/module we are running from importing and 
+    using __main__. 
+    
+    Below we say if our primary Flask app, "app.py" us the __main__ or starting
+    file we then do specific actions. 
+    
+    Otherwise if it is not the "app.py" module do nothing.
     '''
-    #Make sure there is a connection to remote github
-    ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github")
+    import __main__
+    if 'app.py' in str(__main__):
+        # Make sure there is a connection to remote github
+        ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github")
 
-    #Update stats everyday if we are out of focus, runs twice on a debug
-    Thread(target=sync_stats).start()
+        # Update stats everyday if we are out of focus, runs twice on a debug
+        Thread(target=sync_stats).start()
+    else:
+        pass
 
 
 

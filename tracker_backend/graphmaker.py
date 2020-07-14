@@ -1,24 +1,24 @@
-from DarkanTools1.tracker_backend import xp_tracker_backend as be
+import xp_tracker_backend as be
 import matplotlib.pyplot as plt
-
+from datetime import date, timedelta
 
 if __name__ == "__main__":
-    test = be.get_file_stats("jawarrior1", "Attack")
 
-    # String dates
-    x_axis = ["06-08", "06-09", "06-10"]
+    #TODO: Annotate
+    def xpTracker(player, stat_name, days = 7):
+        x_axis = []
+        y_axis = []
+        stat_profile = be.get_file_stats(player, stat_name, days)
 
-    # Actual values
-    y_axis = [1, 2, 3]
+        for stat in stat_profile:
+            x_element = str(stat.getDate())[-5:]
+            x_axis.append(x_element)
 
-    plt.plot(x_axis, y_axis)
+            y_element = stat.getValue()
+            y_axis.append(y_element)
+        plt.plot(x_axis, y_axis)
+        plt.show()
 
-    plt.show()
-
-    # Assign annotation
-
-    for each in test:
-        each
+    xpTracker("garlic pork", "totalXp", 7)
 
 
-    # plot
