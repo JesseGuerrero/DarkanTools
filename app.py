@@ -5,6 +5,7 @@ import os
 
 #TODO: Finish XP Tracker then deploy. Then start on GE
 #TODO: Apply Dry to page functions
+#TODO: Add more players
 
 #Custom Modules
 from tracker_backend import xp_tracker_backend as be
