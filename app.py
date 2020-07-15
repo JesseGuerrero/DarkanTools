@@ -80,7 +80,10 @@ def register():
             new_player = new_player.lower()
 
             # reg_result is determined by the return of commit_player
-            reg_result = be.commit_player(new_player, "github")
+            if "win" in os.sys.platform:
+                reg_result = be.commit_player(new_player, "github", "windows")
+            else:
+                reg_result = be.commit_player(new_player, "github", "master")
         try:
             searched_player = request.form['search_reg']
         except:

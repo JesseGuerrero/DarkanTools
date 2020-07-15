@@ -65,7 +65,7 @@ def ensure_remote(url, remote_name):
                      f"git pull github master"))
         #print(f"Created remote {remote_name} and pulled from it!")
 
-def commit_player(username, remote_name) -> str:
+def commit_player(username, remote_name, branch) -> str:
     '''
     Commits a folder to remote_name. Remote VCS is
     initialized before in a seperate function.
@@ -84,21 +84,21 @@ def commit_player(username, remote_name) -> str:
         with open(os.path.join(getPlayerDir(), username), mode="w"):
             print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
                                f"git commit -m \"{date.today()} committed {username} via website\"",
-                               f"git push {remote_name} master"))
+                               f"git push {remote_name} {branch}"))
             return f"Successfully registered {username.title()}!"
     else:
         return f"{username.title()} does not exist in Darkan..."
 
 #push all players
-def push_all_players(remote_name="github"):
+def push_all_players(remote_name, branch):
     print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
                        f"git commit -m \"{date.today()} committed all players via website\"",
                        f"git push {remote_name} master"))
 
 #TODO: Needs to be annotated and more precise on directory.
-def pull_all(remote_name="github"):
+def pull_all(remote_name, branch):
     print(multiple_cmd(f"cd \"{getPlayerDir()}\"",
-                       f"git pull {remote_name} master"))
+                       f"git pull {remote_name} {branch}"))
 
 #VCS/Shell DONE----
 
