@@ -120,9 +120,10 @@ def commit_player(username, remote_name, branch) -> str:
 
 #push all files
 def push_all(remote_name, branch):
+    timenow = datetime.now().strftime("%H:%M:%S")
     print_log(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
-                       f"git commit -m \"{date.today()} committed all files via website\"",
-                       f"git push {remote_name} master"))
+                       f"git commit -m \"Committed all files via {remote_name} branch:{branch} internal at {timenow}\"",
+                       f"git push {remote_name} {branch}"))
 
 #TODO: Needs to be annotated and more precise on directory.
 # def pull_all(remote_name, branch):
