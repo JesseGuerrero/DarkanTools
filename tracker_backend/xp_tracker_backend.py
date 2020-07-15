@@ -28,10 +28,17 @@ def print_log(log : str):
     logdir = up(up(__file__))
     logdir = join(logdir, "logs")
 
-    with open(f'{logdir}/{date.today()}.log', 'a') as f:
-        stamp = datetime.now().strftime("%H:%M:%S")
-        print(f"{stamp}: {log}", file=f)
-    multiple_cmd(f"cd \"{logdir}\"", "git add .")
+    if "win" in os.sys.platform:
+        with open(f'windows-{logdir}/{date.today()}.log', 'a') as f:
+            stamp = datetime.now().strftime("%H:%M:%S")
+            print(f"{stamp}: {log}", file=f)
+        multiple_cmd(f"cd \"{logdir}\"", "git add .")
+    else:
+        with open(f'ubuntu-{logdir}/{date.today()}.log', 'a') as f:
+            stamp = datetime.now().strftime("%H:%M:%S")
+            print(f"{stamp}: {log}", file=f)
+        multiple_cmd(f"cd \"{logdir}\"", "git add .")
+
 
 #TODO: Annotate
 def setup_log():
