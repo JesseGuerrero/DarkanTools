@@ -20,6 +20,7 @@ app = Flask(__name__)
 #Removes caching -> removes hard resets.
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
+
 #Landing page
 @app.route('/', methods=["GET", "POST"])
 def home():
@@ -51,7 +52,6 @@ def tracker():
         stat_name = request.form['skill_input']
         days = request.form['days_input']
 
-        print(player1, player2, stat_name, days)
     #Changes the actual file.
     gm.xpTracker(stat_name, player1, player2, days)
 
