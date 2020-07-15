@@ -31,7 +31,7 @@ def print_log(log : str):
     with open(f'{logdir}/{date.today()}.log', 'a') as f:
         stamp = datetime.now().strftime("%H:%M:%S")
         print(f"{stamp}: {log}", file=f)
-    multiple_cmd(f"cd {logdir}", "git add .")
+    multiple_cmd(f"cd \"{logdir}\"", "git add .")
 
 #TODO: Annotate
 def setup_log():
@@ -458,7 +458,9 @@ def setTopPlayers():
 
         #Create new player key, we are still in the reg player loop,
         #and substract last day of week by first day. Total difference is xp gained.
-        delta_week_all[player] = xpBuffer[-1]-xpBuffer[0]
+        #Lastly make sure the player has more than 1 entry
+        if len(xpBuffer) > 1:
+            delta_week_all[player] = xpBuffer[-1]-xpBuffer[0]
 
     #Get the folder above playerDir using os.path.dirname
     with open(f"{os.path.dirname(getPlayerDir())}/top_players", mode = "w") as file:
