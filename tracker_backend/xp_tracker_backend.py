@@ -31,6 +31,7 @@ def print_log(log : str):
     with open(f'{logdir}/{date.today()}.log', 'a') as f:
         stamp = datetime.now().strftime("%H:%M:%S")
         print(f"{stamp}: {log}", file=f)
+    multiple_cmd(f"cd {logdir}", "git add .")
 
 #TODO: Annotate
 def setup_log():
