@@ -89,16 +89,16 @@ def commit_player(username, remote_name, branch) -> str:
     else:
         return f"{username.title()} does not exist in Darkan..."
 
-#push all players
-def push_all_players(remote_name, branch):
+#push all files
+def push_all(remote_name, branch):
     print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
                        f"git commit -m \"{date.today()} committed all players via website\"",
                        f"git push {remote_name} master"))
 
 #TODO: Needs to be annotated and more precise on directory.
-def pull_all(remote_name, branch):
-    print(multiple_cmd(f"cd \"{getPlayerDir()}\"",
-                       f"git pull {remote_name} {branch}"))
+# def pull_all(remote_name, branch):
+#     print(multiple_cmd(f"cd \"{getPlayerDir()}\"",
+#                        f"git pull {remote_name} {branch}"))
 
 #VCS/Shell DONE----
 
@@ -379,15 +379,15 @@ def sync_stats():
     Top weekly
     '''
     if "win" in os.sys.platform:
-        #pull_all()
         clean_stats()
         setTopPlayers()
+        push_all("github", "windows")
 
     if "win" not in os.sys.platform:
         gather_game_stats()
         clean_stats()
         setTopPlayers()
-        push_all_players()
+        push_all("github", "ubuntu")
 
 
     print("all stats updated & cleaned & players potentially pushed. Also did top weekly!")
