@@ -17,6 +17,9 @@ from tracker_backend import graphmaker as gm
 #The Flask object constructor takes arguments
 app = Flask(__name__)
 
+#Removes caching -> removes hard resets.
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
 #Landing page
 @app.route('/', methods=["GET", "POST"])
 def home():
