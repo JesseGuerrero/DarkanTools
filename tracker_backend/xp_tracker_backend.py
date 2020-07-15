@@ -1,11 +1,12 @@
-from datetime import date, datetime, timedelta
-import os
 import json
-from time import sleep
-import requests
-from threading import Thread
-import subprocess
 import os
+import subprocess
+from datetime import date, datetime, timedelta
+from threading import Thread
+from time import sleep
+
+import requests
+
 
 #TODO: Create a logging system in a logs file(daily like before)
 #TODO: Upgrade, debug player commit
@@ -58,11 +59,11 @@ def ensure_remote(url, remote_name):
         print(f"Remote {remote_name} exists, don't worry")
     #If github remote is not in local we need to make it and pull
     else:
-        multiple_cmd(f"cd \"{gitPath}\"",
+        print(multiple_cmd(f"cd \"{gitPath}\"",
                      "git init .",
                      f"git remote add {remote_name} {url}",
-                     f"git pull github master")
-        print(f"Created remote {remote_name} and pulled from it!")
+                     f"git pull github master"))
+        #print(f"Created remote {remote_name} and pulled from it!")
 
 def commit_player(username, remote_name) -> str:
     '''
@@ -106,7 +107,10 @@ class Stat():
                 "Cooking": 7, "Woodcutting": 8, "Fletching": 9, "Fishing": 10, "Firemaking": 11, "Crafting": 12,
                 "Smithing": 13, "Mining": 14, "Herblore": 15, "Agility": 16, "Thieving": 17, "Slayer": 18,
                 "Farming": 19, "Runecrafting": 20, "Hunter": 21, "Construction": 22, "Summoning": 23,
-                "Dungeoneering": 24}
+                "Dungeoneering": 24, "totalXp": 25}
+
+    #Reverses key and value
+    skill_Name = dict(map(reversed, skill_ID.items()))
 
     def __init__(self, name : str, value : int, timestamp : date):
         self.name = name
@@ -494,7 +498,9 @@ if __name__ == "__main__":
     Remember, main is established as the first indentation of code, even 
     in imports. This means all level 0 indentations run, even in imports.
     '''
-    print(getTopPlayers())
+
+
+    commit_player("jawarrior1", "github")
 
 
 

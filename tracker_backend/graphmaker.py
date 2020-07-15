@@ -1,15 +1,21 @@
-import xp_tracker_backend as be
 import matplotlib.pyplot as plt
 from datetime import date, timedelta
 from os.path import dirname as up
 from os.path import join, realpath
 from random import shuffle
 
+if __name__ != '__main__':
+    from . import xp_tracker_backend as be
+
 
 #TODO: Annotate
 def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
     #Static directory for the rest of the function. I used from imports to reduce size. It starts from this file
     staticDir = realpath(join(up(up(__file__)), "static"))
+
+    #Convert stat number from option menu to string and days to string
+    stat_name = be.Stat.skill_Name[int(stat_name)]
+    days = int(days)
 
     #Create axis lists
     x1_axis = []
@@ -138,6 +144,9 @@ def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
     #Go to the static folder and save the graph, make the face of the entire figure black with a little transparency
     plt.savefig(realpath(join(staticDir, 'graph.png')), facecolor=(0,0,0,.8))
 
-
+#Imports act different depending on where main is.
 if __name__ == '__main__':
-    xpTracker("totalXp", "jawarrior1", "garlic pork", 14)
+    import xp_tracker_backend as be
+
+    #The options menu gives a number from 0-25. With the Stat.skill_ID attribute we can convert string stats to ID
+    xpTracker(be.Stat.skill_ID["Attack"], "trent", "garlic pork", int(14))

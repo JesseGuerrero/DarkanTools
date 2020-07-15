@@ -55,15 +55,16 @@
                   <form class="form-signin" method="POST" action="">
                     <div class="form-group">
                       <label for="input_player" class="sr-only">Player 1: </label>
-                      <input style="border-radius: 0.25rem" type="text" id="input_player" name="player1_input" class="form-control" value = "{{ player1 }}" required autofocus>
+                      <input style="border-radius: 0.25rem" type="text" id="input_player" name="player1_input" class="form-control" value = "{{ player1 }}">
                       <br>
                       <label for="input_player" class="sr-only">Player 2: </label>
-                      <input style="border-radius: 0.25rem" type="text" id="input_player" name="player2_input" class="form-control" value = "{{ player2 }}" required autofocus>
+                      <input style="border-radius: 0.25rem" type="text" id="input_player" name="player2_input" class="form-control" value = "{{ player2 }}">
                       <br>
                          <label>Skill: </label>
 
 
                          <select id = "skill_selector" name="skill_input" class="skill-menu">
+                           <option value = "25">Total Xp</option>
                            <option value = "0">Attack</option>
                            <option value = "1">Defence</option>
                            <option value = "2">Strength</option>
@@ -104,7 +105,7 @@
                       </div>
                       <br>
                         <!-- you gotta use static -->
-                      <img src="tracker_backend/graph.png" alt="tracker graph">
+                      <img src="static/graph.png" alt="tracker graph">
                     </div>
                   </form>
                 </div>

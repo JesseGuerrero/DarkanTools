@@ -3,12 +3,14 @@ from flask import Flask, render_template, request
 from random import shuffle
 import os
 
+
 #TODO: Finish XP Tracker then deploy. Then start on GE
 #TODO: Apply Dry to page functions
 #TODO: Add more players
 
 #Custom Modules
 from tracker_backend import xp_tracker_backend as be
+from tracker_backend import graphmaker as gm
 
 #TODO: Create log system
 
@@ -33,6 +35,23 @@ def home():
 #XP Tracker(Graph not made, graphmaker.py)
 @app.route('/tracker', methods=["GET", "POST"])
 def tracker():
+    player1, player2, stat_name, days = None, None, None, None
+    if request.method == "POST":
+        try:
+            player1 = request.form['player1_input']
+        except:
+            player1 = ""
+        try:
+            player2 = request.form['player2_input']
+        except:
+            player2 = ""
+        stat_name = request.form['skill_input']
+        days = request.form['days_input']
+
+        print(player1, player2, stat_name, days)
+    #Changes the actual file.
+    gm.xpTracker(stat_name, player1, player2, days)
+
     #Unique PATH per OS
     icondir = os.path.dirname(__file__)
     icondir = os.path.join(icondir, "static", "images", "icons")
