@@ -63,7 +63,7 @@ def multiple_cmd(*cmds):
     proc_stdout = process.communicate()[0].strip()
     return "COMMAND: " + str(proc_stdout)
 
-def ensure_remote(url, remote_name):
+def ensure_remote(url, remote_name, branch):
     '''
     Ensures local repo, branch master and remote 'remote_name' exists
     if it does not then we create it and update the cloud to the github version.
@@ -91,7 +91,7 @@ def ensure_remote(url, remote_name):
         print_log(multiple_cmd(f"cd \"{gitPath}\"",
                      "git init .",
                      f"git remote add {remote_name} {url}",
-                     f"git pull github master"))
+                     f"git pull github {branch}"))
         #print(f"Created remote {remote_name} and pulled from it!")
 
 def commit_player(username, remote_name, branch) -> str:
@@ -567,7 +567,11 @@ if __name__ != "__main__":
     import __main__
     if 'app.py' in str(__main__):
         # Make sure there is a connection to remote github
-        ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github")
+        if "win" in os.sys.platform:
+            ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github", "windows")
+        #Ubuntu
+        else:
+            ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github", "ubuntu")
 
         # Update stats everyday if we are out of focus, runs twice on a debug
         Thread(target=sync_stats).start()
