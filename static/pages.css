@@ -109,6 +109,10 @@ h1 img {
     width: 30em;
 }
 
+.maincontent p + img {
+    width: 30em;
+}
+
 .specialnotice {
     font-family: Arial;
     font-size: .8em;
