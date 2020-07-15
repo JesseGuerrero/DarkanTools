@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 from datetime import date, timedelta
 from os.path import dirname as up
 from os.path import join, realpath
+import os
 from random import shuffle
 
 if __name__ != '__main__':
@@ -45,7 +46,10 @@ def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
     if p1 == False and p2 == False:
         try:
             #TODO: perhaps make 3 funny random error images
-            be.multiple_cmd(f"cd \"{staticDir}\"", "del graph.png", "copy tryagain.png graph.png")
+            if "win" in os.sys.platform:
+                be.multiple_cmd(f"cd \"{staticDir}\"", "del graph.png", "copy tryagain.png graph.png")
+            else:
+                be.multiple_cmd(f"cd \"{staticDir}\"", "rm graph.png", "cp tryagain.png graph.png")
         except:
             return
         else:
