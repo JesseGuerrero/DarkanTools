@@ -153,4 +153,4 @@ if __name__ == '__main__':
     import xp_tracker_backend as be
 
     #The options menu gives a number from 0-25. With the Stat.skill_ID attribute we can convert string stats to ID
-    xpTracker(be.Stat.skill_ID["Attack"], "trent", "garlic pork", int(14))
+    xpTracker(be.Stat.skill_ID["Attack"], "", "Garlic Pork", int(14))

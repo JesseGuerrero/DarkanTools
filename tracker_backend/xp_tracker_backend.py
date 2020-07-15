@@ -518,7 +518,8 @@ if __name__ == "__main__":
     Remember, main is established as the first indentation of code, even 
     in imports. This means all level 0 indentations run, even in imports.
     '''
-
+    # for each in (get_file_stats("gArlic pork", "Attack", 7)):
+    #     print(each)
 
 if __name__ != "__main__":
     '''

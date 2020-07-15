@@ -4,9 +4,9 @@ from random import shuffle
 import os
 
 
-#TODO: Finish XP Tracker then deploy. Then start on GE
+#TODO: Then start on GE
 #TODO: Apply Dry to page functions
-#TODO: Add more players
+#TODO: Check case sensitivity after next merge, Ubuntu was having issues
 
 #Custom Modules
 from tracker_backend import xp_tracker_backend as be
