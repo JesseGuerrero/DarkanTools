@@ -7,6 +7,8 @@ from time import sleep
 
 import requests
 
+from os.path import dirname as up
+from os.path import join, realpath
 
 #TODO: Create a logging system in a logs file(daily like before)
 #TODO: Upgrade, debug player commit
@@ -14,6 +16,32 @@ import requests
 #TODO: 3 place trophy icons in top weekly
 #TODO: Make top weekly
 #TODO: Annotate new register forms and register page func
+
+#Make everythin logged on Ubuntu
+import sys
+
+
+#--Log all updates
+
+#TODO: Annotate
+def print_log(log : str):
+    logdir = up(up(__file__))
+    logdir = join(logdir, "logs")
+
+    with open(f'{logdir}/{date.today()}.log', 'a') as f:
+        stamp = datetime.now().strftime("%H:%M:%S")
+        print(f"{stamp}: {log}", file=f)
+
+#TODO: Annotate
+def setup_log():
+    logdir = up(up(__file__))
+    logdir = join(logdir, "logs")
+    log_file = open(f'{logdir}/{date.today()}.log', 'a')
+    sys.stderr = log_file
+    sys.stdout = log_file
+
+
+#--Log all updates DONE
 
 #VCS/Shell Automation----
 def multiple_cmd(*cmds):
@@ -56,10 +84,10 @@ def ensure_remote(url, remote_name):
 
 
     if remote_name in str(multiple_cmd(f"cd \"{gitPath}\"", "git remote")):
-        print(f"Remote {remote_name} exists, don't worry")
+        print_log(f"Remote {remote_name} exists, don't worry")
     #If github remote is not in local we need to make it and pull
     else:
-        print(multiple_cmd(f"cd \"{gitPath}\"",
+        print_log(multiple_cmd(f"cd \"{gitPath}\"",
                      "git init .",
                      f"git remote add {remote_name} {url}",
                      f"git pull github master"))
@@ -82,7 +110,7 @@ def commit_player(username, remote_name, branch) -> str:
     elif user_exists:
         # Add username file to playersdir path
         with open(os.path.join(getPlayerDir(), username), mode="w"):
-            print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
+            print_log(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
                                f"git commit -m \"{date.today()} committed {username} via website\"",
                                f"git push {remote_name} {branch}"))
             return f"Successfully registered {username.title()}!"
@@ -91,8 +119,8 @@ def commit_player(username, remote_name, branch) -> str:
 
 #push all files
 def push_all(remote_name, branch):
-    print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
-                       f"git commit -m \"{date.today()} committed all players via website\"",
+    print_log(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
+                       f"git commit -m \"{date.today()} committed all files via website\"",
                        f"git push {remote_name} master"))
 
 #TODO: Needs to be annotated and more precise on directory.
@@ -220,10 +248,10 @@ def playerExists(player) -> tuple:
     try:
         player_info = player_info['stats'] #Remove everything else
     except:
-        print("Player not found")
+        print_log("Player not found")
         pass
     else:
-        print(f"{player} query success")
+        print_log(f"{player} query success")
         exists = True
     return (exists, player_info)
 #---Player assurance functions DONE
@@ -302,7 +330,7 @@ def get_file_stats(player : str, stat_ID : str, days = 7) -> list:
                 #Create stat
                 newest_stat = Stat(stat_name, xp_value, stamp)
             else:
-                print("Wrong stat name")
+                print_log("Wrong stat name")
                 break
 
             #Here we are adding stats to a list with conditions
@@ -390,7 +418,7 @@ def sync_stats():
         push_all("github", "ubuntu")
 
 
-    print("all stats updated & cleaned & players potentially pushed. Also did top weekly!")
+    print_log("all stats updated & cleaned & players potentially pushed. Also did top weekly!")
 
     #60 seconds * 60 minutes * 24 hours
     sleep(60*60*24)
@@ -518,8 +546,6 @@ if __name__ == "__main__":
     Remember, main is established as the first indentation of code, even 
     in imports. This means all level 0 indentations run, even in imports.
     '''
-    # for each in (get_file_stats("gArlic pork", "Attack", 7)):
-    #     print(each)
 
 if __name__ != "__main__":
     '''
