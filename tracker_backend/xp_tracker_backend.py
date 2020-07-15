@@ -32,7 +32,7 @@ def multiple_cmd(*cmds):
 
     process = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
     proc_stdout = process.communicate()[0].strip()
-    return proc_stdout
+    return "COMMAND: " + str(proc_stdout)
 
 def ensure_remote(url, remote_name):
     '''
@@ -88,6 +88,18 @@ def commit_player(username, remote_name) -> str:
             return f"Successfully registered {username.title()}!"
     else:
         return f"{username.title()} does not exist in Darkan..."
+
+#push all players
+def push_all_players(remote_name="github"):
+    print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
+                       f"git commit -m \"{date.today()} committed all players via website\"",
+                       f"git push {remote_name} master"))
+
+#TODO: Needs to be annotated and more precise on directory.
+def pull_all(remote_name="github"):
+    print(multiple_cmd(f"cd \"{getPlayerDir()}\"",
+                       f"git pull {remote_name} master"))
+
 #VCS/Shell DONE----
 
 #Create a Stat class
@@ -366,11 +378,19 @@ def sync_stats():
     then cleaning the data. Lastly it will populate the day's
     Top weekly
     '''
-    gather_game_stats()
-    clean_stats()
-    setTopPlayers()
+    if "win" in os.sys.platform:
+        #pull_all()
+        clean_stats()
+        setTopPlayers()
 
-    print("all stats updated & cleaned. Also did top weekly!")
+    if "win" not in os.sys.platform:
+        gather_game_stats()
+        clean_stats()
+        setTopPlayers()
+        push_all_players()
+
+
+    print("all stats updated & cleaned & players potentially pushed. Also did top weekly!")
 
     #60 seconds * 60 minutes * 24 hours
     sleep(60*60*24)
@@ -498,10 +518,6 @@ if __name__ == "__main__":
     Remember, main is established as the first indentation of code, even 
     in imports. This means all level 0 indentations run, even in imports.
     '''
-
-
-    commit_player("jawarrior1", "github")
-
 
 
 if __name__ != "__main__":

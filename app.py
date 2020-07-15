@@ -35,7 +35,7 @@ def home():
 #XP Tracker(Graph not made, graphmaker.py)
 @app.route('/tracker', methods=["GET", "POST"])
 def tracker():
-    player1, player2, stat_name, days = None, None, None, None
+    player1, player2, stat_name, days = "", "", 25, 7
     if request.method == "POST":
         try:
             player1 = request.form['player1_input']
