@@ -22,23 +22,40 @@ import sys
 
 
 #--Log all updates
-
-#TODO: Annotate
 def print_log(log : str):
+    '''
+    We are printing manually to a log. There will be an ubuntu log and a windows log.
+    At the end it is commited. A seperate version control function will automate it.
+    '''
+    #Start off printing for console
+    print(log)
+
+    #Setup directory for logs
     logdir = up(up(__file__))
     logdir = join(logdir, "logs")
 
+    #If its windows log in windows log with time stamp
     if "win" in os.sys.platform:
-        with open(f'windows-{logdir}/{date.today()}.log', 'a') as f:
+        #Specify log as windows in file name
+        with open(f'{logdir}/win_{date.today()}.log', 'a') as f:
+            #Get specific time
             stamp = datetime.now().strftime("%H:%M:%S")
-            print(f"{stamp}: {log}", file=f)
-        multiple_cmd(f"cd \"{logdir}\"", "git add .")
-    else:
-        with open(f'ubuntu-{logdir}/{date.today()}.log', 'a') as f:
-            stamp = datetime.now().strftime("%H:%M:%S")
-            print(f"{stamp}: {log}", file=f)
-        multiple_cmd(f"cd \"{logdir}\"", "git add .")
 
+            #The prints go to a file.
+            print(f"{stamp}-windows: {log}", file=f)
+
+        #Add log file for committing later
+        multiple_cmd(f"cd \"{logdir}\"", "git add .")
+    #Else it is ubuntu
+    else:
+        #Specify log as ubuntu in file name
+        with open(f'{logdir}/ubuntu_{date.today()}.log', 'a') as f:
+            #Get specific time
+            stamp = datetime.now().strftime("%H:%M:%S")
+            #Print goes to file
+            print(f"{stamp}-ubuntu: {log}", file=f)
+        #Add the log for committing
+        multiple_cmd(f"cd \"{logdir}\"", "git add .")
 
 #TODO: Annotate
 def setup_log():
@@ -47,8 +64,6 @@ def setup_log():
     log_file = open(f'{logdir}/{date.today()}.log', 'a')
     sys.stderr = log_file
     sys.stdout = log_file
-
-
 #--Log all updates DONE
 
 #VCS/Shell Automation----
@@ -90,20 +105,32 @@ def ensure_remote(url, remote_name, branch):
     gitPath = os.path.realpath(gitPath)
     #----
 
-
+    #Check if github is registered as remote
     if remote_name in str(multiple_cmd(f"cd \"{gitPath}\"", "git remote")):
-        print_log(f"Remote {remote_name} exists, don't worry")
-    #If github remote is not in local we need to make it and pull
+        print_log(f"Remote {remote_name} exists")
+    #If it is not then make it
     else:
         print_log(multiple_cmd(f"cd \"{gitPath}\"",
                      "git init .",
-                     f"git remote add {remote_name} {url}",
-                     f"git pull github {branch}"))
-        #print(f"Created remote {remote_name} and pulled from it!")
+                     f"git remote add {remote_name} {url}"))
+
+    #Check if branch is there, if it is not you cannot start the program without potentially losing info on wrong branch
+    if branch in str(multiple_cmd(f"cd \"{gitPath}\"", "git status")):
+        print_log(f"Git branch:{branch} is checked out, being used.")
+    else:
+        print_log(f"Created remote {remote_name}!\nYou need to UPDATE/CHECKOUT LOCAL with a relevant repo!!\n EXITING NOW")
+        exit()
+
+#TODO: WRITE THIS
+def push_players(remote_name, branch):
+    pass
+
+def push_logs(remote_name, branch):
+    pass
 
 def commit_player(username, remote_name, branch) -> str:
     '''
-    Commits a folder to remote_name. Remote VCS is
+    Commits a folder to branch. Remote VCS is
     initialized before in a seperate function.
     players dir is already defined outside scope
     '''
@@ -111,7 +138,7 @@ def commit_player(username, remote_name, branch) -> str:
     if username == "":
         return ""
 
-    user_exists, player_info = playerExists(username)
+    user_exists, player_info = playerAPIQuery(username)
 
     if username in getRegPlayers():
         return f"{username.title()} already registered..."
@@ -228,7 +255,7 @@ def getRegPlayers():
 
     return players
 
-def playerExists(player) -> tuple:
+def playerAPIQuery(player) -> tuple:
     '''
     Calls player from API and checks for error by accessing byte information.
     The GET request from HTTPS works even when there is no player. So we check
@@ -239,7 +266,7 @@ def playerExists(player) -> tuple:
     '''
     exists = False
     #=====----->The following was created with Postman
-    url = "https://darkan.org/api/player/" + player.replace(" ", "_")
+    url = "https://darkan.org/api/player/" + player.replace(" ", "_").lower()
 
     payload = {}
     headers= {}
@@ -273,7 +300,7 @@ def get_game_stats(player : str) -> dict:
     :param player: Insert a Darkan username as a string
     :return: Returns their stats from the Darkan API & adds a username key
     '''
-    user_exists, player_info = playerExists(player)
+    user_exists, player_info = playerAPIQuery(player)
 
     if user_exists:
         # Now we add meta data to the dict for future reference
@@ -418,13 +445,15 @@ def sync_stats():
     if "win" in os.sys.platform:
         clean_stats()
         setTopPlayers()
-        push_all("github", "windows")
+        push_logs("github", "ubuntu")
 
     if "win" not in os.sys.platform:
         gather_game_stats()
         clean_stats()
         setTopPlayers()
-        push_all("github", "ubuntu")
+        #Ubuntu will always be updated
+        push_players("github", "ubuntu")
+        push_logs("github", "ubuntu")
 
 
     print_log("all stats updated & cleaned & players potentially pushed. Also did top weekly!")
@@ -547,7 +576,6 @@ def randomTab():
     Returns a random icon image string for all page tabs
     '''
     pass
-
 #---Pure site oriented functions DONE
 
 if __name__ == "__main__":
@@ -557,6 +585,7 @@ if __name__ == "__main__":
     Remember, main is established as the first indentation of code, even 
     in imports. This means all level 0 indentations run, even in imports.
     '''
+    print(playerAPIQuery("Jawarrior1"))
 
 if __name__ != "__main__":
     '''

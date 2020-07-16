@@ -3,7 +3,6 @@ from flask import Flask, render_template, request
 from random import shuffle
 import os
 
-
 #TODO: Then start on GE
 #TODO: Apply Dry to page functions
 #TODO: Check case sensitivity after next merge, Ubuntu was having issues
@@ -123,3 +122,7 @@ if __name__ == '__main__':
     else:
         app.run(host = '0.0.0.0', port=80, threaded=True, debug=False)
 
+import atexit
+def todotest():
+    print("TOYOYL")
+atexit.register(todotest)
