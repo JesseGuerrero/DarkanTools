@@ -5,4 +5,233 @@
 00:10:53:    WARNING: This is a development server. Do not use it in a production deployment.
 00:10:53:    Use a production WSGI server instead.
 00:10:53:  * Debug mode: off
-00:10:55: COMMAND: b"On branch windows\nYour branch is up to date with 'github/windows'.\n\nChanges not staged for commit:\n\tmodified:   ../app.py\n\tmodified:   ../tracker_backend/__pycache__/graphmaker.cpython-37.pyc\n\tmodified:   ../tracker_backend/__pycache__/xp_tracker_backend.cpython-37.pyc\n\tmodified:   ../tracker_backend/graphmaker.py\n\tmodified:   ../tracker_backend/players/Adtukz\n\tmodified:   ../tracker_backend/players/Ady\n\tmodified:   ../tracker_backend/players/Alethros\n\tmodified:   ../tracker_backend/players/Alxx2020\n\tmodified:   ../tracker_backend/players/Ancient\n\tmodified:   ../tracker_backend/players/Arc En Ciel\n\tmodified:   ../tracker_backend/players/Asia\n\tmodified:   ../tracker_backend/players/Aubery\n\tmodified:   ../tracker_backend/players/Aubury\n\tmodified:   ../tracker_backend/players/Baby Deezus\n\tmodified:   ../tracker_backend/players/Big Mac\n\tmodified:   ../tracker_backend/players/Biskybiscuit\n\tmodified:   ../tracker_backend/players/Black Knight\n\tmodified:   ../tracker_backend/players/Blazerlord\n\tmodified:   ../tracker_backend/players/Boe\n\tmodified:   ../tracker_backend/players/Box\n\tmodified:   ../tracker_backend/players/Brad\n\tmodified:   ../tracker_backend/players/Brrs\n\tmodified:   ../tracker_backend/players/Carrot\n\tmodified:   ../tracker_backend/players/Castlewars\n\tmodified:   ../tracker_backend/players/Caviel\n\tmodified:   ../tracker_backend/players/Chbachman\n\tmodified:   ../tracker_backend/players/Christopher\n\tmodified:   ../tracker_backend/players/Clickeddaisy\n\tmodified:   ../tracker_backend/players/Coconut Dan\n\tmodified:   ../tracker_backend/players/Cokecane\n\tmodified:   ../tracker_backend/players/Coolcon12\n\tmodified:   ../tracker_backend/players/Coordinates\n\tmodified:   ../tracker_backend/players/Cringe Kid\n\tmodified:   ../tracker_backend/players/Crow\n\tmodified:   ../tracker_backend/players/Crown\n\tmodified:   ../tracker_backend/players/Crusader\n\tmodified:   ../tracker_backend/players/Cryptonote\n\tmodified:   ../tracker_backend/players/Dark Drift7\n\tmodified:   ../tracker_backend/players/Dbag Magee\n\tmodified:   ../tracker_backend/players/Deadly Were\n\tmodified:   ../tracker_backend/players/Deadlywere\n\tmodified:   ../tracker_backend/players/Death Wish\n\tmodified:   ../tracker_backend/players/Deathstriger\n\tmodified:   ../tracker_backend/players/Delb\n\tmodified:   ../tracker_backend/players/Diskid\n\tmodified:   ../tracker_backend/players/Dispvm\n\tmodified:   ../tracker_backend/players/Disskill\n\tmodified:   ../tracker_backend/players/Dlainee 900\n\tmodified:   ../tracker_backend/players/Dmcg\n\tmodified:   ../tracker_backend/players/Dot Net\n\tmodified:   ../tracker_backend/players/Dreadknight\n\tmodified:   ../tracker_backend/players/Duration\n\tmodified:   ../tracker_backend/players/Duration2\n\tmodified:   ../tracker_backend/players/Edgelord360\n\tmodified:   ../tracker_backend/players/Edgelord420\n\tmodified:   ../tracker_backend/players/Edgelord69\n\tmodified:   ../tracker_backend/players/Ekiph\n\tmodified:   ../tracker_backend/players/Esmerelda\n\tmodified:   ../tracker_backend/players/Eventest\n\tmodified:   ../tracker_backend/players/Fkingalt\n\tmodified:   ../tracker_backend/players/Fkingloot\n\tmodified:   ../tracker_backend/players/Fkingmain\n\tmodified:   ../tracker_backend/players/Flamie\n\tmodified:   ../tracker_backend/players/Flan\n\tmodified:   ../tracker_backend/players/Fletching\n\tmodified:   ../tracker_backend/players/Freeziepop\n\tmodified:   ../tracker_backend/players/Gamer4life\n\tmodified:   ../tracker_backend/players/Garlic Fork\n\tmodified:   ../tracker_backend/players/Gex546\n\tmodified:   ../tracker_backend/players/Gexskills\n\tmodified:   ../tracker_backend/players/Goldenag\n\tmodified:   ../tracker_backend/players/Grimoire\n\tmodified:   ../tracker_backend/players/Grizzly\n\tmodified:   ../tracker_backend/players/Guine\n\tmodified:   ../tracker_backend/players/Handcrafted\n\tmodified:   ../tracker_backend/players/Heat\n\tmodified:   ../tracker_backend/players/Herieman\n\tmodified:   ../tracker_backend/players/Highkeyloki\n\tmodified:   ../tracker_backend/players/Hitler\n\tmodified:   ../tracker_backend/players/Honestly\n\tmodified:   ../tracker_backend/players/Hwguy\n\tmodified:   ../tracker_backend/players/Ian\n\tmodified:   ../tracker_backend/players/Ibt\n\tmodified:   ../tracker_backend/players/Ikrim\n\tmodified:   ../tracker_backend/players/Ill\n\tmodified:   ../tracker_backend/players/Illusion\n\tmodified:   ../tracker_backend/players/Incognito\n\tmodified:   ../tracker_backend/players/Inori\n\tmodified:   ../tracker_backend/players/Invalid\n\tmodified:   ../tracker_backend/players/Iron Arm\n\tmodified:   ../tracker_backend/players/Ironic\n\tmodified:   ../tracker_backend/players/Jarno45\n\tmodified:   ../tracker_backend/players/Javin\n\tmodified:   ../tracker_backend/players/Jeton\n\tmodified:   ../tracker_backend/players/Jigglebox\n\tmodified:   ../tracker_backend/players/Jingles\n\tmodified:   ../tracker_backend/players/Jonny Jonny\n\tmodified:   ../tracker_backend/players/Juice Fruit\n\tmodified:   ../tracker_backend/players/Justin\n\tmodified:   ../tracker_backend/players/Kakarot\n\tmodified:   ../tracker_backend/players/Kale\n\tmodified:   ../tracker_backend/players/Kalem\n\tmodified:   ../tracker_backend/players/Kestlen\n\tmodified:   ../tracker_backend/players/Kijani\n\tmodified:   ../tracker_backend/players/Killing\n\tmodified:   ../tracker_backend/players/Krethis\n\tmodified:   ../tracker_backend/players/Kunark\n\tmodified:   ../tracker_backend/players/Kurt\n\tmodified:   ../tracker_backend/players/Lazy Celeste\n\tmodified:   ../tracker_backend/players/Ledsy\n\tmodified:   ../tracker_backend/players/Lende\n\tmodified:   ../tracker_backend/players/Lestic\n\tmodified:   ../tracker_backend/players/Lowkeyloki\n\tmodified:   ../tracker_backend/players/Mag\n\tmodified:   ../tracker_backend/players/Mageballer43\n\tmodified:   ../tracker_backend/players/Maxed\n\tmodified:   ../tracker_backend/players/Medic\n\tmodified:   ../tracker_backend/players/Megastary\n\tmodified:   ../tracker_backend/players/Miguel\n\tmodified:   ../tracker_backend/players/Mitosk\n\tmodified:   ../tracker_backend/players/Mo\n\tmodified:   ../tracker_backend/players/Monero\n\tmodified:   ../tracker_backend/players/Mystic\n\tmodified:   ../tracker_backend/players/Mysticpoisen\n\tmodified:   ../tracker_backend/players/Myth Scape\n\tmodified:   ../tracker_backend/players/N F\n\tmodified:   ../tracker_backend/players/Neckromancer\n\tmodified:   ../tracker_backend/players/Nex\n\tmodified:   ../tracker_backend/players/Niftu Cal\n\tmodified:   ../tracker_backend/players/Nl\n\tmodified:   ../tracker_backend/players/Noisycork\n\tmodified:   ../tracker_backend/players/Notlead\n\tmodified:   ../tracker_backend/players/Nullopt\n\tmodified:   ../tracker_backend/players/Nurnkiller\n\tmodified:   ../tracker_backend/players/Obarner\n\tmodified:   ../tracker_backend/players/Ojoib\n\tmodified:   ../tracker_backend/players/Ollie12345\n\tmodified:   ../tracker_backend/players/Omu Dung\n\tmodified:   ../tracker_backend/players/Omu U\n\tmodified:   ../tracker_backend/players/One\n\tmodified:   ../tracker_backend/players/Onox\n\tmodified:   ../tracker_backend/players/Pally\n\tmodified:   ../tracker_backend/players/Parenthetic\n\tmodified:   ../tracker_backend/players/Perkele\n\tmodified:   ../tracker_backend/players/Pew\n\tmodified:   ../tracker_backend/players/Pew Il\n\tmodified:   ../tracker_backend/players/Piscies\n\tmodified:   ../tracker_backend/players/Pixel Parade\n\tmodified:   ../tracker_backend/players/Pker 0wns\n\tmodified:   ../tracker_backend/players/Poltergeist\n\tmodified:   ../tracker_backend/players/Pr0mast3r\n\tmodified:   ../tracker_backend/players/Rain\n\tmodified:   ../tracker_backend/players/Ray\n\tmodified:   ../tracker_backend/players/Razi\n\tmodified:   ../tracker_backend/players/Relaytam12\n\tmodified:   ../tracker_backend/players/Reloadz\n\tmodified:   ../tracker_backend/players/Retro\n\tmodified:   ../tracker_backend/players/Rias Gremory\n\tmodified:   ../tracker_backend/players/Ricky\n\tmodified:   ../tracker_backend/players/Robotic01\n\tmodified:   ../tracker_backend/players/Roe\n\tmodified:   ../tracker_backend/players/Roflmfao\n\tmodified:   ../tracker_backend/players/Rowdyy\n\tmodified:   ../tracker_backend/players/Rsbot\n\tmodified:   ../tracker_backend/players/Rusted\n\tmodified:   ../tracker_backend/players/Sam Roberts\n\tmodified:   ../tracker_backend/players/Saradomin\n\tmodified:   ../tracker_backend/players/Savy\n\tmodified:   ../tracker_backend/players/Scrim\n\tmodified:   ../tracker_backend/players/Scrumpy\n\tmodified:   ../tracker_backend/players/Seawolf\n\tmodified:   ../tracker_backend/players/Seis\n\tmodified:   ../tracker_backend/players/Sheldy\n\tmodified:   ../tracker_backend/players/Sincerely\n\tmodified:   ../tracker_backend/players/Skillsy\n\tmodified:   ../tracker_backend/players/Slimsharkie\n\tmodified:   ../tracker_backend/players/Slyjacob\n\tmodified:   ../tracker_backend/players/Slyjacob1\n\tmodified:   ../tracker_backend/players/Snortwindex\n\tmodified:   ../tracker_backend/players/Stephenb1992\n\tmodified:   ../tracker_backend/players/Stephenb92\n\tmodified:   ../tracker_backend/players/Steven\n\tmodified:   ../tracker_backend/players/Sticky\n\tmodified:   ../tracker_backend/players/Sugarmama\n\tmodified:   ../tracker_backend/players/Surdok\n\tmodified:   ../tracker_backend/players/T Tex8\n\tmodified:   ../tracker_backend/players/Tasman 3\n\tmodified:   ../tracker_backend/players/Tbi\n\tmodified:   ../tracker_backend/players/Thetracker3\n\tmodified:   ../tracker_backend/players/Thispot\n\tmodified:   ../tracker_backend/players/Torbjorn\n\tmodified:   ../tracker_backend/players/Trenton\n\tmodified:   ../tracker_backend/players/Virus64\n\tmodified:   ../tracker_backend/players/Volcarona\n\tmodified:   ../tracker_backend/players/Warhorse\n\tmodified:   ../tracker_backend/players/X M A\n\tmodified:   ../tracker_backend/players/X Turtle X\n\tmodified:   ../tracker_backend/players/Xblade 20\n\tmodified:   ../tracker_backend/players/Xexani\n\tmodified:   ../tracker_backend/players/Xie\n\tmodified:   ../tracker_backend/players/Yim\n\tmodified:   ../tracker_backend/players/Yung Schniff\n\tmodified:   ../tracker_backend/players/Zee Meeuw\n\tmodified:   ../tracker_backend/players/Zemouregal\n\tmodified:   ../tracker_backend/players/Zero\n\tmodified:   ../tracker_backend/players/Zeus\n\tmodified:   ../tracker_backend/xp_tracker_backend.py\n\nno changes added to commit"
+00:10:55: COMMAND: b"On branch windows\nYour branch is up to date with 'github/windows'.\n\nChanges not staged for commit:\n\tmodified:   ../app.py\n\tmodified:   ../tracker_backend/__pycache__/graphmaker.cpython-37.pyc\n\tmodified:   ../tracker_backend/__pycache__/xp_tracker_backend.cpython-37.pyc\n\tmodified:   ../tracker_backend/graphmaker.py\n\tmodified:   ../tracker_backend/players/Adtukz\n\tmodified:   ../tracker_backend/players/Ady\n\tmodified:   ../tracker_backend/players/Alethros\n\tmodified:   ../tracker_backend/players/Alxx2020\n\tmodified:   ../tracker_backend/players/Ancient\n\tmodified:   ../tracker_backend/players/Arc En Ciel\n\tmodified:   ../tracker_backend/players/Asia\n\tmodified:   ../tracker_backend/players/Aubery\n\tmodified:   ../tracker_backend/players/Aubury\n\tmodified:   ../tracker_backend/players/Baby Deezus\n\tmodified:   ../tracker_backend/players/Big Mac\n\tmodified:   ../tracker_backend/players/Biskybiscuit\n\tmodified:   ../tracker_backend/players/Black Knight\n\tmodified:   ../tracker_backend/players/Blazerlord\n\tmodified:   ../tracker_backend/players/Boe\n\tmodified:   ../tracker_backend/players/Box\n\tmodified:   ../tracker_backend/players/Brad\n\tmodified:   ../tracker_backend/players/Brrs\n\tmodified:   ../tracker_backend/players/Carrot\n\tmodified:   ../tracker_backend/players/Castlewars\n\tmodified:   ../tracker_backend/players/Caviel\n\tmodified:   ../tracker_backend/players/Chbachman\n\tmodified:   ../tracker_backend/players/Christopher\n\tmodified:   ../tracker_backend/players/Clickeddaisy\n\tmodified:   ../tracker_backend/players/Coconut Dan\n\tmodified:   ../tracker_backend/players/Cokecane\n\tmodified:   ../tracker_backend/players/Coolcon12\n\tmodified:   ../tracker_backend/players/Coordinates\n\tmodified:   ../tracker_backend/players/Cringe Kid\n\tmodified:   ../tracker_backend/players/Crow\n\tmodified:   ../tracker_backend/players/Crown\n\tmodified:   ../tracker_backend/players/Crusader\n\tmodified:   ../tracker_backend/players/Cryptonote\n\tmodified:   ../tracker_backend/players/Dark Drift7\n\tmodified:   ../tracker_backend/players/Dbag Magee\n\tmodified:   ../tracker_backend/players/Deadly Were\n\tmodified:   ../tracker_backend/players/Deadlywere\n\tmodified:   ../tracker_backend/players/Death Wish\n\tmodified:   ../tracker_backend/players/Deathstriger\n\tmodified:   ../tracker_backend/players/Delb\n\tmodified:   ../tracker_backend/players/Diskid\n\tmodified:   ../tracker_backend/players/Dispvm\n\tmodified:   ../tracker_backend/players/Disskill\n\tmodified:   ../tracker_backend/players/Dlainee 900\n\tmodified:   ../tracker_backend/players/Dmcg\n\tmodified:   ../tracker_backend/players/Dot Net\n\tmodified:   ../tracker_backend/players/Dreadknight\n\tmodified:   ../tracker_backend/players/Duration\n\tmodified:   ../tracker_backend/players/Duration2\n\tmodified:   ../tracker_backend/players/Edgelord360\n\tmodified:   ../tracker_backend/players/Edgelord420\n\tmodified:   ../tracker_backend/players/Edgelord69\n\tmodified:   ../tracker_backend/players/Ekiph\n\tmodified:   ../tracker_backend/players/Esmerelda\n\tmodified:   ../tracker_backend/players/Eventest\n\tmodified:   ../tracker_backend/players/Fkingalt\n\tmodified:   ../tracker_backend/players/Fkingloot\n\tmodified:   ../tracker_backend/players/Fkingmain\n\tmodified:   ../tracker_backend/players/Flamie\n\tmodified:   ../tracker_backend/players/Flan\n\tmodified:   ../tracker_backend/players/Fletching\n\tmodified:   ../tracker_backend/players/Freeziepop\n\tmodified:   ../tracker_backend/players/Gamer4life\n\tmodified:   ../tracker_backend/players/Garlic Fork\n\tmodified:   ../tracker_backend/players/Gex546\n\tmodified:   ../tracker_backend/players/Gexskills\n\tmodified:   ../tracker_backend/players/Goldenag\n\tmodified:   ../tracker_backend/players/Grimoire\n\tmodified:   ../tracker_backend/players/Grizzly\n\tmodified:   ../tracker_backend/players/Guine\n\tmodified:   ../tracker_backend/players/Handcrafted\n\tmodified:   ../tracker_backend/players/Heat\n\tmodified:   ../tracker_backend/players/Herieman\n\tmodified:   ../tracker_backend/players/Highkeyloki\n\tmodified:   ../tracker_backend/players/Hitler\n\tmodified:   ../tracker_backend/players/Honestly\n\tmodified:   ../tracker_backend/players/Hwguy\n\tmodified:   ../tracker_backend/players/Ian\n\tmodified:   ../tracker_backend/players/Ibt\n\tmodified:   ../tracker_backend/players/Ikrim\n\tmodified:   ../tracker_backend/players/Ill\n\tmodified:   ../tracker_backend/players/Illusion\n\tmodified:   ../tracker_backend/players/Incognito\n\tmodified:   ../tracker_backend/players/Inori\n\tmodified:   ../tracker_backend/players/Invalid\n\tmodified:   ../tracker_backend/players/Iron Arm\n\tmodified:   ../tracker_backend/players/Ironic\n\tmodified:   ../tracker_backend/players/Jarno45\n\tmodified:   ../tracker_backend/players/Javin\n\tmodified:   ../tracker_backend/players/Jeton\n\tmodified:   ../tracker_backend/players/Jigglebox\n\tmodified:   ../tracker_backend/players/Jingles\n\tmodified:   ../tracker_backend/players/Jonny Jonny\n\tmodified:   ../tracker_backend/players/Juice Fruit\n\tmodified:   ../tracker_backend/players/Justin\n\tmodified:   ../tracker_backend/players/Kakarot\n\tmodified:   ../tracker_backend/players/Kale\n\tmodified:   ../tracker_backend/players/Kalem\n\tmodified:   ../tracker_backend/players/Kestlen\n\tmodified:   ../tracker_backend/players/Kijani\n\tmodified:   ../tracker_backend/players/Killing\n\tmodified:   ../tracker_backend/players/Krethis\n\tmodified:   ../tracker_backend/players/Kunark\n\tmodified:   ../tracker_backend/players/Kurt\n\tmodified:   ../tracker_backend/players/Lazy Celeste\n\tmodified:   ../tracker_backend/players/Ledsy\n\tmodified:   ../tracker_backend/players/Lende\n\tmodified:   ../tracker_backend/players/Lestic\n\tmodified:   ../tracker_backend/players/Lowkeyloki\n\tmodified:   ../tracker_backend/players/Mag\n\tmodified:   ../tracker_backend/players/Mageballer43\n\tmodified:   ../tracker_backend/players/Maxed\n\tmodified:   ../tracker_backend/players/Medic\n\tmodified:   ../tracker_backend/players/Megastary\n\tmodified:   ../tracker_backend/players/Miguel\n\tmodified:   ../tracker_backend/players/Mitosk\n\tmodified:   ../tracker_backend/players/Mo\n\tmodified:   ../tracker_backend/players/Monero\n\tmodified:   ../tracker_backend/players/Mystic\n\tmodified:   ../tracker_backend/players/Mysticpoisen\n\tmodified:   ../tracker_backend/players/Myth Scape\n\tmodified:   ../tracker_backend/players/N F\n\tmodified:   ../tracker_backend/players/Neckromancer\n\tmodified:   ../tracker_backend/players/Nex\n\tmodified:   ../tracker_backend/players/Niftu Cal\n\tmodified:   ../tracker_backend/players/Nl\n\tmodified:   ../tracker_backend/players/Noisycork\n\tmodified:   ../tracker_backend/players/Notlead\n\tmodified:   ../tracker_backend/players/Nullopt\n\tmodified:   ../tracker_backend/players/Nurnkiller\n\tmodified:   ../tracker_backend/players/Obarner\n\tmodified:   ../tracker_backend/players/Ojoib\n\tmodified:   ../tracker_backend/players/Ollie12345\n\tmodified:   ../tracker_backend/players/Omu Dung\n\tmodified:   ../tracker_backend/players/Omu U\n\tmodified:   ../tracker_backend/players/One\n\tmodified:   ../tracker_backend/players/Onox\n\tmodified:   ../tracker_backend/players/Pally\n\tmodified:   ../tracker_backend/players/Parenthetic\n\tmodified:   ../tracker_backend/players/Perkele\n\tmodified:   ../tracker_backend/players/Pew\n\tmodified:   ../tracker_backend/players/Pew Il\n\tmodified:   ../tracker_backend/players/Piscies\n\tmodified:   ../tracker_backend/players/Pixel Parade\n\tmodified:   ../tracker_backend/players/Pker 0wns\n\tmodified:   ../tracker_backend/players/Poltergeist\n\tmodified:   ../tracker_backend/players/Pr0mast3r\n\tmodified:   ../tracker_backend/players/Rain\n\tmodified:   ../tracker_backend/players/Ray\n\tmodified:   ../tracker_backend/players/Razi\n\tmodified:   ../tracker_backend/players/Relaytam12\n\tmodified:   ../tracker_backend/players/Reloadz\n\tmodified:   ../tracker_backend/players/Retro\n\tmodified:   ../tracker_backend/players/Rias Gremory\n\tmodified:   ../tracker_backend/players/Ricky\n\tmodified:   ../tracker_backend/players/Robotic01\n\tmodified:   ../tracker_backend/players/Roe\n\tmodified:   ../tracker_backend/players/Roflmfao\n\tmodified:   ../tracker_backend/players/Rowdyy\n\tmodified:   ../tracker_backend/players/Rsbot\n\tmodified:   ../tracker_backend/players/Rusted\n\tmodified:   ../tracker_backend/players/Sam Roberts\n\tmodified:   ../tracker_backend/players/Saradomin\n\tmodified:   ../tracker_backend/players/Savy\n\tmodified:   ../tracker_backend/players/Scrim\n\tmodified:   ../tracker_backend/players/Scrumpy\n\tmodified:   ../tracker_backend/players/Seawolf\n\tmodified:   ../tracker_backend/players/Seis\n\tmodified:   ../tracker_backend/players/Sheldy\n\tmodified:   ../tracker_backend/players/Sincerely\n\tmodified:   ../tracker_backend/players/Skillsy\n\tmodified:   ../tracker_backend/players/Slimsharkie\n\tmodified:   ../tracker_backend/players/Slyjacob\n\tmodified:   ../tracker_backend/players/Slyjacob1\n\tmodified:   ../tracker_backend/players/Snortwindex\n\tmodified:   ../tracker_backend/players/Stephenb1992\n\tmodified:   ../tracker_backend/players/Stephenb92\n\tmodified:   ../tracker_backend/players/Steven\n\tmodified:   ../tracker_backend/players/Sticky\n\tmodified:   ../tracker_backend/players/Sugarmama\n\tmodified:   ../tracker_backend/players/Surdok\n\tmodified:   ../tracker_backend/players/T Tex8\n\tmodified:   ../tracker_backend/players/Tasman 3\n\tmodified:   ../tracker_backend/players/Tbi\n\tmodified:   ../tracker_backend/players/Thetracker3\n\tmodified:   ../tracker_backend/players/Thispot\n\tmodified:   ../tracker_backend/players/Torbjorn\n\tmodified:   ../tracker_backend/players/Trenton\n\tmodified:   ../tracker_backend/players/Virus64\n\tmodified:   ../tracker_backend/players/Volcarona\n\tmodified:   ../tracker_backend/players/Warhorse\n\tmodified:   ../tracker_backend/players/X M A\n\tmodified:   ../tracker_backend/players/X Turtle X\n\tmodified:   ../tracker_backend/players/Xblade 20\n\tmodified:   ../tracker_backend/players/Xexani\n\tmodified:   ../tracker_backend/players/Xie\n\tmodified:   ../tracker_backend/players/Yim\n\tmodified:   ../tracker_backend/players/Yung Schniff\n\tmodified:   ../tracker_backend/players/Zee Meeuw\n\tmodified:   ../tracker_backend/players/Zemouregal\n\tmodified:   ../tracker_backend/players/Zero\n\tmodified:   ../tracker_backend/players/Zeus\n\tmodified:   ../tracker_backend/xp_tracker_backend.py\n\nno changes added to commit"00:37:31: Remote github exists00:37:31: 
+00:37:31: Git branch:windows is checked out, being used.00:37:31: 
+00:37:31: 00:37:31: 00:37:31:  * Serving Flask app "app" (lazy loading)
+00:37:31:  * Environment: production
+00:37:31:    WARNING: This is a development server. Do not use it in a production deployment.
+00:37:31:    Use a production WSGI server instead.
+00:37:31:  * Debug mode: off
+00:37:31: 000:37:31: 
+00:37:31: 100:37:31: 
+00:37:31: 1300:37:31: 
+00:37:31: 1600:37:31: 
+00:37:31: 1haha100:37:31: 
+00:37:31: 4444444444400:37:31: 
+00:37:31: 45kin00:37:31: 
+00:37:31: 75345615925800:37:31: 
+00:37:31: 7yz00:37:31: 
+00:37:31: Adtukz00:37:31: 
+00:37:31: Ady00:37:31: 
+00:37:31: Alethros00:37:31: 
+00:37:31: Alxx202000:37:31: 
+00:37:31: Ancient00:37:31: 
+00:37:31: Arc En Ciel00:37:31: 
+00:37:31: Asia00:37:31: 
+00:37:31: Aubery00:37:31: 
+00:37:31: Aubury00:37:31: 
+00:37:31: Baby Deezus00:37:31: 
+00:37:31: Big Mac00:37:31: 
+00:37:31: Biskybiscuit00:37:31: 
+00:37:31: Black Knight00:37:31: 
+00:37:31: Blazerlord00:37:31: 
+00:37:31: Boe00:37:31: 
+00:37:31: Box00:37:31: 
+00:37:31: Brad00:37:31: 
+00:37:31: Brrs00:37:31: 
+00:37:31: Carrot00:37:31: 
+00:37:31: Castlewars00:37:31: 
+00:37:31: Caviel00:37:31: 
+00:37:31: Chbachman00:37:31: 
+00:37:31: Christopher00:37:31: 
+00:37:31: Clickeddaisy00:37:31: 
+00:37:31: Coconut Dan00:37:31: 
+00:37:31: Cokecane00:37:31: 
+00:37:31: Coolcon1200:37:31: 
+00:37:31: Coordinates00:37:31: 
+00:37:31: Cringe Kid00:37:31: 
+00:37:31: Crow00:37:31: 
+00:37:31: Crown00:37:31: 
+00:37:31: Crusader00:37:31: 
+00:37:31: Cryptonote00:37:31: 
+00:37:31: Dark Drift700:37:31: 
+00:37:31: Dbag Magee00:37:31: 
+00:37:31: Deadly Were00:37:31: 
+00:37:31: Deadlywere00:37:31: 
+00:37:31: Death Wish00:37:31: 
+00:37:31: Deathstriger00:37:31: 
+00:37:31: Delb00:37:31: 
+00:37:31: Diskid00:37:31: 
+00:37:31: Dispvm00:37:31: 
+00:37:31: Disskill00:37:31: 
+00:37:31: Dlainee 90000:37:31: 
+00:37:31: Dmcg00:37:31: 
+00:37:31: Dot Net00:37:31: 
+00:37:31: Dreadknight00:37:31: 
+00:37:31: Duration00:37:31: 
+00:37:31: Duration200:37:31: 
+00:37:31: Edgelord36000:37:31: 
+00:37:31: Edgelord42000:37:31: 
+00:37:31: Edgelord6900:37:31: 
+00:37:31: Ekiph00:37:31: 
+00:37:31: Esmerelda00:37:31: 
+00:37:31: Eventest00:37:31: 
+00:37:31: Fkingalt00:37:31: 
+00:37:31: Fkingloot00:37:31: 
+00:37:31: Fkingmain00:37:31: 
+00:37:31: Flamie00:37:31: 
+00:37:31: Flan00:37:31: 
+00:37:31: Fletching00:37:31: 
+00:37:31: Freeziepop00:37:31: 
+00:37:31: Gamer4life00:37:31: 
+00:37:31: Garlic Fork00:37:31: 
+00:37:31: Gex54600:37:31: 
+00:37:31: Gexskills00:37:31: 
+00:37:31: Goldenag00:37:31: 
+00:37:31: Grimoire00:37:31: 
+00:37:31: Grizzly00:37:31: 
+00:37:31: Guine00:37:31: 
+00:37:31: Handcrafted00:37:31: 
+00:37:31: Heat00:37:31: 
+00:37:31: Herieman00:37:31: 
+00:37:31: Highkeyloki00:37:31: 
+00:37:31: Hitler00:37:31: 
+00:37:31: Honestly00:37:31: 
+00:37:31: Hwguy00:37:31: 
+00:37:31: Ian00:37:31: 
+00:37:31: Ibt00:37:31: 
+00:37:31: Ikrim00:37:31: 
+00:37:31: Ill00:37:31: 
+00:37:31: Illusion00:37:31: 
+00:37:31: Incognito00:37:31: 
+00:37:31: Inori00:37:31: 
+00:37:31: Invalid00:37:31: 
+00:37:31: Iron Arm00:37:31: 
+00:37:31: Ironic00:37:31: 
+00:37:31: Jarno4500:37:31: 
+00:37:31: Javin00:37:31: 
+00:37:31: Jeton00:37:31: 
+00:37:31: Jigglebox00:37:31: 
+00:37:31: Jingles00:37:31: 
+00:37:31: Jonny Jonny00:37:31: 
+00:37:31: Juice Fruit00:37:31: 
+00:37:31: Justin00:37:31: 
+00:37:31: Kakarot00:37:31: 
+00:37:31: Kale00:37:31: 
+00:37:31: Kalem00:37:31: 
+00:37:31: Kestlen00:37:31: 
+00:37:31: Kijani00:37:31: 
+00:37:31: Killing00:37:31: 
+00:37:31: Krethis00:37:31: 
+00:37:31: Kunark00:37:31: 
+00:37:31: Kurt00:37:31: 
+00:37:31: Lazy Celeste00:37:31: 
+00:37:31: Ledsy00:37:31: 
+00:37:31: Lende00:37:31: 
+00:37:31: Lestic00:37:31: 
+00:37:31: Lowkeyloki00:37:31: 
+00:37:31: Mag00:37:31: 
+00:37:31: Mageballer4300:37:31: 
+00:37:31: Maxed00:37:31: 
+00:37:31: Medic00:37:31: 
+00:37:31: Megastary00:37:31: 
+00:37:31: Miguel00:37:31: 
+00:37:31: Mitosk00:37:31: 
+00:37:31: Mo00:37:31: 
+00:37:31: Monero00:37:31: 
+00:37:31: Mystic00:37:31: 
+00:37:31: Mysticpoisen00:37:31: 
+00:37:31: Myth Scape00:37:31: 
+00:37:31: N F00:37:31: 
+00:37:31: Neckromancer00:37:31: 
+00:37:31: Nex00:37:31: 
+00:37:31: Niftu Cal00:37:31: 
+00:37:31: Nl00:37:31: 
+00:37:31: Noisycork00:37:31: 
+00:37:31: Notlead00:37:31: 
+00:37:31: Nullopt00:37:31: 
+00:37:31: Nurnkiller00:37:31: 
+00:37:31: Obarner00:37:31: 
+00:37:31: Ojoib00:37:31: 
+00:37:31: Ollie1234500:37:31: 
+00:37:31: Omu Dung00:37:31: 
+00:37:31: Omu U00:37:31: 
+00:37:31: One00:37:31: 
+00:37:31: Onox00:37:31: 
+00:37:31: Pally00:37:31: 
+00:37:31: Parenthetic00:37:31: 
+00:37:31: Perkele00:37:31: 
+00:37:31: Pew00:37:31: 
+00:37:31: Pew Il00:37:31: 
+00:37:31: Piscies00:37:31: 
+00:37:31: Pixel Parade00:37:31: 
+00:37:31: Pker 0wns00:37:31: 
+00:37:31: Poltergeist00:37:31: 
+00:37:31: Pr0mast3r00:37:31: 
+00:37:31: Rain00:37:31: 
+00:37:31: Ray00:37:31: 
+00:37:31: Razi00:37:31: 
+00:37:31: Relaytam1200:37:31: 
+00:37:31: Reloadz00:37:31: 
+00:37:31: Retro00:37:31: 
+00:37:31: Rias Gremory00:37:31: 
+00:37:31: Ricky00:37:31: 
+00:37:31: Robotic0100:37:31: 
+00:37:31: Roe00:37:31: 
+00:37:31: Roflmfao00:37:31: 
+00:37:31: Rowdyy00:37:31: 
+00:37:31: Rsbot00:37:31: 
+00:37:31: Rusted00:37:31: 
+00:37:31: Sam Roberts00:37:31: 
+00:37:31: Saradomin00:37:31: 
+00:37:31: Savy00:37:31: 
+00:37:31: Scrim00:37:31: 
+00:37:31: Scrumpy00:37:31: 
+00:37:31: Seawolf00:37:31: 
+00:37:31: Seis00:37:31: 
+00:37:31: Sheldy00:37:31: 
+00:37:31: Sincerely00:37:31: 
+00:37:31: Skillsy00:37:31: 
+00:37:31: Slimsharkie00:37:31: 
+00:37:31: Slyjacob00:37:31: 
+00:37:31: Slyjacob100:37:31: 
+00:37:31: Snortwindex00:37:31: 
+00:37:31: Stephenb199200:37:31: 
+00:37:31: Stephenb9200:37:31: 
+00:37:31: Steven00:37:31: 
+00:37:31: Sticky00:37:31: 
+00:37:31: Sugarmama00:37:31: 
+00:37:31: Surdok00:37:31: 
+00:37:31: T Tex800:37:31: 
+00:37:31: Tasman 300:37:31: 
+00:37:31: Tbi00:37:31: 
+00:37:31: Thetracker300:37:31: 
+00:37:31: Thispot00:37:31: 
+00:37:31: Torbjorn00:37:31: 
+00:37:31: Trenton00:37:31: 
+00:37:31: Virus6400:37:31: 
+00:37:31: Volcarona00:37:31: 
+00:37:31: Warhorse00:37:31: 
+00:37:31: X M A00:37:31: 
+00:37:31: X Turtle X00:37:31: 
+00:37:31: Xblade 2000:37:31: 
+00:37:31: Xexani00:37:31: 
+00:37:31: Xie00:37:31: 
+00:37:31: Yim00:37:31: 
+00:37:31: Yung Schniff00:37:31: 
+00:37:31: Zee Meeuw00:37:31: 
+00:37:31: Zemouregal00:37:31: 
+00:37:31: Zero00:37:31: 
+00:37:31: Zeus00:37:31: 
+00:37:31: blessdanoobs00:37:31: 
+00:37:31: garlic pork00:37:31: 
+00:37:31: i am yim00:37:31: 
+00:37:31: jawarrior00:37:31: 
+00:37:31: jawarrior100:37:31: 
+00:37:31: jawarrior200:37:31: 
+00:37:31: jiren00:37:31: 
+00:37:31: lady celeste00:37:31: 
+00:37:31: niftu00:37:31: 
+00:37:31: trent00:37:31: 
+00:37:31: wolf00:37:31: 
+00:37:36: COMMAND: b'On branch windows\nYour branch is ahead of \'github/windows\' by 5 commits.\n  (use "git push" to publish your local commits)\n\nChanges not staged for commit:\n\tmodified:   ../tracker_backend/__pycache__/graphmaker.cpython-37.pyc\n\tmodified:   ../tracker_backend/__pycache__/xp_tracker_backend.cpython-37.pyc\n\tmodified:   ../tracker_backend/players/adtukz\n\tmodified:   ../tracker_backend/players/ady\n\tmodified:   ../tracker_backend/players/alethros\n\tmodified:   ../tracker_backend/players/alxx2020\n\tmodified:   ../tracker_backend/players/ancient\n\tmodified:   ../tracker_backend/players/arc en ciel\n\tmodified:   ../tracker_backend/players/asia\n\tmodified:   ../tracker_backend/players/aubery\n\tmodified:   ../tracker_backend/players/aubury\n\tmodified:   ../tracker_backend/players/baby deezus\n\tmodified:   ../tracker_backend/players/big mac\n\tmodified:   ../tracker_backend/players/biskybiscuit\n\tmodified:   ../tracker_backend/players/black knight\n\tmodified:   ../tracker_backend/players/blazerlord\n\tmodified:   ../tracker_backend/players/boe\n\tmodified:   ../tracker_backend/players/box\n\tmodified:   ../tracker_backend/players/brad\n\tmodified:   ../tracker_backend/players/brrs\n\tmodified:   ../tracker_backend/players/carrot\n\tmodified:   ../tracker_backend/players/castlewars\n\tmodified:   ../tracker_backend/players/caviel\n\tmodified:   ../tracker_backend/players/chbachman\n\tmodified:   ../tracker_backend/players/christopher\n\tmodified:   ../tracker_backend/players/clickeddaisy\n\tmodified:   ../tracker_backend/players/coconut dan\n\tmodified:   ../tracker_backend/players/cokecane\n\tmodified:   ../tracker_backend/players/coolcon12\n\tmodified:   ../tracker_backend/players/coordinates\n\tmodified:   ../tracker_backend/players/cringe kid\n\tmodified:   ../tracker_backend/players/crow\n\tmodified:   ../tracker_backend/players/crown\n\tmodified:   ../tracker_backend/players/crusader\n\tmodified:   ../tracker_backend/players/cryptonote\n\tmodified:   ../tracker_backend/players/dark drift7\n\tmodified:   ../tracker_backend/players/dbag magee\n\tmodified:   ../tracker_backend/players/deadly were\n\tmodified:   ../tracker_backend/players/deadlywere\n\tmodified:   ../tracker_backend/players/death wish\n\tmodified:   ../tracker_backend/players/deathstriger\n\tmodified:   ../tracker_backend/players/delb\n\tmodified:   ../tracker_backend/players/diskid\n\tmodified:   ../tracker_backend/players/dispvm\n\tmodified:   ../tracker_backend/players/disskill\n\tmodified:   ../tracker_backend/players/dlainee 900\n\tmodified:   ../tracker_backend/players/dmcg\n\tmodified:   ../tracker_backend/players/dot net\n\tmodified:   ../tracker_backend/players/dreadknight\n\tmodified:   ../tracker_backend/players/duration\n\tmodified:   ../tracker_backend/players/duration2\n\tmodified:   ../tracker_backend/players/edgelord360\n\tmodified:   ../tracker_backend/players/edgelord420\n\tmodified:   ../tracker_backend/players/edgelord69\n\tmodified:   ../tracker_backend/players/ekiph\n\tmodified:   ../tracker_backend/players/esmerelda\n\tmodified:   ../tracker_backend/players/eventest\n\tmodified:   ../tracker_backend/players/fkingalt\n\tmodified:   ../tracker_backend/players/fkingloot\n\tmodified:   ../tracker_backend/players/fkingmain\n\tmodified:   ../tracker_backend/players/flamie\n\tmodified:   ../tracker_backend/players/flan\n\tmodified:   ../tracker_backend/players/fletching\n\tmodified:   ../tracker_backend/players/freeziepop\n\tmodified:   ../tracker_backend/players/gamer4life\n\tmodified:   ../tracker_backend/players/garlic fork\n\tmodified:   ../tracker_backend/players/gex546\n\tmodified:   ../tracker_backend/players/gexskills\n\tmodified:   ../tracker_backend/players/goldenag\n\tmodified:   ../tracker_backend/players/grimoire\n\tmodified:   ../tracker_backend/players/grizzly\n\tmodified:   ../tracker_backend/players/guine\n\tmodified:   ../tracker_backend/players/handcrafted\n\tmodified:   ../tracker_backend/players/heat\n\tmodified:   ../tracker_backend/players/herieman\n\tmodified:   ../tracker_backend/players/highkeyloki\n\tmodified:   ../tracker_backend/players/hitler\n\tmodified:   ../tracker_backend/players/honestly\n\tmodified:   ../tracker_backend/players/hwguy\n\tmodified:   ../tracker_backend/players/ian\n\tmodified:   ../tracker_backend/players/ibt\n\tmodified:   ../tracker_backend/players/ikrim\n\tmodified:   ../tracker_backend/players/ill\n\tmodified:   ../tracker_backend/players/illusion\n\tmodified:   ../tracker_backend/players/incognito\n\tmodified:   ../tracker_backend/players/inori\n\tmodified:   ../tracker_backend/players/invalid\n\tmodified:   ../tracker_backend/players/iron arm\n\tmodified:   ../tracker_backend/players/ironic\n\tmodified:   ../tracker_backend/players/jarno45\n\tmodified:   ../tracker_backend/players/javin\n\tmodified:   ../tracker_backend/players/jeton\n\tmodified:   ../tracker_backend/players/jigglebox\n\tmodified:   ../tracker_backend/players/jingles\n\tmodified:   ../tracker_backend/players/jonny jonny\n\tmodified:   ../tracker_backend/players/juice fruit\n\tmodified:   ../tracker_backend/players/justin\n\tmodified:   ../tracker_backend/players/kakarot\n\tmodified:   ../tracker_backend/players/kale\n\tmodified:   ../tracker_backend/players/kalem\n\tmodified:   ../tracker_backend/players/kestlen\n\tmodified:   ../tracker_backend/players/kijani\n\tmodified:   ../tracker_backend/players/killing\n\tmodified:   ../tracker_backend/players/krethis\n\tmodified:   ../tracker_backend/players/kunark\n\tmodified:   ../tracker_backend/players/kurt\n\tmodified:   ../tracker_backend/players/lazy celeste\n\tmodified:   ../tracker_backend/players/ledsy\n\tmodified:   ../tracker_backend/players/lende\n\tmodified:   ../tracker_backend/players/lestic\n\tmodified:   ../tracker_backend/players/lowkeyloki\n\tmodified:   ../tracker_backend/players/mag\n\tmodified:   ../tracker_backend/players/mageballer43\n\tmodified:   ../tracker_backend/players/maxed\n\tmodified:   ../tracker_backend/players/medic\n\tmodified:   ../tracker_backend/players/megastary\n\tmodified:   ../tracker_backend/players/miguel\n\tmodified:   ../tracker_backend/players/mitosk\n\tmodified:   ../tracker_backend/players/mo\n\tmodified:   ../tracker_backend/players/monero\n\tmodified:   ../tracker_backend/players/mystic\n\tmodified:   ../tracker_backend/players/mysticpoisen\n\tmodified:   ../tracker_backend/players/myth scape\n\tmodified:   ../tracker_backend/players/n f\n\tmodified:   ../tracker_backend/players/neckromancer\n\tmodified:   ../tracker_backend/players/nex\n\tmodified:   ../tracker_backend/players/niftu cal\n\tmodified:   ../tracker_backend/players/nl\n\tmodified:   ../tracker_backend/players/noisycork\n\tmodified:   ../tracker_backend/players/notlead\n\tmodified:   ../tracker_backend/players/nullopt\n\tmodified:   ../tracker_backend/players/nurnkiller\n\tmodified:   ../tracker_backend/players/obarner\n\tmodified:   ../tracker_backend/players/ojoib\n\tmodified:   ../tracker_backend/players/ollie12345\n\tmodified:   ../tracker_backend/players/omu dung\n\tmodified:   ../tracker_backend/players/omu u\n\tmodified:   ../tracker_backend/players/one\n\tmodified:   ../tracker_backend/players/onox\n\tmodified:   ../tracker_backend/players/pally\n\tmodified:   ../tracker_backend/players/parenthetic\n\tmodified:   ../tracker_backend/players/perkele\n\tmodified:   ../tracker_backend/players/pew\n\tmodified:   ../tracker_backend/players/pew il\n\tmodified:   ../tracker_backend/players/piscies\n\tmodified:   ../tracker_backend/players/pixel parade\n\tmodified:   ../tracker_backend/players/pker 0wns\n\tmodified:   ../tracker_backend/players/poltergeist\n\tmodified:   ../tracker_backend/players/pr0mast3r\n\tmodified:   ../tracker_backend/players/rain\n\tmodified:   ../tracker_backend/players/ray\n\tmodified:   ../tracker_backend/players/razi\n\tmodified:   ../tracker_backend/players/relaytam12\n\tmodified:   ../tracker_backend/players/reloadz\n\tmodified:   ../tracker_backend/players/retro\n\tmodified:   ../tracker_backend/players/rias gremory\n\tmodified:   ../tracker_backend/players/ricky\n\tmodified:   ../tracker_backend/players/robotic01\n\tmodified:   ../tracker_backend/players/roe\n\tmodified:   ../tracker_backend/players/roflmfao\n\tmodified:   ../tracker_backend/players/rowdyy\n\tmodified:   ../tracker_backend/players/rsbot\n\tmodified:   ../tracker_backend/players/rusted\n\tmodified:   ../tracker_backend/players/sam roberts\n\tmodified:   ../tracker_backend/players/saradomin\n\tmodified:   ../tracker_backend/players/savy\n\tmodified:   ../tracker_backend/players/scrim\n\tmodified:   ../tracker_backend/players/scrumpy\n\tmodified:   ../tracker_backend/players/seawolf\n\tmodified:   ../tracker_backend/players/seis\n\tmodified:   ../tracker_backend/players/sheldy\n\tmodified:   ../tracker_backend/players/sincerely\n\tmodified:   ../tracker_backend/players/skillsy\n\tmodified:   ../tracker_backend/players/slimsharkie\n\tmodified:   ../tracker_backend/players/slyjacob\n\tmodified:   ../tracker_backend/players/slyjacob1\n\tmodified:   ../tracker_backend/players/snortwindex\n\tmodified:   ../tracker_backend/players/stephenb1992\n\tmodified:   ../tracker_backend/players/stephenb92\n\tmodified:   ../tracker_backend/players/steven\n\tmodified:   ../tracker_backend/players/sticky\n\tmodified:   ../tracker_backend/players/sugarmama\n\tmodified:   ../tracker_backend/players/surdok\n\tmodified:   ../tracker_backend/players/t tex8\n\tmodified:   ../tracker_backend/players/tasman 3\n\tmodified:   ../tracker_backend/players/tbi\n\tmodified:   ../tracker_backend/players/thetracker3\n\tmodified:   ../tracker_backend/players/thispot\n\tmodified:   ../tracker_backend/players/torbjorn\n\tmodified:   ../tracker_backend/players/trenton\n\tmodified:   ../tracker_backend/players/virus64\n\tmodified:   ../tracker_backend/players/volcarona\n\tmodified:   ../tracker_backend/players/warhorse\n\tmodified:   ../tracker_backend/players/x m a\n\tmodified:   ../tracker_backend/players/x turtle x\n\tmodified:   ../tracker_backend/players/xblade 20\n\tmodified:   ../tracker_backend/players/xexani\n\tmodified:   ../tracker_backend/players/xie\n\tmodified:   ../tracker_backend/players/yim\n\tmodified:   ../tracker_backend/players/yung schniff\n\tmodified:   ../tracker_backend/players/zee meeuw\n\tmodified:   ../tracker_backend/players/zemouregal\n\tmodified:   ../tracker_backend/players/zero\n\tmodified:   ../tracker_backend/players/zeus\n\tmodified:   ../tracker_backend/xp_tracker_backend.py\n\nno changes added to commit'
