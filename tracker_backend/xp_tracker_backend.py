@@ -136,9 +136,10 @@ def push_logs(remote_name, branch):
                        f"git commit -m \"Pushing logs at {getNow()} from {getOS()}\"",
                        f"git push {remote_name} {branch}"))
 
-def commit_player(username, remote_name, branch) -> str:
+def add_player_file(username, remote_name, branch) -> str:
     '''
-    Commits a folder to branch. Remote VCS is
+    Adds a player file. Make sure all are lower case.
+    Also commits player folder to branch. Remote VCS is
     initialized before in a seperate function.
     players dir is already defined outside scope
     '''
@@ -151,14 +152,31 @@ def commit_player(username, remote_name, branch) -> str:
     if username in getRegPlayers():
         return f"{username.title()} already registered..."
     elif user_exists:
-        # Add username file to playersdir path
-        with open(os.path.join(getPlayerDir(), username), mode="w"):
+        # Add username file to playersdir path, make sure its lower.
+        with open(os.path.join(getPlayerDir(), username.lower()), mode="w"):
             print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
                                f"git commit -m \"{date.today()} committed {username} via website\"",
                                f"git push {remote_name} {branch}"))
             return f"Successfully registered {username.title()}!"
     else:
         return f"{username.title()} does not exist in Darkan..."
+
+def updatedPlayerList():
+    '''
+    This is a generator
+    :return: list of players from highscores but generatred
+    '''
+    for page in range(0, 11):
+        url = f"https://darkan.org/api/highscores?page={page}"
+
+        payload = {}
+        headers = {}
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+
+        page_info = json.loads(response.text.encode('utf8'))
+        for each in page_info:
+            yield each['displayName'].lower()
 
 #push all files
 def push_all(remote_name, branch):
@@ -514,6 +532,7 @@ def setTopPlayers():
         #Create new player key, we are still in the reg player loop,
         #and substract last day of week by first day. Total difference is xp gained.
         #Lastly make sure the player has more than 1 entry
+
         if len(xpBuffer) > 1:
             delta_week_all[player] = xpBuffer[-1]-xpBuffer[0]
 
@@ -603,6 +622,11 @@ if __name__ == "__main__":
     Remember, main is established as the first indentation of code, even 
     in imports. This means all level 0 indentations run, even in imports.
     '''
+
+
+
+
+
 
 if __name__ != "__main__":
     '''
