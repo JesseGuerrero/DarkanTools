@@ -11,6 +11,8 @@ import os
 from tracker_backend import xp_tracker_backend as be
 from tracker_backend import graphmaker as gm
 
+import atexit
+atexit.register(be.emailAdmin, be.getOS())
 #TODO: Create log system
 
 #The Flask object constructor takes arguments
