@@ -3,7 +3,6 @@ from flask import Flask, render_template, request
 from random import shuffle
 import os
 
-
 #TODO: Then start on GE
 #TODO: Apply Dry to page functions
 #TODO: Check case sensitivity after next merge, Ubuntu was having issues
@@ -119,7 +118,6 @@ if __name__ == '__main__':
     #Threaded option to enable multiple instances for multiple user access support
     #If its windows, we are probably debugging at home.
     if "win" in os.sys.platform:
-        app.run(threaded=True, port=5000, debug = True)
+        app.run(threaded=True, port=5000, debug = False)
     else:
         app.run(host = '0.0.0.0', port=80, threaded=True, debug=False)
-

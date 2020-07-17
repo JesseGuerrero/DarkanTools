@@ -10,10 +10,9 @@ import requests
 from os.path import dirname as up
 from os.path import join, realpath
 
-#TODO: Create a logging system in a logs file(daily like before)
+#TODO: Seperate tracker and backend work, create a seperate module for general backend -> backend.py
 #TODO: Upgrade, debug player commit
-#TODO: Create a logs commit->PUSH system <-- You can delay and move to graphing though
-#TODO: 3 place trophy icons in top weekly
+#TODO: Create a logs commit->PUSH system
 #TODO: Make top weekly
 #TODO: Annotate new register forms and register page func
 
@@ -22,25 +21,48 @@ import sys
 
 
 #--Log all updates
+#Modified from Stack Overflow!
+class logConsoleFile:
+    '''
+    ##FROM Stack Overflow, so you may not understand it all.
+    We are wrapping stdout and stderr to make them write to console and file logs,
+    sort of like overrifing their built-in "write" function. Note, "write" coincidently
+    has the same name for file IO class.
 
-#TODO: Annotate
-def print_log(log : str):
+    Requires: sys.stdout = logConsoleFile(sys.stdout, file_name) in that format
+    It can also be used for sys.stderr
+    '''
+
+    def __init__(self, stream, file_name):
+        self.stream = stream
+        # Append to constantly add
+        self.file = open(f'{file_name}', mode='a')
+
+    # Calls itself to it writes again. It is overriding I believe, not sure
+    def write(self, data):
+        self.stream.write(data)
+
+        # self.stream.flush()
+        # self.file.write(f"{time}")
+        self.file.write(f"{getNow()}: {data}")
+
+    def flush(self):
+        pass
+def getLogDir():
+    '''
+    Makes all code simpler. If the alias are changed
+    in the imports section that could be an issue
+    '''
     logdir = up(up(__file__))
-    logdir = join(logdir, "logs")
+    return join(logdir, "logs")
 
-    with open(f'{logdir}/{date.today()}.log', 'a') as f:
-        stamp = datetime.now().strftime("%H:%M:%S")
-        print(f"{stamp}: {log}", file=f)
-    multiple_cmd(f"cd \"{logdir}\"", "git add .")
-
-#TODO: Annotate
-def setup_log():
-    logdir = up(up(__file__))
-    logdir = join(logdir, "logs")
-    log_file = open(f'{logdir}/{date.today()}.log', 'a')
-    sys.stderr = log_file
-    sys.stdout = log_file
-
+def getNow():
+    '''
+    Gets time in Hour:Min:Sec format. Should be used with a date specified externally
+    :return: string format
+    '''
+    return datetime.now().strftime("%H:%M:%S")
+#--Log all updates DONE
 
 #--Log all updates DONE
 
@@ -83,20 +105,40 @@ def ensure_remote(url, remote_name, branch):
     gitPath = os.path.realpath(gitPath)
     #----
 
-
+    #Check if github is registered as remote
     if remote_name in str(multiple_cmd(f"cd \"{gitPath}\"", "git remote")):
-        print_log(f"Remote {remote_name} exists, don't worry")
-    #If github remote is not in local we need to make it and pull
+        print(f"Remote {remote_name} exists")
+    #If it is not then make it
     else:
-        print_log(multiple_cmd(f"cd \"{gitPath}\"",
+        print(multiple_cmd(f"cd \"{gitPath}\"",
                      "git init .",
-                     f"git remote add {remote_name} {url}",
-                     f"git pull github {branch}"))
-        #print(f"Created remote {remote_name} and pulled from it!")
+                     f"git remote add {remote_name} {url}"))
+
+    #Check if branch is there, if it is not you cannot start the program without potentially losing info on wrong branch
+    if branch in str(multiple_cmd(f"cd \"{gitPath}\"", "git status")):
+        print(f"Git branch:{branch} is checked out, being used.")
+    else:
+        print(f"Created remote {remote_name}!\nYou need to UPDATE/CHECKOUT LOCAL with a relevant repo!!\n EXITING NOW")
+        exit()
+
+#TODO: WRITE THIS, How to stay logged into github over ubuntu
+def push_players(remote_name, branch):
+    '''
+    Branch should already be ensured by ensure_remote.
+    Print automatically goes to console and logs.
+    '''
+    print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
+                       f"git commit -m \"Pushing players at {getNow()} from {getOS()}\"",
+                       f"git push {remote_name} {branch}"))
+
+def push_logs(remote_name, branch):
+    print(multiple_cmd(f"cd \"{getLogDir()}\"", "git add .",
+                       f"git commit -m \"Pushing logs at {getNow()} from {getOS()}\"",
+                       f"git push {remote_name} {branch}"))
 
 def commit_player(username, remote_name, branch) -> str:
     '''
-    Commits a folder to remote_name. Remote VCS is
+    Commits a folder to branch. Remote VCS is
     initialized before in a seperate function.
     players dir is already defined outside scope
     '''
@@ -104,14 +146,14 @@ def commit_player(username, remote_name, branch) -> str:
     if username == "":
         return ""
 
-    user_exists, player_info = playerExists(username)
+    user_exists, player_info = playerAPIQuery(username)
 
     if username in getRegPlayers():
         return f"{username.title()} already registered..."
     elif user_exists:
         # Add username file to playersdir path
         with open(os.path.join(getPlayerDir(), username), mode="w"):
-            print_log(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
+            print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
                                f"git commit -m \"{date.today()} committed {username} via website\"",
                                f"git push {remote_name} {branch}"))
             return f"Successfully registered {username.title()}!"
@@ -120,9 +162,19 @@ def commit_player(username, remote_name, branch) -> str:
 
 #push all files
 def push_all(remote_name, branch):
-    print_log(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
-                       f"git commit -m \"{date.today()} committed all files via website\"",
-                       f"git push {remote_name} master"))
+    print(multiple_cmd(f"cd \"{getPlayerDir()}\"", "git add .",
+                       f"git commit -m \"Committed all files via {remote_name} branch:{branch} internal at {getNow()}\"",
+                       f"git push {remote_name} {branch}"))
+
+#TODO: Replace all long code with this
+def getOS():
+    '''
+    Returns either win or OS, used to respect DRY principles
+    '''
+    if "win" in os.sys.platform:
+        return "win"
+    else:
+        return "ubuntu"
 
 #TODO: Needs to be annotated and more precise on directory.
 # def pull_all(remote_name, branch):
@@ -143,7 +195,6 @@ class Stat():
     and left in a dead scope.
     '''
 
-    #TODO: Implement adding totalXP as 25th skill
     skill_ID = {"Attack": 0, "Defence": 1, "Strength": 2, "Hitpoints": 3, "Ranged": 4, "Prayer": 5, "Magic": 6,
                 "Cooking": 7, "Woodcutting": 8, "Fletching": 9, "Fishing": 10, "Firemaking": 11, "Crafting": 12,
                 "Smithing": 13, "Mining": 14, "Herblore": 15, "Agility": 16, "Thieving": 17, "Slayer": 18,
@@ -220,7 +271,7 @@ def getRegPlayers():
 
     return players
 
-def playerExists(player) -> tuple:
+def playerAPIQuery(player) -> tuple:
     '''
     Calls player from API and checks for error by accessing byte information.
     The GET request from HTTPS works even when there is no player. So we check
@@ -231,7 +282,7 @@ def playerExists(player) -> tuple:
     '''
     exists = False
     #=====----->The following was created with Postman
-    url = "https://darkan.org/api/player/" + player.replace(" ", "_")
+    url = "https://darkan.org/api/player/" + player.replace(" ", "_").lower()
 
     payload = {}
     headers= {}
@@ -249,10 +300,10 @@ def playerExists(player) -> tuple:
     try:
         player_info = player_info['stats'] #Remove everything else
     except:
-        print_log("Player not found")
+        print("Player not found")
         pass
     else:
-        print_log(f"{player} query success")
+        print(f"{player} query success")
         exists = True
     return (exists, player_info)
 #---Player assurance functions DONE
@@ -265,7 +316,7 @@ def get_game_stats(player : str) -> dict:
     :param player: Insert a Darkan username as a string
     :return: Returns their stats from the Darkan API & adds a username key
     '''
-    user_exists, player_info = playerExists(player)
+    user_exists, player_info = playerAPIQuery(player)
 
     if user_exists:
         # Now we add meta data to the dict for future reference
@@ -331,7 +382,7 @@ def get_file_stats(player : str, stat_ID : str, days = 7) -> list:
                 #Create stat
                 newest_stat = Stat(stat_name, xp_value, stamp)
             else:
-                print_log("Wrong stat name")
+                print("Wrong stat name")
                 break
 
             #Here we are adding stats to a list with conditions
@@ -407,22 +458,26 @@ def sync_stats():
     then cleaning the data. Lastly it will populate the day's
     Top weekly
     '''
+
     if "win" in os.sys.platform:
         clean_stats()
         setTopPlayers()
-        push_all("github", "windows")
+        #Windows doesnt update players
+        push_logs("github", "windows")
 
     if "win" not in os.sys.platform:
         gather_game_stats()
         clean_stats()
         setTopPlayers()
-        push_all("github", "ubuntu")
+        #Ubuntu will always be updated
+        push_players("github", "ubuntu")
+        push_logs("github", "ubuntu")
 
 
-    print_log("all stats updated & cleaned & players potentially pushed. Also did top weekly!")
+    print("all stats updated & cleaned & players potentially pushed. Also did top weekly!")
 
     #60 seconds * 60 minutes * 24 hours
-    sleep(60*60*24)
+    sleep(60*60*12)
     sync_stats()
 #---XP tracking assurance DONE
 
@@ -539,7 +594,6 @@ def randomTab():
     Returns a random icon image string for all page tabs
     '''
     pass
-
 #---Pure site oriented functions DONE
 
 if __name__ == "__main__":
@@ -564,17 +618,31 @@ if __name__ != "__main__":
     
     Otherwise if it is not the "app.py" module do nothing.
     '''
+
+    #If we are up and running outside this file and in app.py as a web server
     import __main__
     if 'app.py' in str(__main__):
-        # Make sure there is a connection to remote github
+
+        #check if we are in windows
         if "win" in os.sys.platform:
+            logdir = join(getLogDir(), f"win_{date.today()}.log")
+            #Send errors and console outputs to file that is only unique to the day. Files will be unique according to day.
+            sys.stdout = logConsoleFile(sys.stdout, logdir)
+            sys.stderr = logConsoleFile(sys.stderr, logdir)
             ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github", "windows")
-        #Ubuntu
+
+        #Otherwise ubuntu
         else:
+            logdir = join(getLogDir(), f"ubuntu_{date.today()}.log")
+            #Do the same here but with ubuntu.
+            sys.stdout = logConsoleFile(sys.stdout, logdir)
+            sys.stderr = logConsoleFile(sys.stderr, logdir)
             ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github", "ubuntu")
 
         # Update stats everyday if we are out of focus, runs twice on a debug
         Thread(target=sync_stats).start()
+
+    #If we are not running from app.py then we are not running the webserver so pass.
     else:
         pass
 
