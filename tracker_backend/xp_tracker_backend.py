@@ -435,6 +435,7 @@ def clean_stats():
     Maybe do this once a month. The delete after 180 days is unwritten.
     '''
     for player in getRegPlayers():
+
         #Create stats for outer scope, the cleaned_stats is the filtered list of {PLAYERDICT}s
         cleaned_stats = []
 
@@ -449,6 +450,11 @@ def clean_stats():
 
             #Each line is a new {PLAYERDICT}
             for line in player_file:
+
+                #Don't accept anything that is not starting with "{"
+                if line[0] != "{":
+                    continue
+
                 # Remember load JSON does not accept single quotes
                 line = line.replace("'", '"')
 
