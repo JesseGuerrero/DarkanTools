@@ -9,7 +9,7 @@ if __name__ != '__main__':
     from . import xp_tracker_backend as be
 
 
-#TODO: Annotate
+#TODO: Ensure good Annotation
 def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
     #Static directory for the rest of the function. I used from imports to reduce size. It starts from this file
     staticDir = realpath(join(up(up(__file__)), "static"))
