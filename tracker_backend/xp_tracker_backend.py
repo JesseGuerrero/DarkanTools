@@ -462,6 +462,7 @@ def sync_stats():
     if "win" in os.sys.platform:
         clean_stats()
         setTopPlayers()
+        #Windows doesnt update players
         push_logs("github", "windows")
 
     if "win" not in os.sys.platform:
