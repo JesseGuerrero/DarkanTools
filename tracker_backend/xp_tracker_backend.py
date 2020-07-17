@@ -33,18 +33,21 @@ class logConsoleFile:
     It can also be used for sys.stderr
     '''
 
-    def __init__(self, stream, file_name):
+    def __init__(self, stream, file_name, err = False):
         self.stream = stream
         # Append to constantly add
         self.file = open(f'{file_name}', mode='a')
+        self.err = err
 
-    # Calls itself to it writes again. It is overriding I believe, not sure
+    # Calls itself to it writes again. It is overriding I believe, not sure. Email me if its an error
     def write(self, data):
         self.stream.write(data)
+        self.file.write(f"{getNow()}: {data}\n")
 
-        # self.stream.flush()
-        # self.file.write(f"{time}")
-        self.file.write(f"{getNow()}: {data}")
+        #Only email me outside of windows
+        if self.err == True and ("win" not in getOS()):
+            emailAdmin()
+
 
     def flush(self):
         pass
@@ -193,6 +196,21 @@ def getOS():
         return "win"
     else:
         return "ubuntu"
+
+def emailAdmin():
+    #Setup email, copied from Python zero to hero udemy course
+    import smtplib
+    smtp_object = smtplib.SMTP('smtp.gmail.com', 587)
+    smtp_object.ehlo()
+    smtp_object.starttls()
+    smtp_object.login("jesseguerrero1991@gmail.com", "fniv ihzs ofzk stsu")
+
+    msg = f'''
+    Subject: Your {getOS()} darkantools server has been turned off.
+    '''
+    smtp_object.sendmail("jesseguerrero1991@gmail.com", "jesseguerrero1991@gmail.com", msg)
+    smtp_object.quit()
+    print("emailAdmin was run")
 
 #TODO: Needs to be annotated and more precise on directory.
 # def pull_all(remote_name, branch):
@@ -442,7 +460,6 @@ def clean_stats():
         #This will be the most recent {PLAYERDICT} as we iterate
         newest_dict = {}
 
-
         with open(f"{getPlayerDir()}/{player}", mode='r') as file:
             #Open the file as a string "{PLAYERDICT} \n" over and over
             player_file = file.readlines()
@@ -658,7 +675,7 @@ if __name__ != "__main__":
             logdir = join(getLogDir(), f"win_{date.today()}.log")
             #Send errors and console outputs to file that is only unique to the day. Files will be unique according to day.
             sys.stdout = logConsoleFile(sys.stdout, logdir)
-            sys.stderr = logConsoleFile(sys.stderr, logdir)
+            sys.stderr = logConsoleFile(sys.stderr, logdir, err=True)
             ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github", "windows")
 
         #Otherwise ubuntu
@@ -666,7 +683,7 @@ if __name__ != "__main__":
             logdir = join(getLogDir(), f"ubuntu_{date.today()}.log")
             #Do the same here but with ubuntu.
             sys.stdout = logConsoleFile(sys.stdout, logdir)
-            sys.stderr = logConsoleFile(sys.stderr, logdir)
+            sys.stderr = logConsoleFile(sys.stderr, logdir, err=True)
             ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github", "ubuntu")
 
         # Update stats everyday if we are out of focus, runs twice on a debug

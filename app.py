@@ -6,6 +6,8 @@ import os
 #TODO: Then start on GE
 #TODO: Apply Dry to page functions
 #TODO: Check case sensitivity after next merge, Ubuntu was having issues
+#TODO: Create stat increase profile where each stat is categorized and shown to players
+#TODO: Add actual stat increase inside graph
 
 #Custom Modules
 from tracker_backend import xp_tracker_backend as be
