@@ -44,11 +44,6 @@ class logConsoleFile:
         self.stream.write(data)
         self.file.write(f"{getNow()}: {data}\n")
 
-        #Only email me outside of windows
-        if self.err == True and ("win" not in getOS()):
-            emailAdmin()
-
-
     def flush(self):
         pass
 def getLogDir():
