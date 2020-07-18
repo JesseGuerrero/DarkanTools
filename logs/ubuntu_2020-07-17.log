@@ -2189,3 +2189,753 @@
 18:39:00: 
 
 18:39:00: rsbot query success
+18:38:06:  * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+18:38:06: 
+
+18:38:34: 149.28.73.26 - - [17/Jul/2020 18:38:34] "[37mGET / HTTP/1.1[0m" 200 -
+18:38:34: 
+
+18:48:33: 104.236.216.73 - - [17/Jul/2020 18:48:33] "[37mGET / HTTP/1.1[0m" 200 -
+18:48:33: 
+
+18:48:42: 37.97.137.40 - - [17/Jul/2020 18:48:42] "[37mHEAD / HTTP/1.1[0m" 200 -
+18:48:42: 
+
+18:58:30: 149.28.73.26 - - [17/Jul/2020 18:58:30] "[37mHEAD / HTTP/1.1[0m" 200 -
+18:58:30: 
+
+19:02:44: 178.162.65.138 - - [17/Jul/2020 19:02:44] "[37mGET / HTTP/1.1[0m" 200 -
+19:02:44: 
+
+19:08:29: 104.236.216.73 - - [17/Jul/2020 19:08:29] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:08:29: 
+
+19:18:25: 149.28.73.26 - - [17/Jul/2020 19:18:25] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:18:25: 
+
+19:27:51: 128.14.133.58 - - [17/Jul/2020 19:27:51] "[37mGET / HTTP/1.1[0m" 200 -
+19:27:51: 
+
+19:28:21: 104.236.216.73 - - [17/Jul/2020 19:28:21] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:28:21: 
+
+19:38:18: 149.28.73.26 - - [17/Jul/2020 19:38:18] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:38:18: 
+
+19:48:15: 104.236.216.73 - - [17/Jul/2020 19:48:15] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:48:15: 
+
+19:58:13: 149.28.73.26 - - [17/Jul/2020 19:58:13] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:58:13: 
+
+20:01:09: 45.95.168.136 - - [17/Jul/2020 20:01:09] "[37mGET / HTTP/1.1[0m" 200 -
+20:01:09: 
+
+20:08:09: 104.236.216.73 - - [17/Jul/2020 20:08:09] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:08:09: 
+
+20:18:06: 149.28.73.26 - - [17/Jul/2020 20:18:06] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:18:06: 
+
+20:20:20: 142.54.186.18 - - [17/Jul/2020 20:20:20] "[37mGET / HTTP/1.1[0m" 200 -
+20:20:20: 
+
+20:28:03: 104.236.216.73 - - [17/Jul/2020 20:28:03] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:28:03: 
+
+20:35:16: 18.195.117.251 - - [17/Jul/2020 20:35:16] "[37mGET / HTTP/1.1[0m" 200 -
+20:35:16: 
+
+20:38:01: 149.28.73.26 - - [17/Jul/2020 20:38:01] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:38:01: 
+
+20:45:37: 142.54.186.18 - - [17/Jul/2020 20:45:37] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x03\x00\x8a\x01\x00\x00\x86\x03\x03_\x12')
+20:45:37: 
+
+20:45:37: 142.54.186.18 - - [17/Jul/2020 20:45:37] "[35m[1m   _ç¦¿ñ|_ëìWè:¨·ÞàyÊãc¤"Øý  0À(    À+À#À'ÀÀ = < 5 /À,À$À[0m" HTTPStatus.BAD_REQUEST -
+20:45:37: 
+
+20:45:37: 142.54.186.18 - - [17/Jul/2020 20:45:37] code 400, message Bad request version ("âðj\x00\x000À(\x00\x9f\x00\x9e\x00\x9d\x00\x9cÀ+À#À'À\x14À\x13\x00=\x00<\x005\x00/À,À$À")
+20:45:37: 
+
+20:45:37: 142.54.186.18 - - [17/Jul/2020 20:45:37] "[35m[1m   _ç.ÛîáA¿¡üÆÐÞËóÈ#mõâðj  0À(    À+À#À'ÀÀ = < 5 /À,À$À[0m" HTTPStatus.BAD_REQUEST -
+20:45:37: 
+
+20:47:32: 59.127.224.12 - - [17/Jul/2020 20:47:32] "[37mGET / HTTP/1.1[0m" 200 -
+20:47:32: 
+
+20:48:00: 104.236.216.73 - - [17/Jul/2020 20:48:00] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:48:00: 
+
+20:50:14: 41.213.138.16 - - [17/Jul/2020 20:50:14] "[33mPOST /cgi-bin/ViewLog.asp HTTP/1.1[0m" 404 -
+20:50:14: 
+
+20:57:57: 149.28.73.26 - - [17/Jul/2020 20:57:57] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:57:57: 
+
+21:02:17: 72.191.29.70 - - [17/Jul/2020 21:02:17] "[37mGET / HTTP/1.1[0m" 200 -
+21:02:17: 
+
+21:02:17: 72.191.29.70 - - [17/Jul/2020 21:02:17] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+21:02:17: 
+
+21:02:17: 72.191.29.70 - - [17/Jul/2020 21:02:17] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+21:02:17: 
+
+21:02:17: 72.191.29.70 - - [17/Jul/2020 21:02:17] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+21:02:17: 
+
+21:02:17: 72.191.29.70 - - [17/Jul/2020 21:02:17] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+21:02:17: 
+
+21:02:17: 72.191.29.70 - - [17/Jul/2020 21:02:17] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+21:02:17: 
+
+21:02:17: 72.191.29.70 - - [17/Jul/2020 21:02:17] "[36mGET /static/images/darkan.png HTTP/1.1[0m" 304 -
+21:02:17: 
+
+21:02:18: 72.191.29.70 - - [17/Jul/2020 21:02:18] "[37mGET /static/images/icons/bones.png HTTP/1.1[0m" 200 -
+21:02:18: 
+
+21:07:54: 104.236.216.73 - - [17/Jul/2020 21:07:54] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:07:54: 
+
+21:17:52: 149.28.73.26 - - [17/Jul/2020 21:17:52] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:17:52: 
+
+21:19:36: 72.191.29.70 - - [17/Jul/2020 21:19:36] "[37mGET / HTTP/1.1[0m" 200 -
+21:19:36: 
+
+21:19:37: 72.191.29.70 - - [17/Jul/2020 21:19:37] "[37mGET /static/pages.css HTTP/1.1[0m" 200 -
+21:19:37: 
+
+21:19:37: 72.191.29.70 - - [17/Jul/2020 21:19:37] "[37mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 200 -
+21:19:37: 
+
+21:19:37: 72.191.29.70 - - [17/Jul/2020 21:19:37] "[37mGET /static/images/darkan.png HTTP/1.1[0m" 200 -
+21:19:37: 
+
+21:19:37: 72.191.29.70 - - [17/Jul/2020 21:19:37] "[37mGET /static/images/silvertrophy.png HTTP/1.1[0m" 200 -
+21:19:37: 
+
+21:19:37: 72.191.29.70 - - [17/Jul/2020 21:19:37] "[37mGET /static/images/goldtrophy.png HTTP/1.1[0m" 200 -
+21:19:37: 
+
+21:19:37: 72.191.29.70 - - [17/Jul/2020 21:19:37] "[37mGET /static/images/logo.png HTTP/1.1[0m" 200 -
+21:19:37: 
+
+21:19:37: 72.191.29.70 - - [17/Jul/2020 21:19:37] "[37mGET /static/images/icons/man.png HTTP/1.1[0m" 200 -
+21:19:37: 
+
+21:27:48: 104.236.216.73 - - [17/Jul/2020 21:27:48] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:27:48: 
+
+21:37:45: 149.28.73.26 - - [17/Jul/2020 21:37:45] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:37:45: 
+
+21:47:41: 104.236.216.73 - - [17/Jul/2020 21:47:41] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:47:41: 
+
+21:57:37: 149.28.73.26 - - [17/Jul/2020 21:57:37] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:57:37: 
+
+22:07:33: 104.236.216.73 - - [17/Jul/2020 22:07:33] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:07:33: 
+
+22:17:29: 149.28.73.26 - - [17/Jul/2020 22:17:29] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:17:29: 
+
+22:27:26: 104.236.216.73 - - [17/Jul/2020 22:27:26] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:27:26: 
+
+22:29:32: 220.134.42.143 - - [17/Jul/2020 22:29:32] "[37mGET / HTTP/1.1[0m" 200 -
+22:29:32: 
+
+22:32:50: 192.241.211.193 - - [17/Jul/2020 22:32:50] "[33mGET /portal/redlion HTTP/1.1[0m" 404 -
+22:32:50: 
+
+22:37:24: 149.28.73.26 - - [17/Jul/2020 22:37:24] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:37:24: 
+
+22:42:36: 72.191.29.70 - - [17/Jul/2020 22:42:36] "[37mGET / HTTP/1.1[0m" 200 -
+22:42:36: 
+
+22:42:37: 72.191.29.70 - - [17/Jul/2020 22:42:37] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+22:42:37: 
+
+22:42:37: 72.191.29.70 - - [17/Jul/2020 22:42:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+22:42:37: 
+
+22:42:37: 72.191.29.70 - - [17/Jul/2020 22:42:37] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+22:42:37: 
+
+22:42:37: 72.191.29.70 - - [17/Jul/2020 22:42:37] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+22:42:37: 
+
+22:42:37: 72.191.29.70 - - [17/Jul/2020 22:42:37] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+22:42:37: 
+
+22:42:37: 72.191.29.70 - - [17/Jul/2020 22:42:37] "[36mGET /static/images/darkan.png HTTP/1.1[0m" 304 -
+22:42:37: 
+
+22:42:37: 72.191.29.70 - - [17/Jul/2020 22:42:37] "[37mGET /static/images/icons/red_partyhat.png HTTP/1.1[0m" 200 -
+22:42:37: 
+
+22:47:21: 104.236.216.73 - - [17/Jul/2020 22:47:21] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:47:21: 
+
+22:57:18: 149.28.73.26 - - [17/Jul/2020 22:57:18] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:57:18: 
+
+23:07:15: 104.236.216.73 - - [17/Jul/2020 23:07:15] "[37mHEAD / HTTP/1.1[0m" 200 -
+23:07:15: 
+
+23:17:12: 149.28.73.26 - - [17/Jul/2020 23:17:12] "[37mHEAD / HTTP/1.1[0m" 200 -
+23:17:12: 
+
+23:27:09: 104.236.216.73 - - [17/Jul/2020 23:27:09] "[37mHEAD / HTTP/1.1[0m" 200 -
+23:27:09: 
+
+23:31:43: 66.240.205.34 - - [17/Jul/2020 23:31:43] code 400, message Bad request syntax ('H\x00\x00\x00tj¨\x9e#D\x98+Êð§»lÅ\x19×\x8d¶\x18íJ\x1enÁùxu[lðE\x1d-jìÔxLÉrÉ\x15\x10uà%\x86Rtg\x05fv\x86]%Ì\x80\x0cèÏ®\x00µÀfÈ\x8dDÅ\tô')
+23:31:43: 
+
+23:31:43: 66.240.205.34 - - [17/Jul/2020 23:31:43] "[35m[1mH   tj¨#D+Êð§»lÅ×¶íJnÁùxu[lðE-jìÔxLÉrÉuà%Rtgfv]%ÌèÏ® µÀfÈDÅ	ô[0m" HTTPStatus.BAD_REQUEST -
+23:31:43: 
+
+23:32:51: 59.126.208.87 - - [17/Jul/2020 23:32:51] "[37mGET / HTTP/1.1[0m" 200 -
+23:32:51: 
+
+23:37:07: 149.28.73.26 - - [17/Jul/2020 23:37:07] "[37mHEAD / HTTP/1.1[0m" 200 -
+18:39:00: 
+
+18:39:01: rusted query success
+18:39:01: 
+
+18:39:01: sam roberts query success
+18:39:01: 
+
+18:39:01: saradomin query success
+18:39:01: 
+
+18:39:02: savy query success
+18:39:02: 
+
+18:39:02: scrim query success
+18:39:02: 
+
+18:39:02: scrumpy query success
+18:39:02: 
+
+18:39:03: seawolf query success
+18:39:03: 
+
+18:39:03: seis query success
+18:39:03: 
+
+18:39:03: sheldy query success
+18:39:03: 
+
+18:39:04: sincerely query success
+18:39:04: 
+
+18:39:04: skillsy query success
+18:39:04: 
+
+18:39:04: slimsharkie query success
+18:39:04: 
+
+18:39:05: slyjacob query success
+18:39:05: 
+
+18:39:05: slyjacob1 query success
+18:39:05: 
+
+18:39:05: snortwindex query success
+18:39:05: 
+
+18:39:05: stephenb1992 query success
+18:39:05: 
+
+18:39:06: stephenb92 query success
+18:39:06: 
+
+18:39:06: steven query success
+18:39:06: 
+
+18:39:06: sticky query success
+18:39:06: 
+
+18:39:07: sugarmama query success
+18:39:07: 
+
+18:39:07: surdok query success
+18:39:07: 
+
+18:39:07: t tex8 query success
+18:39:07: 
+
+18:39:08: tasman 3 query success
+18:39:08: 
+
+18:39:08: tbi query success
+18:39:08: 
+
+18:39:08: thetracker3 query success
+18:39:08: 
+
+18:39:08: thispot query success
+18:39:08: 
+
+18:39:09: torbjorn query success
+18:39:09: 
+
+18:39:09: trent query success
+18:39:09: 
+
+18:39:09: trenton query success
+18:39:09: 
+
+18:39:10: virus64 query success
+18:39:10: 
+
+18:39:10: volcarona query success
+18:39:10: 
+
+18:39:10: warhorse query success
+18:39:10: 
+
+18:39:10: wolf query success
+18:39:10: 
+
+18:39:11: x m a query success
+18:39:11: 
+
+18:39:11: x turtle x query success
+18:39:11: 
+
+18:39:11: xblade 20 query success
+18:39:11: 
+
+18:39:12: xexani query success
+18:39:12: 
+
+18:39:12: xie query success
+18:39:12: 
+
+18:39:12: yim query success
+18:39:12: 
+
+18:39:13: yung schniff query success
+18:39:13: 
+
+18:39:13: zee meeuw query success
+18:39:13: 
+
+18:39:13: zemouregal query success
+18:39:13: 
+
+18:39:13: zero query success
+18:39:13: 
+
+18:39:14: zeus query success
+18:39:14: 
+
+18:39:18: COMMAND: b'On branch ubuntu\nChanges not staged for commit:\n\tmodified:   ../../logs/ubuntu_2020-07-17.log\n\tmodified:   ../__pycache__/xp_tracker_backend.cpython-36.pyc\n\nno changes added to commit'
+18:39:18: 
+
+18:39:21: COMMAND: b'[ubuntu f12525a] Pushing logs at 18:39:18 from ubuntu\n 1 file changed, 546 insertions(+)'
+18:39:21: 
+
+18:39:21: all stats updated & cleaned & players potentially pushed. Also did top weekly!
+18:39:21: 
+
+06:39:22: 0 query success
+06:39:22: 
+
+06:39:22: 1 query success
+06:39:22: 
+
+06:39:24: 13 query success
+06:39:24: 
+
+06:39:24: 16 query success
+06:39:24: 
+
+06:39:24: 1haha1 query success
+06:39:24: 
+
+06:39:25: 44444444444 query success
+06:39:25: 
+
+06:39:25: 45kin query success
+06:39:25: 
+
+06:39:25: 753456159258 query success
+06:39:25: 
+
+06:39:26: 7yz query success
+06:39:26: 
+
+06:39:26: adtukz query success
+06:39:26: 
+
+06:39:26: ady query success
+06:39:26: 
+
+06:39:27: alethros query success
+06:39:27: 
+
+06:39:27: ancient query success
+06:39:27: 
+
+06:39:27: arc en ciel query success
+06:39:27: 
+
+06:39:28: asia query success
+06:39:28: 
+
+06:39:28: aubery query success
+06:39:28: 
+
+06:39:28: aubury query success
+06:39:28: 
+
+06:39:29: baby deezus query success
+06:39:29: 
+
+06:39:29: big mac query success
+06:39:29: 
+
+06:39:29: biskybiscuit query success
+06:39:29: 
+
+06:39:30: black knight query success
+06:39:30: 
+
+06:39:30: blazerlord query success
+06:39:30: 
+
+06:39:30: blessdanoobs query success
+06:39:30: 
+
+06:39:31: boe query success
+06:39:31: 
+
+06:39:31: box query success
+06:39:31: 
+
+06:39:31: brad query success
+06:39:31: 
+
+06:39:31: brrs query success
+06:39:31: 
+
+06:39:32: carrot query success
+06:39:32: 
+
+06:39:32: castlewars query success
+06:39:32: 
+
+06:39:32: caviel query success
+06:39:32: 
+
+06:39:33: chbachman query success
+06:39:33: 
+
+06:39:33: christopher query success
+06:39:33: 
+
+06:39:33: clickeddaisy query success
+06:39:33: 
+
+06:39:34: coconut dan query success
+06:39:34: 
+
+06:39:34: cokecane query success
+06:39:34: 
+
+06:39:34: coolcon12 query success
+06:39:34: 
+
+06:39:35: coordinates query success
+06:39:35: 
+
+06:39:35: cringe kid query success
+06:39:35: 
+
+06:39:35: crow query success
+06:39:35: 
+
+06:39:36: crown query success
+06:39:36: 
+
+06:39:36: crusader query success
+06:39:36: 
+
+06:39:36: cryptonote query success
+06:39:36: 
+
+06:39:37: dark drift7 query success
+06:39:37: 
+
+06:39:37: dbag magee query success
+06:39:37: 
+
+06:39:37: deadly were query success
+06:39:37: 
+
+06:39:37: deadlywere query success
+06:39:37: 
+
+06:39:38: death wish query success
+06:39:38: 
+
+06:39:38: deathstriger query success
+06:39:38: 
+
+06:39:38: delb query success
+06:39:38: 
+
+06:39:39: diskid query success
+06:39:39: 
+
+06:39:39: dispvm query success
+06:39:39: 
+
+06:39:39: disskill query success
+06:39:39: 
+
+06:39:40: dlainee 900 query success
+06:39:40: 
+
+06:39:40: dmcg query success
+06:39:40: 
+
+06:39:40: dot net query success
+06:39:40: 
+
+06:39:41: dreadknight query success
+06:39:41: 
+
+06:39:41: duration query success
+06:39:41: 
+
+06:39:41: duration2 query success
+06:39:41: 
+
+06:39:42: edgelord360 query success
+06:39:42: 
+
+06:39:42: edgelord420 query success
+06:39:42: 
+
+06:39:42: edgelord69 query success
+06:39:42: 
+
+06:39:43: ekiph query success
+06:39:43: 
+
+06:39:43: esmerelda query success
+06:39:43: 
+
+06:39:43: eventest query success
+06:39:43: 
+
+06:39:44: fkingalt query success
+06:39:44: 
+
+06:39:44: fkingloot query success
+06:39:44: 
+
+06:39:44: fkingmain query success
+06:39:44: 
+
+06:39:44: flamie query success
+06:39:44: 
+
+06:39:45: flan query success
+06:39:45: 
+
+06:39:45: fletching query success
+06:39:45: 
+
+06:39:45: freeziepop query success
+06:39:45: 
+
+06:39:46: gamer4life query success
+06:39:46: 
+
+06:39:46: garlic fork query success
+06:39:46: 
+
+06:39:46: garlic pork query success
+06:39:46: 
+
+06:39:47: gex546 query success
+06:39:47: 
+
+06:39:47: gexskills query success
+06:39:47: 
+
+06:39:47: goldenag query success
+06:39:47: 
+
+06:39:48: grimoire query success
+06:39:48: 
+
+06:39:48: grizzly query success
+06:39:48: 
+
+06:39:48: guine query success
+06:39:48: 
+
+06:39:49: handcrafted query success
+06:39:49: 
+
+06:39:49: heat query success
+06:39:49: 
+
+06:39:49: herieman query success
+06:39:49: 
+
+06:39:50: highkeyloki query success
+06:39:50: 
+
+06:39:50: hitler query success
+06:39:50: 
+
+06:39:50: honestly query success
+06:39:50: 
+
+06:39:50: hwguy query success
+06:39:50: 
+
+06:39:51: i am yim query success
+06:39:51: 
+
+06:39:51: ian query success
+06:39:51: 
+
+06:39:51: ibt query success
+06:39:51: 
+
+06:39:52: ikrim query success
+06:39:52: 
+
+06:39:52: ill query success
+06:39:52: 
+
+06:39:52: illusion query success
+06:39:52: 
+
+06:39:53: incognito query success
+06:39:53: 
+
+06:39:53: inori query success
+06:39:53: 
+
+06:39:53: invalid query success
+06:39:53: 
+
+06:39:53: iron arm query success
+06:39:53: 
+
+06:39:54: ironic query success
+06:39:54: 
+
+06:39:54: jarno45 query success
+06:39:54: 
+
+06:39:54: javin query success
+06:39:54: 
+
+06:39:55: jawarrior query success
+06:39:55: 
+
+06:39:55: jawarrior1 query success
+06:39:55: 
+
+06:39:55: jawarrior2 query success
+06:39:55: 
+
+06:39:56: jeton query success
+06:39:56: 
+
+06:39:56: jigglebox query success
+06:39:56: 
+
+06:39:56: jingles query success
+06:39:56: 
+
+06:39:57: jiren query success
+06:39:57: 
+
+06:39:57: jonny jonny query success
+06:39:57: 
+
+06:39:57: juice fruit query success
+06:39:57: 
+
+06:39:58: justin query success
+06:39:58: 
+
+06:39:58: kakarot query success
+06:39:58: 
+
+06:39:58: kale query success
+06:39:58: 
+
+06:39:59: kalem query success
+06:39:59: 
+
+06:39:59: kestlen query success
+06:39:59: 
+
+06:39:59: kijani query success
+06:39:59: 
+
+06:40:00: killing query success
+06:40:00: 
+
+06:40:00: krethis query success
+06:40:00: 
+
+06:40:00: kunark query success
+06:40:00: 
+
+06:40:00: kurt query success
+06:40:00: 
+
+06:40:01: lady celeste query success
+06:40:01: 
+
+06:40:01: lazy celeste query success
+06:40:01: 
+
+06:40:02: ledsy query success
+06:40:02: 
+
+06:40:02: lende query success
+06:40:02: 
+
+06:40:02: lestic query success
+06:40:02: 
+
+06:40:02: lowkeyloki query success
+06:40:02: 
+
+06:40:03: mag query success
+06:40:03: 
+
+06:40:03: mageballer43 query success
+06:40:03: 
+
+06:40:03: maxed query success
+06:40:03: 
+
+06:40:04: medic query success
+06:40:04: 
+
+06:40:04: megastary query success
+06:40:04: 
+
