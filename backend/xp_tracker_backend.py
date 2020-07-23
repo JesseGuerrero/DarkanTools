@@ -4,7 +4,7 @@ import subprocess
 from datetime import date, datetime, timedelta
 from threading import Thread
 from time import sleep
-
+from random import shuffle
 import requests
 
 from os.path import dirname as up
@@ -626,11 +626,16 @@ def populatePlayerIcons():
 #---Top Weekly DONE
 
 #---Pure site oriented functions
-def randomTab():
+def randomTabIcon():
     '''
     Returns a random icon image string for all page tabs
     '''
-    pass
+    icondir = up(up(__file__))
+    icondir = os.path.join(icondir, "static", "images", "icons")
+    icon_list = os.listdir(icondir)
+    shuffle(icon_list)
+    return icon_list.pop()
+
 #---Pure site oriented functions DONE
 
 if __name__ == "__main__":
@@ -640,7 +645,7 @@ if __name__ == "__main__":
     Remember, main is established as the first indentation of code, even 
     in imports. This means all level 0 indentations run, even in imports.
     '''
-
+    print(randomTabIcon())
 
 
 
