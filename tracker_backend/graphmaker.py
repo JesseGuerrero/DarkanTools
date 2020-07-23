@@ -9,7 +9,7 @@ if __name__ != '__main__':
     from . import xp_tracker_backend as be
 
 
-#TODO: Annotate
+#TODO: Ensure good Annotation
 def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
     #Static directory for the rest of the function. I used from imports to reduce size. It starts from this file
     staticDir = realpath(join(up(up(__file__)), "static"))
@@ -153,4 +153,4 @@ if __name__ == '__main__':
     import xp_tracker_backend as be
 
     #The options menu gives a number from 0-25. With the Stat.skill_ID attribute we can convert string stats to ID
-    xpTracker(be.Stat.skill_ID["Attack"], "trent", "garlic pork", int(14))
+    xpTracker(be.Stat.skill_ID["Attack"], "", "Garlic Pork", int(14))

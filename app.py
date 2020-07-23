@@ -3,10 +3,11 @@ from flask import Flask, render_template, request
 from random import shuffle
 import os
 
-
-#TODO: Finish XP Tracker then deploy. Then start on GE
+#TODO: Then start on GE
 #TODO: Apply Dry to page functions
-#TODO: Add more players
+#TODO: Check case sensitivity after next merge, Ubuntu was having issues
+#TODO: Create stat increase profile where each stat is categorized and shown to players
+#TODO: Add actual stat increase inside graph
 
 #Custom Modules
 from tracker_backend import xp_tracker_backend as be
@@ -19,6 +20,7 @@ app = Flask(__name__)
 
 #Removes caching -> removes hard resets.
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
 
 #Landing page
 @app.route('/', methods=["GET", "POST"])
@@ -51,7 +53,6 @@ def tracker():
         stat_name = request.form['skill_input']
         days = request.form['days_input']
 
-        print(player1, player2, stat_name, days)
     #Changes the actual file.
     gm.xpTracker(stat_name, player1, player2, days)
 
@@ -79,8 +80,11 @@ def register():
             #Otherwise do this...
             new_player = new_player.lower()
 
-            # reg_result is determined by the return of commit_player
-            reg_result = be.commit_player(new_player, "github")
+            # reg_result is determined by the return of add_player_file
+            if "win" in os.sys.platform:
+                reg_result = be.add_player_file(new_player, "github", "windows")
+            else:
+                reg_result = be.add_player_file(new_player, "github", "ubuntu")
         try:
             searched_player = request.form['search_reg']
         except:
@@ -116,7 +120,6 @@ if __name__ == '__main__':
     #Threaded option to enable multiple instances for multiple user access support
     #If its windows, we are probably debugging at home.
     if "win" in os.sys.platform:
-        app.run(threaded=True, port=5000, debug = True)
+        app.run(threaded=True, port=5000, debug = False)
     else:
         app.run(host = '0.0.0.0', port=80, threaded=True, debug=False)
-
