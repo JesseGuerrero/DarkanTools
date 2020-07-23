@@ -517,10 +517,6 @@ def sync_stats():
     sync_stats()
 #---XP tracking assurance DONE
 
-#---Graph Maker
-def makeGraph():
-    pass
-#---Graph Maker DONE
 
 #---Top Weekly
 def setTopPlayers():
@@ -613,7 +609,7 @@ def getTopPlayers() -> list:
     #-Organize list DONE
     return org_players
 
-def populatePlayerIcons():
+def topPlayerIcons():
     '''
     Creates player tags for top 10 players. Perhaps create a tag
     folder just for this purpose
