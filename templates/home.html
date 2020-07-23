@@ -1,58 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Default meta on html doc -->
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- CSS Call is specific to Flask-->
-    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='pages.css') }}">
-
-    <!-- Titles -->
-    <link rel="icon" href="static/images/icons/{{ icon }}">
-    <title>Darkan Tools</title>
-</head>
-<body>
-{#Main header + menu#}
-    <h1><img src="static/images/logo.png">Darkan Tools</h1>
-    <table id = "mainmenu">
-        <tr>
-            <td class = "mainbutton">
-                <a href="/">Home</a>
-            </td>
-            <td class = "mainbutton">
-                <a href="https://darkan.org/">Official site</a>
-            </td>
-             <td class = "mainbutton">
-                <a href="https://darkan.fandom.com/wiki/Darkan_Wiki">Wiki page</a>
-            </td>
-            <td class = "mainbutton">
-                <a href="/tracker">XP tracker</a>
-            </td>
-            <td class = "mainbutton">
-                <a href='/register'>Register username</a>
-            </td>
-            <td>
-                {#Left blank for more space#}
-            </td>
-        </tr>
-    </table>
-    <table class = "layout">
-        <tr>
-            <td id="playerlist">
-                <div>Top Weekly</div>
-                {% for player in player_list %}
-                    {% if player == "No more XP registered!" %}
-                        <span style="font-style: italic; color: red">{{ player }}</span>
-                    {% else %}
-                        <img src="{{ player_icons.pop(0) }}" class="player_icons">
-                        <span style="text-decoration: underline;">{{ player[0].title() }}:</span> {{ player[1] }}<br>
-                    {% endif %}
-                {% endfor %}
-            </td>
-            <td class="maincontent">
+{% include 'header.html' %}
+            <div class="col-sm-10">
                 <h2>Welcome to Darkan Tools!</h2>
                 <p>
                     This website runs for free 24/7 and automatically saves
@@ -67,13 +14,10 @@
                     If you have feature suggestions, which I appreciate, DM me
                     in the Darkan discord.
                 </p>
-                <img src="static/images/darkan.png">
-            </td>
-        </tr>
-    </table>
-
-
-
+                <img src="static/images/darkan.webp">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 

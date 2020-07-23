@@ -3,11 +3,14 @@ from flask import Flask, render_template, request
 from random import shuffle
 import os
 
+#TODO: Convert all images to webp, bookmark in browser
 #TODO: Then start on GE
 #TODO: Apply Dry to page functions
 #TODO: Check case sensitivity after next merge, Ubuntu was having issues
 #TODO: Create stat increase profile where each stat is categorized and shown to players
 #TODO: Add actual stat increase inside graph
+#Create Tabs for XP Tracker, GE Tracker https://getbootstrap.com/docs/4.5/components/navs/#tabs
+
 
 #Custom Modules
 from tracker_backend import xp_tracker_backend as be
@@ -31,11 +34,10 @@ def home():
     icon_list = os.listdir(icondir)
 
     shuffle(icon_list)
-
     #Create website oriented function section in backend. use each func ind at first, get rid of shuffle at each page.
     #Do this for each
     return render_template("home.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
-                           player_icons = be.populatePlayerIcons())
+                           player_icons = be.populatePlayerIcons(), home_active="active")
 
 #XP Tracker(Graph not made, graphmaker.py)
 @app.route('/tracker', methods=["GET", "POST"])
@@ -62,7 +64,7 @@ def tracker():
     icon_list = os.listdir(icondir)
 
     return render_template("tracker.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
-                           player_icons = be.populatePlayerIcons())
+                           player_icons = be.populatePlayerIcons(), tracker_active="active")
 
 #A section for adding usernames
 @app.route('/register', methods=["GET", "POST"])
@@ -101,7 +103,8 @@ def register():
     shuffle(icon_list)
 
     return render_template("register_player.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
-                           result = reg_result, result2 = searched_player, player_icons = be.populatePlayerIcons())
+                           result = reg_result, result2 = searched_player, player_icons = be.populatePlayerIcons(),
+                           register_player = "active")
 
 @app.route("/grandexchange")
 def grandexchange():
@@ -114,7 +117,7 @@ def grandexchange():
     icon_list = os.listdir(icondir)
     shuffle(icon_list)
     return render_template("grandexchange.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
-                           player_icons = be.populatePlayerIcons())
+                           player_icons = be.populatePlayerIcons(), ge_active = "active")
 
 if __name__ == '__main__':
     #Threaded option to enable multiple instances for multiple user access support
