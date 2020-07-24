@@ -156,3 +156,171 @@
 
 12:39:53: 127.0.0.1 - - [24/Jul/2020 12:39:53] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
 
+12:45:21:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+12:45:23: 127.0.0.1 - - [24/Jul/2020 12:45:23] "[37mGET / HTTP/1.1[0m" 200 -
+
+12:45:23: 127.0.0.1 - - [24/Jul/2020 12:45:23] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:23: 127.0.0.1 - - [24/Jul/2020 12:45:23] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:23: 127.0.0.1 - - [24/Jul/2020 12:45:23] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:23: 127.0.0.1 - - [24/Jul/2020 12:45:23] "[36mGET /static/images/darkan.webp HTTP/1.1[0m" 304 -
+
+12:45:23: 127.0.0.1 - - [24/Jul/2020 12:45:23] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:23: 127.0.0.1 - - [24/Jul/2020 12:45:23] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:23: 127.0.0.1 - - [24/Jul/2020 12:45:23] "[36mGET /static/images/icons/man.png HTTP/1.1[0m" 304 -
+
+12:45:24: 127.0.0.1 - - [24/Jul/2020 12:45:24] "[37mGET /ge HTTP/1.1[0m" 200 -
+
+12:45:24: 127.0.0.1 - - [24/Jul/2020 12:45:24] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:24: 127.0.0.1 - - [24/Jul/2020 12:45:24] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:24: 127.0.0.1 - - [24/Jul/2020 12:45:24] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:24: 127.0.0.1 - - [24/Jul/2020 12:45:24] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:24: 127.0.0.1 - - [24/Jul/2020 12:45:24] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:24: 127.0.0.1 - - [24/Jul/2020 12:45:24] "[36mGET /static/images/icons/elysian_shield.png HTTP/1.1[0m" 304 -
+
+12:45:25: 127.0.0.1 - - [24/Jul/2020 12:45:25] "[37mGET /street HTTP/1.1[0m" 200 -
+
+12:45:25: 127.0.0.1 - - [24/Jul/2020 12:45:25] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:25: 127.0.0.1 - - [24/Jul/2020 12:45:25] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:25: 127.0.0.1 - - [24/Jul/2020 12:45:25] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:25: 127.0.0.1 - - [24/Jul/2020 12:45:25] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:25: 127.0.0.1 - - [24/Jul/2020 12:45:25] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:26: 127.0.0.1 - - [24/Jul/2020 12:45:26] "[37mGET /upload HTTP/1.1[0m" 200 -
+
+12:45:26: 127.0.0.1 - - [24/Jul/2020 12:45:26] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:26: 127.0.0.1 - - [24/Jul/2020 12:45:26] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:26: 127.0.0.1 - - [24/Jul/2020 12:45:26] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:26: 127.0.0.1 - - [24/Jul/2020 12:45:26] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:26: 127.0.0.1 - - [24/Jul/2020 12:45:26] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:26: 127.0.0.1 - - [24/Jul/2020 12:45:26] "[36mGET /static/images/icons/gold.png HTTP/1.1[0m" 304 -
+
+12:45:27: 127.0.0.1 - - [24/Jul/2020 12:45:27] "[37mGET /ge HTTP/1.1[0m" 200 -
+
+12:45:27: 127.0.0.1 - - [24/Jul/2020 12:45:27] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:27: 127.0.0.1 - - [24/Jul/2020 12:45:27] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:27: 127.0.0.1 - - [24/Jul/2020 12:45:27] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:27: 127.0.0.1 - - [24/Jul/2020 12:45:27] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:27: 127.0.0.1 - - [24/Jul/2020 12:45:27] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:28: 127.0.0.1 - - [24/Jul/2020 12:45:28] "[37mGET /profile HTTP/1.1[0m" 200 -
+
+12:45:28: 127.0.0.1 - - [24/Jul/2020 12:45:28] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:28: 127.0.0.1 - - [24/Jul/2020 12:45:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:28: 127.0.0.1 - - [24/Jul/2020 12:45:28] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:28: 127.0.0.1 - - [24/Jul/2020 12:45:28] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:28: 127.0.0.1 - - [24/Jul/2020 12:45:28] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:29: 127.0.0.1 - - [24/Jul/2020 12:45:29] "[37mGET /compare HTTP/1.1[0m" 200 -
+
+12:45:29: 127.0.0.1 - - [24/Jul/2020 12:45:29] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:29: 127.0.0.1 - - [24/Jul/2020 12:45:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:29: 127.0.0.1 - - [24/Jul/2020 12:45:29] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:29: 127.0.0.1 - - [24/Jul/2020 12:45:29] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:29: 127.0.0.1 - - [24/Jul/2020 12:45:29] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:29: 127.0.0.1 - - [24/Jul/2020 12:45:29] "[36mGET /static/graph.png HTTP/1.1[0m" 304 -
+
+12:45:30: 127.0.0.1 - - [24/Jul/2020 12:45:30] "[37mGET /register HTTP/1.1[0m" 200 -
+
+12:45:30: 127.0.0.1 - - [24/Jul/2020 12:45:30] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:30: 127.0.0.1 - - [24/Jul/2020 12:45:30] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:30: 127.0.0.1 - - [24/Jul/2020 12:45:30] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:30: 127.0.0.1 - - [24/Jul/2020 12:45:30] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:30: 127.0.0.1 - - [24/Jul/2020 12:45:30] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:32: 127.0.0.1 - - [24/Jul/2020 12:45:32] "[37mGET /compare HTTP/1.1[0m" 200 -
+
+12:45:32: 127.0.0.1 - - [24/Jul/2020 12:45:32] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:32: 127.0.0.1 - - [24/Jul/2020 12:45:32] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:32: 127.0.0.1 - - [24/Jul/2020 12:45:32] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:32: 127.0.0.1 - - [24/Jul/2020 12:45:32] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:32: 127.0.0.1 - - [24/Jul/2020 12:45:32] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:32: 127.0.0.1 - - [24/Jul/2020 12:45:32] "[36mGET /static/graph.png HTTP/1.1[0m" 304 -
+
+12:45:46: 127.0.0.1 - - [24/Jul/2020 12:45:46] "[37mGET /profile HTTP/1.1[0m" 200 -
+
+12:45:46: 127.0.0.1 - - [24/Jul/2020 12:45:46] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:46: 127.0.0.1 - - [24/Jul/2020 12:45:46] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:46: 127.0.0.1 - - [24/Jul/2020 12:45:46] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:46: 127.0.0.1 - - [24/Jul/2020 12:45:46] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:46: 127.0.0.1 - - [24/Jul/2020 12:45:46] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:48: 127.0.0.1 - - [24/Jul/2020 12:45:48] "[37mGET /compare HTTP/1.1[0m" 200 -
+
+12:45:48: 127.0.0.1 - - [24/Jul/2020 12:45:48] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:45:48: 127.0.0.1 - - [24/Jul/2020 12:45:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:45:48: 127.0.0.1 - - [24/Jul/2020 12:45:48] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:45:48: 127.0.0.1 - - [24/Jul/2020 12:45:48] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:45:48: 127.0.0.1 - - [24/Jul/2020 12:45:48] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:45:48: 127.0.0.1 - - [24/Jul/2020 12:45:48] "[36mGET /static/graph.png HTTP/1.1[0m" 304 -
+
+12:48:40: [2020-07-24 12:48:40,945] ERROR in app: Exception on /compare [POST]
+Traceback (most recent call last):
+  File "C:\Users\jesse\.virtualenvs\DarkanTools-MwIIjnv4\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\jesse\.virtualenvs\DarkanTools-MwIIjnv4\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\jesse\.virtualenvs\DarkanTools-MwIIjnv4\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\jesse\.virtualenvs\DarkanTools-MwIIjnv4\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\jesse\.virtualenvs\DarkanTools-MwIIjnv4\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\jesse\.virtualenvs\DarkanTools-MwIIjnv4\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/jesse/OneDrive - Texas A&M University-San Antonio/Learning/Programming/Python/Projects/Darkantools/app.py", line 46, in tracker
+    graphMake(stat_name, player1, player2, days)
+  File "C:\Users\jesse\OneDrive - Texas A&M University-San Antonio\Learning\Programming\Python\Projects\Darkantools\backend\player_profiler.py", line 176, in xpTracker
+    labels[i-deleted_i] = x_element
+IndexError: list assignment index out of range
+
