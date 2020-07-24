@@ -1,0 +1,158 @@
+12:39:01:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+12:39:07: 127.0.0.1 - - [24/Jul/2020 12:39:07] "[37mGET / HTTP/1.1[0m" 200 -
+
+12:39:07: 127.0.0.1 - - [24/Jul/2020 12:39:07] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:07: 127.0.0.1 - - [24/Jul/2020 12:39:07] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:07: 127.0.0.1 - - [24/Jul/2020 12:39:07] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:07: 127.0.0.1 - - [24/Jul/2020 12:39:07] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:07: 127.0.0.1 - - [24/Jul/2020 12:39:07] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:07: 127.0.0.1 - - [24/Jul/2020 12:39:07] "[36mGET /static/images/darkan.webp HTTP/1.1[0m" 304 -
+
+12:39:07: 127.0.0.1 - - [24/Jul/2020 12:39:07] "[36mGET /static/images/icons/fire_cape.png HTTP/1.1[0m" 304 -
+
+12:39:11: 127.0.0.1 - - [24/Jul/2020 12:39:11] "[37mGET /ge HTTP/1.1[0m" 200 -
+
+12:39:11: 127.0.0.1 - - [24/Jul/2020 12:39:11] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:11: 127.0.0.1 - - [24/Jul/2020 12:39:11] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:11: 127.0.0.1 - - [24/Jul/2020 12:39:11] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:11: 127.0.0.1 - - [24/Jul/2020 12:39:11] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:11: 127.0.0.1 - - [24/Jul/2020 12:39:11] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:12: 127.0.0.1 - - [24/Jul/2020 12:39:12] "[37mGET /profile HTTP/1.1[0m" 200 -
+
+12:39:12: 127.0.0.1 - - [24/Jul/2020 12:39:12] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:12: 127.0.0.1 - - [24/Jul/2020 12:39:12] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:12: 127.0.0.1 - - [24/Jul/2020 12:39:12] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:12: 127.0.0.1 - - [24/Jul/2020 12:39:12] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:12: 127.0.0.1 - - [24/Jul/2020 12:39:12] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:14: 127.0.0.1 - - [24/Jul/2020 12:39:14] "[37mGET /compare HTTP/1.1[0m" 200 -
+
+12:39:14: 127.0.0.1 - - [24/Jul/2020 12:39:14] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:14: 127.0.0.1 - - [24/Jul/2020 12:39:14] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:14: 127.0.0.1 - - [24/Jul/2020 12:39:14] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:14: 127.0.0.1 - - [24/Jul/2020 12:39:14] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:14: 127.0.0.1 - - [24/Jul/2020 12:39:14] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:14: 127.0.0.1 - - [24/Jul/2020 12:39:14] "[36mGET /static/graph.png HTTP/1.1[0m" 304 -
+
+12:39:14: 127.0.0.1 - - [24/Jul/2020 12:39:14] "[36mGET /static/images/icons/elysian_shield.png HTTP/1.1[0m" 304 -
+
+12:39:15: 127.0.0.1 - - [24/Jul/2020 12:39:15] "[37mGET /register HTTP/1.1[0m" 200 -
+
+12:39:15: 127.0.0.1 - - [24/Jul/2020 12:39:15] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:15: 127.0.0.1 - - [24/Jul/2020 12:39:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:15: 127.0.0.1 - - [24/Jul/2020 12:39:15] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:15: 127.0.0.1 - - [24/Jul/2020 12:39:15] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:15: 127.0.0.1 - - [24/Jul/2020 12:39:15] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:15: 127.0.0.1 - - [24/Jul/2020 12:39:15] "[36mGET /static/images/icons/gold.png HTTP/1.1[0m" 304 -
+
+12:39:16: 127.0.0.1 - - [24/Jul/2020 12:39:16] "[37mGET /profile HTTP/1.1[0m" 200 -
+
+12:39:16: 127.0.0.1 - - [24/Jul/2020 12:39:16] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:16: 127.0.0.1 - - [24/Jul/2020 12:39:16] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:16: 127.0.0.1 - - [24/Jul/2020 12:39:16] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:16: 127.0.0.1 - - [24/Jul/2020 12:39:16] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:16: 127.0.0.1 - - [24/Jul/2020 12:39:16] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:27: 127.0.0.1 - - [24/Jul/2020 12:39:27] "[37mGET / HTTP/1.1[0m" 200 -
+
+12:39:27: 127.0.0.1 - - [24/Jul/2020 12:39:27] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:27: 127.0.0.1 - - [24/Jul/2020 12:39:27] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:27: 127.0.0.1 - - [24/Jul/2020 12:39:27] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:27: 127.0.0.1 - - [24/Jul/2020 12:39:27] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:27: 127.0.0.1 - - [24/Jul/2020 12:39:27] "[36mGET /static/images/darkan.webp HTTP/1.1[0m" 304 -
+
+12:39:27: 127.0.0.1 - - [24/Jul/2020 12:39:27] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:27: 127.0.0.1 - - [24/Jul/2020 12:39:27] "[36mGET /static/images/icons/odd_old_man.png HTTP/1.1[0m" 304 -
+
+12:39:30: 127.0.0.1 - - [24/Jul/2020 12:39:30] "[37mGET /ge HTTP/1.1[0m" 200 -
+
+12:39:30: 127.0.0.1 - - [24/Jul/2020 12:39:30] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:30: 127.0.0.1 - - [24/Jul/2020 12:39:30] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:30: 127.0.0.1 - - [24/Jul/2020 12:39:30] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:30: 127.0.0.1 - - [24/Jul/2020 12:39:30] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:30: 127.0.0.1 - - [24/Jul/2020 12:39:30] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:31: 127.0.0.1 - - [24/Jul/2020 12:39:31] "[37mGET /profile HTTP/1.1[0m" 200 -
+
+12:39:31: 127.0.0.1 - - [24/Jul/2020 12:39:31] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:31: 127.0.0.1 - - [24/Jul/2020 12:39:31] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:31: 127.0.0.1 - - [24/Jul/2020 12:39:31] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:31: 127.0.0.1 - - [24/Jul/2020 12:39:31] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:31: 127.0.0.1 - - [24/Jul/2020 12:39:31] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:31: 127.0.0.1 - - [24/Jul/2020 12:39:31] "[36mGET /static/images/icons/ectophial.png HTTP/1.1[0m" 304 -
+
+12:39:47: 127.0.0.1 - - [24/Jul/2020 12:39:47] "[37mGET /ge HTTP/1.1[0m" 200 -
+
+12:39:47: 127.0.0.1 - - [24/Jul/2020 12:39:47] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:47: 127.0.0.1 - - [24/Jul/2020 12:39:47] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:47: 127.0.0.1 - - [24/Jul/2020 12:39:47] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:47: 127.0.0.1 - - [24/Jul/2020 12:39:47] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:47: 127.0.0.1 - - [24/Jul/2020 12:39:47] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:47: 127.0.0.1 - - [24/Jul/2020 12:39:47] "[36mGET /static/images/icons/boots_of_lightness.png HTTP/1.1[0m" 304 -
+
+12:39:50: 127.0.0.1 - - [24/Jul/2020 12:39:50] "[37mGET /profile HTTP/1.1[0m" 200 -
+
+12:39:50: 127.0.0.1 - - [24/Jul/2020 12:39:50] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
+12:39:50: 127.0.0.1 - - [24/Jul/2020 12:39:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+
+12:39:51: 127.0.0.1 - - [24/Jul/2020 12:39:51] "[36mGET /static/images/goldtrophy.png HTTP/1.1[0m" 304 -
+
+12:39:51: 127.0.0.1 - - [24/Jul/2020 12:39:51] "[36mGET /static/images/silvertrophy.png HTTP/1.1[0m" 304 -
+
+12:39:51: 127.0.0.1 - - [24/Jul/2020 12:39:51] "[36mGET /static/images/bronzetrophy.png HTTP/1.1[0m" 304 -
+
+12:39:51: 127.0.0.1 - - [24/Jul/2020 12:39:51] "[36mGET /static/images/icons/man.png HTTP/1.1[0m" 304 -
+
+12:39:53: 127.0.0.1 - - [24/Jul/2020 12:39:53] "[37mGET /compare HTTP/1.1[0m" 200 -
+
+12:39:53: 127.0.0.1 - - [24/Jul/2020 12:39:53] "[36mGET /static/pages.css HTTP/1.1[0m" 304 -
+
