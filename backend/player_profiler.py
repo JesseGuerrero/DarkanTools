@@ -6,16 +6,22 @@ import os
 from random import shuffle
 
 if __name__ != '__main__':
-    from . import xp_tracker_backend as be
+    #Needs this import to use backend functions outside the file.
+    from . import backend as be
 
+def xpTracker(stat_num, player1 ="", player2 ="", days = 7):
+    '''
+    stat_num is 1-25 which is all 24 skills and 1 last one called "totalXp".
+    It is converted to the actual skill name using the Stat class, which has a dictionary
+    of the IDs and names and the reverse names and IDs
 
-#TODO: Ensure good Annotation
-def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
+    The function creates a picture which is loaded into the tracker.html
+    '''
     #Static directory for the rest of the function. I used from imports to reduce size. It starts from this file
     staticDir = realpath(join(up(up(__file__)), "static"))
 
     #Convert stat number from option menu to string and days to string
-    stat_name = be.Stat.skill_Name[int(stat_name)]
+    stat_num = be.Stat.skill_Name[int(stat_num)]
     days = int(days)
 
     #Create axis lists
@@ -30,14 +36,14 @@ def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
 
     #Get stat object list but if you fail, dont plot it
     try:
-        stat_profile1 = be.get_file_stats(player1, stat_name, days)
+        stat_profile1 = be.get_file_stats(player1, stat_num, days)
     #Player 1 plotting disabled
     except:
         p1 = False
 
     #Get stat object list for player 2
     try:
-        stat_profile2 = be.get_file_stats(player2, stat_name, days)
+        stat_profile2 = be.get_file_stats(player2, stat_num, days)
     #player 2 plotting disabled
     except:
         p2 = False
@@ -57,20 +63,36 @@ def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
 
     #Get date and value elements but if player 1 is empty do not
     if p1:
-        for stat in stat_profile1:
+        for day, stat in enumerate(stat_profile1):
+            '''
+            enumerate makes a tuple (0-days, Stat obj)
+            If the first day that is our base stat
+            '''
+            if day is 0:
+                first_xp = stat.getValue()
+
             x_element = str(stat.getDate())[-5:]
             x1_axis.append(x_element)
 
-            y_element = stat.getValue()
+            #We find the difference from the first day
+            y_element = stat.getValue() - first_xp
             y1_axis.append(y_element)
 
     #get date and value elements but if player 2 is empty do not
     if p2:
-        for stat in stat_profile2:
+        for day, stat in enumerate(stat_profile2):
+            '''
+            enumerate makes a tuple (0-days, Stat obj)
+            If the first day that is our base stat
+            '''
+            if day is 0:
+                first_xp = stat.getValue()
+
             x_element = str(stat.getDate())[-5:]
             x2_axis.append(x_element)
 
-            y_element = stat.getValue()
+            #We find the difference from the first day
+            y_element = stat.getValue() - first_xp
             y2_axis.append(y_element)
 
     #Setup default colors
@@ -80,11 +102,11 @@ def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
     plt.rcParams['xtick.color'] = COLOR
     plt.rcParams['ytick.color'] = COLOR
 
-    #Get the internal portion and set it to black and make the title the stat_name
+    #Get the internal portion and set it to black and make the title the stat_num
     fig = plt.figure()
     ax = fig.add_subplot()
     ax.patch.set_facecolor('black')
-    ax.set_title(stat_name.title())
+    ax.set_title(stat_num.title())
 
 
     #player2 random color, default red if only 1 player
@@ -116,8 +138,13 @@ def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
 
     #Lastly setup the ticks
     locs, labels = plt.yticks()
-    for i, x in enumerate(locs):
+
+    #Used to represent lost indices from enumerate.
+    deleted_i = 0
+    for i, x_tick in enumerate(locs):
         '''
+        Remember, we changed this to mean xp from the starting day 7 days ago.
+        
         locs are the number values of the y-axis, it is actual xp in float format
         We turn to integer to take off decimal and then turn to string to format.
         The format function is used to add commas 
@@ -128,19 +155,25 @@ def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
         Lastly labels is some kind of text object where you can set the text.
         When you re-insert it into ply.yticks() object it works but it requires locs too.
         '''
-        x_element = int(x)
+
+        x_element = int(x_tick)
         x_element = str(x_element)
 
-        #Now lets add a M for millions, IT EATS THE K and the 3 zeros
-        if len(x_element) > 7:
-            x_element = x_element[0:-6] + "M"
-
         #Now lets add a k for thousands
-        elif len(x_element) > 4:
+        if len(x_element) > 4:
             x_element = x_element[0:-3] + "K"
 
-        #The labels will override the values
-        labels[i] = x_element
+        if x_tick < 0:
+            '''
+            We will not allow the x-axis to have negative numbers.
+            Delete all numbers past the negative one.
+            '''
+            locs = locs[i+1:]
+            labels = labels[i+1:]
+            deleted_i += 1
+        # The labels will override the values
+        else:
+            labels[i-deleted_i] = x_element
 
     #Put it back in with the string changes
     plt.yticks(locs, labels)
@@ -148,9 +181,10 @@ def xpTracker(stat_name, player1 = "", player2 = "", days = 7):
     #Go to the static folder and save the graph, make the face of the entire figure black with a little transparency
     plt.savefig(realpath(join(staticDir, 'graph.png')), facecolor=(0,0,0,.8))
 
-#Imports act different depending on where main is.
+
 if __name__ == '__main__':
-    import xp_tracker_backend as be
+    #If this file is being run by itself we can simply import differently
+    import backend as be
 
     #The options menu gives a number from 0-25. With the Stat.skill_ID attribute we can convert string stats to ID
     xpTracker(be.Stat.skill_ID["Attack"], "", "Garlic Pork", int(14))
