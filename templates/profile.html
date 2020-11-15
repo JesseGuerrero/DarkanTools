@@ -2,77 +2,16 @@
             <div class="col-sm-10">
                 <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <a class="nav-link active" href="/compare">Compare</a>
+                    <a class="nav-link active" href="/profile">Profiler</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/profiler">Profiler</a>
+                    <a class="nav-link" href="/compare">Compare</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
                   </li>
                 </ul>
-                <h2>Profiler</h2>
-                <form method="POST">
-                    <div class="form-group row">
-                        <label for="inputP1" class="col-sm-1 col-form-label">Player 1:</label>
-                        <div class="col-sm-3">
-                          <input type="text" name="player1_input" class="form-control" id="inputP1" placeholder="Username">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputP2" class="col-sm-1 col-form-label">Player 2:</label>
-                        <div class="col-sm-3">
-                          <input type="text" name="player2_input" class="form-control" id="inputP2" placeholder="Username">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="skill_sel" class="col-sm-1 col-form-label">Skill:</label>
-                        <div class="col-sm-3">
-                            <select name="skill_input" id="skill_sel" class="form-control form-control-sm">
-                              <option value = "25">Total Xp</option>
-                               <option value = "0">Attack</option>
-                               <option value = "1">Defence</option>
-                               <option value = "2">Strength</option>
-                               <option value = "3">Hitpoints</option>
-                               <option value = "4">Ranged</option>
-                               <option value = "5">Prayer</option>
-                               <option value = "6">Magic</option>
-                               <option value = "7">Cooking</option>
-                               <option value = "8">Woodcutting</option>
-                               <option value = "9">Fletching</option>
-                               <option value = "10">Fishing</option>
-                               <option value = "11">Firemaking</option>
-                               <option value = "12">Crafting</option>
-                               <option value = "13">Smithing</option>
-                               <option value = "14">Mining</option>
-                               <option value = "15">Herblore</option>
-                               <option value = "16">Agility</option>
-                               <option value = "17">Thieving</option>
-                               <option value = "18">Slayer</option>
-                               <option value = "19">Farming</option>
-                               <option value = "20">Runecrafting</option>
-                               <option value = "21">Hunter</option>
-                               <option value = "22">Construction</option>
-                               <option value = "23">Summoning</option>
-                               <option value = "24">Dungeoneering</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="day_sel" class="col-sm-1 col-form-label">Days:</label>
-                        <div class="col-sm-3">
-                            <select name="days_input" id="day_sel" class="form-control form-control-sm">
-                               <option value = "7">7 Days</option>
-                               <option value = "14">14 days</option>
-                               <option value = "30">30 days</option>
-                            </select>
-                        </div>
-                    </div>
-                    <form method="post">
-                          <input type="submit" value="Plot" style = "color: #fff; height:40px; width: 65px; font-size: 15px; border: 1px solid transparent; border-radius: 0.25rem; background-color: #3A3F44; border-color: rgba(0,0,0,0.6); text-shadow: 1px 1px 1px rgba(0,0,0,0.3); transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;" >
-                    </form>
-                    <div class="">
-                        <!-- you gotta use static -->
-                      <img src="static/graph.png" alt="tracker graph">
-                    </div>
-                </form>
+
             </div>
         </div>
     </div>

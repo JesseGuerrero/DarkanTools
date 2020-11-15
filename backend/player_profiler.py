@@ -9,13 +9,13 @@ if __name__ != '__main__':
     #Needs this import to use backend functions outside the file.
     from . import backend as be
 
-def xpTracker(stat_num, player1 ="", player2 ="", days = 7):
+def graphMake(stat_num, player1 ="", player2 ="", days = 7):
     '''
     stat_num is 1-25 which is all 24 skills and 1 last one called "totalXp".
     It is converted to the actual skill name using the Stat class, which has a dictionary
     of the IDs and names and the reverse names and IDs
 
-    The function creates a picture which is loaded into the tracker.html
+    The function creates a picture which is loaded into the compare.html
     '''
     #Static directory for the rest of the function. I used from imports to reduce size. It starts from this file
     staticDir = realpath(join(up(up(__file__)), "static"))
@@ -139,6 +139,8 @@ def xpTracker(stat_num, player1 ="", player2 ="", days = 7):
     #Lastly setup the ticks
     locs, labels = plt.yticks()
 
+    print(locs, labels)
+
     #Used to represent lost indices from enumerate.
     deleted_i = 0
     for i, x_tick in enumerate(locs):
@@ -155,7 +157,7 @@ def xpTracker(stat_num, player1 ="", player2 ="", days = 7):
         Lastly labels is some kind of text object where you can set the text.
         When you re-insert it into ply.yticks() object it works but it requires locs too.
         '''
-
+        # print(x_tick, labels)
         x_element = int(x_tick)
         x_element = str(x_element)
 
@@ -163,14 +165,15 @@ def xpTracker(stat_num, player1 ="", player2 ="", days = 7):
         if len(x_element) > 4:
             x_element = x_element[0:-3] + "K"
 
+        #TODO: Annotate
         if x_tick < 0:
             '''
             We will not allow the x-axis to have negative numbers.
             Delete all numbers past the negative one.
             '''
-            locs = locs[i+1:]
-            labels = labels[i+1:]
             deleted_i += 1
+            locs = locs[1:]
+            labels = labels[1:]
         # The labels will override the values
         else:
             labels[i-deleted_i] = x_element
@@ -181,10 +184,27 @@ def xpTracker(stat_num, player1 ="", player2 ="", days = 7):
     #Go to the static folder and save the graph, make the face of the entire figure black with a little transparency
     plt.savefig(realpath(join(staticDir, 'graph.png')), facecolor=(0,0,0,.8))
 
+def errorGraphMake():
+    '''
+    Makes an error graph every time there is an error comparing top 2 players in top weekly
+    [random text title]
+    [picture1, picture2]
+    '''
+    pass
+
+def player_profile(username, days = 3) -> list:
+    '''
+    Processes and returns a stats profiler for xp tracking players individually.
+    Returns a list of stat changes to be parsed inside the html through Jinja
+    '''
+    print(be.get_file_stats(username, "Hitpoints", days))
+
 
 if __name__ == '__main__':
     #If this file is being run by itself we can simply import differently
     import backend as be
 
     #The options menu gives a number from 0-25. With the Stat.skill_ID attribute we can convert string stats to ID
-    xpTracker(be.Stat.skill_ID["Attack"], "", "Garlic Pork", int(14))
+    #graphMake(be.Stat.skill_ID["Attack"], "", "Garlic Pork", int(14))
+
+    player_profile("jawarrior1")

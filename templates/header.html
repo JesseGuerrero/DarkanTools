@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- CSS Call is specific to Flask-->
-    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='pages2.css') }}">
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='pages.css') }}">
 
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -31,11 +31,13 @@
 {#Main header + menu#}
     <div class = "container-fluid px-0">
         <h1><img src="static/images/logo.png" id="brand">Darkan Tools</h1>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark">
             {#This is the hamburger#}
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            {#This is the dropdown "Darkan"#}
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-item nav-link {{ home_active }}" href="/">Home<span class="sr-only">(current)</span></a>
@@ -45,13 +47,13 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="https://darkan.fandom.com/wiki/Darkan_Wiki">Wiki</a>
                   <a class="dropdown-item" href="https://www.reddit.com/r/2012scape/">Reddit</a>
-                  <a class="dropdown-item" href="#">Discord <i class="fas fa-certificate" style="color: #f5e10c"></i></a>
+                  <a class="dropdown-item" href="https://discord.com/invite/Z32ggEB">Discord <i class="fas fa-certificate" style="color: #43eb34"></i></a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="https://darkan.org/">Official Website</a>
               </div>
-                <a class="nav-item nav-link {{ ge_active }}" href="/grandexchange">GE Tracker</a>
-              <a class="nav-item nav-link {{ tracker_active }}" href="/tracker">XP Tracker</a>
-              <a class="nav-item nav-link {{ register_player }}" href="/register">Register username</a>
+                <a class="nav-item nav-link {{ ge_active }}" href="/ge">GE Tool</a>
+                <a class="nav-item nav-link {{ tracker_active }}" href="/profile">XP Profiles</a>
+                <a class="nav-item nav-link {{ donate_active }}" href="/donate">Donate</a>
             </div>
           </div>
         </nav>
@@ -63,7 +65,7 @@
                         <span style="font-style: italic; color: red">{{ player }}</span>
                     {% else %}
                         <img src="{{ player_icons.pop(0) }}" class="player_icons">
-                        <span style="text-decoration: underline;">{{ player[0].title() }}:</span> {{ player[1] }}<br>
+                        <span style="text-decoration: underline;">{{ player[0].title() }}:</span> {{ player[1] }} XP<br>
                     {% endif %}
                 {% endfor %}
             </div>

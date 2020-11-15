@@ -12,6 +12,40 @@ pretty
     font-weight: bold;
 }
 
+.navbar {
+    background-color: #1a1a1a;
+    padding: 0 !important;
+}
+
+/*Accordian from donate page*/
+.card-body {
+    background-color: #272B30;
+}
+
+.btn-bg-black {
+    color: #aaa !important;
+    text-align: left !important;
+    background-color: #1a1a1a !important;
+}
+
+.btn-bg-black:hover {
+    background-color:  !important;
+}
+
+#accordion {
+    width: 50% !important;
+}
+
+#accordion img {
+    width: 100%;
+}
+
+button:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+/*Accordian done*/
+
 /*Setup constants on all pages*/
 body {
     /*Default universal settings for page*/

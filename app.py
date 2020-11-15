@@ -1,22 +1,25 @@
 #Essentials
 from flask import Flask, render_template, request
-from random import shuffle
 import os
 
+#TODO: Checkout iframe, tipit, runehq, sals realm
+    #1: Download tip.it
+    #2: Make it runnable on Darkantools local
+    #3: Relink all urls, media, js to Darkantools
+    #4: Push to ubuntu
+#TODO: Darken all colors
+#TODO: Redo above for available webstes on web archive
 #TODO: Convert all images to webp, bookmark in browser
 #TODO: Then start on GE
 #TODO: Apply Dry to page functions
-#TODO: Check case sensitivity after next merge, Ubuntu was having issues
 #TODO: Create stat increase profile where each stat is categorized and shown to players
-#TODO: Add actual stat increase inside graph
 #Create Tabs for XP Tracker, GE Tracker https://getbootstrap.com/docs/4.5/components/navs/#tabs
-
+#TODO: Change color scheme of tabs
 
 #Custom Modules
-from tracker_backend import xp_tracker_backend as be
-from tracker_backend import graphmaker as gm
-
-#TODO: Create log system
+from backend.backend import *
+from backend.filemanagement import getRegPlayers
+from backend.player_profiler import *
 
 #The Flask object constructor takes arguments
 app = Flask(__name__)
@@ -28,19 +31,11 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 #Landing page
 @app.route('/', methods=["GET", "POST"])
 def home():
-    #Unique PATH per OS
-    icondir = os.path.dirname(__file__)
-    icondir = os.path.join(icondir, "static", "images", "icons")
-    icon_list = os.listdir(icondir)
+    return render_template("home.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), home_active="active")
 
-    shuffle(icon_list)
-    #Create website oriented function section in backend. use each func ind at first, get rid of shuffle at each page.
-    #Do this for each
-    return render_template("home.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
-                           player_icons = be.populatePlayerIcons(), home_active="active")
-
-#XP Tracker(Graph not made, graphmaker.py)
-@app.route('/tracker', methods=["GET", "POST"])
+#XP Tracker(Graph not made, player_profiler.py)
+@app.route('/compare', methods=["GET", "POST"])
 def tracker():
     player1, player2, stat_name, days = "", "", 25, 7
     if request.method == "POST":
@@ -56,15 +51,16 @@ def tracker():
         days = request.form['days_input']
 
     #Changes the actual file.
-    gm.xpTracker(stat_name, player1, player2, days)
+    graphMake(stat_name, player1, player2, days)
 
-    #Unique PATH per OS
-    icondir = os.path.dirname(__file__)
-    icondir = os.path.join(icondir, "static", "images", "icons")
-    icon_list = os.listdir(icondir)
+    return render_template("compare.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), tracker_active="active")
 
-    return render_template("tracker.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
-                           player_icons = be.populatePlayerIcons(), tracker_active="active")
+#Profile each player and their gains
+@app.route('/profile', methods=["GET", "POST"])
+def compare():
+    return render_template("profile.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), tracker_active="active")
 
 #A section for adding usernames
 @app.route('/register', methods=["GET", "POST"])
@@ -84,40 +80,44 @@ def register():
 
             # reg_result is determined by the return of add_player_file
             if "win" in os.sys.platform:
-                reg_result = be.add_player_file(new_player, "github", "windows")
+                reg_result = add_player_file(new_player, "github", "windows")
             else:
-                reg_result = be.add_player_file(new_player, "github", "ubuntu")
+                reg_result = add_player_file(new_player, "github", "ubuntu")
         try:
             searched_player = request.form['search_reg']
         except:
             # If search form fails/empty, do nothing
             pass
         else:
-            if searched_player.lower() in be.getRegPlayers():
+            if searched_player.lower() in getRegPlayers():
                 searched_player = f"{searched_player.title()} is in our DB..."
 
-    #Get path to icon, os.path works with all os, list icons in path, shuffle path
-    icondir = os.path.dirname(__file__)
-    icondir = os.path.join(icondir, "static", "images", "icons")
-    icon_list = os.listdir(icondir)
-    shuffle(icon_list)
+    return render_template("register.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           result = reg_result, result2 = searched_player, player_icons = topPlayerIcons(),
+                           tracker_active = "active")
 
-    return render_template("register_player.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
-                           result = reg_result, result2 = searched_player, player_icons = be.populatePlayerIcons(),
-                           register_player = "active")
-
-@app.route("/grandexchange")
-def grandexchange():
+@app.route("/ge")
+def ge():
     '''
     Using API create a UI for GE
     '''
+    return render_template("ge.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), ge_active ="active")
 
-    icondir = os.path.dirname(__file__)
-    icondir = os.path.join(icondir, "static", "images", "icons")
-    icon_list = os.listdir(icondir)
-    shuffle(icon_list)
-    return render_template("grandexchange.html", icon = icon_list.pop(), player_list = be.getTopPlayers(),
-                           player_icons = be.populatePlayerIcons(), ge_active = "active")
+@app.route('/street')
+def street():
+    return render_template("street.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), ge_active ="active")
+
+@app.route('/upload')
+def upload():
+    return render_template("upload.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), ge_active ="active")
+
+@app.route('/donate')
+def donate():
+    return render_template("donate.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), donate_active = "active")
 
 if __name__ == '__main__':
     #Threaded option to enable multiple instances for multiple user access support
