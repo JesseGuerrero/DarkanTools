@@ -1,0 +1,25 @@
+14:35:17: Remote github exists
+14:35:17: 
+
+14:35:17: Git branch:windows is checked out, being used.
+14:35:17: 
+
+14:35:17: Traceback (most recent call last):
+
+14:35:17:   File "C:/Users/jesse/OneDrive - Texas A&M University-San Antonio/Learning/Programming/Python/Projects/Darkantools/app.py", line 20, in <module>
+
+14:35:17:     
+14:35:17: from backend.backend import *
+14:35:17: 
+
+14:35:17:   File "C:\Users\jesse\OneDrive - Texas A&M University-San Antonio\Learning\Programming\Python\Projects\Darkantools\backend\backend.py", line 62, in <module>
+
+14:35:17:     
+14:35:17: Thread(target=sync_stats).start()
+14:35:17: 
+
+14:35:17: NameError
+14:35:17: : 
+14:35:17: name 'sync_stats' is not defined
+14:35:17: 
+
