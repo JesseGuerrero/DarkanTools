@@ -16,46 +16,188 @@
                     <div class="form-group row">
                         <label for="inputP1" class="col-sm-auto col-form-label">Player:</label>
                         <div class="col-sm-2">
-                          <input type="text" name="player1_input" class="form-control" id="inputP1" placeholder="Username">
+                          <input type="text" name="name_input" class="form-control" id="inputP1" placeholder="Username">
                         </div>
 
                         <div class="col-sm-1">
                             <input type="text" name="days_input" class="form-control" id="day_sel" placeholder="Days">
                         </div>
+
+                        <div class="col-sm-1">
+                            <input type="submit" value="Plot" style = "color: #fff; height:40px; width: 65px; font-size: 15px; border: 1px solid transparent; border-radius: 0.25rem; background-color: #3A3F44; border-color: rgba(0,0,0,0.6); text-shadow: 1px 1px 1px rgba(0,0,0,0.3); transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;" >
+                        </div>
                     </div>
                     <div class="form-group row">
                     </div>
                 </form>
+
+                <h3>{{ player.title() }}</h3>
+                <span style="font-size: 6;">*If its too many days it defaults to 0</span>
                 <div class="row">
                     <div class="col-sm-auto has_skill_icons">
-                        <img src = "static/images/skill_icons/skillicon.png">Total XP: 0<br>
-                        <img src = "static/images/skill_icons/Attack.png">Attack: 0<br>
-                        <img src = "static/images/skill_icons/Defence.png">Defence: 0<br>
-                        <img src = "static/images/skill_icons/Strength.png">Strength: 0<br>
-                        <img src = "static/images/skill_icons/Constitution.png">Hitpoints: 0<br>
-                        <img src = "static/images/skill_icons/Ranged.png">Ranged: 0<br>
-                        <img src = "static/images/skill_icons/Prayer.png">Prayer: 0<br>
-                        <img src = "static/images/skill_icons/Magic.png">Magic: 0<br>
-                        <img src = "static/images/skill_icons/Cooking.png">Cooking: 0<br>
-                        <img src = "static/images/skill_icons/Woodcutting.png">Woodcutting: 0<br>
-                        <img src = "static/images/skill_icons/Fletching.png">Fletching: 0<br>
-                        <img src = "static/images/skill_icons/Fishing.png">Fishing: 0<br>
-                        <img src = "static/images/skill_icons/Firemaking.png">Firemaking: 0<br>
+                        <img src = "static/images/skill_icons/skillicon.png">Total Lvls:
+                        {% if player_profiler[0] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[0]) }} Lvls</span>
+                        {% else %} {{ player_profiler[0] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Attack.png">Attack:
+                        {% if player_profiler[1] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[1]) }} XP</span>
+                        {% else %} {{ player_profiler[1] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Defence.png">Defence:
+                        {% if player_profiler[2] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[2]) }} XP</span>
+                        {% else %} {{ player_profiler[2] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Strength.png">Strength:
+                        {% if player_profiler[3] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[3]) }} XP</span>
+                        {% else %} {{ player_profiler[3] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Constitution.png">Hitpoints:
+                        {% if player_profiler[4] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[4]) }} XP</span>
+                        {% else %} {{ player_profiler[4] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Ranged.png">Ranged:
+                        {% if player_profiler[5] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[5]) }} XP</span>
+                        {% else %} {{ player_profiler[5] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Prayer.png">Prayer:
+                        {% if player_profiler[6] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[6]) }} XP</span>
+                        {% else %} {{ player_profiler[6] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Magic.png">Magic:
+                        {% if player_profiler[7] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[7]) }} XP</span>
+                        {% else %} {{ player_profiler[7] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Cooking.png">Cooking:
+                        {% if player_profiler[8] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[8]) }} XP</span>
+                        {% else %} {{ player_profiler[8] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Woodcutting.png">Woodcutting:
+                        {% if player_profiler[9] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[9]) }} XP</span>
+                        {% else %} {{ player_profiler[9] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Fletching.png">Fletching:
+                        {% if player_profiler[10] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[10]) }} XP</span>
+                        {% else %} {{ player_profiler[10] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Fishing.png">Fishing:
+                        {% if player_profiler[11] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[11]) }} XP</span>
+                        {% else %} {{ player_profiler[11] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Firemaking.png">Firemaking:
+                        {% if player_profiler[12] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[12]) }} XP</span>
+                        {% else %} {{ player_profiler[12] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Crafting.png">Crafting:
+                        {% if player_profiler[13] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[13]) }} XP</span>
+                        {% else %} {{ player_profiler[13] }}
+                        {% endif %}<br>
+
                     </div>
                     <div class="col-sm-auto has_skill_icons">
-                        <img src = "static/images/skill_icons/Crafting.png">Crafting: 0<br>
-                        <img src = "static/images/skill_icons/Smithing.png">Smithing: 0<br>
-                        <img src = "static/images/skill_icons/Mining.png">Mining: 0<br>
-                        <img src = "static/images/skill_icons/Herblore.png">Herblore: 0<br>
-                        <img src = "static/images/skill_icons/Agility.png">Agility: 0<br>
-                        <img src = "static/images/skill_icons/Thieving.png">Thieving: 0<br>
-                        <img src = "static/images/skill_icons/Slayer.png">Slayer: 0<br>
-                        <img src = "static/images/skill_icons/Farming.png">Farming: 0<br>
-                        <img src = "static/images/skill_icons/Runecrafting.png">Runecrafting: 0<br>
-                        <img src = "static/images/skill_icons/Hunter.png">Hunter: 0<br>
-                        <img src = "static/images/skill_icons/Construction.png">Construction: 0<br>
-                        <img src = "static/images/skill_icons/Summoning.png">Summoning: 0<br>
-                        <img src = "static/images/skill_icons/Dungeoneering.png">Dungeoneering: 0<br>
+                        <img src = "static/images/skill_icons/XP.png">Total XP:
+                        {% if player_profiler[14] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[14]) }} XP</span>
+                        {% else %} {{ player_profiler[14] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Smithing.png">Smithing:
+                        {% if player_profiler[15] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[15]) }} XP</span>
+                        {% else %} {{ player_profiler[15] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Mining.png">Mining:
+                        {% if player_profiler[16] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[16]) }} XP</span>
+                        {% else %} {{ player_profiler[16] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Herblore.png">Herblore:
+                        {% if player_profiler[17] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[17]) }} XP</span>
+                        {% else %} {{ player_profiler[17] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Agility.png">Agility:
+                        {% if player_profiler[18] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[18]) }} XP</span>
+                        {% else %} {{ player_profiler[18] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Thieving.png">Thieving:
+                        {% if player_profiler[19] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[19]) }} XP</span>
+                        {% else %} {{ player_profiler[19] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Slayer.png">Slayer:
+                        {% if player_profiler[20] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[20]) }} XP</span>
+                        {% else %} {{ player_profiler[20] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Farming.png">Farming:
+                        {% if player_profiler[21] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[21]) }} XP</span>
+                        {% else %} {{ player_profiler[21] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Runecrafting.png">Runecrafting:
+                        {% if player_profiler[22] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[22]) }} XP</span>
+                        {% else %} {{ player_profiler[22] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Hunter.png">Hunter:
+                        {% if player_profiler[23] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[23]) }} XP</span>
+                        {% else %} {{ player_profiler[23] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Construction.png">Construction:
+                        {% if player_profiler[24] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[24]) }} XP</span>
+                        {% else %} {{ player_profiler[24] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Summoning.png">Summoning:
+                        {% if player_profiler[25] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[25]) }} XP</span>
+                        {% else %} {{ player_profiler[25] }}
+                        {% endif %}<br>
+
+                        <img src = "static/images/skill_icons/Dungeoneering.png">Dungeoneering:
+                        {% if player_profiler[26] > 0 %}
+                            <span style="font-style: italic; color: green">+{{ "{:,}".format(player_profiler[26]) }} XP</span>
+                        {% else %} {{ player_profiler[26] }}
+                        {% endif %}<br>
                     </div>
                 </div>
             </div>

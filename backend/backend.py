@@ -1,3 +1,4 @@
+import operator
 import json
 import os
 import subprocess
@@ -249,7 +250,7 @@ def getTopPlayers() -> list:
 
     for i, each in enumerate(topPlayers):
         xpDelta = "{:,}".format(each[3])
-        topPlayers[i] = (each[1], xpDelta)
+        topPlayers[i] = (each[1], xpDelta, each[2])
     if (len(topPlayers) < 10):
         topPlayers.append("No more XP registered!")
     return topPlayers
@@ -276,6 +277,28 @@ def randomTabIcon():
     icon_list = os.listdir(icondir)
     shuffle(icon_list)
     return icon_list.pop()
+
+
+# noinspection SqlResolve
+def MakeSkillsDeltaListing(name, days):
+    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "xp_profiles")
+    try:
+        query = f"SELECT totalLevel, attack, defence, strength, hitpoints, ranged, prayer, magic, cooking, woodcutting, fletching, fishing,\
+           firemaking, crafting, totalXp, smithing, mining, herblore, agility, thieving, slayer, farming, runecrafting,\
+           hunter, construction, summoning, dungeoneering FROM `{name.lower()}` WHERE date = CURDATE()"
+        today = askQuery(connection, query)
+
+        query = f"SELECT totalLevel, attack, defence, strength, hitpoints, ranged, prayer, magic, cooking, woodcutting, fletching, fishing,\
+               firemaking, crafting, totalXp, smithing, mining, herblore, agility, thieving, slayer, farming, runecrafting,\
+               hunter, construction, summoning, dungeoneering FROM `{name.lower()}` WHERE date = CURRENT_DATE-{days};"
+        previous = askQuery(connection, query)
+        connection.close()
+        answer = (list(map(operator.sub, today[0], previous[0])))
+        return answer
+    except:
+        connection.close()
+        return [0]*27
+
 
 #---Pure site oriented functions DONE
 

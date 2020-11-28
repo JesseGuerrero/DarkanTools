@@ -2,12 +2,16 @@
 from flask import Flask, render_template, request
 import os
 
+
+#TODO: Clean all the code
+#TODO: Seperate all the functions into more modules
+#TODO: Place all GE Icons in the database to be retrieved on-demand by the website
+
 #TODO: Checkout iframe, tipit, runehq, sals realm
     #1: Download tip.it
     #2: Make it runnable on Darkantools local
     #3: Relink all urls, media, js to Darkantools
     #4: Push to ubuntu
-#TODO: Darken all colors
 #TODO: Redo above for available webstes on web archive
 #TODO: Convert all images to webp, bookmark in browser
 #TODO: Then start on GE
@@ -54,9 +58,19 @@ def tracker():
 
 #Profile each player and their gains
 @app.route('/profile', methods=["GET", "POST"])
-def compare():
+def profile():
+    player, days = "Username", 2
+    if request.method == "POST":
+        try:
+            player = request.form['name_input']
+        except:
+            player = "Username"
+        try:
+            days = request.form['days_input']
+        except:
+            days = 2
     return render_template("profile.html", icon = randomTabIcon(), player_list = getTopPlayers(),
-                           player_icons = topPlayerIcons(), tracker_active="active")
+                           player_icons = topPlayerIcons(), player_profiler = MakeSkillsDeltaListing(player, days), player = player, tracker_active="active")
 
 #A section for adding usernames
 @app.route('/register', methods=["GET", "POST"])
