@@ -9,19 +9,10 @@ import requests
 from os.path import dirname as up
 from os.path import join, realpath
 import sys
+from backend.APIQueries import *
+from backend.filemanagement import *
+from backend.databaseMethods import *
 
-#Import own libs if app.py is running
-if __name__ != "__main__":
-    import __main__
-    if 'app.py' in str(__main__):
-        from backend.APIQueries import *
-        from backend.filemanagement import *
-        from backend.player_profiler import *
-else:
-    pass
-    # from . import filemanagement
-    # from backend.filemanagement import *
-    # from backend.player_profiler import *
 #TODO: Annotate new register forms and register page func
 #TODO: Needs to be annotated and more precise on directory.
 # def pull_all(remote_name, branch):
@@ -244,52 +235,6 @@ def sync_stats():
 
 
 #---Top Weekly
-def setTopPlayers():
-    '''
-    Sets top players for the week in the top_players file
-    '''
-    #TODO: Document previous work
-
-    #Will be used to hold total xp over the week, keyed by name
-    delta_week_all = {}
-
-    #Do this for all players
-    for player in getRegPlayers():
-        #Take out only totalxp for the lifetime of the player, remember its a list of Stat objs
-        player_stats = get_file_stats(player, "totalXp")
-
-        #Xp from week goes here, every day registered will be here
-        xpBuffer = []
-
-        #Retrieve individual stat_obj
-        for totalXp in player_stats:
-            #If date is after 7 days ago ignore
-            if totalXp.getDate() > (date.today() - timedelta(days=7)):
-                #Put the dates until 7 days ago in the buffer
-                xpBuffer.append(totalXp.getValue())
-
-        #Create new player key, we are still in the reg player loop,
-        #and substract last day of week by first day. Total difference is xp gained.
-        #Lastly make sure the player has more than 1 entry
-
-        if len(xpBuffer) > 1:
-            delta_week_all[player] = xpBuffer[-1]-xpBuffer[0]
-
-    #Get the folder above playerDir using os.path.dirname
-    with open(f"{os.path.dirname(getPlayerDir())}/top_players", mode = "w") as file:
-        #Stop at 10th player, i is counter
-        i = 0
-
-        # Organize the dictionary by top ten using keyword sorted
-        for w in sorted(delta_week_all, key=delta_week_all.get, reverse=True):
-            #Stop at 10th player
-            if i == 10:
-                break
-
-            #Write each line then add to count
-            file.write(f"{w}, {delta_week_all[w]}\n")
-            i += 1
-
 def getTopPlayers() -> list:
     '''
     Returns top 10 players of the week organized as a list of tuples.
@@ -298,41 +243,16 @@ def getTopPlayers() -> list:
 
     :return: list of tuples [(PLAYER1, XP1), (PLAYER2, XP2), ..., (PLAYER10, XP10)]
     '''
-    #unorganized list, organize list
-    unorg_players = []
-    org_players = []
+    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "darkantools")
+    topPlayers = askQuery(connection, "SELECT * FROM top_ten;")
+    connection.close()
 
-    #Start with unorganized: get a list of the top, [PLAYER1, XP1, PLAYER2, XP2, ...]
-    with open(f"{os.path.dirname(getPlayerDir())}/top_players", mode="r") as file:
-        unorg_players = file.read().split('\n')
-
-    #End with organized list as a list of tuples
-    for player in unorg_players:
-        #If its empty let it go
-        if player == '':
-            continue
-
-        #The line is "PLAYER1, XP1\n" as all strings so we split to interpret each as a list -> [P1, XP1]
-        interpreted_line = player.split(", ")
-
-        ranout_notice = "No more XP registered!"
-
-        #If they earned nothing let it go and end the top list. Split makes a list of the line
-        if interpreted_line[1] == '0':
-            org_players.append(ranout_notice)
-            break
-        #Turn the list to a tuple
-        else:
-            #if there is a ranout notice skip
-            if not ranout_notice in interpreted_line[1]:
-                #Format the xp string, but the format function requires a int cast.
-                xp = "{:,}".format(int(interpreted_line[1]))
-
-                #Create a tuple from list elements.
-                interpreted_line = (interpreted_line[0], xp)
-                org_players.append(interpreted_line)
-    #-Organize list DONE
-    return org_players
+    for i, each in enumerate(topPlayers):
+        xpDelta = "{:,}".format(each[3])
+        topPlayers[i] = (each[1], xpDelta)
+    if (len(topPlayers) < 10):
+        topPlayers.append("No more XP registered!")
+    return topPlayers
 
 def topPlayerIcons():
     '''

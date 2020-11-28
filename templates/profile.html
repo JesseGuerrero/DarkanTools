@@ -4,16 +4,65 @@
                   <li class="nav-item">
                     <a class="nav-link active" href="/profile">Profiler</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/compare">Compare</a>
-                  </li>
+{#                  <li class="nav-item">#}
+{#                    <a class="nav-link" href="/compare">Compare</a>#}
+{#                  </li>#}
                   <li class="nav-item">
                     <a class="nav-link" href="/register">Register</a>
                   </li>
                 </ul>
 
+                <form method="POST">
+                    <div class="form-group row">
+                        <label for="inputP1" class="col-sm-auto col-form-label">Player:</label>
+                        <div class="col-sm-2">
+                          <input type="text" name="player1_input" class="form-control" id="inputP1" placeholder="Username">
+                        </div>
+
+                        <div class="col-sm-1">
+                            <input type="text" name="days_input" class="form-control" id="day_sel" placeholder="Days">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-sm-auto has_skill_icons">
+                        <img src = "static/images/skill_icons/skillicon.png">Total XP: 0<br>
+                        <img src = "static/images/skill_icons/Attack.png">Attack: 0<br>
+                        <img src = "static/images/skill_icons/Defence.png">Defence: 0<br>
+                        <img src = "static/images/skill_icons/Strength.png">Strength: 0<br>
+                        <img src = "static/images/skill_icons/Constitution.png">Hitpoints: 0<br>
+                        <img src = "static/images/skill_icons/Ranged.png">Ranged: 0<br>
+                        <img src = "static/images/skill_icons/Prayer.png">Prayer: 0<br>
+                        <img src = "static/images/skill_icons/Magic.png">Magic: 0<br>
+                        <img src = "static/images/skill_icons/Cooking.png">Cooking: 0<br>
+                        <img src = "static/images/skill_icons/Woodcutting.png">Woodcutting: 0<br>
+                        <img src = "static/images/skill_icons/Fletching.png">Fletching: 0<br>
+                        <img src = "static/images/skill_icons/Fishing.png">Fishing: 0<br>
+                        <img src = "static/images/skill_icons/Firemaking.png">Firemaking: 0<br>
+                    </div>
+                    <div class="col-sm-auto has_skill_icons">
+                        <img src = "static/images/skill_icons/Crafting.png">Crafting: 0<br>
+                        <img src = "static/images/skill_icons/Smithing.png">Smithing: 0<br>
+                        <img src = "static/images/skill_icons/Mining.png">Mining: 0<br>
+                        <img src = "static/images/skill_icons/Herblore.png">Herblore: 0<br>
+                        <img src = "static/images/skill_icons/Agility.png">Agility: 0<br>
+                        <img src = "static/images/skill_icons/Thieving.png">Thieving: 0<br>
+                        <img src = "static/images/skill_icons/Slayer.png">Slayer: 0<br>
+                        <img src = "static/images/skill_icons/Farming.png">Farming: 0<br>
+                        <img src = "static/images/skill_icons/Runecrafting.png">Runecrafting: 0<br>
+                        <img src = "static/images/skill_icons/Hunter.png">Hunter: 0<br>
+                        <img src = "static/images/skill_icons/Construction.png">Construction: 0<br>
+                        <img src = "static/images/skill_icons/Summoning.png">Summoning: 0<br>
+                        <img src = "static/images/skill_icons/Dungeoneering.png">Dungeoneering: 0<br>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
+<footer>
+    <script src="static/js/profiler.js"></script>
+</footer>
 </html>

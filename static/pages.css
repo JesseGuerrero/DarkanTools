@@ -86,3 +86,7 @@ h1 img {
     color: yellow;
 }
 
+.has_skill_icons img {
+    width: 30px;
+    height: 30px;
+}

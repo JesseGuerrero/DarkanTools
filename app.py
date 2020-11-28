@@ -19,7 +19,6 @@ import os
 #Custom Modules
 from backend.backend import *
 from backend.filemanagement import getRegPlayers
-from backend.player_profiler import *
 
 #The Flask object constructor takes arguments
 app = Flask(__name__)
@@ -34,7 +33,7 @@ def home():
     return render_template("home.html", icon = randomTabIcon(), player_list = getTopPlayers(),
                            player_icons = topPlayerIcons(), home_active="active")
 
-#XP Tracker(Graph not made, player_profiler.py)
+#XP Comparison
 @app.route('/compare', methods=["GET", "POST"])
 def tracker():
     player1, player2, stat_name, days = "", "", 25, 7
@@ -49,9 +48,6 @@ def tracker():
             player2 = ""
         stat_name = request.form['skill_input']
         days = request.form['days_input']
-
-    #Changes the actual file.
-    graphMake(stat_name, player1, player2, days)
 
     return render_template("compare.html", icon = randomTabIcon(), player_list = getTopPlayers(),
                            player_icons = topPlayerIcons(), tracker_active="active")
