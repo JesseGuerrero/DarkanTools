@@ -288,9 +288,10 @@ def MakeSkillsDeltaListing(name, days):
            hunter, construction, summoning, dungeoneering FROM `{name.lower()}` WHERE date = CURDATE()"
         today = askQuery(connection, query)
 
+
         query = f"SELECT totalLevel, attack, defence, strength, hitpoints, ranged, prayer, magic, cooking, woodcutting, fletching, fishing,\
                firemaking, crafting, totalXp, smithing, mining, herblore, agility, thieving, slayer, farming, runecrafting,\
-               hunter, construction, summoning, dungeoneering FROM `{name.lower()}` WHERE date = CURRENT_DATE-{days};"
+               hunter, construction, summoning, dungeoneering FROM `{name.lower()}` WHERE date = DATE(NOW()) - INTERVAL {days} DAY;"
         previous = askQuery(connection, query)
         connection.close()
         answer = (list(map(operator.sub, today[0], previous[0])))
