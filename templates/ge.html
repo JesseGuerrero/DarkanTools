@@ -4,26 +4,28 @@
       <li class="nav-item">
         <a class="nav-link active" href="/ge">GE</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/street">Street</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="/upload">Upload</a>
-      </li>
+{#      <li class="nav-item">#}
+{#        <a class="nav-link" href="/street">Street</a>#}
+{#      </li>#}
+{#       <li class="nav-item">#}
+{#        <a class="nav-link" href="/upload">Upload</a>#}
+{#      </li>#}
     </ul>
-                <p>
-                CREATE A TABLE WITH SELL ON LEFT COLUMN AND BUY ON RIGHT, Also create a street page, 14 days, notice by email [ITEM] [QUANTITY] [GP] [DAYS] [NTOFICATION CHECK + EMAIL]
-                <br><br>
-                SELL<br>
-                |     [ICON, medium]      |<br>
-                |   X[QUANTITY, small]    |  USERNAME<br>
-                |   [gp icon][GP Small]   |<br>
-                <br><br>
-                BUY<br>
-                |     [ICON, medium]      |<br>
-                |   X[QUANTITY, small]    |  USERNAME<br>
-                |   [gp icon][GP Small]   |<br>
-                </p>
-            </div>
+    <div class="row">
+        <div class="col-sm-auto">
+            <h3>Buy offers</h3>
+            {% for buyOffer in geBuyOffers %}
+                <img src="/ge_icon/{{ buyOffer['itemId'] }}.png"> {{ buyOffer['itemName'] }}: {{ buyOffer['amountLeft'] }} @ {{ "{:,}".format(buyOffer['pricePerItem']) }}GP Each<br>
+            {% endfor %}
+        </div>
+
+        <div class="col-sm-auto">
+            <h3>Sell offers</h3>
+            {% for sellOffer in geSellOffers %}
+                <img src="/ge_icon/{{ sellOffer['itemId'] }}.png"> {{ sellOffer['itemName'] }}: {{ sellOffer['amountLeft'] }} @ {{ "{:,}".format(sellOffer['pricePerItem']) }}GP Each<br>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 </body>
 </html>

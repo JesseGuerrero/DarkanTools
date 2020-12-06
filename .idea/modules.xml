@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Darkantools.iml" filepath="$PROJECT_DIR$/.idea/Darkantools.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/flaskProject/.idea/flaskProject.iml" filepath="$USER_HOME$/PycharmProjects/flaskProject/.idea/flaskProject.iml" />
     </modules>
   </component>
 </project>

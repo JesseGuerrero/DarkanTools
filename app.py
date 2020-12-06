@@ -1,7 +1,9 @@
 #Essentials
 from flask import Flask, render_template, request
 import os
-
+from flask import send_file
+from PIL import Image
+import io
 
 #TODO: Clean all the code
 #TODO: Seperate all the functions into more modules
@@ -29,6 +31,11 @@ app = Flask(__name__)
 
 #Removes caching -> removes hard resets.
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
+
+
+
+
 
 
 #Landing page
@@ -78,41 +85,33 @@ def register():
     #Processes POSTS of registered player search and player registration
     reg_result = ""
     searched_player = ""
-    if request.method == "POST":
-        try:
-            new_player = request.form['user_reg']
-        except:
-            #If user_reg form fails/empty, do nothing
-            pass
-        else:
-            #Otherwise do this...
-            new_player = new_player.lower()
-
-            # reg_result is determined by the return of add_player_file
-            if "win" in os.sys.platform:
-                reg_result = add_player_file(new_player, "github", "windows")
-            else:
-                reg_result = add_player_file(new_player, "github", "ubuntu")
-        try:
-            searched_player = request.form['search_reg']
-        except:
-            # If search form fails/empty, do nothing
-            pass
-        else:
-            if searched_player.lower() in getRegPlayers():
-                searched_player = f"{searched_player.title()} is in our DB..."
 
     return render_template("register.html", icon = randomTabIcon(), player_list = getTopPlayers(),
                            result = reg_result, result2 = searched_player, player_icons = topPlayerIcons(),
                            tracker_active = "active")
 
+#Really good code here~~~~!!!!
+@app.route('/ge_icon/<i>.png')
+def image(i):
+    img = Image.open(io.BytesIO(readGEIcon(i)))
+
+    # create file-object in memory
+    file_object = io.BytesIO()
+
+    # write PNG in file-object
+    img.save(file_object, 'PNG')
+
+    # move to beginning of file so `send_file()` it will read from start
+    file_object.seek(0)
+
+    return send_file(file_object, mimetype='image/PNG')
+
 @app.route("/ge")
 def ge():
-    '''
-    Using API create a UI for GE
-    '''
+    ge_buy = getGEOffersFormatted("buy")
+    ge_sell = getGEOffersFormatted("sell")
     return render_template("ge.html", icon = randomTabIcon(), player_list = getTopPlayers(),
-                           player_icons = topPlayerIcons(), ge_active ="active")
+                           player_icons = topPlayerIcons(), geBuyOffers = ge_buy, geSellOffers = ge_sell)
 
 @app.route('/street')
 def street():

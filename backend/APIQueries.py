@@ -1,3 +1,5 @@
+import requests, json
+
 def playerAPIQuery(player) -> tuple:
     '''
     Calls player from API and checks for error by accessing byte information.

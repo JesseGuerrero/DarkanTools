@@ -205,33 +205,6 @@ def clean_stats():
                  #Remember load JSON does not accept single quotes, this one may be unnecessary
                  file.write(str(each).replace("'", '"')+"\n")
 
-def sync_stats():
-    '''
-    Syncronizes stats every 24 hours by calling gather game stats
-    then cleaning the data. Lastly it will populate the day's
-    Top weekly
-    '''
-
-    if "win" in os.sys.platform:
-        clean_stats()
-        setTopPlayers()
-        #Windows doesnt update players
-        push_logs("github", "windows")
-
-    if "win" not in os.sys.platform:
-        gather_game_stats()
-        clean_stats()
-        setTopPlayers()
-        #Ubuntu will always be updated
-        push_players("github", "ubuntu")
-        push_logs("github", "ubuntu")
-
-
-    print("all stats updated & cleaned & players potentially pushed. Also did top weekly!")
-
-    #60 seconds * 60 minutes * 24 hours
-    sleep(60*60*12)
-    sync_stats()
 #---XP tracking assurance DONE
 
 
@@ -303,6 +276,37 @@ def MakeSkillsDeltaListing(name, days):
 
 #---Pure site oriented functions DONE
 
+def readGEIcon(icon_id):
+    print("Reading BLOB data from python_employee table")
+
+    try:
+        connection = mysql.connector.connect(host='51.79.66.9',
+                                             database='darkantools',
+                                             user='Jawarrior1',
+                                             password='ilikepeas1')
+
+        cursor = connection.cursor()
+        sql_fetch_blob_query = """SELECT * from ge_icons where id = %s"""
+
+        cursor.execute(sql_fetch_blob_query, (icon_id,))
+        record = cursor.fetchall()
+        for row in record:
+            return row[1]
+
+    except mysql.connector.Error as error:
+        print("Failed to read BLOB data from MySQL table {}".format(error))
+
+    finally:
+        if (connection.is_connected()):
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
+
+def getGEOffersFormatted(buyorsell):
+    for offer in (getGEOffers(buyorsell)):
+        print(offer)
+    return getGEOffers(buyorsell)
+
 if __name__ == "__main__":
     '''
     if we are running this file, it is usually for testing and debugging.
@@ -352,7 +356,6 @@ if __name__ != "__main__":
             ensure_remote("https://github.com/JesseGuerrero/DarkanTools.git", "github", "ubuntu")
 
         # Update stats everyday if we are out of focus, runs twice on a debug
-        Thread(target=sync_stats).start()
 
     #If we are not running from app.py then we are not running the webserver so pass.
     else:
