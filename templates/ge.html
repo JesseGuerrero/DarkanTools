@@ -15,14 +15,14 @@
         <div class="col-sm-auto">
             <h3>Buy offers</h3>
             {% for buyOffer in geBuyOffers %}
-                <img src="/ge_icon/{{ buyOffer['itemId'] }}.png"> {{ buyOffer['itemName'] }}: {{ buyOffer['amountLeft'] }} @ {{ "{:,}".format(buyOffer['pricePerItem']) }}GP Each<br>
+                <img src="/images/{{ buyOffer['itemId'] }}.png"> {{ buyOffer['itemName'] }}: {{ buyOffer['amountLeft'] }} @ {{ "{:,}".format(buyOffer['pricePerItem']) }}GP Each<br>
             {% endfor %}
         </div>
 
         <div class="col-sm-auto">
             <h3>Sell offers</h3>
             {% for sellOffer in geSellOffers %}
-                <img src="/ge_icon/{{ sellOffer['itemId'] }}.png"> {{ sellOffer['itemName'] }}: {{ sellOffer['amountLeft'] }} @ {{ "{:,}".format(sellOffer['pricePerItem']) }}GP Each<br>
+                <img src="/images/{{ sellOffer['itemId'] }}.png"> {{ sellOffer['itemName'] }}: {{ sellOffer['amountLeft'] }} @ {{ "{:,}".format(sellOffer['pricePerItem']) }}GP Each<br>
             {% endfor %}
         </div>
     </div>

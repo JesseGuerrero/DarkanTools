@@ -307,6 +307,32 @@ def getGEOffersFormatted(buyorsell):
         print(offer)
     return getGEOffers(buyorsell)
 
+def readHolidayImage(name):
+    print("Reading BLOB data from python_employee table")
+
+    try:
+        connection = mysql.connector.connect(host='51.79.66.9',
+                                             database='darkantools',
+                                             user='Jawarrior1',
+                                             password='ilikepeas1')
+
+        cursor = connection.cursor()
+        sql_fetch_blob_query = """SELECT * from holiday_images where name = %s"""
+
+        cursor.execute(sql_fetch_blob_query, (name,))
+        record = cursor.fetchall()
+        for row in record:
+            return row[1]
+
+    except mysql.connector.Error as error:
+        print("Failed to read BLOB data from MySQL table {}".format(error))
+
+    finally:
+        if (connection.is_connected()):
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
+
 if __name__ == "__main__":
     '''
     if we are running this file, it is usually for testing and debugging.

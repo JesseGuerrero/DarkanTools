@@ -5,10 +5,14 @@ from flask import send_file
 from PIL import Image
 import io
 
+#Custom Modules
+from backend.backend import *
+from backend.filemanagement import getRegPlayers
+
+#TODO: Add custom client
+#TODO: Backup the database somehow
 #TODO: Clean all the code
 #TODO: Seperate all the functions into more modules
-#TODO: Place all GE Icons in the database to be retrieved on-demand by the website
-
 #TODO: Checkout iframe, tipit, runehq, sals realm
     #1: Download tip.it
     #2: Make it runnable on Darkantools local
@@ -18,13 +22,8 @@ import io
 #TODO: Convert all images to webp, bookmark in browser
 #TODO: Then start on GE
 #TODO: Apply Dry to page functions
-#TODO: Create stat increase profile where each stat is categorized and shown to players
 #Create Tabs for XP Tracker, GE Tracker https://getbootstrap.com/docs/4.5/components/navs/#tabs
 #TODO: Change color scheme of tabs
-
-#Custom Modules
-from backend.backend import *
-from backend.filemanagement import getRegPlayers
 
 #The Flask object constructor takes arguments
 app = Flask(__name__)
@@ -32,11 +31,25 @@ app = Flask(__name__)
 #Removes caching -> removes hard resets.
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
+#Really good code here~~~~!!!!
+@app.route('/images/<i>.png')
+def image(i : str):
+    if(i.startswith("christmas")):
+        img = Image.open(io.BytesIO(readHolidayImage(i)))
+        pass
+    else:
+        img = Image.open(io.BytesIO(readGEIcon(i)))
 
+    # create file-object in memory
+    file_object = io.BytesIO()
 
+    # write PNG in file-object
+    img.save(file_object, 'PNG')
 
+    # move to beginning of file so `send_file()` it will read from start
+    file_object.seek(0)
 
-
+    return send_file(file_object, mimetype='image/PNG')
 
 #Landing page
 @app.route('/', methods=["GET", "POST"])
@@ -89,22 +102,6 @@ def register():
     return render_template("register.html", icon = randomTabIcon(), player_list = getTopPlayers(),
                            result = reg_result, result2 = searched_player, player_icons = topPlayerIcons(),
                            tracker_active = "active")
-
-#Really good code here~~~~!!!!
-@app.route('/ge_icon/<i>.png')
-def image(i):
-    img = Image.open(io.BytesIO(readGEIcon(i)))
-
-    # create file-object in memory
-    file_object = io.BytesIO()
-
-    # write PNG in file-object
-    img.save(file_object, 'PNG')
-
-    # move to beginning of file so `send_file()` it will read from start
-    file_object.seek(0)
-
-    return send_file(file_object, mimetype='image/PNG')
 
 @app.route("/ge")
 def ge():

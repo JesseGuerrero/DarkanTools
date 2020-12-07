@@ -23,6 +23,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2be56c0c06.js" crossorigin="anonymous"></script>
 
+    <!--JS Holidays-->
+    <script src="{{ url_for('static',filename='js/christmas.js') }}"></script>
+
     <!-- Titles, icons -->
     <link rel="icon" href="static/images/icons/{{ icon }}">
     <title>Darkan Tools</title>
@@ -30,7 +33,7 @@
 <body>
 {#Main header + menu#}
     <div class = "container-fluid px-0">
-        <h1><img src="static/images/logo.png" id="brand">Darkan Tools</h1>
+        <h1><img src="static/images/logo.png" id="brand"></h1>
         <nav class="navbar navbar-expand-md navbar-dark">
             {#This is the hamburger#}
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
