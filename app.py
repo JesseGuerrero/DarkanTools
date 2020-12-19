@@ -34,11 +34,11 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 import pathlib
 def getSoundFiles() -> list:
     appPath = pathlib.Path(__file__).parent.absolute()
-    path = os.path.join(appPath, "essentialIgnored", "effects")
+    path = os.path.join(appPath, "static", "essentialIgnored", "effects")
 
     fileList = []
     for fileName in (os.listdir(path)):
-        fileName = fileName.replace(".flac", "")
+        fileName = fileName.replace(".mp3", "")
         fileName = int(fileName)
         fileList.append(fileName)
     fileList.sort()
