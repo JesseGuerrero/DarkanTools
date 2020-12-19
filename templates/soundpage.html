@@ -1,11 +1,21 @@
 {% include 'header.html' %}
             <div class="col-sm-10">
                 <h2>Sound Effects</h2>
-                <p>I will periodically be updating this page</p>
-                <p>
-                    Send me a DM on Discord or Rune-server to update this list.
-                    Discord: "Jesse G#2300"
-                    Rune-server: "Jawarrior"
+                <p>To contribute you can download
+                    <a href="static/essentialIgnored/effectsSolved.txt" download>
+                        this TXT<img src="static/images/documentIcon.png" width="30" height="30" alt="document">
+                    </a>
+                    and review the unknown sounds on the website, write your guess, then upload it. Please keep it friendly for my script to go
+                    through by following the examples already in existence. The key characters are "-" and a new line. I have a piece of software
+                    to merge the changes with a line by line review feature, so I can take multiple files!
+                    Also the txt file is updated live on the website right after I review it, the link above is dynamic, so give it a shot!
+                    <br><br>
+                    <italics>Upload here</italics>
+                    <form action = "/soundpage" method = "POST" enctype = "multipart/form-data">
+                        <input type = "file" name = "file" /><br>
+                        <input type = "submit"/>
+                    </form>
+                    <span style="color: yellow;">{{ savetext }}</span>
                 </p>
                 <p>
                     Click the number to play the sound:

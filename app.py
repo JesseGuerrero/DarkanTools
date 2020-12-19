@@ -1,9 +1,11 @@
 #Essentials
+import werkzeug
 from flask import Flask, render_template, request
 import os
 from flask import send_file
 from PIL import Image
 import io
+import pathlib
 
 #Custom Modules
 from backend.backend import *
@@ -30,8 +32,11 @@ app = Flask(__name__)
 
 #Removes caching -> removes hard resets.
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+app.config['UPLOAD_FOLDER'] = os.path.join(pathlib.Path(__file__).parent.absolute(), "static", "essentialIgnored", "Uploads")
+app.config['MAX_CONTENT_PATH'] = 100_000 #100KB file limit
 
-import pathlib
+
+
 def getSoundFiles() -> list:
     appPath = pathlib.Path(__file__).parent.absolute()
     path = os.path.join(appPath, "static", "essentialIgnored", "effects")
@@ -53,6 +58,15 @@ def getSoundFiles() -> list:
         fileInfo.append(tuple(buff))
     # print(fileInfo)
     return fileInfo
+
+def getUploadNum() -> str:
+    uploadCount=0
+    appPath = pathlib.Path(__file__).parent.absolute()
+    path = os.path.join(appPath, "static", "essentialIgnored", "Uploads")
+
+    for fileName in (os.listdir(path)):
+        uploadCount+=1
+    return str(uploadCount)
 
 
 getSoundFiles()
@@ -95,7 +109,19 @@ def home():
 
 @app.route('/soundpage', methods=["GET", "POST"])
 def soundpage():
-    return render_template("soundpage.html", soundFiles = getSoundFiles(), icon = randomTabIcon(), player_list = getTopPlayers(),
+    saved = ""
+    if request.method == 'POST':
+        uploadedFile = request.files['file']
+        uploadedFile : werkzeug.datastructures.FileStorage
+
+        appPath = pathlib.Path(__file__).parent.absolute()
+        saveFilePath = os.path.join(appPath, "static", "essentialIgnored", "Uploads", getUploadNum() + "_" + uploadedFile.filename)
+
+        uploadedFile.save(saveFilePath)
+        print(uploadedFile)
+        saved = "Your file has been saved!"
+
+    return render_template("soundpage.html", soundFiles = getSoundFiles(), savetext = saved, icon = randomTabIcon(), player_list = getTopPlayers(),
                            player_icons = topPlayerIcons(), sound_active = "active")
 
 #XP Comparison
