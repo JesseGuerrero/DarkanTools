@@ -26,6 +26,9 @@
     <!--JS Holidays-->
     <script src="{{ url_for('static',filename='js/christmas.js') }}"></script>
 
+    {#    misc js#}
+    <script src="{{ url_for('static',filename='js/misc.js') }}"></script>
+
     <!-- Titles, icons -->
     <link rel="icon" href="static/images/icons/{{ icon }}">
     <title>Darkan Tools</title>
@@ -56,6 +59,8 @@
               </div>
                 <a class="nav-item nav-link {{ ge_active }}" href="/ge">GE Tool</a>
                 <a class="nav-item nav-link {{ tracker_active }}" href="/profile">XP Profiles</a>
+                <a class="nav-item nav-link {{ sound_active }}" href="/soundpage">Sounds</a>
+{#                add custom client with embedded github link + commit history, fix donate formatting#}
                 <a class="nav-item nav-link {{ donate_active }}" href="/donate">Donate</a>
             </div>
           </div>

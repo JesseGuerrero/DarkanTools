@@ -1,7 +1,9 @@
-/*
+/* Christmas
 * 1. Christmas light string over Darkan tools picture canva, switching every 3 seconds
 * 2. Santa hat on skills icon
 * 3. Highlighted color for navbar is red
+*
+* Add New Years later + make this a general holiday thing
 * */
 var i = 1;
 setInterval(function(){

@@ -31,6 +31,32 @@ app = Flask(__name__)
 #Removes caching -> removes hard resets.
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
+import pathlib
+def getSoundFiles() -> list:
+    appPath = pathlib.Path(__file__).parent.absolute()
+    path = os.path.join(appPath, "essentialIgnored", "effects")
+
+    fileList = []
+    for fileName in (os.listdir(path)):
+        fileName = fileName.replace(".flac", "")
+        fileName = int(fileName)
+        fileList.append(fileName)
+    fileList.sort()
+
+    path = os.path.join(appPath, "static", "essentialIgnored", "effectsSolved.txt")
+    fileInfo = []
+    answersFile = open(path)
+    allLines = answersFile.readlines()
+    for each in allLines:
+        buff = each.replace("\n", "").split("-")
+        buff[0] = int(buff[0])
+        fileInfo.append(tuple(buff))
+    # print(fileInfo)
+    return fileInfo
+
+
+getSoundFiles()
+
 #Really good code here~~~~!!!!
 @app.route('/images/<i>.png')
 def image(i : str):
@@ -51,11 +77,26 @@ def image(i : str):
 
     return send_file(file_object, mimetype='image/PNG')
 
+#Really good code here~~~~!!!!
+@app.route('/sounds/<i>.mp3')
+def sounds(i : str):
+    if(i.isdigit()):
+        pass
+    else:
+        i = 0;
+    return send_file("static/essentialIgnored/effects/" +i + ".mp3")
+
+
 #Landing page
 @app.route('/', methods=["GET", "POST"])
 def home():
     return render_template("home.html", icon = randomTabIcon(), player_list = getTopPlayers(),
                            player_icons = topPlayerIcons(), home_active="active")
+
+@app.route('/soundpage', methods=["GET", "POST"])
+def soundpage():
+    return render_template("soundpage.html", soundFiles = getSoundFiles(), icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), sound_active = "active")
 
 #XP Comparison
 @app.route('/compare', methods=["GET", "POST"])

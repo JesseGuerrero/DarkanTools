@@ -59,7 +59,10 @@ h1 img {
     margin-left: 10px;
 }
 
-
+#soundtext:hover {
+    background-color: black;
+    cursor: pointer;
+}
 
 
 #playerlist {

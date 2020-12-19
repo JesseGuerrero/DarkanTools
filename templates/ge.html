@@ -18,7 +18,7 @@
                 <img src="/images/{{ buyOffer['itemId'] }}.png"> {{ buyOffer['itemName'] }}: {{ buyOffer['amountLeft'] }} @ {{ "{:,}".format(buyOffer['pricePerItem']) }}GP Each<br>
             {% endfor %}
         </div>
-
+{#    pass all this to javascript! https://stackoverflow.com/questions/42499535/passing-a-json-object-from-flask-to-javascript#}
         <div class="col-sm-auto">
             <h3>Sell offers</h3>
             {% for sellOffer in geSellOffers %}
