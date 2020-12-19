@@ -36,7 +36,7 @@ app.config['UPLOAD_FOLDER'] = os.path.join(pathlib.Path(__file__).parent.absolut
 app.config['MAX_CONTENT_PATH'] = 100_000 #100KB file limit
 
 
-
+import pathlib
 def getSoundFiles() -> list:
     appPath = pathlib.Path(__file__).parent.absolute()
     path = os.path.join(appPath, "static", "essentialIgnored", "effects")
