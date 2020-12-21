@@ -79,7 +79,7 @@
 78-
 79-
 80-
-81-
+81-Door open
 82-
 83-
 84-
@@ -199,7 +199,7 @@
 198-
 199-
 200-Teleport sound
-201-
+201-Teleport arrive
 202-
 203-
 204-
@@ -3834,7 +3834,7 @@
 3885-
 3886-
 3887-
-3888-
+3888-Bandos attack 1
 3889-
 3890-
 3891-
@@ -3848,10 +3848,10 @@
 3899-
 3900-
 3901-
-3902-
+3902-Great gnome tree teleport
 3903-
 3904-
-3905-
+3905-Great gnome tree arrival
 3906-
 3907-
 3908-
@@ -3960,7 +3960,7 @@
 4011-
 4012-
 4013-
-4014-
+4014-Environmental teleport circle sound
 4015-
 4016-
 4017-
@@ -3985,11 +3985,11 @@
 4036-
 4037-
 4038-
-4039-
+4039-Inventory full
 4040-
-4041-
-4042-
-4043-
+4041-Pick up 1-10gp from ground
+4042-Insert money into bank
+4043-Drop gold
 4044-
 4045-
 4046-
@@ -4026,15 +4026,15 @@
 4077-
 4078-
 4079-
-4080-
-4081-
-4082-
-4083-
-4084-
-4085-
-4086-
-4087-
-4088-
+4080-Environmental Bird1
+4081-Environmental Bird2
+4082-Environmental Bird3
+4083-Environmental Bird4
+4084-Environmental Bird5
+4085-Environmental Bird6
+4086-Environmental Bird7
+4087-Environmental Bird8
+4088-Environmental Bird9
 4089-
 4090-
 4091-
@@ -4114,7 +4114,7 @@
 4165-
 4166-
 4167-
-4168-
+4168-Trade not allowed
 4169-
 4170-
 4171-
@@ -4804,7 +4804,7 @@
 4857-
 4858-
 4859-
-4860-
+4860-Level up fireworks
 4861-
 4862-
 4863-
