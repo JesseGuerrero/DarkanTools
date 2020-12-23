@@ -22,8 +22,6 @@ from backend.filemanagement import getRegPlayers
     #4: Push to ubuntu
 #TODO: Redo above for available webstes on web archive
 #TODO: Convert all images to webp, bookmark in browser
-#TODO: Then start on GE
-#TODO: Apply Dry to page functions
 #Create Tabs for XP Tracker, GE Tracker https://getbootstrap.com/docs/4.5/components/navs/#tabs
 #TODO: Change color scheme of tabs
 
@@ -36,40 +34,7 @@ app.config['UPLOAD_FOLDER'] = os.path.join(pathlib.Path(__file__).parent.absolut
 app.config['MAX_CONTENT_PATH'] = 100_000 #100KB file limit
 
 
-import pathlib
-def getSoundFiles() -> list:
-    appPath = pathlib.Path(__file__).parent.absolute()
-    path = os.path.join(appPath, "static", "essentialIgnored", "effects")
 
-    fileList = []
-    for fileName in (os.listdir(path)):
-        fileName = fileName.replace(".mp3", "")
-        fileName = int(fileName)
-        fileList.append(fileName)
-    fileList.sort()
-
-    path = os.path.join(appPath, "static", "essentialIgnored", "effectsSolved.txt")
-    fileInfo = []
-    answersFile = open(path)
-    allLines = answersFile.readlines()
-    for each in allLines:
-        buff = each.replace("\n", "").split("-")
-        buff[0] = int(buff[0])
-        fileInfo.append(tuple(buff))
-    # print(fileInfo)
-    return fileInfo
-
-def getUploadNum() -> str:
-    uploadCount=0
-    appPath = pathlib.Path(__file__).parent.absolute()
-    path = os.path.join(appPath, "static", "essentialIgnored", "Uploads")
-
-    for fileName in (os.listdir(path)):
-        uploadCount+=1
-    return str(uploadCount)
-
-
-getSoundFiles()
 
 #Really good code here~~~~!!!!
 @app.route('/images/<i>.png')

@@ -264,6 +264,3 @@ def getRegPlayers():
 if __name__ == "__main__":
     print("you are running filemanagement")
 
-
-    # for each in updatedPlayerList():
-    #     print(each)
