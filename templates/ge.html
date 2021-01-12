@@ -14,14 +14,16 @@
     <div class="row">
         <div class="col-sm-auto">
             <h3>Buy offers</h3>
+            {% set count = {'value': 0} %}
             {% for buyOffer in geBuyOffers %}
+                {{ increment(count) }}
                 <img src="/images/{{ buyOffer['itemId'] }}.png"> {{ buyOffer['itemName'] }}: {{ buyOffer['amountLeft'] }} @ {{ "{:,}".format(buyOffer['pricePerItem']) }}GP Each<br>
             {% endfor %}
         </div>
-{#    pass all this to javascript! https://stackoverflow.com/questions/42499535/passing-a-json-object-from-flask-to-javascript#}
         <div class="col-sm-auto">
             <h3>Sell offers</h3>
             {% for sellOffer in geSellOffers %}
+
                 <img src="/images/{{ sellOffer['itemId'] }}.png"> {{ sellOffer['itemName'] }}: {{ sellOffer['amountLeft'] }} @ {{ "{:,}".format(sellOffer['pricePerItem']) }}GP Each<br>
             {% endfor %}
         </div>

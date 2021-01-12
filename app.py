@@ -1,29 +1,12 @@
 #Essentials
 import werkzeug
 from flask import Flask, render_template, request
-import os
 from flask import send_file
 from PIL import Image
 import io
-import pathlib
 
 #Custom Modules
 from backend.backend import *
-from backend.filemanagement import getRegPlayers
-
-#TODO: Add custom client
-#TODO: Backup the database somehow
-#TODO: Clean all the code
-#TODO: Seperate all the functions into more modules
-#TODO: Checkout iframe, tipit, runehq, sals realm
-    #1: Download tip.it
-    #2: Make it runnable on Darkantools local
-    #3: Relink all urls, media, js to Darkantools
-    #4: Push to ubuntu
-#TODO: Redo above for available webstes on web archive
-#TODO: Convert all images to webp, bookmark in browser
-#Create Tabs for XP Tracker, GE Tracker https://getbootstrap.com/docs/4.5/components/navs/#tabs
-#TODO: Change color scheme of tabs
 
 #The Flask object constructor takes arguments
 app = Flask(__name__)
@@ -33,8 +16,18 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['UPLOAD_FOLDER'] = os.path.join(pathlib.Path(__file__).parent.absolute(), "static", "essentialIgnored", "Uploads")
 app.config['MAX_CONTENT_PATH'] = 100_000 #100KB file limit
 
-
-
+'''
+Example code to clean up Jinja2 & app.py
+'''
+@app.context_processor
+def my_utility_processor():
+    def date_now(format="%d.m.%Y %H:%M:%S"):
+        """ returns the formated datetime """
+        return datetime.now().strftime(format)
+    def increment(count):
+        count['value'] += 1
+        return ''
+    return dict(date_now=date_now, increment=increment)
 
 #Really good code here~~~~!!!!
 @app.route('/images/<i>.png')
