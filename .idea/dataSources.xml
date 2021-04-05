@@ -7,5 +7,12 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://51.79.66.9:3306</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Gaming Server" uuid="48f920e3-49a7-4dfb-9258-480da6ac6f04">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>The best!</remarks>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://144.91.84.171:3306/</jdbc-url>
+    </data-source>
   </component>
 </project>
