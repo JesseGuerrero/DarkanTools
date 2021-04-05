@@ -7,6 +7,10 @@ import io
 
 #Custom Modules
 from backend.backend import *
+from backend.DaemonDB import *
+
+password = input("Database Password: ")
+Thread(target=UpdateDB, args=(password,)).start()
 
 #The Flask object constructor takes arguments
 app = Flask(__name__)

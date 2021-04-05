@@ -4,8 +4,10 @@ from mysql.connector import Error, MySQLConnection
 from datetime import datetime
 from time import sleep
 
-
-# TODO: Update all players every Monday with Iron as well.
+DB_HOST_IP = '144.91.84.171'
+DB_NAME = 'darkantools'
+DB_USERNAME = 'jesse'
+DB_PASSWORD = 'RESPOND_TO_PROMPT'
 
 def create_connection(host_name, user_name, user_password, db_name):
     connection = None
@@ -38,7 +40,7 @@ def executeQuery(connection: MySQLConnection, query):
     try:
         cursor.execute(query)
         connection.commit()
-        print("Query run successfully")
+        # print("Query run successfully")
     except Error as e:
         print(f"The error '{e}' occurred")
 
@@ -50,13 +52,13 @@ def listPlayers():
     '''
     page = 0
     while (True):
-        print(f"page {page}")
+        print(f"Queried highscores page {page}")
         url = f"https://darkan.org/api/highscores?page={page}"
 
         payload = {}
         headers = {}
 
-        response = requests.request("GET", url, headers=headers, data=payload)
+        response = requests.request("GET", url, headers=headers, data=payload, verify=False)
 
         page_info = json.loads(response.text.encode('utf8'))
 
@@ -76,7 +78,11 @@ def listPlayers():
 # Main here, make varchar name length longer
 
 def UpdatePlayerListDB():
-    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "darkantools")
+    global DB_HOST_IP
+    global DB_NAME
+    global DB_USERNAME
+    global DB_PASSWORD
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_NAME)
 
     for player in listPlayers():
         name = player[0]
@@ -91,7 +97,11 @@ def UpdatePlayerListDB():
 
 
 def GeneratePlayerNamesFromDB():
-    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "darkantools")
+    global DB_HOST_IP
+    global DB_NAME
+    global DB_USERNAME
+    global DB_PASSWORD
+    connection = create_connection(DB_HOST_IP, DB_NAME, DB_PASSWORD, DB_NAME)
     for player_info in askQuery(connection, "SELECT * FROM darkantools.players;"):
         yield player_info
     connection.close()
@@ -135,7 +145,11 @@ def playerAPIQuery(player) -> tuple:
 
 
 def createXP_Profiles():
-    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "xp_profiles")
+    global DB_HOST_IP
+    global DB_NAME
+    global DB_USERNAME
+    global DB_PASSWORD
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, "xp_profiles")
     skill_ID = {"Attack": 0, "Defence": 1, "Strength": 2, "Hitpoints": 3, "Ranged": 4, "Prayer": 5, "Magic": 6,
                 "Cooking": 7, "Woodcutting": 8, "Fletching": 9, "Fishing": 10, "Firemaking": 11, "Crafting": 12,
                 "Smithing": 13, "Mining": 14, "Herblore": 15, "Agility": 16, "Thieving": 17, "Slayer": 18,
@@ -174,9 +188,13 @@ def createXP_Profiles():
 
 
 def CreateTopTenDB():
+    global DB_HOST_IP
+    global DB_NAME
+    global DB_USERNAME
+    global DB_PASSWORD
     top_ten = []
 
-    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "xp_profiles")
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, "xp_profiles")
     for player in GeneratePlayerNamesFromDB():
         query = f"SELECT date, name, isIron, totalXp FROM `{player[0]}` WHERE date >= DATE(NOW()) - INTERVAL 7 DAY;"
         answer = askQuery(connection, query)
@@ -202,7 +220,7 @@ def CreateTopTenDB():
     top_ten = top_ten[:10]
     print(top_ten)
 
-    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "darkantools")
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_NAME)
     executeQuery(connection, "TRUNCATE TABLE top_ten;")
     for rank, player in enumerate(top_ten):
         name = player[0][1:-1]  # remove the quotes/apostraphie
@@ -212,7 +230,9 @@ def CreateTopTenDB():
     connection.close()
 
 
-def UpdateDB():
+def UpdateDB(password):
+    global DB_PASSWORD
+    DB_PASSWORD = password
     while (True):
         (UpdatePlayerListDB())
         (createXP_Profiles())
@@ -227,13 +247,17 @@ def convertToBinaryData(filename):
     return binaryData
 
 def readGEIcon(icon_id):
+    global DB_HOST_IP
+    global DB_NAME
+    global DB_USERNAME
+    global DB_PASSWORD
     print("Reading BLOB data from python_employee table")
 
     try:
-        connection = mysql.connector.connect(host='51.79.66.9',
-                                             database='darkantools',
-                                             user='Jawarrior1',
-                                             password='ilikepeas1')
+        connection = mysql.connector.connect(host=DB_HOST_IP,
+                                             database=DB_NAME,
+                                             user=DB_USERNAME,
+                                             password=DB_PASSWORD)
 
         cursor = connection.cursor()
         sql_fetch_blob_query = """SELECT * from ge_icons where id = %s"""
@@ -253,6 +277,10 @@ def readGEIcon(icon_id):
             print("MySQL connection is closed")
 
 def updateAllGEIcons():
+    global DB_HOST_IP
+    global DB_NAME
+    global DB_USERNAME
+    global DB_PASSWORD
     def insertIconBLOB(connection, id, path):
         print("Inserting BLOB")
         try:
@@ -273,7 +301,7 @@ def updateAllGEIcons():
             print(f"other exception: {e}")
 
 
-    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "darkantools")
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_NAME)
     executeQuery(connection, "TRUNCATE ge_icons;")
     for id in range(0, 24806):
         path = f"/root/Jesse/DarkanTools/ge_icons/items/{id}.png"
@@ -282,21 +310,6 @@ def updateAllGEIcons():
         connection.close()
         print("MySQL connection is closed")
 
-UpdateDB()
+from threading import Thread
 
 
-# from tkinter import *
-# from PIL import ImageTk, Image
-# import io
-#
-#
-#
-# root = Tk()
-# canvas = Canvas(root, width = 300, height = 300)
-#
-# img = Image.open(io.BytesIO(readGEIcon(10)))
-# img = ImageTk.PhotoImage(img)
-#
-# canvas.pack()
-# canvas.create_image(150,150, anchor=NW, image=img)
-# mainloop()
