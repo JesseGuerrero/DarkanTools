@@ -1,11 +1,14 @@
-import operator
-import mysql.connector, requests, json, schedule
-from mysql.connector import Error, MySQLConnection
 from datetime import datetime
 from time import sleep
 
+import json
+import mysql.connector
+import requests
+from mysql.connector import Error, MySQLConnection
+
 DB_HOST_IP = '144.91.84.171'
-DB_NAME = 'darkantools'
+DB_MAIN_NAME = 'darkantools'
+DB_XP_NAME = 'xp_profiles'
 DB_USERNAME = 'jesse'
 DB_PASSWORD = 'RESPOND_TO_PROMPT'
 
@@ -80,10 +83,10 @@ def listPlayers():
 
 def UpdatePlayerListDB():
     global DB_HOST_IP
-    global DB_NAME
+    global DB_MAIN_NAME
     global DB_USERNAME
     global DB_PASSWORD
-    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_NAME)
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_MAIN_NAME)
 
     for player in listPlayers():
         name = player[0]
@@ -99,10 +102,10 @@ def UpdatePlayerListDB():
 
 def GeneratePlayerNamesFromDB():
     global DB_HOST_IP
-    global DB_NAME
+    global DB_MAIN_NAME
     global DB_USERNAME
     global DB_PASSWORD
-    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_NAME)
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_MAIN_NAME)
     for player_info in askQuery(connection, "SELECT * FROM darkantools.players;"):
         yield player_info
     connection.close()
@@ -147,7 +150,7 @@ def playerAPIQuery(player) -> tuple:
 
 def createXP_Profiles():
     global DB_HOST_IP
-    global DB_NAME
+    global DB_MAIN_NAME
     global DB_USERNAME
     global DB_PASSWORD
     connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, "xp_profiles")
@@ -190,7 +193,7 @@ def createXP_Profiles():
 
 def CreateTopTenDB():
     global DB_HOST_IP
-    global DB_NAME
+    global DB_MAIN_NAME
     global DB_USERNAME
     global DB_PASSWORD
     top_ten = []
@@ -221,7 +224,7 @@ def CreateTopTenDB():
     top_ten = top_ten[:10]
     print(top_ten)
 
-    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_NAME)
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_MAIN_NAME)
     executeQuery(connection, "TRUNCATE TABLE top_ten;")
     for rank, player in enumerate(top_ten):
         name = player[0][1:-1]  # remove the quotes/apostraphie
@@ -250,14 +253,14 @@ def convertToBinaryData(filename):
 
 def readGEIcon(icon_id):
     global DB_HOST_IP
-    global DB_NAME
+    global DB_MAIN_NAME
     global DB_USERNAME
     global DB_PASSWORD
     print("Reading BLOB data from python_employee table")
 
     try:
         connection = mysql.connector.connect(host=DB_HOST_IP,
-                                             database=DB_NAME,
+                                             database=DB_MAIN_NAME,
                                              user=DB_USERNAME,
                                              password=DB_PASSWORD)
 
@@ -281,7 +284,7 @@ def readGEIcon(icon_id):
 
 def updateAllGEIcons():
     global DB_HOST_IP
-    global DB_NAME
+    global DB_MAIN_NAME
     global DB_USERNAME
     global DB_PASSWORD
 
@@ -304,7 +307,7 @@ def updateAllGEIcons():
         except Exception as e:
             print(f"other exception: {e}")
 
-    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_NAME)
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_MAIN_NAME)
     executeQuery(connection, "TRUNCATE ge_icons;")
     for id in range(0, 24806):
         path = f"/root/Jesse/DarkanTools/ge_icons/items/{id}.png"

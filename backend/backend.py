@@ -14,6 +14,7 @@ from backend.APIQueries import *
 from backend.filemanagement import *
 from backend.databaseMethods import *
 import pathlib
+from backend.DaemonDB import *
 
 class Skills():
     '''
@@ -45,7 +46,7 @@ def getTopPlayers() -> list:
 
     :return: list of tuples [(PLAYER1, XP1), (PLAYER2, XP2), ..., (PLAYER10, XP10)]
     '''
-    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "darkantools")
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_MAIN_NAME)
     topPlayers = askQuery(connection, "SELECT * FROM top_ten;")
     connection.close()
 
@@ -82,7 +83,7 @@ def randomTabIcon():
 
 # noinspection SqlResolve
 def MakeSkillsDeltaListing(name, days):
-    connection = create_connection("51.79.66.9", "Jawarrior1", "ilikepeas1", "xp_profiles")
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, "xp_profiles")
     try:
         query = f"SELECT totalLevel, attack, defence, strength, hitpoints, ranged, prayer, magic, cooking, woodcutting, fletching, fishing,\
            firemaking, crafting, totalXp, smithing, mining, herblore, agility, thieving, slayer, farming, runecrafting,\
@@ -108,10 +109,10 @@ def readGEIcon(icon_id):
     print("Reading BLOB data from python_employee table")
 
     try:
-        connection = mysql.connector.connect(host='51.79.66.9',
-                                             database='darkantools',
-                                             user='Jawarrior1',
-                                             password='ilikepeas1')
+        connection = mysql.connector.connect(host=DB_HOST_IP,
+                                             database=DB_MAIN_NAME,
+                                             user=DB_USERNAME,
+                                             password=DB_PASSWORD)
 
         cursor = connection.cursor()
         sql_fetch_blob_query = """SELECT * from ge_icons where id = %s"""
@@ -139,10 +140,10 @@ def readHolidayImage(name):
     print("Reading BLOB data from python_employee table")
 
     try:
-        connection = mysql.connector.connect(host='51.79.66.9',
-                                             database='darkantools',
-                                             user='Jawarrior1',
-                                             password='ilikepeas1')
+        connection = mysql.connector.connect(host=DB_HOST_IP,
+                                             database=DB_MAIN_NAME,
+                                             user=DB_USERNAME,
+                                             password=DB_PASSWORD)
 
         cursor = connection.cursor()
         sql_fetch_blob_query = """SELECT * from holiday_images where name = %s"""
