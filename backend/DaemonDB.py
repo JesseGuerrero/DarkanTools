@@ -124,7 +124,7 @@ def playerAPIQuery(player) -> tuple:
     payload = {}
     headers = {}
 
-    response = requests.request("GET", url, headers=headers, data=payload)
+    response = requests.request("GET", url, headers=headers, data=payload, verify=False)
 
     # request, below, is the string representation of the player information
     request = response.text.encode('utf8')
