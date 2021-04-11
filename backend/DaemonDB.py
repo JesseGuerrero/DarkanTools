@@ -9,6 +9,7 @@ DB_NAME = 'darkantools'
 DB_USERNAME = 'jesse'
 DB_PASSWORD = 'RESPOND_TO_PROMPT'
 
+
 def create_connection(host_name, user_name, user_password, db_name):
     connection = None
     try:
@@ -25,7 +26,7 @@ def create_connection(host_name, user_name, user_password, db_name):
     return connection
 
 
-def askQuery(connection: MySQLConnection, query):
+def askQuery(connection : MySQLConnection, query):
     cursor = connection.cursor()
     try:
         cursor.execute(query)
@@ -101,7 +102,7 @@ def GeneratePlayerNamesFromDB():
     global DB_NAME
     global DB_USERNAME
     global DB_PASSWORD
-    connection = create_connection(DB_HOST_IP, DB_NAME, DB_PASSWORD, DB_NAME)
+    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_NAME)
     for player_info in askQuery(connection, "SELECT * FROM darkantools.players;"):
         yield player_info
     connection.close()
@@ -246,6 +247,7 @@ def convertToBinaryData(filename):
         binaryData = file.read()
     return binaryData
 
+
 def readGEIcon(icon_id):
     global DB_HOST_IP
     global DB_NAME
@@ -276,11 +278,13 @@ def readGEIcon(icon_id):
             connection.close()
             print("MySQL connection is closed")
 
+
 def updateAllGEIcons():
     global DB_HOST_IP
     global DB_NAME
     global DB_USERNAME
     global DB_PASSWORD
+
     def insertIconBLOB(connection, id, path):
         print("Inserting BLOB")
         try:
@@ -300,7 +304,6 @@ def updateAllGEIcons():
         except Exception as e:
             print(f"other exception: {e}")
 
-
     connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_NAME)
     executeQuery(connection, "TRUNCATE ge_icons;")
     for id in range(0, 24806):
@@ -310,6 +313,6 @@ def updateAllGEIcons():
         connection.close()
         print("MySQL connection is closed")
 
-from threading import Thread
 
-
+if __name__ == "__main__":
+    UpdateDB(input("Database Password: "))
