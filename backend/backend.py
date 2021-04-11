@@ -39,6 +39,7 @@ class Skills():
 
 #---Top Weekly
 def getTopPlayers() -> list:
+    global DB_PASSWORD
     '''
     Returns top 10 players of the week organized as a list of tuples.
     If it runs out of players who have more than 0 xp then it adds

@@ -234,9 +234,8 @@ def CreateTopTenDB():
     connection.close()
 
 
-def UpdateDB(password):
+def UpdateDB():
     global DB_PASSWORD
-    DB_PASSWORD = password
     while (True):
         (UpdatePlayerListDB())
         (createXP_Profiles())
@@ -317,5 +316,17 @@ def updateAllGEIcons():
         print("MySQL connection is closed")
 
 
+from threading import Thread
+import traceback
 if __name__ == "__main__":
-    UpdateDB(input("Database Password: "))
+    DB_PASSWORD = input("Database Password: ")
+    UpdateDB()
+else:
+    DB_PASSWORD = input("Database Password: ")
+    try:
+        Thread(target=UpdateDB).start()
+    except:
+        with open("exceptions.log", "a") as logfile:
+            traceback.print_exc(file=logfile)
+
+

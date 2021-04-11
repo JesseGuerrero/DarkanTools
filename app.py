@@ -1,4 +1,6 @@
 #Essentials
+import warnings
+
 import werkzeug
 from flask import Flask, render_template, request
 from flask import send_file
@@ -9,8 +11,7 @@ import io
 from backend.backend import *
 from backend.DaemonDB import *
 
-password = input("Database Password: ")
-Thread(target=UpdateDB, args=(password,)).start()
+
 
 #The Flask object constructor takes arguments
 app = Flask(__name__)
@@ -19,6 +20,7 @@ app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['UPLOAD_FOLDER'] = os.path.join(pathlib.Path(__file__).parent.absolute(), "static", "essentialIgnored", "Uploads")
 app.config['MAX_CONTENT_PATH'] = 100_000 #100KB file limit
+warnings.filterwarnings("ignore")
 
 '''
 Example code to clean up Jinja2 & app.py
