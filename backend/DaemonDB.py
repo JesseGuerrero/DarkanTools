@@ -323,11 +323,12 @@ if __name__ == "__main__":
     DB_PASSWORD = input("Database Password: ")
     UpdateDB()
 else:
-    DB_PASSWORD = sys.argv[1]
-    try:
-        Thread(target=UpdateDB).start()
-    except:
-        with open("exceptions.log", "a") as logfile:
-            traceback.print_exc(file=logfile)
+    pass
+    # DB_PASSWORD = sys.argv[1]
+    # try:
+    #     Thread(target=UpdateDB).start()
+    # except:
+    #     with open("exceptions.log", "a") as logfile:
+    #         traceback.print_exc(file=logfile)
 
 
