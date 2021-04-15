@@ -318,11 +318,12 @@ def updateAllGEIcons():
 
 from threading import Thread
 import traceback
+import sys
 if __name__ == "__main__":
     DB_PASSWORD = input("Database Password: ")
     UpdateDB()
 else:
-    DB_PASSWORD = input("Database Password: ")
+    DB_PASSWORD = sys.argv[1]
     try:
         Thread(target=UpdateDB).start()
     except:
