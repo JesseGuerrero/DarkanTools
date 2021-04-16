@@ -11,8 +11,6 @@ import io
 from backend.backend import *
 from backend.DaemonDB import *
 
-
-
 #The Flask object constructor takes arguments
 app = Flask(__name__)
 
@@ -21,6 +19,9 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['UPLOAD_FOLDER'] = os.path.join(pathlib.Path(__file__).parent.absolute(), "static", "essentialIgnored", "Uploads")
 app.config['MAX_CONTENT_PATH'] = 100_000 #100KB file limit
 warnings.filterwarnings("ignore")
+
+#Jinja
+app.jinja_env.add_extension('jinja2.ext.loopcontrols')
 
 '''
 Example code to clean up Jinja2 & app.py
@@ -134,12 +135,63 @@ def register():
                            result = reg_result, result2 = searched_player, player_icons = topPlayerIcons(),
                            tracker_active = "active")
 
-@app.route("/ge")
-def ge():
-    ge_buy = getGEOffersFormatted("buy")
+@app.route("/ge-buy", methods=["GET", "POST"])
+def geBuy():
     ge_sell = getGEOffersFormatted("sell")
-    return render_template("ge.html", icon = randomTabIcon(), player_list = getTopPlayers(),
-                           player_icons = topPlayerIcons(), geBuyOffers = ge_buy, geSellOffers = ge_sell)
+
+    minimum_price = -1
+    maximum_price = -1
+    if request.method == "POST":
+        try:
+            minimum_price = int(request.form['price_minimum'])
+        except:
+            pass
+        else:
+            if (minimum_price > 0):
+                ge_sell = removeGEOffersByMinimumPrice(ge_sell, minimum_price)
+        try:
+            maximum_price = int(request.form['price_maximum'])
+        except:
+            pass
+        else:
+            if (maximum_price > 0):
+                ge_sell = removeGEOffersByMaximumPrice(ge_sell, maximum_price)
+    # print(ge_sell)
+
+    ge_sell = alphabeticalGEOffers(ge_sell)
+    ge_buy = orderGEOffersByTableOrder(ge_sell)
+
+    return render_template("ge-buy.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), geSellOffers = ge_sell, ge_active="active")
+
+@app.route("/ge-sell", methods=["GET", "POST"])
+def geSell():
+    ge_buy = getGEOffersFormatted("buy")
+
+    minimum_price = -1
+    maximum_price = -1
+    if request.method == "POST":
+        try:
+            minimum_price = int(request.form['price_minimum'])
+        except:
+            pass
+        else:
+            if (minimum_price > 0):
+                ge_buy = removeGEOffersByMinimumPrice(ge_buy, minimum_price)
+        try:
+            maximum_price = int(request.form['price_maximum'])
+        except:
+            pass
+        else:
+            if (maximum_price > 0):
+                ge_buy = removeGEOffersByMaximumPrice(ge_buy, maximum_price)
+    print(ge_buy)
+
+    ge_buy = alphabeticalGEOffers(ge_buy)
+    ge_buy = orderGEOffersByTableOrder(ge_buy)
+
+    return render_template("ge-sell.html", icon = randomTabIcon(), player_list = getTopPlayers(),
+                           player_icons = topPlayerIcons(), geBuyOffers = ge_buy, ge_active="active")
 
 @app.route('/street')
 def street():

@@ -1,0 +1,71 @@
+{% include 'header.html' %}
+<div class="col-sm-10">
+    <ul class="nav nav-tabs">
+      <li class="nav-item show-border">
+        <a class="nav-link" style="color: #aaa;" href="/ge-buy">Buy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/ge-sell">Sell</a>
+      </li>
+    </ul>
+
+    <form method="POST">
+        <div class="form-group row removeBottomPadding">
+            <div class="col-sm-2">
+              <input type="text" name="price_minimum" class="form-control" placeholder="Min GP per item">
+            </div>
+            <div class="col-sm-2">
+              <input type="text" name="price_maximum" class="form-control" placeholder="Max GP per item">
+            </div>
+            <div class="col-sm-1">
+                <input type="submit" value="Filter" style = "color: #fff; height:40px; width: 65px; font-size: 15px; border: 1px solid transparent; border-radius: 0.25rem; background-color: #3A3F44; border-color: rgba(0,0,0,0.6); text-shadow: 1px 1px 1px rgba(0,0,0,0.3); transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;" >
+            </div>
+        </div>
+        <div class="form-group row">
+        </div>
+    </form>
+
+
+    <div class="table-responsive" style="border-top: 1px solid #cdd0d4;">
+        <table class="table table-hover table-dark">
+          <thead>
+            <tr>
+              <th scope="col" style="border-left: 1px solid #cdd0d4;">Item</th>
+              <th scope="col">Item Name</th>
+              <th scope="col">Amount Left</th>
+              <th scope="col">Price Per Item</th>
+              <th scope="col" style="border-left: 1px solid #cdd0d4;">Item</th>
+              <th scope="col">Item Name</th>
+              <th scope="col">Amount Left</th>
+              <th scope="col" style="border-right: 1px solid #cdd0d4;">Price Per Item</th>
+            </tr>
+          </thead>
+          <tbody style="border-bottom: 1px solid #cdd0d4;">
+            {% set count = {'value': 0} %}
+                {% for buyOffer in geBuyOffers %}
+                    {{ increment(count) }}
+                    {% if count['value'] % 2 == 1 %} {# Starts at 1! #}
+                         <tr>
+                            <th scope="row" style="border-left: 1px solid #cdd0d4;"><img src="/images/{{ buyOffer['itemId'] }}.png"></th>
+                            <td>{{ buyOffer['itemName'] }}</td>
+                            <td>{{ buyOffer['amountLeft'] }}</td>
+                            <td>{{ "{:,}".format(buyOffer['pricePerItem']) }}GP</td>
+                    {% elif count['value'] % 2 == 0 %}
+                            <td style="border-left: 1px solid #cdd0d4;"><img src="/images/{{ buyOffer['itemId'] }}.png"></td>
+                            <td>{{ buyOffer['itemName'] }}</td>
+                            <td>{{ buyOffer['amountLeft'] }}</td>
+                            <td style="border-right: 1px solid #cdd0d4;">{{ "{:,}".format(buyOffer['pricePerItem']) }}GP</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+                {% if count['value'] % 2 == 1 %} {# Finish the table off #}
+                            <td style="border-left: 1px solid #cdd0d4;"></td><td></td><td></td><td style="border-right: 1px solid #cdd0d4;"></td>
+                        </tr>
+                {% endif %}
+          </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

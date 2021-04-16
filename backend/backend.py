@@ -133,8 +133,6 @@ def readGEIcon(icon_id):
             print("MySQL connection is closed")
 
 def getGEOffersFormatted(buyorsell):
-    for offer in (getGEOffers(buyorsell)):
-        print(offer)
     return getGEOffers(buyorsell)
 
 def readHolidayImage(name):
@@ -194,6 +192,54 @@ def getUploadNum() -> str:
     for fileName in (os.listdir(path)):
         uploadCount+=1
     return str(uploadCount)
+
+def removeGEOffersByMinimumPrice(geOffers : list, minimumPrice : int) -> list:
+    newGEOffers = []
+    for offer in geOffers:
+        if offer['pricePerItem'] > minimumPrice:
+            newGEOffers.append(offer)
+    return newGEOffers
+
+def removeGEOffersByMaximumPrice(geOffers : list, maxPrice : int) -> list:
+    newGEOffers = []
+    for offer in geOffers:
+        if offer['pricePerItem'] < maxPrice:
+            newGEOffers.append(offer)
+    return newGEOffers
+
+def alphabeticalGEOffers(geOffers : list) -> list:
+    newGEOffers = []
+    for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+        for offer in geOffers:
+            if offer['itemName'][0] == letter:
+                newGEOffers.append(offer)
+    return newGEOffers
+
+from math import ceil
+def orderGEOffersByTableOrder(geOffers : list) -> list:
+    endOffer = []
+
+    leftTable = []
+    rightTable = []
+
+    row_count = ceil(len(geOffers)/2)
+
+    for i in range(0, row_count):
+        leftTable.append(geOffers[i])
+    for i in range(row_count, len(geOffers)):
+        rightTable.append(geOffers[i])
+
+    leftIndex = 0
+    rightIndex = 0
+    for i in range(0, len(geOffers)):
+        if i % 2 == 0:
+            endOffer.append(leftTable[leftIndex])
+            leftIndex += 1
+        elif i % 2 == 1:
+            endOffer.append(rightTable[rightIndex])
+            rightIndex += 1
+
+    return endOffer
 
 if __name__ == "__main__":
     '''

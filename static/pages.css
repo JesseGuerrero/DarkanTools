@@ -29,7 +29,7 @@ pretty
 }
 
 .btn-bg-black:hover {
-    background-color:  !important;
+    background-color: black !important;
 }
 
 #accordion {
@@ -92,4 +92,16 @@ h1 img {
 .has_skill_icons img {
     width: 30px;
     height: 30px;
+}
+
+.show-border {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.removeBottomPadding{
+    margin-bottom:0px !important;
 }
