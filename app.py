@@ -159,7 +159,7 @@ def geBuy():
     # print(ge_sell)
 
     ge_sell = alphabeticalGEOffers(ge_sell)
-    ge_buy = orderGEOffersByTableOrder(ge_sell)
+    ge_sell = orderGEOffersByTableOrder(ge_sell)
 
     return render_template("ge-buy.html", icon = randomTabIcon(), player_list = getTopPlayers(),
                            player_icons = topPlayerIcons(), geSellOffers = ge_sell, ge_active="active")
