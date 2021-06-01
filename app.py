@@ -74,25 +74,33 @@ def home():
     return render_template("home.html", icon = randomTabIcon(), player_list = getTopPlayers(),
                            player_icons = topPlayerIcons(), home_active="active")
 
+
 @app.route('/soundpage', methods=["GET", "POST"])
 def soundpage():
-    saved = ""
-    if request.method == 'POST':
-        uploadedFile = request.files['file']
-        uploadedFile : werkzeug.datastructures.FileStorage
-
-        appPath = pathlib.Path(__file__).parent.absolute()
-        saveFilePath = os.path.join(appPath, "static", "essentialIgnored", "Uploads", getUploadNum() + "_" + uploadedFile.filename)
-
-        uploadedFile.save(saveFilePath)
-        print(uploadedFile)
-        saved = "Your file has been saved!"
-
-    return render_template("soundpage.html", soundFiles = getSoundFiles(), savetext = saved, icon = randomTabIcon(), player_list = getTopPlayers(),
+    return render_template("soundpage.html", soundFiles = getSoundFiles(), icon = randomTabIcon(), player_list = getTopPlayers(),
                            player_icons = topPlayerIcons(), sound_active = "active")
 @socketio.on('client_message')
-def receive_message (client_msg):
-    emit('server_message', client_msg, broadcast=True)
+def receive_message (client_msg, repost = False):
+    # if repost:
+    #     appPath = pathlib.Path(__file__).parent.absolute()
+    #     saveFilePath = os.path.join(appPath, "static", "essentialIgnored", "userInput")
+    #     with open(saveFilePath, "r") as myfile:
+    #         for line in myfile.readlines():
+    #             msgInfo = line.split("~")
+    #             msg = {"nickname": msgInfo[0], "message": msgInfo[1]}
+    #             emit('server_message', msg, broadcast=True)
+    # else:
+    appPath = pathlib.Path(__file__).parent.absolute()
+    saveFilePath = os.path.join(appPath, "static", "essentialIgnored", "userInput")
+    with open(saveFilePath, "a") as myfile:
+        name = client_msg["nickname"]
+        msg = client_msg["message"]
+        name.replace("~", "-")
+        name.replace("\n", "")
+        msg.replace("~", "-")
+        msg.replace("\n", "")
+        myfile.write(name + "~" + msg + "\n")
+        emit('server_message', client_msg, broadcast=True)
 
 
 #XP Comparison
@@ -223,3 +231,5 @@ if __name__ == '__main__':
     else:
         socketio.run(app, host = '0.0.0.0', port=80)
         # app.run(host = '0.0.0.0', port=80, threaded=True, debug=False)
+
+        #https://stackoverflow.com/questions/66069215/the-client-is-using-an-unsupported-version-of-the-socket-io-or-engine-io-protoco
