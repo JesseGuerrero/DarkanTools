@@ -6,6 +6,7 @@ from flask import Flask, render_template, request
 from flask import send_file
 from PIL import Image
 import io
+from flask_socketio import SocketIO, emit
 
 #Custom Modules
 from backend.backend import *
@@ -13,6 +14,7 @@ from backend.DaemonDB import *
 
 #The Flask object constructor takes arguments
 app = Flask(__name__)
+socketio = SocketIO(app)
 
 #Removes caching -> removes hard resets.
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
@@ -88,6 +90,10 @@ def soundpage():
 
     return render_template("soundpage.html", soundFiles = getSoundFiles(), savetext = saved, icon = randomTabIcon(), player_list = getTopPlayers(),
                            player_icons = topPlayerIcons(), sound_active = "active")
+@socketio.on('client_message')
+def receive_message (client_msg):
+    emit('server_message', client_msg, broadcast=True)
+
 
 #XP Comparison
 @app.route('/compare', methods=["GET", "POST"])
@@ -212,6 +218,8 @@ if __name__ == '__main__':
     #Threaded option to enable multiple instances for multiple user access support
     #If its windows, we are probably debugging at home.
     if "win" in os.sys.platform:
-        app.run(threaded=True, port=5000, debug = False)
+        socketio.run(app, host = '0.0.0.0', port=5000, debug=True)
+        # app.run(host = '0.0.0.0', threaded=True, port=5000, debug = False)
     else:
-        app.run(host = '0.0.0.0', port=80, threaded=True, debug=False)
+        socketio.run(app, host = '0.0.0.0', port=80)
+        # app.run(host = '0.0.0.0', port=80, threaded=True, debug=False)
