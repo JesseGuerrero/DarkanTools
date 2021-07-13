@@ -226,10 +226,10 @@ if __name__ == '__main__':
     #Threaded option to enable multiple instances for multiple user access support
     #If its windows, we are probably debugging at home.
     if "win" in os.sys.platform:
-        socketio.run(app, host = '0.0.0.0', port=5000, debug=True)
+        socketio.run(app, host = '0.0.0.0', port=80, debug=True)
         # app.run(host = '0.0.0.0', threaded=True, port=5000, debug = False)
     else:
-        socketio.run(app, host = '0.0.0.0', port=80)
+        socketio.run(app, host = '0.0.0.0', port=80, debug=True)
         # app.run(host = '0.0.0.0', port=80, threaded=True, debug=False)
 
         #https://stackoverflow.com/questions/66069215/the-client-is-using-an-unsupported-version-of-the-socket-io-or-engine-io-protoco
