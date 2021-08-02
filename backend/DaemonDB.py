@@ -10,7 +10,7 @@ DB_HOST_IP = '144.91.84.171'
 DB_MAIN_NAME = 'darkantools'
 DB_XP_NAME = 'xp_profiles'
 DB_USERNAME = 'jesse'
-DB_PASSWORD = 'temppass'
+DB_PASSWORD = 'darkaniscool'
 
 
 def create_connection(host_name, user_name, user_password, db_name):
