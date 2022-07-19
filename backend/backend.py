@@ -47,9 +47,9 @@ def getTopPlayers() -> list:
 
     :return: list of tuples [(PLAYER1, XP1), (PLAYER2, XP2), ..., (PLAYER10, XP10)]
     '''
-    connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_MAIN_NAME)
-    topPlayers = askQuery(connection, "SELECT * FROM top_ten;")
-    connection.close()
+    #connection = create_connection(DB_HOST_IP, DB_USERNAME, DB_PASSWORD, DB_MAIN_NAME)
+    topPlayers = []
+    #connection.close()
 
     for i, each in enumerate(topPlayers):
         xpDelta = "{:,}".format(each[3])
