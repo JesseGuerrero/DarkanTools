@@ -152,7 +152,7 @@
 151-
 152-
 153-
-154-
+154-player frozen
 155-
 156-
 157-
@@ -166,12 +166,12 @@
 165-
 166-
 167-
-168-
-169-
-170-
-171-
+168-ice barrage land
+169-ice blitz land
+170-ice brust land
+171-all ice spells cast
 172-
-173-
+173-level 48 ancient magic ice rush land
 174-
 175-
 176-
@@ -191,18 +191,18 @@
 190-
 191-
 192-
-193-
-194-
-195-
+193-home teleport circling wond sound
+194-sitting down after circle
+195-teleport home sound
 196-
 197-
 198-
-199-
+199-teleport another spell.
 200-Teleport sound
 201-Teleport arrive
 202-
 203-
-204-
+204-wilderness oblisk teleport.
 205-
 206-
 207-
@@ -294,8 +294,8 @@
 293-
 294-
 295-
-296-
-297-
+296-attacking a bat
+297-bat dying
 298-
 299-
 300-
@@ -1910,7 +1910,7 @@
 1927-
 1928-
 1929-
-1930-
+1930-random event pop-up.
 1931-
 1932-
 1933-
@@ -2632,7 +2632,7 @@
 2652-
 2653-
 2654-
-2655-
+2655-leveling up from lamps.
 2656-Mine rock once
 2657-Mine rock 3 times
 2658-Mine rock 4 times
@@ -2650,25 +2650,25 @@
 2670-
 2671-
 2672-run out of prayer
-2673-
-2674-
-2675-
-2676-
-2677-
-2678-
-2679-
-2680-
-2681-
-2682-
+2673-when clicking on prayer with 0 prayer points.
+2674-recharging prayer points at any alters.
+2675-level 37 mage prayer.
+2676-level 43 melee  prayer.
+2677-range 40 prayer.
+2678-rapid heal level 22 prayer.
+2679-level 19 rapid restore prayer.
+2680-When lifepoints fall below 10%
+2681-level 49 prayer redemption when used and drains prayer to restore lifepoints
+2682-level 46 prayer retribution
 2683-
 2684-
-2685-
+2685-level 8 prayer sharp eye
 2686-
-2687-
+2687-level 28 prayer steel skin
 2688-
-2689-
+2689-level 4 prayer brust of strengh
 2690-
-2691-
+2691-level 31 prayer ultimate strengh
 2692-
 2693-
 2694-
@@ -2687,22 +2687,22 @@
 2707-
 2708-
 2709-
-2710-
+2710-runescrafting runes at altar
 2711-
 2712-
-2713-
-2714-
-2715-
+2713-abbysal whip special attack.
+2714-granite maul regular hit
+2715-granite maul specical attack spec
 2716-
 2717-
 2718-
 2719-
 2720-Whip attack
-2721-
+2721-smithing at an anvil
 2722-
 2723-
 2724-
-2725-
+2725-melting ore at furnce
 2726-
 2727-pickpocket fail
 2728-
@@ -2716,7 +2716,7 @@
 2736-
 2737-
 2738-Bury bones
-2739-
+2739-dropping items from inventory
 2740-
 2741-
 2742-
@@ -3993,7 +3993,7 @@
 4044-
 4045-
 4046-
-4047-
+4047-edgville monks healing
 4048-
 4049-
 4050-
