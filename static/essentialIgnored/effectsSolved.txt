@@ -50,7 +50,7 @@
 49-
 50-
 51-
-52-
+52-lever pull sound
 53-
 54-
 55-
@@ -66,8 +66,8 @@
 65-
 66-
 67-
-68-
-69-
+68-gate close
+69-gate open
 70-
 71-
 72-
@@ -78,7 +78,7 @@
 77-
 78-
 79-
-80-
+80-door close
 81-Door open
 82-
 83-
@@ -100,42 +100,42 @@
 99-
 100-
 101-
-102-
-103-
+102-blood barrage landing
+103-blood rush casting/landing full
 104-
 105-
 106-
 107-
-108-
-109-
+108-blood casting for all
+109-blood casting/failing to hit sound full
 110-
 111-
 112-
 113-
 114-
-115-
-116-
-117-
-118-
-119-
+115-level 60 charge earth orb full sound
+116-level 66 charge air orb full sound
+117-level 63 charge fire orb full sound
+118-level 56 charge water orb full sound
+119-level 3 confuse spell casting
 120-
-121-
+121-level 3 confuse spell landing
 122-
 123-
 124-
-125-
-126-
-127-
-128-
-129-
-130-
-131-
-132-
-133-
-134-
-135-
-136-
-137-
+125-rune/pure essence mine teleport full
+126-level 19 cruse spell landing
+127-level 19 cruse spell casting
+128-level 53 earth blast casting
+129-level 53 earth blast landing
+130-level 29 earth bolt casting
+131-level 29 earth bolt landing
+132-level 9 earth strike casting
+133-level 9 earth stike landing
+134-level 70 earth wave casting
+135-level 70 earth wave landing
+136-level 7 sapphire enchant full
+137-level 57 diamond enchant full
 138-
 139-
 140-
@@ -190,7 +190,7 @@
 189-
 190-
 191-
-192-
+192-level 33 tele grab spell full
 193-home teleport circling wond sound
 194-sitting down after circle
 195-teleport home sound
@@ -200,20 +200,20 @@
 199-teleport another spell.
 200-Teleport sound
 201-Teleport arrive
-202-
-203-
+202-level 85 tele block casting
+203-level 85 tele block landing
 204-wilderness oblisk teleport.
 205-
 206-
-207-
-208-
-209-
-210-
-211-
-212-
-213-
-214-
-215-
+207-level 47 water blast casting
+208-level 47 water blast landing
+209-level 23 water bolt casting
+210-level 23 water bolt landing
+211-level 5 water strike casting
+212-level 5 water strike landing
+213-level 65 water wave casting
+214-level 65 water wave landing
+215-level 11 weaken casting/landing full with successfull hit
 216-
 217-
 218-
@@ -310,7 +310,7 @@
 309-
 310-
 311-
-312-
+312-bloodveld attack
 313-
 314-
 315-
@@ -331,7 +331,7 @@
 330-
 331-
 332-
-333-
+333-evil bob random event cat sound
 334-
 335-
 336-
@@ -354,8 +354,8 @@
 353-
 354-
 355-
-356-
-357-
+356-chicken dying
+357-fighting chicken
 358-
 359-
 360-
@@ -1135,7 +1135,7 @@
 1139-
 1140-
 1141-
-1142-
+1042-bank enty pin fail
 1143-
 1144-
 1145-
@@ -2287,7 +2287,7 @@
 2306-
 2307-
 2308-
-2309-
+2309-quiz master correct answer
 2310-
 2311-
 2312-
@@ -2308,10 +2308,10 @@
 2327-
 2328-
 2329-
-2330-
+2330-level 9 earth stike
 2331-
 2332-
-2333-
+2333-level 9 earth strike fail hit
 2334-
 2335-
 2336-
@@ -2359,10 +2359,10 @@
 2378-
 2379-
 2380-
-2381-
+2381-destorying an item
 2382-
 2383-
-2384-
+2384-popping ballons
 2385-
 2386-
 2387-
@@ -2374,12 +2374,12 @@
 2393-Eating sound
 2394-
 2395-
-2396-
+2396-leveling up fireworks
 2397-
 2398-
 2400-
 2401-Potion Drinking
-2402-
+2402-locked chest
 2403-
 2404-
 2405-
@@ -2423,7 +2423,7 @@
 2443-
 2444-
 2445-
-2446-
+2446-watering plants
 2447-
 2448-
 2449-
@@ -2451,7 +2451,7 @@
 2471-
 2472-
 2473-
-2474-
+2474-bank pin entered correctly
 2475-
 2476-
 2477-
@@ -2469,7 +2469,7 @@
 2489-
 2490-
 2491-
-2492-
+2492-hopping stones in game (agility)
 2493-
 2494-
 2495-
@@ -2477,7 +2477,7 @@
 2497-
 2498-
 2499-
-2500-
+2500-web slash with any wep
 2501-
 2502-
 2503-
@@ -2506,7 +2506,7 @@
 2526-
 2527-
 2528-
-2529-
+2529-dragon longsword special attack
 2530-
 2531-
 2532-
@@ -2514,15 +2514,15 @@
 2534-
 2535-
 2536-
-2537-
+2537-all dragon daggers special attack
 2538-
 2539-
-2540-
+2540-dragon scimy special attack
 2541-
 2542-
 2543-
 2544-
-2545-
+2545-magic short bow special attack
 2546-
 2547-
 2548-
@@ -2532,7 +2532,7 @@
 2552-
 2553-
 2554-
-2555-
+2555-attacking with any staff (melee)
 2556-
 2557-
 2558-
@@ -2554,7 +2554,7 @@
 2574-
 2575-
 2576-
-2577-
+2577-cooking any food
 2578-
 2579-
 2580-
@@ -2562,7 +2562,7 @@
 2582-Item pickup
 2583-
 2584-
-2585-
+2585-filling pot from sink or fountain
 2586-Craft gem
 2587-
 2588-
@@ -2582,9 +2582,9 @@
 2602-
 2603-
 2604-
-2605-
-2606-
-2607-
+2605-fletching lohgs
+2606-attaching bow strings to bows (u)
+2607-timed pots wearing off such as dragonfire or overloads etc..
 2608-
 2609-
 2610-
