@@ -35,11 +35,11 @@
 34-
 35-
 36-
-37-
+37-unlocking puzzle door
 38-
 39-
 40-
-41-
+41-barrows door close
 42-
 43-
 44-
@@ -60,7 +60,7 @@
 59-
 60-
 61-
-62-
+62-barrows door open
 63-
 64-
 65-
@@ -157,7 +157,7 @@
 159-
 160-
 161-
-162-
+162-ibans blast, ahrim firewave attack
 163-
 164-
 165-
@@ -499,7 +499,7 @@
 506-hitting a woman
 507-
 508-
-510-
+510-player getting hit for damage
 511-
 512-Man death
 513-hitting a man
@@ -525,9 +525,9 @@
 534-Imp attack
 535-Imp death
 536-Imp defence
-537-Spider attack
-538-Spider death
-539-Spider defence
+537-giant crypt Spider attack
+538-giant crypt Spider death
+539-giant crypt Spider defence
 540-
 541-
 542-
@@ -590,9 +590,9 @@
 599-
 600-
 601-
-602-
-603-
-604-
+602-bloodworm dying
+603-bloodworm getting hit
+604-bloodworm attacking
 605-
 606-
 607-
@@ -697,9 +697,9 @@
 707-
 708-
 709-
-711-
+711-tiny/giant rat dying
 712-
-713-tiny rat getting hit
+713-tiny/giant rat getting hit
 714-
 715-
 716-
@@ -760,8 +760,8 @@
 771-
 772-
 773-
-774-
-775-
+774-skeleton w axe/sword & square/round shield getting hit
+775-skeleton with sword and round shield attacking
 778-
 780-
 781-
@@ -1281,27 +1281,27 @@
 1316-
 1317-
 1318-
-1319-
+1319-dharoks attacking
 1320-
 1321-
 1322-
 1323-
 1324-
-1325-
+1325-guthans attacking
 1326-
 1327-
 1328-
 1329-
-1330-
+1330-torags attacking
 1331-
 1332-
-1333-
+1333-veracs attacking
 1334-
 1335-
 1336-
 1337-
-1338-
-1339-
+1338-dying sound
+1339-impact on enemy sound
 1340-
 1341-
 1342-
@@ -1431,7 +1431,7 @@
 1467-
 1468-
 1469-
-1470-
+1470-dig with spade
 1471-
 1472-
 1473-
@@ -2548,7 +2548,7 @@
 2691-level 31 prayer ultimate strengh
 2692-
 2694-
-2695-
+2695-karils (xbow) attacking
 2696-
 2697-
 2698-
@@ -2560,7 +2560,7 @@
 2704-
 2705-
 2706-
-2707-
+2707-black knives thrown
 2708-
 2709-
 2711-
@@ -2659,11 +2659,11 @@
 2808-
 2809-
 2810-
-2811-
-2812-
-2813-
-2814-
-2815-
+2811-impact sound on player1
+2812-impact sound on player2
+2813-impact sound on player3
+2814-impact sound on player4
+2815-impact sound on player5
 2816-
 2817-
 2818-
@@ -3096,7 +3096,7 @@
 3310-
 3311-
 3312-
-3313-
+3313-skeleton with axe and square shield attacking
 3314-
 3315-
 3316-
@@ -3348,12 +3348,12 @@
 3601-
 3602-
 3603-
-3604-
+3604-small crypt spider attacking
 3605-
 3606-
 3607-
-3608-
-3609-
+3608-small crypt spider dying
+3609-small crypt spider getting hit
 3610-
 3611-Scorpion attack
 3612-Scorpion defence
