@@ -167,7 +167,7 @@
 169-ice blitz land
 170-ice brust land
 171-all ice spells cast
-172-
+172-kamil ncp ice barrage
 173-level 48 ancient magic ice rush land
 174-
 175-
@@ -932,7 +932,7 @@
 962-
 963-
 964-
-965-
+965-tele tab teleport
 966-
 967-
 968-
@@ -1186,7 +1186,7 @@
 1220-
 1221-
 1222-
-1223-
+1223-filling vial with water
 1224-
 1225-
 1226-
@@ -1611,7 +1611,7 @@
 1648-
 1649-
 1650-
-1651-
+1651-level 80 magic (charge) spell
 1652-
 1653-
 1654-
@@ -1624,8 +1624,8 @@
 1661-
 1662-
 1663-
-1664-
-1665-
+1654-level 60 magic (flames of zamorak miss)
+1655-level 60 magic (flames of zamorak hit)
 1666-
 1667-
 1668-
@@ -2745,16 +2745,16 @@
 2907-
 2908-
 2910-
-2911-
-2912-
-2913-
-2914-
-2915-
-2916-
-2917-
-2918-
-2919-
-2920-
+2911-rubby bolts (e)/dragon bolts (e) special effect (blood forfeit)
+2912-saphhire bolts (e)/dragon version (e) special effect (clear mind)
+2913-diamond bolts (e)/diamond dragon bolts (e) special effect (Armour piercing)
+2914-topaz bolts (e)/ topaz dragon bolts (e) special effect (down to earth)
+2915-dragonstone bolts (e) dragonstone dragon bolts (e) special effect (dragon's breath)
+2916-jade bolts (e)/jade dragon bolts (e) special effect (earth's fury
+2917-onyx bolts (e)/onyx dragon bolts (e) speical effect (life leech)
+2918-opal bolts (e)/ opal dragon bolts (e) speical effect (lucky lightning)
+2919-emerald bolts (e)/emerald dragon bolts (e) special effect (magical poison)
+2920-peral bolts (e)/ peral dragon bolts (e) speical effect (sea curse)
 2921-
 2922-
 2923-
@@ -4700,14 +4700,14 @@
 5359-
 5360-
 5363-
-5365-
-5366-
-5367-
-5368-
-5369-
-5370-
-5371-
-5372-
+5365-miasmic rush successful landing
+5366-miasmic burst casting success
+5367-miasmic blitz landing successful
+5368-miasmic rush successful casting
+5369-miasmic barrage successful landing
+5370-miasmic blitz casting successful landing
+5371-miasmic barrage successful casting
+5372-miasmic burst successful landing
 5373-
 5374-
 5376-
@@ -6438,7 +6438,7 @@
 7929-
 7930-
 7931-
-7932-
+7932-fire surge cast
 7933-
 7934-
 7935-
@@ -7495,7 +7495,7 @@
 9465-
 9468-
 9470-
-9472-
+9472-quest cape emote
 9474-
 9475-
 9477-
